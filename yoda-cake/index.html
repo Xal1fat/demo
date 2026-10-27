@@ -551,7 +551,7 @@ setLang(((new URLSearchParams(location.search).get('lang') || location.hash.repl
 function sendOrder(){
   const items = [...cart.values()];
   if (!items.length) return;
-  const handle = 'yoda_cake'; // TODO: заменить на реальный ник
+  const handle = 'massiveboy';
   const lines = items.map(({p, qty}) => `• ${p.name} × ${qty} — ${money(p.price * qty)}`);
   const total = items.reduce((a, x) => a + x.p.price * x.qty, 0);
   const text = `Замовлення з сайту yoda.cake:\n${lines.join('\n')}\n\nРазом: ${money(total)}`;

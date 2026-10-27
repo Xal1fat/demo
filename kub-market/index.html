@@ -465,7 +465,7 @@ apply();
 document.addEventListener('click', function(e){
   const b = e.target.closest('.res');
   if (!b || b.disabled) return;
-  const handle = 'kubmarket'; // TODO: заменить на реальный ник
+  const handle = 'massiveboy';
   const text = `Хочу забронювати: ${b.dataset.name}`;
   window.open(`https://t.me/${handle}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
 });

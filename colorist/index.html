@@ -549,7 +549,7 @@ function sendBooking(e){
     (!name ? document.getElementById('f-name') : document.getElementById('f-contact')).focus();
     return false;
   }
-  const handle = 'lenachakluye'; // TODO: заменить на реальный ник
+  const handle = 'massiveboy';
   const text = `Заявка з сайту: ${name}\nКонтакт: ${contact}\nПослуга: ${svc}` + (note ? `\nКоментар: ${note}` : '');
   window.open(`https://t.me/${handle}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   msg.style.color = '';
