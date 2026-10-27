@@ -50,10 +50,11 @@
   .btn.line{background:none;color:var(--ink);border:1px solid var(--ink)}
 
   /* ── герой ── */
-  .hero{padding:34px 0 26px;border-bottom:1px solid var(--line)}
+  .hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center;
+    padding:38px 0 32px;border-bottom:1px solid var(--line)}
   .hero h1{font-size:clamp(30px,4.6vw,54px);max-width:22ch}
   .hero p{color:var(--body);max-width:52ch;margin:14px 0 0;font-size:16px}
-  .hstat{display:flex;gap:28px;flex-wrap:wrap;margin-top:22px}
+  .hstat{display:grid;grid-template-columns:1fr 1fr;gap:26px 30px;margin:0}
   .hstat div{font-size:12.5px;color:var(--muted)}
   .hstat b{display:block;font-size:22px;letter-spacing:-0.02em;color:var(--ink);font-weight:700}
 
@@ -96,6 +97,7 @@
   .arow .br{font-family:"Consolas",monospace;font-size:11px;letter-spacing:.1em;color:var(--muted)}
   .arow .st{font-family:"Consolas",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--sold)}
   .ahead{display:flex;justify-content:space-between;align-items:baseline;margin:0 0 12px}
+  .cathead{margin:30px 0 14px}
   .ahead h2{font-size:22px}
   .ahead .mono{color:var(--muted)}
 
@@ -125,9 +127,10 @@
 
 
   /* ───── бронирование ───── */
-  .res{background:none;border:0;border-bottom:1px solid var(--ink);padding:0 0 2px;margin:12px 0 0;
-    font:inherit;font-size:10px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;
+  .res{position:relative;background:none;border:0;border-bottom:1px solid var(--ink);padding:0 0 3px;margin:14px 0 0;
+    font:inherit;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;
     color:var(--ink);align-self:flex-start;transition:opacity .2s}
+  .res::after{content:'';position:absolute;inset:-12px -8px -10px -8px}
   .res:hover{opacity:.6}
   .res:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
   .res.off{color:var(--muted);border-bottom-color:var(--line);cursor:default}
@@ -136,11 +139,15 @@
   @media (max-width:1100px){ .grid{grid-template-columns:repeat(3,1fr)} }
   @media (max-width:900px){
     .wrap{padding:0 16px}
+    .hero{grid-template-columns:minmax(0,1fr);gap:24px;padding:26px 0 24px}
+    .hstat{gap:20px 22px}
     nav{display:none}
     .hrow .btn{display:none}
     .grid{grid-template-columns:repeat(2,1fr);gap:10px}
     .filters{top:52px}
     .frow{gap:10px;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px}
+    .filters::after{content:'';position:absolute;right:0;top:0;bottom:0;width:44px;pointer-events:none;
+      background:linear-gradient(90deg,rgba(246,246,244,0),var(--bg) 72%)}
     .count{display:none}
     .how{grid-template-columns:minmax(0,1fr)}
     .trust{grid-template-columns:1fr 1fr}
@@ -203,8 +210,10 @@
 
 <div class="wrap">
   <div class="hero">
+    <div class="hleft">
     <h1 data-t="h1">Оригінальні речі з Японії та Європи</h1>
     <p data-t="lead">Кожна річ в одному екземплярі. Перевіряю оригінальність, знімаю стан, відправляю по Україні й за кордон. Наявність — тут, а не в сторіс.</p>
+    </div>
     <div class="hstat">
       <div><b>778</b><span data-t="st1">позицій у профілі</span></div>
       <div><b>18K</b><span data-t="st2">підписників</span></div>
@@ -212,6 +221,10 @@
       <div><b>100%</b><span data-t="st4">перевірка оригінальності</span></div>
     </div>
   </div>
+</div>
+
+<div class="wrap">
+  <div class="ahead cathead"><h2 data-t="cat_h">Каталог</h2><span class="mono" id="count">4 / 4</span></div>
 </div>
 
 <div class="filters">
@@ -235,7 +248,6 @@
       <button class="chip" data-f="status" data-v="ok" data-t="s_ok">в наявності</button>
       <button class="chip" data-f="status" data-v="hold" data-t="s_hold">заброньовано</button>
     </div>
-    <span class="count" id="count"></span>
   </div>
 </div>
 
@@ -348,7 +360,7 @@ const T = {
     h1:"Оригінальні речі з Японії та Європи",
     lead:"Кожна річ в одному екземплярі. Перевіряю оригінальність, знімаю стан, відправляю по Україні й за кордон. Наявність — тут, а не в сторіс.",
     st1:"позицій у профілі", st2:"підписників", st3:"для УБД", st4:"перевірка оригінальності",
-    fcat:"Категорія", fsize:"Розмір", fstat:"Статус", all:"усі", all2:"усі", all3:"усі",
+    cat_h:"Каталог", fcat:"Категорія", fsize:"Розмір", fstat:"Статус", all:"усі", all2:"усі", all3:"усі",
     c1:"куртки", c2:"жилети",
     s_ok:"в наявності", s_hold:"заброньовано", s_sold:"продано",
     i1:"Куртка Beta LT, пісочна", i2:"Жилет Atom SL, олива", i3:"Куртка Gamma MX, графіт",
@@ -374,7 +386,7 @@ const T = {
     h1:"Оригинальные вещи из Японии и Европы",
     lead:"Каждая вещь в одном экземпляре. Проверяю оригинальность, снимаю состояние, отправляю по Украине и за границу. Наличие — здесь, а не в сторис.",
     st1:"позиций в профиле", st2:"подписчиков", st3:"для УБД", st4:"проверка оригинальности",
-    fcat:"Категория", fsize:"Размер", fstat:"Статус", all:"все", all2:"все", all3:"все",
+    cat_h:"Каталог", fcat:"Категория", fsize:"Размер", fstat:"Статус", all:"все", all2:"все", all3:"все",
     c1:"куртки", c2:"жилеты",
     s_ok:"в наличии", s_hold:"забронировано", s_sold:"продано",
     i1:"Куртка Beta LT, песочная", i2:"Жилет Atom SL, олива", i3:"Куртка Gamma MX, графит",
