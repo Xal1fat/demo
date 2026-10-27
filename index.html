@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Приклади робіт — сайти для б'юті-бізнесу</title>
+<meta name="description" content="Демо-макети сайтів для салонів краси, кондитерських і майстрів: каталог, онлайн-запис, кошик.">
+<style>
+  :root{ --ink:#231a1d; --body:#5f5055; --muted:#9a8a90; --line:#e8dfe2; --bg:#fbf7f8; --card:#fff; --pink:#dd7ba3; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",system-ui,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{padding:56px 0 26px}
+  h1{font-size:clamp(30px,5vw,50px);line-height:1.02;letter-spacing:-0.04em;margin:0 0 14px;font-weight:800}
+  .lead{color:var(--body);max-width:56ch;margin:0;font-size:16.5px}
+  .micro{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:22px 0 10px}
+  .card{background:var(--card);border:1px solid var(--line);text-decoration:none;color:inherit;display:block;
+    transition:transform .2s, box-shadow .2s;overflow:hidden}
+  .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(60,30,45,.10)}
+  .card .shot{aspect-ratio:16/10;overflow:hidden;background:#efe7ea;display:block}
+  .card .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s}
+  .card:hover .shot img{transform:scale(1.03)}
+  .card .txt{padding:18px 20px 20px}
+  .card .tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);font-weight:700}
+  .card h2{font-size:19px;margin:6px 0 6px;letter-spacing:-0.02em;font-weight:800}
+  .card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.5}
+  .card .go{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    border-bottom:1px solid var(--pink);color:var(--ink);padding-bottom:2px}
+  .wide{grid-column:1 / -1}
+  .wide .shot{aspect-ratio:16/7}
+  .note{margin:36px 0 0;padding:20px 22px;background:#fff;border:1px solid var(--line);color:var(--body);font-size:14px}
+  .note b{color:var(--ink)}
+  footer{padding:30px 0 60px;color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  @media (max-width:760px){ .grid{grid-template-columns:1fr} .wide .shot{aspect-ratio:16/10} header{padding-top:34px} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="micro">приклади робіт</div>
+    <h1>Сайти для б'юті-бізнесу<br>та майстрів</h1>
+    <p class="lead">Кілька макетів, які показують підхід: живий каталог, онлайн-запис, робоча корзина, адаптив під телефон. Кожен зроблено під конкретний бізнес.</p>
+  </header>
+
+  <div class="grid">
+
+    <a class="card wide" href="https://beauty-studio-blue-dusky.vercel.app" target="_blank" rel="noopener">
+      <span class="shot"><img src="salon.jpg" alt=""></span>
+      <div class="txt">
+        <span class="tag">робочий сайт</span>
+        <h2>Салон краси з онлайн-записом</h2>
+        <p>Запис на послугу й час, заявки в панель керування, повідомлення в Telegram. Це вже запущений сайт, а не макет.</p>
+        <span class="go">відкрити сайт</span>
+      </div>
+    </a>
+
+    <a class="card" href="yoda-cake/index.html">
+      <span class="shot"><img src="yoda-cake.jpg" alt=""></span>
+      <div class="txt">
+        <span class="tag">кондитерська</span>
+        <h2>Торти та бенто на замовлення</h2>
+        <p>Темна тема, каталог із цінами й вагою, кошик, що рахує суму, блок доставки та сертифікатів.</p>
+        <span class="go">дивитись макет</span>
+      </div>
+    </a>
+
+    <a class="card" href="kub-market/index.html">
+      <span class="shot"><img src="kub-market.jpg" alt=""></span>
+      <div class="txt">
+        <span class="tag">streetwear-перепродаж</span>
+        <h2>Каталог речей з фільтрами</h2>
+        <p>Кожна річ в одному екземплярі: фільтр по розміру, статус «в наявності / заброньовано / продано».</p>
+        <span class="go">дивитись макет</span>
+      </div>
+    </a>
+
+    <a class="card wide" href="colorist/index.html">
+      <span class="shot"><img src="colorist.jpg" alt=""></span>
+      <div class="txt">
+        <span class="tag">колорист</span>
+        <h2>Портфоліо майстра з фарбування</h2>
+        <p>Спектральна палітра, лента робіт, прайс і форма запису. Демонструє, як показати складні кольори, які губяться в стрічці Instagram.</p>
+        <span class="go">дивитись макет</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="note">
+    <b>Про фото:</b> у макетах використані зображення з відкритих профілів Instagram — це приклади, а не клієнтські проєкти.
+    На реальному сайті стоять фото власника бізнесу.
+  </div>
+
+  <footer>
+    <span>Приклади робіт · 2026</span>
+    <span>Сайт, запис і кошик — під ваш бізнес</span>
+  </footer>
+
+</div>
+</body>
+</html>
