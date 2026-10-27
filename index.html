@@ -3,27 +3,52 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Приклади робіт — сайти для б'юті-бізнесу</title>
-<meta name="description" content="Демо-макети сайтів для салонів краси, кондитерських і майстрів: каталог, онлайн-запис, кошик.">
+<title>Приклади робіт — сайти для б'юті-бізнесу та майстрів</title>
+<meta name="description" content="Демо-макети сайтів для салонів краси, кондитерських і майстрів: каталог, онлайн-запис, кошик. Живий сайт салону з записом у Telegram.">
+<meta name="theme-color" content="#fbf7f8">
+<meta name="author" content="Xal1fat">
+
+<!-- og: посилання в Telegram/WhatsApp показує превʼю -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Приклади робіт">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:title" content="Сайти для б'юті-бізнесу та майстрів — приклади робіт">
+<meta property="og:description" content="Живий сайт салону з онлайн-записом + три макети: кондитерська, streetwear-каталог, портфоліо колориста.">
+<meta property="og:url" content="https://xal1fat.github.io/demo/">
+<meta property="og:image" content="https://xal1fat.github.io/demo/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Обкладинка: чотири приклади сайтів для б'юті-бізнесу та майстрів">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Сайти для б'юті-бізнесу та майстрів — приклади робіт">
+<meta name="twitter:description" content="Живий сайт салону з онлайн-записом + три макети.">
+<meta name="twitter:image" content="https://xal1fat.github.io/demo/og-cover.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23231a1d'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23dd7ba3'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23231a1d'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23dd7ba3'/%3E%3C/svg%3E">
+
 <style>
-  :root{ --ink:#231a1d; --body:#5f5055; --muted:#9a8a90; --line:#e8dfe2; --bg:#fbf7f8; --card:#fff; --pink:#dd7ba3; }
+  :root{ --ink:#231a1d; --body:#5f5055; --muted:#8d7d83; --line:#e8dfe2; --bg:#fbf7f8; --card:#fff; --pink:#dd7ba3; --pink-deep:#c25f88; }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",system-ui,sans-serif;
     font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
   header{padding:56px 0 26px}
   h1{font-size:clamp(30px,5vw,50px);line-height:1.02;letter-spacing:-0.04em;margin:0 0 14px;font-weight:800}
   .lead{color:var(--body);max-width:56ch;margin:0;font-size:16.5px}
-  .micro{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  .micro{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:22px 0 10px}
-  .card{background:var(--card);border:1px solid var(--line);text-decoration:none;color:inherit;display:block;
+  .card{background:var(--card);border:1px solid var(--line);text-decoration:none;color:inherit;display:flex;flex-direction:column;
     transition:transform .2s, box-shadow .2s;overflow:hidden}
   .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(60,30,45,.10)}
+  .card:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
   .card .shot{aspect-ratio:16/10;overflow:hidden;background:#efe7ea;display:block}
   .card .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s}
   .card:hover .shot img{transform:scale(1.03)}
   .card .txt{padding:18px 20px 20px}
-  .card .tag{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);font-weight:700}
+  .card .tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-deep);font-weight:700}
   .card h2{font-size:19px;margin:6px 0 6px;letter-spacing:-0.02em;font-weight:800}
   .card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.5}
   .card .go{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
@@ -32,8 +57,39 @@
   .wide .shot{aspect-ratio:16/7}
   .note{margin:36px 0 0;padding:20px 22px;background:#fff;border:1px solid var(--line);color:var(--body);font-size:14px}
   .note b{color:var(--ink)}
+
+  /* як це працює */
+  .how{padding:56px 0 8px}
+  .how h2{font-size:clamp(22px,3vw,30px);letter-spacing:-0.03em;margin:0 0 8px;font-weight:800}
+  .how .sub{color:var(--body);margin:0 0 26px;max-width:60ch;font-size:15px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;list-style:none;padding:0;margin:0}
+  .steps li{background:#fff;border:1px solid var(--line);padding:20px 20px 22px}
+  .steps b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-deep);margin-bottom:10px}
+  .steps h3{margin:0 0 6px;font-size:16px;letter-spacing:-0.02em}
+  .steps p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.5}
+
+  /* контакти */
+  .contact{margin:48px 0 0;background:#231a1d;color:#f6ecef;padding:36px 32px;border-radius:2px}
+  .contact .micro{color:#c9a9b5;margin-bottom:14px}
+  .contact h2{font-size:clamp(22px,3.4vw,32px);line-height:1.1;letter-spacing:-0.03em;margin:0 0 10px;font-weight:800;max-width:22ch}
+  .contact p{margin:0 0 22px;color:#cbb7bf;max-width:52ch;font-size:14.5px}
+  .contact .row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .cbtn{display:inline-flex;align-items:center;gap:10px;background:var(--pink);color:#2a1520;text-decoration:none;
+    padding:14px 24px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:.2s}
+  .cbtn:hover{background:#f4a6c6}
+  .cbtn.ghost{background:none;color:#f6ecef;border:1px solid rgba(246,236,239,.32)}
+  .cbtn.ghost:hover{border-color:#f6ecef;background:rgba(246,236,239,.08)}
+  .cbtn:focus-visible{outline:2px solid #f4a6c6;outline-offset:3px}
+  .contact .hint{margin:18px 0 0;font-size:12px;color:#9a8189;letter-spacing:.04em}
+
   footer{padding:30px 0 60px;color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  @media (max-width:760px){ .grid{grid-template-columns:1fr} .wide .shot{aspect-ratio:16/10} header{padding-top:34px} }
+  @media (max-width:760px){
+    .grid{grid-template-columns:1fr}
+    .wide .shot{aspect-ratio:16/10}
+    header{padding-top:34px}
+    .steps{grid-template-columns:1fr}
+    .contact{padding:28px 22px}
+  }
 </style>
 </head>
 <body>
@@ -48,7 +104,7 @@
   <div class="grid">
 
     <a class="card wide" href="https://beauty-studio-blue-dusky.vercel.app" target="_blank" rel="noopener">
-      <span class="shot"><img src="salon.jpg" alt=""></span>
+      <span class="shot"><img src="salon.jpg" alt="Головна сторінка сайту «Beauty Studio Blue»: заголовок «Красота в деталях» і фото перукарки за роботою"></span>
       <div class="txt">
         <span class="tag">робочий сайт</span>
         <h2>Салон краси з онлайн-записом</h2>
@@ -57,8 +113,8 @@
       </div>
     </a>
 
-    <a class="card" href="yoda-cake/index.html">
-      <span class="shot"><img src="yoda-cake.jpg" alt=""></span>
+    <a class="card" href="yoda-cake/" target="_blank" rel="noopener">
+      <span class="shot"><img src="yoda-cake.jpg" alt="Макет кондитерської «yoda.cake»: темна тема, торт із вишнями і заголовок «Торти, які памʼятають»" loading="lazy"></span>
       <div class="txt">
         <span class="tag">кондитерська</span>
         <h2>Торти та бенто на замовлення</h2>
@@ -67,8 +123,8 @@
       </div>
     </a>
 
-    <a class="card" href="kub-market/index.html">
-      <span class="shot"><img src="kub-market.jpg" alt=""></span>
+    <a class="card" href="kub-market/" target="_blank" rel="noopener">
+      <span class="shot"><img src="kub-market.jpg" alt="Макет магазину «KUB MARKET»: каталог речей з фільтрами по розміру і статусом наявності" loading="lazy"></span>
       <div class="txt">
         <span class="tag">streetwear-перепродаж</span>
         <h2>Каталог речей з фільтрами</h2>
@@ -77,17 +133,50 @@
       </div>
     </a>
 
-    <a class="card wide" href="colorist/index.html">
-      <span class="shot"><img src="colorist.jpg" alt=""></span>
+    <a class="card wide" href="colorist/" target="_blank" rel="noopener">
+      <span class="shot"><img src="colorist.jpg" alt="Макет портфоліо колориста «Лєна Чаклує»: градієнтний заголовок і галерея робіт" loading="lazy"></span>
       <div class="txt">
         <span class="tag">колорист</span>
         <h2>Портфоліо майстра з фарбування</h2>
-        <p>Спектральна палітра, лента робіт, прайс і форма запису. Демонструє, як показати складні кольори, які губяться в стрічці Instagram.</p>
+        <p>Спектральна палітра, лента робіт, прайс і форма запису. Демонструє, як показати складні кольори, які губляться в стрічці Instagram.</p>
         <span class="go">дивитись макет</span>
       </div>
     </a>
 
   </div>
+
+  <section class="how">
+    <div class="micro">як це працює</div>
+    <h2>Від макета до запуску — три кроки</h2>
+    <p class="sub">Макети вище — це не картинки, а робочі сторінки: можна відкрити на телефоні, поклікати фільтри й корзину.</p>
+    <ol class="steps">
+      <li>
+        <b>01 — макет</b>
+        <h3>Роблю демо під ваш бізнес</h3>
+        <p>Беру ваші фото, послуги й ціни. Через кілька днів у вас є посилання, яке можна показати.</p>
+      </li>
+      <li>
+        <b>02 — правки</b>
+        <h3>Доводимо разом</h3>
+        <p>Тексти, кольори, порядок блоків. Правки в межах макета — без окремих рахунків.</p>
+      </li>
+      <li>
+        <b>03 — запуск</b>
+        <h3>Домен, запис, аналітика</h3>
+        <p>Підключаю домен, форму запису й повідомлення в Telegram. Далі — підтримка за потреби.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="contact" id="contacts">
+    <div class="micro">контакти</div>
+    <h2>Покажу, як це виглядатиме з вашими фото</h2>
+    <p>Напишіть, чим займаєтесь — і я скажу, який з форматів підійде краще і скільки це коштує. Відповідаю протягом дня.</p>
+    <div class="row">
+      <a class="cbtn" href="https://t.me/massiveboy" target="_blank" rel="noopener">Написати в Telegram</a>
+    </div>
+    <p class="hint">@massiveboy · Київ · працюю з бізнесом по Україні та за кордоном</p>
+  </section>
 
   <div class="note">
     <b>Про фото:</b> у макетах використані зображення з відкритих профілів Instagram — це приклади, а не клієнтські проєкти.
@@ -100,5 +189,22 @@
   </footer>
 
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Приклади робіт — сайти для б'юті-бізнесу та майстрів",
+  "url": "https://xal1fat.github.io/demo/",
+  "inLanguage": "uk",
+  "about": { "@type": "Thing", "name": "Розробка сайтів для малого бізнесу" },
+  "hasPart": [
+    { "@type": "WebPage", "name": "Салон краси з онлайн-записом", "url": "https://beauty-studio-blue-dusky.vercel.app" },
+    { "@type": "WebPage", "name": "Кондитерська yoda.cake", "url": "https://xal1fat.github.io/demo/yoda-cake/" },
+    { "@type": "WebPage", "name": "KUB MARKET — каталог речей", "url": "https://xal1fat.github.io/demo/kub-market/" },
+    { "@type": "WebPage", "name": "Портфоліо колориста", "url": "https://xal1fat.github.io/demo/colorist/" }
+  ]
+}
+</script>
 </body>
 </html>
