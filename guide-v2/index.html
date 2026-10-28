@@ -6,6 +6,7 @@
 <title>Технологічні карти тортів — PDF-посібник · cakes with benefits</title>
 <meta name="description" content="12 технологічних карт: бісквіти, креми, шоколадний декор. Точні грами, вихід на форму, собівартість. PDF, 48 сторінок.">
 <meta name="theme-color" content="#f2f1ee">
+<script>document.documentElement.className+=" js";</script>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0a0b'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23d4ff3f'/%3E%3C/svg%3E">
 <style>
@@ -141,9 +142,10 @@
 
   /* bento */
   .bento{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+  @media(max-width:899px){.tile{min-height:0}}
   @media(min-width:900px){.bento{grid-template-columns:repeat(4,1fr);gap:14px}}
   .tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;
-    display:flex;flex-direction:column;justify-content:space-between;min-height:170px;
+    display:flex;flex-direction:column;gap:14px;justify-content:space-between;min-height:170px;
     transition:transform var(--t-normal) var(--ease),box-shadow var(--t-normal) var(--ease)}
   .tile:hover{transform:translateY(-3px);box-shadow:0 22px 40px -26px rgba(10,10,11,.4)}
   .tile .n{font-size:11px;letter-spacing:.16em;color:var(--muted);font-weight:600}
@@ -269,8 +271,8 @@
   .receipt b{font-weight:600;text-align:right}
 
   /* reveal */
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
-  .reveal.in{opacity:1;transform:none}
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+  .js .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){
     .reveal{opacity:1;transform:none}
     *{transition-duration:.01ms!important;animation-duration:.01ms!important}
