@@ -5,219 +5,255 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Технологічні карти тортів — PDF-посібник · cakes with benefits</title>
 <meta name="description" content="12 технологічних карт: бісквіти, креми, шоколадний декор. Точні грамівки, вихід і собівартість. PDF, одразу на пошту після оплати.">
-<meta name="theme-color" content="#FAF4EC">
+<meta name="theme-color" content="#0E0C0B">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="product">
 <meta property="og:title" content="Технологічні карти тортів — PDF-посібник">
 <meta property="og:description" content="12 карт з точними грамівками, виходом і собівартістю. PDF, одразу на пошту.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#FAF4EC; --paper:#FFFDFA; --ink:#2A1A13; --body:#5C4A40; --muted:#8C7A6E;
-    --line:#E8DCD0; --pink:#E8447F; --pink-soft:#FBE3EC; --caramel:#B9783F; --choco:#170F0C;
-    --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope","Segoe UI",system-ui,sans-serif;
+    --bg:#0E0C0B; --bg2:#151110; --card:#1A1615; --ink:#F4EFE8; --body:#B8AEA5; --muted:#857C75;
+    --line:rgba(244,239,232,.12); --line2:rgba(244,239,232,.06);
+    --pink:#FF4D8D; --pink-soft:rgba(255,77,141,.14);
+    --sans:"Onest","Segoe UI",system-ui,sans-serif; --disp:"Unbounded","Onest",sans-serif;
     --r:18px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.05;letter-spacing:-.01em}
+  body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased}
+  ::selection{background:var(--pink);color:#160A10}
+  h1,h2,h3{margin:0;font-weight:800;line-height:.98;letter-spacing:-.035em}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
-  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
-  .lab{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--caramel)}
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;
-    border:0;border-radius:99px;padding:17px 30px;font-family:var(--sans);font-size:13px;font-weight:700;
-    letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
-  .btn:hover{background:var(--pink);transform:translateY(-1px);box-shadow:0 12px 28px rgba(232,68,127,.25)}
-  .btn.pink{background:var(--pink)}
-  .btn.pink:hover{background:#d3316c}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  .lab{font-family:var(--disp);font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:var(--pink)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--pink);color:#180A10;
+    border:0;border-radius:999px;padding:18px 30px;font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.02em;
+    cursor:pointer;transition:transform .2s, box-shadow .2s, background .2s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(255,77,141,.28)}
+  .btn.dark{background:var(--ink);color:#12100F}
   .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
-  .btn.ghost:hover{background:var(--ink);color:#fff;box-shadow:none}
+  .btn.ghost:hover{border-color:var(--ink);box-shadow:none;transform:none}
+  .btn svg{flex:0 0 auto}
 
   /* header */
-  header{position:sticky;top:0;z-index:40;background:rgba(250,244,236,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  .hrow{display:flex;align-items:center;gap:18px;padding:14px 0}
-  .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:20px}
-  .brand img{width:34px;height:34px;border-radius:50%;object-fit:cover}
-  .price-chip{margin-left:auto;font-size:13px;color:var(--muted)}
-  .price-chip b{color:var(--ink);font-size:15px}
-  header .btn{padding:12px 22px;font-size:11.5px}
+  header{position:sticky;top:0;z-index:50;background:rgba(14,12,11,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line2)}
+  .hrow{display:flex;align-items:center;gap:16px;padding:13px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;letter-spacing:-.02em}
+  .brand img{width:32px;height:32px;border-radius:50%}
+  header .meta{margin-left:auto;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:10px}
+  header .meta b{color:var(--ink);font-weight:600}
+  header .btn{padding:12px 20px;font-size:12px}
 
   /* hero */
-  .hero{padding:64px 0 56px;position:relative;overflow:hidden}
-  .hero::after{content:"";position:absolute;right:-10%;top:-20%;width:55%;height:130%;border-radius:50%;
-    background:radial-gradient(closest-side,rgba(232,68,127,.07),transparent 70%);pointer-events:none}
-  .hgrid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;position:relative;z-index:1}
-  .kicker{display:inline-flex;align-items:center;gap:9px;background:var(--pink-soft);color:#B32A5B;border-radius:99px;
-    padding:7px 14px;font-size:11.5px;font-weight:600;letter-spacing:.04em}
-  .kicker i{width:6px;height:6px;border-radius:50%;background:var(--pink);font-style:normal}
-  h1{font-size:clamp(38px,5.1vw,68px);margin:20px 0 18px}
-  h1 em{font-style:italic;color:var(--pink)}
-  .lead{color:var(--body);font-size:17px;max-width:44ch;margin:0 0 24px}
-  .bullets{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:9px}
-  .bullets li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:14.5px;color:var(--body)}
-  .bullets li b{color:var(--ink);font-weight:600}
-  .bullets svg{color:var(--pink)}
+  .hero{padding:70px 0 44px;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;right:-15%;top:-30%;width:60%;height:120%;pointer-events:none;
+    background:radial-gradient(closest-side,rgba(255,77,141,.13),transparent 70%)}
+  .hgrid{display:grid;grid-template-columns:1.12fr .88fr;gap:56px;align-items:center;position:relative}
+  .kicker{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:999px;padding:8px 15px;
+    font-size:11.5px;color:var(--body);letter-spacing:.02em}
+  .kicker i{width:6px;height:6px;border-radius:50%;background:var(--pink);box-shadow:0 0 12px var(--pink)}
+  h1{font-size:clamp(38px,5.2vw,76px);margin:22px 0 20px}
+  h1 em{font-style:normal;color:var(--pink)}
+  .lead{color:var(--body);font-size:17px;max-width:46ch;margin:0 0 26px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+  .chip{font-size:11.5px;color:var(--body);border:1px solid var(--line);border-radius:999px;padding:7px 13px}
+  .chip b{color:var(--ink);font-weight:600}
   .hbuy{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-  .hprice{font-family:var(--serif);font-size:38px;line-height:1}
-  .hprice span{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-  .hnote{font-size:12px;color:var(--muted);margin-top:14px}
+  .hbuy .note{font-size:11.5px;color:var(--muted);max-width:190px;line-height:1.45}
 
   /* cover */
   .cover-wrap{position:relative;display:flex;justify-content:center}
-  .cover{position:relative;width:320px;aspect-ratio:3/4;border-radius:6px;overflow:hidden;background:var(--choco);
-    box-shadow:0 36px 70px rgba(50,25,15,.35);transform:rotate(-2deg)}
-  .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92}
-  .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,10,6,.15),rgba(20,10,6,.82))}
-  .cover-txt{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:space-between;padding:26px}
-  .cover-top{display:flex;justify-content:space-between;color:rgba(255,255,255,.75);font-size:9px;letter-spacing:.2em;text-transform:uppercase}
-  .cover h3{color:#fff;font-size:34px;line-height:1.02}
-  .cover small{display:block;color:rgba(255,255,255,.7);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px}
-  .cover .pages{color:rgba(255,255,255,.55);font-size:10.5px}
-  .badge-float{position:absolute;right:6px;bottom:36px;background:var(--pink);color:#fff;border-radius:99px;
-    padding:11px 16px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-    box-shadow:0 10px 24px rgba(232,68,127,.35);transform:rotate(-2deg)}
+  .cover{position:relative;width:330px;aspect-ratio:3/4;border-radius:22px;overflow:hidden;background:#0A0706;
+    box-shadow:0 40px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06)}
+  .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.95;transform:scale(1.02)}
+  .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,7,6,.05) 20%,rgba(10,7,6,.9))}
+  .cover-txt{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:space-between;padding:24px}
+  .cover-top{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+  .cover h3{font-size:29px;letter-spacing:-.03em;line-height:1.02;color:#fff}
+  .cover .csub{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:10px}
+  .cover .cpages{font-size:11px;color:rgba(255,255,255,.5);margin-top:12px}
+  .sticker{position:absolute;right:-6px;bottom:26px;background:var(--pink);color:#170A10;border-radius:999px;padding:12px 18px;
+    font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;transform:rotate(-6deg);
+    box-shadow:0 14px 30px rgba(255,77,141,.35)}
+
+  /* ticker */
+  .ticker{border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);overflow:hidden;background:#0A0807}
+  .ticker div{display:flex;gap:34px;white-space:nowrap;padding:14px 0;font-family:var(--disp);font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--muted);animation:marquee 26s linear infinite}
+  .ticker span{display:flex;align-items:center;gap:34px}
+  .ticker b{color:var(--pink);font-weight:400}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
   /* sections */
-  section{padding:64px 0}
-  .shead{max-width:620px;margin-bottom:36px}
-  .shead h2{font-size:clamp(28px,3.6vw,46px);margin:12px 0 10px}
-  .shead p{margin:0;color:var(--body);font-size:15px}
+  section{padding:74px 0}
+  .shead{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:40px}
+  .shead h2{font-size:clamp(30px,4.2vw,54px);margin-top:14px;max-width:16ch}
+  .shead p{margin:0;color:var(--body);font-size:14.5px;max-width:36ch}
 
-  /* for whom */
-  .who{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .who article{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px}
-  .who .ic{width:38px;height:38px;border-radius:50%;background:var(--pink-soft);display:grid;place-items:center;color:var(--pink);margin-bottom:16px}
-  .who h3{font-size:22px;margin-bottom:8px}
-  .who p{margin:0;color:var(--body);font-size:14px}
+  /* who */
+  .who{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .who article{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:26px;transition:border-color .25s,transform .25s}
+  .who article:hover{border-color:rgba(255,77,141,.4);transform:translateY(-3px)}
+  .who .num{font-family:var(--disp);font-size:11px;color:var(--pink);letter-spacing:.1em}
+  .who h3{font-size:21px;margin:34px 0 8px;letter-spacing:-.02em}
+  .who p{margin:0;font-size:13.5px;color:var(--body)}
 
   /* inside */
-  .inside{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
-  .chapter{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:26px 26px 26px 0;border-bottom:1px solid var(--line)}
-  .chapter:nth-child(odd){border-right:1px solid var(--line);padding-right:40px}
-  .chapter:nth-child(even){padding-left:40px}
-  .chapter .n{font-family:var(--serif);font-size:30px;color:var(--caramel);line-height:1}
-  .chapter h3{font-size:21px;margin-bottom:6px}
-  .chapter p{margin:0;color:var(--body);font-size:13.5px}
+  .inside{border-top:1px solid var(--line)}
+  .row{display:grid;grid-template-columns:70px 1fr 40px;gap:24px;align-items:start;padding:26px 0;border-bottom:1px solid var(--line2);
+    transition:background .25s;position:relative}
+  .row:hover{background:rgba(255,255,255,.02)}
+  .row .n{font-family:var(--disp);font-size:13px;color:var(--muted)}
+  .row h3{font-size:clamp(20px,2.2vw,27px);letter-spacing:-.02em}
+  .row p{margin:7px 0 0;color:var(--body);font-size:14px;max-width:58ch}
+  .row .arw{justify-self:end;color:var(--muted);transition:transform .25s,color .25s;padding-top:4px}
+  .row:hover .arw{color:var(--pink);transform:translateX(4px)}
 
-  /* pages preview */
-  .pages-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .page{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px;box-shadow:0 18px 40px rgba(60,30,18,.08);
-    font-size:10.5px;color:var(--body)}
-  .page .ph{display:flex;justify-content:space-between;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-  .page h4{font-family:var(--serif);font-size:19px;color:var(--ink);margin:0 0 4px;font-weight:600}
-  .page .sub{font-size:9.5px;color:var(--muted);margin-bottom:14px}
+  /* pages */
+  .pages-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-top:6px}
+  .page{background:#F6F1EA;color:#241713;border-radius:14px;padding:22px;box-shadow:0 24px 50px rgba(0,0,0,.45);
+    transition:transform .35s}
+  .page:nth-child(1){transform:rotate(-1.4deg)}
+  .page:nth-child(2){transform:translateY(-10px)}
+  .page:nth-child(3){transform:rotate(1.4deg)}
+  .page:hover{transform:rotate(0) translateY(-4px)}
+  .page .ph{display:flex;justify-content:space-between;font-family:var(--disp);font-size:8px;letter-spacing:.16em;
+    text-transform:uppercase;color:#9C8B80;margin-bottom:16px}
+  .page h4{font-size:19px;letter-spacing:-.02em;margin:0 0 4px;font-weight:700}
+  .page .sub{font-size:9.5px;color:#8C7A6E;margin-bottom:14px}
   .page table{width:100%;border-collapse:collapse;font-size:9.5px}
-  .page th{text-align:left;font-weight:600;color:var(--muted);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid var(--line)}
-  .page td{padding:5px 0;border-bottom:1px solid #F1E8DF}
+  .page th{text-align:left;font-size:7.5px;letter-spacing:.1em;text-transform:uppercase;color:#9C8B80;font-weight:600;
+    padding-bottom:6px;border-bottom:1px solid #E4D8CC}
+  .page td{padding:5px 0;border-bottom:1px solid #EDE3D9;color:#3A2A23}
   .page tr:last-child td{border-bottom:0}
   .page td:last-child,.page th:last-child{text-align:right}
-  .page .total{display:flex;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-weight:600;color:var(--ink);font-size:10px}
-  .page .note{font-size:8.5px;color:var(--muted);margin-top:10px;line-height:1.5}
-  .pages-note{text-align:center;font-size:12.5px;color:var(--muted);margin-top:18px}
+  .page .total{display:flex;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid #E4D8CC;
+    font-weight:700;color:#1D120E;font-size:10px}
+  .page .note{font-size:8.5px;color:#9C8B80;margin-top:10px;line-height:1.5}
+  .pages-note{font-size:12px;color:var(--muted);margin-top:24px;text-align:center}
 
   /* author */
-  .author{background:var(--choco);color:#F7EFE6;border-radius:26px;padding:46px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
-  .author .lab{color:#E8A9C2}
-  .author h2{font-size:clamp(26px,3.2vw,40px);margin:12px 0 14px;color:#fff}
-  .author p{color:rgba(247,239,230,.72);font-size:14.5px;margin:0 0 18px;max-width:46ch}
-  .astats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-top:1px solid rgba(255,255,255,.14);padding-top:20px}
-  .astats b{display:block;font-family:var(--serif);font-size:32px;color:#fff;line-height:1}
-  .astats span{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,239,230,.5)}
-  .author-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .author-photos img{border-radius:12px;width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
-  .author-photos img:first-child{transform:translateY(16px)}
+  .author{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center;
+    background:linear-gradient(140deg,#1C1513,#120E0D);border:1px solid var(--line2);border-radius:26px;padding:44px;position:relative;overflow:hidden}
+  .author::after{content:"";position:absolute;left:-10%;bottom:-40%;width:60%;height:90%;
+    background:radial-gradient(closest-side,rgba(255,77,141,.12),transparent);pointer-events:none}
+  .author h2{font-size:clamp(28px,3.4vw,44px);margin:14px 0 14px}
+  .author p{color:var(--body);font-size:14.5px;margin:0 0 24px;max-width:44ch}
+  .astats{display:flex;gap:34px;border-top:1px solid var(--line);padding-top:20px}
+  .astats b{display:block;font-family:var(--disp);font-size:26px;line-height:1;color:#fff}
+  .astats span{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  .aphotos{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:1}
+  .aphotos img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
+  .aphotos img:nth-child(2){transform:translateY(18px)}
 
   /* reviews */
-  .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .rev{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px}
-  .rev p{font-family:var(--serif);font-size:20px;line-height:1.35;margin:0 0 16px;color:var(--ink)}
-  .rev .who-s{font-size:12px;color:var(--muted)}
-  .rev .who-s b{color:var(--ink);font-weight:600}
-  .revs-note{font-size:11.5px;color:var(--muted);margin-top:14px}
+  .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .rev{background:var(--card);border:1px solid var(--line2);border-radius:var(--r);padding:26px}
+  .rev .q{font-family:var(--disp);font-size:26px;color:var(--pink);line-height:1;margin-bottom:16px}
+  .rev p{font-size:15px;line-height:1.55;margin:0 0 18px;color:var(--ink)}
+  .rev .who-s{font-size:11.5px;color:var(--muted)}
+  .rev .who-s b{color:var(--body);font-weight:600}
+  .revs-note{font-size:11.5px;color:var(--muted);margin-top:16px}
 
-  /* price */
-  .buy{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:44px;display:grid;grid-template-columns:1fr .9fr;gap:44px;align-items:center}
-  .buy h2{font-size:clamp(26px,3.4vw,42px);margin:10px 0 10px}
-  .buy p{color:var(--body);font-size:14.5px;margin:0 0 18px}
-  .steps{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  /* buy */
+  .buy{background:var(--card);border:1px solid rgba(255,77,141,.22);border-radius:26px;padding:46px;
+    display:grid;grid-template-columns:1fr .85fr;gap:46px;align-items:center;position:relative;overflow:hidden}
+  .buy::before{content:"";position:absolute;right:-120px;top:-140px;width:380px;height:380px;border-radius:50%;
+    background:radial-gradient(closest-side,rgba(255,77,141,.18),transparent);pointer-events:none}
+  .buy h2{font-size:clamp(28px,3.6vw,48px);margin:14px 0 12px}
+  .buy p{color:var(--body);font-size:14.5px;margin:0 0 22px}
+  .steps{list-style:none;padding:0;margin:0;display:grid;gap:14px}
   .steps li{display:grid;grid-template-columns:26px 1fr;gap:12px;font-size:13.5px;color:var(--body)}
-  .steps b{width:26px;height:26px;border-radius:50%;background:var(--pink-soft);color:#B32A5B;display:grid;place-items:center;font-size:11px}
-  .buybox{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center}
+  .steps b{width:26px;height:26px;border-radius:50%;background:var(--pink-soft);color:var(--pink);display:grid;place-items:center;
+    font-size:11px;font-weight:700}
+  .buybox{background:#0B0908;border:1px solid var(--line);border-radius:18px;padding:28px;text-align:center;position:relative;z-index:1}
   .buybox .old{font-size:13px;color:var(--muted);text-decoration:line-through}
-  .buybox .now{font-family:var(--serif);font-size:56px;line-height:1;margin:6px 0 4px}
-  .buybox .now small{font-family:var(--sans);font-size:14px;color:var(--muted);letter-spacing:.06em}
-  .buybox .btn{width:100%;margin-top:16px}
-  .buybox .safe{font-size:11px;color:var(--muted);margin-top:12px}
+  .buybox .now{font-family:var(--disp);font-size:52px;line-height:1;margin:8px 0 6px}
+  .buybox .now small{font-family:var(--sans);font-size:16px;color:var(--muted);font-weight:500}
+  .buybox .btn{width:100%;margin-top:18px}
+  .buybox .safe{font-size:10.5px;color:var(--muted);margin-top:12px}
 
   /* faq */
-  details{border-bottom:1px solid var(--line);padding:18px 0}
-  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-family:var(--serif);font-size:22px;line-height:1.3}
+  details{border-bottom:1px solid var(--line2);padding:20px 0}
+  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:18px;font-size:19px;font-weight:600;
+    letter-spacing:-.02em;transition:color .2s}
+  summary:hover{color:var(--pink)}
   summary::-webkit-details-marker{display:none}
-  summary::after{content:"+";font-family:var(--sans);font-size:20px;color:var(--pink);font-weight:400}
+  summary::after{content:"+";font-weight:300;color:var(--pink);font-size:22px;line-height:1}
   details[open] summary::after{content:"–"}
-  details p{margin:10px 0 0;color:var(--body);font-size:14px;max-width:66ch}
+  details p{margin:12px 0 2px;color:var(--body);font-size:14px;max-width:66ch}
 
-  footer{padding:46px 0 36px;border-top:1px solid var(--line);margin-top:20px}
+  footer{padding:50px 0 40px;border-top:1px solid var(--line2)}
   .fg{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
-  .fg p{margin:0;color:var(--muted);font-size:13px;max-width:44ch}
-  .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:26px;padding-top:16px;border-top:1px solid var(--line)}
+  .fg p{margin:0;color:var(--muted);font-size:12.5px;max-width:46ch}
+  .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:10.5px;color:var(--muted);
+    margin-top:28px;padding-top:16px;border-top:1px solid var(--line2)}
 
-  /* sticky mobile */
   .sticky{display:none}
 
-  /* modal */
-  .overlay{position:fixed;inset:0;background:rgba(23,15,12,.6);backdrop-filter:blur(6px);z-index:80;display:none;align-items:center;justify-content:center;padding:20px}
+  .overlay{position:fixed;inset:0;background:rgba(8,6,5,.7);backdrop-filter:blur(8px);z-index:80;display:none;
+    align-items:center;justify-content:center;padding:20px}
   .overlay.on{display:flex}
-  .modal{background:var(--paper);border-radius:22px;max-width:440px;width:100%;padding:30px;position:relative;box-shadow:0 40px 90px rgba(30,15,10,.4)}
-  .modal h3{font-size:30px;margin:0 0 6px}
-  .modal p{color:var(--body);font-size:13.5px;margin:0 0 18px}
-  .modal label{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
-  .modal input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--cream);
-    font:inherit;font-size:14px;color:var(--ink);margin-bottom:14px}
+  .modal{background:#171312;border:1px solid var(--line);border-radius:22px;max-width:430px;width:100%;padding:30px;
+    position:relative;box-shadow:0 40px 90px rgba(0,0,0,.6)}
+  .modal h3{font-size:28px;margin:0 0 8px}
+  .modal p{color:var(--body);font-size:13px;margin:0 0 20px}
+  .modal label{display:block;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 7px}
+  .modal input{width:100%;padding:14px;border:1px solid var(--line);border-radius:12px;background:#0C0A09;color:var(--ink);
+    font:inherit;font-size:14px;margin-bottom:14px}
   .modal input:focus{outline:none;border-color:var(--pink)}
   .modal .btn{width:100%}
-  .modal .close{position:absolute;right:14px;top:12px;background:none;border:0;font-size:24px;line-height:1;color:var(--muted);cursor:pointer}
-  .modal .demo-note{font-size:10.5px;color:var(--muted);margin:14px 0 0;text-align:center}
-  .success{text-align:center;padding:10px 0}
-  .success .ok{width:58px;height:58px;border-radius:50%;background:#E7F5EC;color:#1F7A45;display:grid;place-items:center;margin:0 auto 16px}
+  .modal .close{position:absolute;right:14px;top:12px;background:none;border:0;color:var(--muted);font-size:24px;cursor:pointer}
+  .demo-note{font-size:10px;color:var(--muted);margin:14px 0 0;text-align:center}
+  .success{text-align:center;padding:6px 0}
+  .success .ok{width:58px;height:58px;border-radius:50%;background:rgba(46,190,110,.14);color:#41D98A;display:grid;
+    place-items:center;margin:0 auto 16px}
   .success h3{margin-bottom:8px}
+  .success p{color:var(--body);font-size:13.5px}
+
+  .reveal{transform:translateY(14px);transition:transform .7s ease}
+  .reveal.in{transform:none}
 
   @media (max-width:900px){
     .wrap{padding:0 18px}
-    .hgrid{grid-template-columns:1fr;gap:34px}
-    .cover{width:280px}
-    .hero{padding:40px 0 34px}
+    .hgrid{grid-template-columns:1fr;gap:38px}
+    .hero{padding:44px 0 30px}
+    .cover{width:290px}
+    header .meta{display:none}
+    header .btn{display:none}
     .who{grid-template-columns:1fr}
-    .inside{grid-template-columns:1fr}
-    .chapter,.chapter:nth-child(odd),.chapter:nth-child(even){padding:22px 0;border-right:0}
-    .pages-row{grid-template-columns:1fr}
-    .author{grid-template-columns:1fr;padding:28px;gap:26px}
+    .shead{flex-direction:column;align-items:flex-start;gap:10px}
+    .row{grid-template-columns:40px 1fr 24px;gap:14px}
+    .pages-row{grid-template-columns:1fr;gap:24px}
+    .page:nth-child(1),.page:nth-child(3){transform:none}
+    .page:nth-child(2){transform:none}
+    .author{grid-template-columns:1fr;padding:26px;gap:26px}
     .revs{grid-template-columns:1fr}
     .buy{grid-template-columns:1fr;padding:26px;gap:26px}
-    section{padding:44px 0}
-    .price-chip{display:none}
-    header .btn{display:none}
+    section{padding:48px 0}
+    .astats{gap:22px}
     .sticky{display:flex;align-items:center;gap:12px;position:fixed;left:0;right:0;bottom:0;z-index:60;
-      padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(250,244,236,.96);
-      backdrop-filter:blur(12px);border-top:1px solid var(--line)}
-    .sticky .p{font-family:var(--serif);font-size:26px;line-height:1}
-    .sticky .btn{flex:1;padding:14px 16px;font-size:11.5px}
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(14,12,11,.96);
+      backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+    .sticky .p{font-family:var(--disp);font-size:22px}
+    .sticky .btn{flex:1;padding:14px 16px;font-size:12px}
     body{padding-bottom:72px}
   }
-  @media print{ .sticky,header,.overlay{display:none} body{background:#fff} }
+  @media print{.sticky,header,.overlay,.ticker{display:none}body{background:#fff;color:#111}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap hrow">
-    <div class="brand"><img src="img/logo.jpg" alt="cakes with benefits"><span>cakes with benefits</span></div>
-    <div class="price-chip">PDF-посібник · <b>499 ₴</b></div>
-    <button class="btn pink" onclick="openBuy()">Купити</button>
+    <div class="brand"><img src="img/logo.jpg" alt=""> cakes with benefits</div>
+    <div class="meta">PDF · 48 сторінок <b>499 ₴</b></div>
+    <button class="btn" onclick="openBuy()">Купити</button>
   </div>
 </header>
 
@@ -225,68 +261,70 @@
   <div class="hero">
     <div class="hgrid">
       <div>
-        <span class="kicker"><i></i>Електронний посібник · 48 сторінок</span>
+        <span class="kicker"><i></i>Електронний посібник · 2026</span>
         <h1>Торт, який виходить <em>з&nbsp;першого&nbsp;разу</em></h1>
         <p class="lead">12 технологічних карт: бісквіти, креми й шоколадний декор. З точними грамівками, виходом на форму та собівартістю — щоб не перераховувати навпомацки.</p>
-        <ul class="bullets">
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            <span><b>Точні грамівки</b> — не «на око», а таблиця з відсотками</span>
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            <span><b>Вихід і собівартість</b> — рахуєте ціну, а не вгадуєте</span>
-          </li>
-          <li>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            <span><b>PDF на пошту</b> — одразу після оплати, без очікування</span>
-          </li>
-        </ul>
-        <div class="hbuy">
-          <button class="btn pink" onclick="openBuy()">Купити за 499 ₴</button>
-          <div class="hprice">499 ₴<span>за весь посібник</span></div>
+        <div class="chips">
+          <span class="chip"><b>12</b> карт</span>
+          <span class="chip"><b>48</b> сторінок</span>
+          <span class="chip">PDF · <b>назавжди</b></span>
+          <span class="chip">на пошту <b>за хвилину</b></span>
         </div>
-        <div class="hnote">Оплата карткою · файл приходить на пошту за хвилину</div>
+        <div class="hbuy">
+          <button class="btn" onclick="openBuy()">Купити за 499 ₴
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <div class="note">Оплата карткою. Файл приходить на пошту одразу після оплати.</div>
+        </div>
       </div>
 
       <div class="cover-wrap">
         <div class="cover">
-          <img src="img/cake-05.jpg" alt="Торт ручної роботи — приклад з посібника">
+          <img src="img/cake-05.jpg" alt="Шоколадний торт з трояндами">
           <div class="cover-txt">
             <div class="cover-top"><span>cakes with benefits</span><span>PDF</span></div>
             <div>
               <h3>Технологічні карти тортів</h3>
-              <small>12 карт · бісквіти · креми · декор</small>
+              <div class="csub">бісквіти · креми · декор</div>
+              <div class="cpages">48 сторінок · українською</div>
             </div>
-            <div class="pages">48 сторінок · українською</div>
           </div>
         </div>
-        <div class="badge-float">Одразу на пошту</div>
+        <div class="sticker">Одразу на пошту</div>
       </div>
     </div>
   </div>
 </div>
 
+<div class="ticker">
+  <div>
+    <span>12 технологічних карт <b>✳</b> 48 сторінок <b>✳</b> точні грамівки <b>✳</b> вихід і собівартість <b>✳</b> шоколадний декор <b>✳</b></span>
+    <span>12 технологічних карт <b>✳</b> 48 сторінок <b>✳</b> точні грамівки <b>✳</b> вихід і собівартість <b>✳</b> шоколадний декор <b>✳</b></span>
+  </div>
+</div>
+
 <div class="wrap">
   <section id="who">
-    <div class="shead">
-      <div class="lab">01 — для кого</div>
-      <h2>Кому це справді потрібно</h2>
+    <div class="shead reveal">
+      <div>
+        <div class="lab">01 — для кого</div>
+        <h2>Кому це справді потрібно</h2>
+      </div>
       <p>Не «всім, хто любить солодке», а тим, хто вже пече — або збирається продавати.</p>
     </div>
     <div class="who">
-      <article>
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/></svg></div>
+      <article class="reveal">
+        <div class="num">01</div>
         <h3>Тільки починаєте</h3>
-        <p>Щоб перший торт не став останнім. Базові карти зрозумілі навіть без досвіду роботи з вагами й формами.</p>
+        <p>Щоб перший торт не став останнім. Базові карти зрозумілі без досвіду з вагами й формами.</p>
       </article>
-      <article>
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M6 16V8l6-4 6 4v8"/></svg></div>
+      <article class="reveal">
+        <div class="num">02</div>
         <h3>Печете на замовлення</h3>
         <p>Коли треба порахувати собівартість і назвати ціну, а не працювати «в нуль» на кожному торті.</p>
       </article>
-      <article>
-        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 7v10l8 5 8-5V7z"/></svg></div>
+      <article class="reveal">
+        <div class="num">03</div>
         <h3>Хочете складний декор</h3>
         <p>Шоколад, фігури, квіти — щоб конструкція тримала форму й не падала на здачі.</p>
       </article>
@@ -296,32 +334,36 @@
 
 <div class="wrap">
   <section id="inside">
-    <div class="shead">
-      <div class="lab">02 — що всередині</div>
-      <h2>Шість розділів, 12 карт</h2>
-      <p>Кожна карта — це таблиця: інгредієнт, вага, відсоток, вихід і собівартість на один кілограм.</p>
+    <div class="shead reveal">
+      <div>
+        <div class="lab">02 — що всередині</div>
+        <h2>Шість розділів, 12 карт</h2>
+      </div>
+      <p>Кожна карта — таблиця: інгредієнт, вага, відсоток, вихід і собівартість на кілограм.</p>
     </div>
     <div class="inside">
-      <div class="chapter"><div class="n">01</div><div><h3>Бісквіти</h3><p>Ванільний, шоколадний, червоний оксамит і горіховий. Пропорції, які не осідають.</p></div></div>
-      <div class="chapter"><div class="n">02</div><div><h3>Креми, що тримають</h3><p>Стабільні начинки, які не течуть під вагою декору й не рвуть зріз.</p></div></div>
-      <div class="chapter"><div class="n">03</div><div><h3>Шоколадний декор</h3><p>Темперування, фігури, квіти й написи. Що робити, коли шоколад «сіріє».</p></div></div>
-      <div class="chapter"><div class="n">04</div><div><h3>Збірка та вага</h3><p>Як розрахувати каркас, щоб торт не просів під фігурою.</p></div></div>
-      <div class="chapter"><div class="n">05</div><div><h3>Собівартість</h3><p>Формула перерахунку на будь-яку форму й на будь-який вихід.</p></div></div>
-      <div class="chapter"><div class="n">06</div><div><h3>Чек-листи</h3><p>Що купити, що зробити за день до і що — у день здачі.</p></div></div>
+      <div class="row reveal"><div class="n">01</div><div><h3>Бісквіти</h3><p>Ванільний, шоколадний, червоний оксамит і горіховий. Пропорції, які не осідають.</p></div><div class="arw">↗</div></div>
+      <div class="row reveal"><div class="n">02</div><div><h3>Креми, що тримають</h3><p>Стабільні начинки, які не течуть під вагою декору й не рвуть зріз.</p></div><div class="arw">↗</div></div>
+      <div class="row reveal"><div class="n">03</div><div><h3>Шоколадний декор</h3><p>Темперування, фігури, квіти й написи. Що робити, коли шоколад «сіріє».</p></div><div class="arw">↗</div></div>
+      <div class="row reveal"><div class="n">04</div><div><h3>Збірка та вага</h3><p>Як розрахувати каркас, щоб торт не просів під фігурою.</p></div><div class="arw">↗</div></div>
+      <div class="row reveal"><div class="n">05</div><div><h3>Собівартість</h3><p>Формула перерахунку на будь-яку форму й на будь-який вихід.</p></div><div class="arw">↗</div></div>
+      <div class="row reveal"><div class="n">06</div><div><h3>Чек-листи</h3><p>Що купити, що зробити за день до і що — у день здачі.</p></div><div class="arw">↗</div></div>
     </div>
   </section>
 </div>
 
 <div class="wrap">
   <section id="pages">
-    <div class="shead">
-      <div class="lab">03 — як виглядає</div>
-      <h2>Сторінки зсередини</h2>
+    <div class="shead reveal">
+      <div>
+        <div class="lab">03 — як виглядає</div>
+        <h2>Сторінки зсередини</h2>
+      </div>
       <p>Три типи сторінок: карта бісквіта, карта крему й збірка торта.</p>
     </div>
     <div class="pages-row">
-      <div class="page">
-        <div class="ph"><span>карта 01</span><span>с. 6</span></div>
+      <div class="page reveal">
+        <div class="ph"><span>карта 01</span><span>с. 06</span></div>
         <h4>Ванільний бісквіт</h4>
         <div class="sub">Форма 20 см · 3 яруси · вихід 1,6 кг</div>
         <table>
@@ -332,9 +374,9 @@
           <tr><td>Олія</td><td>90</td><td>10</td></tr>
         </table>
         <div class="total"><span>Разом</span><span>900 г</span></div>
-        <div class="note">Вихід після випікання — 780 г. Час: 32 хв при 170 °C.</div>
+        <div class="note">Вихід після випікання — 780 г. 32 хв при 170 °C.</div>
       </div>
-      <div class="page">
+      <div class="page reveal">
         <div class="ph"><span>карта 04</span><span>с. 18</span></div>
         <h4>Крем на білому шоколаді</h4>
         <div class="sub">Стабільний під декор · вихід 1,2 кг</div>
@@ -346,9 +388,9 @@
           <tr><td>Желатин</td><td>60</td><td>5</td></tr>
         </table>
         <div class="total"><span>Разом</span><span>1 200 г</span></div>
-        <div class="note">Тримає форму 6 годин при +22 °C. Не тече на зрізі.</div>
+        <div class="note">Тримає форму 6 годин при +22 °C.</div>
       </div>
-      <div class="page">
+      <div class="page reveal">
         <div class="ph"><span>карта 09</span><span>с. 34</span></div>
         <h4>Збірка на 3 кг</h4>
         <div class="sub">Каркас · вага · час</div>
@@ -360,16 +402,16 @@
           <tr><td>Декор</td><td>60 хв</td><td>380 г</td></tr>
         </table>
         <div class="total"><span>Разом</span><span>3 000 г</span></div>
-        <div class="note">Каркас ставиться до декору. Перевірка ваги — перед фігурою.</div>
+        <div class="note">Каркас — до декору. Перевірка ваги перед фігурою.</div>
       </div>
     </div>
-    <div class="pages-note">Це фрагменти макета. У посібнику — 48 сторінок і 12 повних карт.</div>
+    <div class="pages-note">Фрагменти макета. У посібнику — 48 сторінок і 12 повних карт.</div>
   </section>
 </div>
 
 <div class="wrap">
   <section id="author">
-    <div class="author">
+    <div class="author reveal">
       <div>
         <div class="lab">04 — автор</div>
         <h2>cakes with benefits</h2>
@@ -377,11 +419,11 @@
         <div class="astats">
           <div><b>855</b><span>робіт</span></div>
           <div><b>7 259</b><span>підписників</span></div>
-          <div><b>100%</b><span>шоколадний декор</span></div>
+          <div><b>100%</b><span>шоколад</span></div>
         </div>
       </div>
-      <div class="author-photos">
-        <img src="img/cake-01.jpg" alt="Шоколадний торт з фігурою дракона">
+      <div class="aphotos">
+        <img src="img/cake-01.jpg" alt="Торт із фігурою дракона">
         <img src="img/cake-04.jpg" alt="Торт у вигляді книги">
       </div>
     </div>
@@ -390,23 +432,16 @@
 
 <div class="wrap">
   <section id="reviews">
-    <div class="shead">
-      <div class="lab">05 — відгуки</div>
-      <h2>Що кажуть ті, хто вже спек</h2>
+    <div class="shead reveal">
+      <div>
+        <div class="lab">05 — відгуки</div>
+        <h2>Що кажуть ті, хто вже спек</h2>
+      </div>
     </div>
     <div class="revs">
-      <div class="rev">
-        <p>«Нарешті зрозуміла, чому мій бісквіт осідав. Справа була в пропорції, а не в духовці».</p>
-        <div class="who-s"><b>Олена</b> · кондитер, Київ</div>
-      </div>
-      <div class="rev">
-        <p>«Порахувала собівартість — і підняла ціну на 30%. Ніхто не пішов, бо торт став стабільним».</p>
-        <div class="who-s"><b>Марія</b> · пече на замовлення</div>
-      </div>
-      <div class="rev">
-        <p>«Карта збірки на 3 кг — те, чого не вистачало. Фігура більше не падає».</p>
-        <div class="who-s"><b>Ірина</b> · кондитерська, Львів</div>
-      </div>
+      <div class="rev reveal"><div class="q">“</div><p>Нарешті зрозуміла, чому мій бісквіт осідав. Справа була в пропорції, а не в духовці.</p><div class="who-s"><b>Олена</b> · кондитер, Київ</div></div>
+      <div class="rev reveal"><div class="q">“</div><p>Порахувала собівартість — і підняла ціну на 30%. Ніхто не пішов, бо торт став стабільним.</p><div class="who-s"><b>Марія</b> · пече на замовлення</div></div>
+      <div class="rev reveal"><div class="q">“</div><p>Карта збірки на 3 кг — те, чого не вистачало. Фігура більше не падає.</p><div class="who-s"><b>Ірина</b> · кондитерська, Львів</div></div>
     </div>
     <div class="revs-note">У демо відгуки умовні — у робочій версії поставимо ваші.</div>
   </section>
@@ -414,7 +449,7 @@
 
 <div class="wrap">
   <section id="buy">
-    <div class="buy">
+    <div class="buy reveal">
       <div>
         <div class="lab">06 — оплата</div>
         <h2>Що буде після оплати</h2>
@@ -428,8 +463,8 @@
       <div class="buybox">
         <div class="old">799 ₴</div>
         <div class="now">499 <small>₴</small></div>
-        <div class="hnote" style="margin:0 0 4px">PDF · 48 сторінок · назавжди</div>
-        <button class="btn pink" onclick="openBuy()">Купити посібник</button>
+        <div style="font-size:11.5px;color:var(--muted)">PDF · 48 сторінок · назавжди</div>
+        <button class="btn" onclick="openBuy()">Купити посібник</button>
         <div class="safe">Оплата карткою · чек на пошту</div>
       </div>
     </div>
@@ -438,9 +473,11 @@
 
 <div class="wrap">
   <section id="faq">
-    <div class="shead">
-      <div class="lab">07 — питання</div>
-      <h2>Часті питання</h2>
+    <div class="shead reveal">
+      <div>
+        <div class="lab">07 — питання</div>
+        <h2>Часті питання</h2>
+      </div>
     </div>
     <details open>
       <summary>Це підійде, якщо я новачок?</summary>
@@ -468,7 +505,7 @@
 <div class="wrap">
   <footer>
     <div class="fg">
-      <div class="brand"><img src="img/logo.jpg" alt=""><span>cakes with benefits</span></div>
+      <div class="brand"><img src="img/logo.jpg" alt=""> cakes with benefits</div>
       <p>Технологічні карти тортів · Київ<br>Питання — у директ @cakes_with_benefits</p>
     </div>
     <div class="legal">
@@ -480,11 +517,11 @@
 
 <div class="sticky">
   <div class="p">499 ₴</div>
-  <button class="btn pink" onclick="openBuy()">Купити</button>
+  <button class="btn" onclick="openBuy()">Купити</button>
 </div>
 
 <div class="overlay" id="overlay">
-  <div class="modal" id="modal">
+  <div class="modal">
     <button class="close" onclick="closeBuy()" aria-label="Закрити">×</button>
     <div id="formView">
       <h3>Купити посібник</h3>
@@ -493,13 +530,13 @@
       <input id="f-name" placeholder="Олена" autocomplete="name">
       <label>Email для файлу</label>
       <input id="f-email" type="email" placeholder="olena@example.com" autocomplete="email">
-      <button class="btn pink" onclick="pay()">Оплатити 499 ₴</button>
+      <button class="btn" onclick="pay()">Оплатити 499 ₴</button>
       <div class="demo-note">Демо-режим: реальна оплата не підключена</div>
     </div>
     <div id="okView" style="display:none">
       <div class="success">
         <div class="ok">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
         </div>
         <h3>Готово!</h3>
         <p id="okText">Файл надіслано на пошту.</p>
@@ -513,17 +550,22 @@
 <script>
   function openBuy(){ document.getElementById('overlay').classList.add('on'); document.body.style.overflow='hidden'; }
   function closeBuy(){ document.getElementById('overlay').classList.remove('on'); document.body.style.overflow='';
-    setTimeout(()=>{ document.getElementById('formView').style.display='block'; document.getElementById('okView').style.display='none'; }, 200); }
+    setTimeout(()=>{ document.getElementById('formView').style.display='block'; document.getElementById('okView').style.display='none'; },200); }
   function pay(){
     const email = document.getElementById('f-email').value.trim();
     const name = document.getElementById('f-name').value.trim();
     if(!email || !email.includes('@')){ document.getElementById('f-email').focus(); return; }
-    document.getElementById('okText').textContent = (name ? name + ', ' : '') + 'файл надіслано на ' + email + '.';
+    document.getElementById('okText').textContent = (name?name+', ':'') + 'файл надіслано на ' + email + '.';
     document.getElementById('formView').style.display='none';
     document.getElementById('okView').style.display='block';
   }
   document.getElementById('overlay').addEventListener('click', e => { if(e.target.id==='overlay') closeBuy(); });
   document.addEventListener('keydown', e => { if(e.key==='Escape') closeBuy(); });
+
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  },{threshold:.12}) : null;
+  document.querySelectorAll('.reveal').forEach(el=>{ if(io) io.observe(el); else el.classList.add('in'); });
 </script>
 </body>
 </html>
