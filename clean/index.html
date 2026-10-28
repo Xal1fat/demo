@@ -1,0 +1,633 @@
+<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#141416">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Клінінг · Київ</title>
+<style>
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:#f5f3ee;color:#141416;font-family:-apple-system,system-ui,sans-serif;
+    font-size:16px;line-height:1.45;padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+  header{position:sticky;top:0;z-index:10;background:rgba(245,243,238,.94);backdrop-filter:blur(10px);
+    border-bottom:1px solid #e2ddd4;padding:calc(10px + env(safe-area-inset-top)) 16px 10px}
+  .head-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  h1{font-size:17px;margin:0} .count{font-size:13px;color:#8a8078;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .nav{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+  .nav a{flex:0 0 auto;border:1px solid #d8d1c6;background:#fff;color:#5b544d;border-radius:999px;
+    padding:7px 12px;font-size:12.5px;white-space:nowrap;text-decoration:none}
+  .nav a.on{background:#141416;color:#fff;border-color:#141416}
+  main{padding:12px 12px 0;display:grid;gap:10px}
+  .card{background:#fff;border:1px solid #e6e1d8;border-radius:16px;padding:14px}
+  .row{display:flex;align-items:flex-start;gap:10px}
+  .num{color:#b3aaa0;font-size:13px;padding-top:2px;min-width:22px}
+  .who{flex:1;min-width:0} h2{font-size:16px;margin:0 0 3px;font-weight:600;overflow-wrap:anywhere}
+  .badge{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#8a8078;
+    border:1px solid #e6e1d8;border-radius:999px;padding:2px 8px;margin-right:4px}
+  .badge.nos{color:#7a5a12;border-color:#e9cf8f;background:#fff8e6}
+  .addr{font-size:13px;color:#6b635c;margin-top:6px;overflow-wrap:anywhere}
+  .addr a{color:#6b635c}
+  .status{border:1px solid #d8d1c6;background:#faf8f4;color:#5b544d;border-radius:999px;padding:6px 10px;
+    font:inherit;font-size:11px;flex:0 0 auto}
+  .status[data-status="sent"]{background:#fff3d6;border-color:#e9cf8f;color:#7a5a12}
+  .status[data-status="replied"]{background:#e6f4e9;border-color:#b7dfc2;color:#1f6b35}
+  .status[data-status="no"]{background:#f2f0ec;border-color:#d8d1c6;color:#8a8078}
+  .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+  .copy{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:8px}
+  .btn{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:12px;
+    border:1px solid #d8d1c6;background:#faf8f4;color:#141416;font:inherit;font-size:14px;
+    text-decoration:none;padding:0 10px;text-align:center;min-width:0;overflow-wrap:anywhere}
+  .btn.primary{background:#141416;color:#fff;border-color:#141416}
+  .btn.ghost{color:#5b544d}
+  .btn.done{background:#e6f4e9;border-color:#b7dfc2;color:#1f6b35}
+  details{margin-top:10px} summary{font-size:13px;color:#8a8078;cursor:pointer;padding:4px 0}
+  .msg{font-size:14px;line-height:1.5;margin:8px 0 0;padding:12px;background:#faf8f4;border:1px solid #eae5dc;
+    border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere} .msg.muted{color:#6b635c;font-size:13px}
+  .empty{text-align:center;color:#8a8078;padding:40px 0;font-size:14px}
+  #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#141416;
+    color:#fff;font-size:14px;padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;
+    transition:.18s;z-index:50} #toast.on{opacity:1;transform:translateX(-50%)}
+  @media (max-width:380px){ .actions{grid-template-columns:1fr} .copy{grid-template-columns:1fr} }
+  @media print{ body{background:#fff} .status,.copy,#toast,.nav{display:none} .card{break-inside:avoid} }
+</style></head><body>
+<header>
+  <div class="head-row"><h1>Клінінг · Київ</h1><span class="count" id="count">0 / 27</span></div>
+  <nav class="nav"><a href="../sweets/" class="">Кондитерські</a><a href="../hair/" class="">Перукарні</a><a href="../clean/" class="on">Клінінг</a><a href="../outreach-kyiv/">Салони</a></nav>
+</header>
+<main id="list">
+    <article class="card" data-idx="0" data-key="+380632644681">
+      <div class="row"><div class="num">01</div>
+        <div class="who"><h2>Клининговая компания в Киеве - генеральная уборка квартир, офисов и домов Топ Клин</h2>
+          <span class="badge">Послуги з прибирання</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Івана Миколайчука, 19а, офис 77, Київ, 02152 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B2%20%D0%9A%D0%B8%D0%B5%D0%B2%D0%B5%20-%20%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%83%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%2C%20%D0%BE%D1%84%D0%B8%D1%81%D0%BE%D0%B2%20%D0%B8%20%D0%B4%D0%BE%D0%BC%D0%BE%D0%B2%20%D0%A2%D0%BE%D0%BF%20%D0%9A%D0%BB%D0%B8%D0%BD%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%86%D0%B2%D0%B0%D0%BD%D0%B0%20%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D1%87%D1%83%D0%BA%D0%B0%2C%2019%D0%B0%2C%20%D0%BE%D1%84%D0%B8%D1%81%2077%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002152%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380632644681">+380 63 264 46 81</a><a class="btn" href="https://t.me/+380632644681" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.
+Сайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="1" data-key="+380677627111">
+      <div class="row"><div class="num">02</div>
+        <div class="who"><h2>Клининговая компания Киев &quot;Блеск&quot;</h2>
+          <span class="badge">Прибирання будинків і споруд</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Березняківська, 29 Б, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%9A%D0%B8%D0%B5%D0%B2%20%22%D0%91%D0%BB%D0%B5%D1%81%D0%BA%22%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%91%D0%B5%D1%80%D0%B5%D0%B7%D0%BD%D1%8F%D0%BA%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%2029%20%D0%91%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380677627111">+380 67 762 71 11</a><a class="btn" href="https://t.me/+380677627111" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.
+Сайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="2" data-key="+380731031500">
+      <div class="row"><div class="num">03</div>
+        <div class="who"><h2>Клінінгова компанія &quot;Colibri Cleaning Service&quot; | Клінінг | Прибирання | Миття вікон | Хімчистка Київ</h2>
+          <span class="badge">Прибирання будинків і споруд</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Павла Загребельного, 34, Київ, 01042 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20%22Colibri%20Cleaning%20Service%22%20%7C%20%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%20%7C%20%D0%9F%D1%80%D0%B8%D0%B1%D0%B8%D1%80%D0%B0%D0%BD%D0%BD%D1%8F%20%7C%20%D0%9C%D0%B8%D1%82%D1%82%D1%8F%20%D0%B2%D1%96%D0%BA%D0%BE%D0%BD%20%7C%20%D0%A5%D1%96%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0%20%D0%9A%D0%B8%D1%97%D0%B2%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%B0%20%D0%97%D0%B0%D0%B3%D1%80%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%2C%2034%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001042%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380731031500">+380 73 103 15 00</a><a class="btn" href="https://t.me/+380731031500" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.
+Сайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="3" data-key="+380685866562">
+      <div class="row"><div class="num">04</div>
+        <div class="who"><h2>Клінінгова Компанія Dream Cleans - прибирання квартир, будинків, приміщень. Миття вікон. Хімчистка меблів</h2>
+          <span class="badge">Прибирання будинків і споруд</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Бориса Гмирі, 18, Київ, 02137 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20Dream%20Cleans%20-%20%D0%BF%D1%80%D0%B8%D0%B1%D0%B8%D1%80%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%2C%20%D0%B1%D1%83%D0%B4%D0%B8%D0%BD%D0%BA%D1%96%D0%B2%2C%20%D0%BF%D1%80%D0%B8%D0%BC%D1%96%D1%89%D0%B5%D0%BD%D1%8C.%20%D0%9C%D0%B8%D1%82%D1%82%D1%8F%20%D0%B2%D1%96%D0%BA%D0%BE%D0%BD.%20%D0%A5%D1%96%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0%20%D0%BC%D0%B5%D0%B1%D0%BB%D1%96%D0%B2%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%B0%20%D0%93%D0%BC%D0%B8%D1%80%D1%96%2C%2018%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002137%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380685866562">+380 68 586 65 62</a><a class="btn" href="https://t.me/+380685866562" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.
+Сайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="4" data-key="+380963378705">
+      <div class="row"><div class="num">05</div>
+        <div class="who"><h2>Клінінгова компанія WELLCOOL CLEAN</h2>
+          <span class="badge">Офіс фірми</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Професора Підвисоцького, 10, Київ, 01103 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20WELLCOOL%20CLEAN%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9F%D1%80%D0%BE%D1%84%D0%B5%D1%81%D0%BE%D1%80%D0%B0%20%D0%9F%D1%96%D0%B4%D0%B2%D0%B8%D1%81%D0%BE%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%2010%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001103%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380963378705">+380 96 337 87 05</a><a class="btn" href="https://t.me/+380963378705" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.
+Сайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="5" data-key="+380638582017">
+      <div class="row"><div class="num">06</div>
+        <div class="who"><h2>Cleaner Masters Уборка Квартир Киев, Клининговая Компания Киев</h2>
+          <span class="badge">Прибирання будинків і споруд</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Юрія Шумського, 10, офис 163, Київ, 02098 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Cleaner%20Masters%20%D0%A3%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20%D0%9A%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%9A%D0%B8%D0%B5%D0%B2%2C%20%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%9A%D0%B8%D0%B5%D0%B2%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%AE%D1%80%D1%96%D1%8F%20%D0%A8%D1%83%D0%BC%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%2010%2C%20%D0%BE%D1%84%D0%B8%D1%81%20163%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002098%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380638582017">+380 63 858 20 17</a><a class="btn" href="https://t.me/+380638582017" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.
+Сайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="6" data-key="+380671106969">
+      <div class="row"><div class="num">07</div>
+        <div class="who"><h2>Клининговая компания Гала Клин</h2>
+          <span class="badge">Прибирання будинків і споруд</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">проспект Науки, 11, Київ, 03028 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%93%D0%B0%D0%BB%D0%B0%20%D0%9A%D0%BB%D0%B8%D0%BD%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9D%D0%B0%D1%83%D0%BA%D0%B8%2C%2011%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2003028%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380671106969">+380 67 110 69 69</a><a class="btn" href="https://t.me/+380671106969" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://www.galaclean.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="7" data-key="+380937653068">
+      <div class="row"><div class="num">08</div>
+        <div class="who"><h2>Клінінгова Компанія</h2>
+          <span class="badge">Прибиральники</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вул. Ревуцького, 2Б, Київ, 02068 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%9A%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%2C%20%D0%B2%D1%83%D0%BB.%20%D0%A0%D0%B5%D0%B2%D1%83%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%202%D0%91%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002068%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380937653068">+380 93 765 30 68</a><a class="btn" href="https://t.me/+380937653068" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://masterhouse.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="8" data-key="+380631518080">
+      <div class="row"><div class="num">09</div>
+        <div class="who"><h2>Клінінгова компанія &quot;Premium Cleaning&quot;</h2>
+          <span class="badge">Прибирання в будинках</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Будіндустрії, 7а, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20%22Premium%20Cleaning%22%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%91%D1%83%D0%B4%D1%96%D0%BD%D0%B4%D1%83%D1%81%D1%82%D1%80%D1%96%D1%97%2C%207%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380631518080">+380 63 151 80 80</a><a class="btn" href="https://t.me/+380631518080" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://premium-cleaning.in.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="9" data-key="+380675606472">
+      <div class="row"><div class="num">10</div>
+        <div class="who"><h2>Клінінгова компанія Конкордія</h2>
+          <span class="badge">Прибирання в будинках</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">проспект Соборності, 15/17, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20%D0%9A%D0%BE%D0%BD%D0%BA%D0%BE%D1%80%D0%B4%D1%96%D1%8F%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%A1%D0%BE%D0%B1%D0%BE%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%96%2C%2015%2F17%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380675606472">+380 67 560 64 72</a><a class="btn" href="https://t.me/+380675606472" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://concordia.in.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="10" data-key="+380930935735">
+      <div class="row"><div class="num">11</div>
+        <div class="who"><h2>Клінінгова компанія Чистий Кит</h2>
+          <span class="badge">Прибирання в будинках</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Саксаганського, 41В, оф. 4, Київ, 01033 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20%D0%A7%D0%B8%D1%81%D1%82%D0%B8%D0%B9%20%D0%9A%D0%B8%D1%82%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A1%D0%B0%D0%BA%D1%81%D0%B0%D0%B3%D0%B0%D0%BD%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%2041%D0%92%2C%20%D0%BE%D1%84.%204%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001033%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380930935735">+380 93 093 57 35</a><a class="btn" href="https://t.me/+380930935735" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://kytt.com.ua/order?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gbp_kyiv&amp;utm_content=booking" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="11" data-key="+380930909109">
+      <div class="row"><div class="num">12</div>
+        <div class="who"><h2>Клінінгова компанія Ad Clavum Київ</h2>
+          <span class="badge">Прибирання в будинках</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Урлівська, 16/37, Київ, 02081 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20Ad%20Clavum%20%D0%9A%D0%B8%D1%97%D0%B2%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A3%D1%80%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%2016%2F37%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002081%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380930909109">+380 93 090 91 09</a><a class="btn" href="https://t.me/+380930909109" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://adclavum.com/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="12" data-key="+380638000828">
+      <div class="row"><div class="num">13</div>
+        <div class="who"><h2>Клінінгова компанія CLEAN-HOME</h2>
+          <span class="badge">Прибиральники</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Зої Бутенко, 7А, Київ, 03127 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20CLEAN-HOME%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%97%D0%BE%D1%97%20%D0%91%D1%83%D1%82%D0%B5%D0%BD%D0%BA%D0%BE%2C%207%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2003127%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380638000828">+380 63 800 08 28</a><a class="btn" href="https://t.me/+380638000828" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://clean-home.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="13" data-key="+380967322767">
+      <div class="row"><div class="num">14</div>
+        <div class="who"><h2>Клінінгова компанія MasterHouse</h2>
+          <span class="badge">Прибиральники</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Богдана Хмельницького, 17/52, Київ, 02000, Київ, 01030 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20MasterHouse%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%91%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD%D0%B0%20%D0%A5%D0%BC%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%2017%2F52%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001030%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380967322767">+380 96 732 27 67</a><a class="btn" href="https://t.me/+380967322767" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://masterhouse.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="14" data-key="+380935073708">
+      <div class="row"><div class="num">15</div>
+        <div class="who"><h2>Клінінгова компанія Mister-Cleaner</h2>
+          <span class="badge">Прибирання будинків і споруд</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">проспект Науки, 1, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20Mister-Cleaner%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9D%D0%B0%D1%83%D0%BA%D0%B8%2C%201%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380935073708">+380 93 507 37 08</a><a class="btn" href="https://t.me/+380935073708" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://mister-cleaner.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="15" data-key="+380982585057">
+      <div class="row"><div class="num">16</div>
+        <div class="who"><h2>Клінінгова компанія TooClean</h2>
+          <span class="badge">Послуги з прибирання</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Лариси Руденко, 6а, Київ, 02140 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20TooClean%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9B%D0%B0%D1%80%D0%B8%D1%81%D0%B8%20%D0%A0%D1%83%D0%B4%D0%B5%D0%BD%D0%BA%D0%BE%2C%206%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002140%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380982585057">+380 98 258 50 57</a><a class="btn" href="https://t.me/+380982585057" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://tooclean.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="16" data-key="+380676777071">
+      <div class="row"><div class="num">17</div>
+        <div class="who"><h2>Клінінгова компанія Univel</h2>
+          <span class="badge">Послуги з прибирання</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Здолбунівська, 7А, Київ, 02081 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20Univel%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%97%D0%B4%D0%BE%D0%BB%D0%B1%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%207%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002081%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380676777071">+380 67 677 70 71</a><a class="btn" href="https://t.me/+380676777071" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://univelgroup.com.ua/calculation" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="17" data-key="+380686023837">
+      <div class="row"><div class="num">18</div>
+        <div class="who"><h2>Просто Чисто</h2>
+          <span class="badge">Хімчистка</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Урлівська, 7, Київ, 02095 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%20%D0%A7%D0%B8%D1%81%D1%82%D0%BE%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A3%D1%80%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%207%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002095%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380686023837">+380 68 602 38 37</a><a class="btn" href="https://t.me/+380686023837" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://www.prosto-chisto.kiev.ua/kontakti/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="18" data-key="+380443603933">
+      <div class="row"><div class="num">19</div>
+        <div class="who"><h2>Проф Сервіс</h2>
+          <span class="badge">Послуги з прибирання</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">02000, вулиця Гліба Бабіча, 2, Київ · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9F%D1%80%D0%BE%D1%84%20%D0%A1%D0%B5%D1%80%D0%B2%D1%96%D1%81%2C%2002000%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%93%D0%BB%D1%96%D0%B1%D0%B0%20%D0%91%D0%B0%D0%B1%D1%96%D1%87%D0%B0%2C%202%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380443603933">+380 44 360 39 33</a><a class="btn ghost" href="http://cleaningservice.kiev.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="19" data-key="+380673485851">
+      <div class="row"><div class="num">20</div>
+        <div class="who"><h2>Уборка квартир в Киеве</h2>
+          <span class="badge">Послуги з прибирання</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вул. Князя Романа Мстиславича, 7, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A3%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%20%D0%B2%20%D0%9A%D0%B8%D0%B5%D0%B2%D0%B5%2C%20%D0%B2%D1%83%D0%BB.%20%D0%9A%D0%BD%D1%8F%D0%B7%D1%8F%20%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D0%B0%20%D0%9C%D1%81%D1%82%D0%B8%D1%81%D0%BB%D0%B0%D0%B2%D0%B8%D1%87%D0%B0%2C%207%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380673485851">+380 67 348 58 51</a><a class="btn" href="https://t.me/+380673485851" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://cleanguard.com.ua/uborka-kvartir/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="20" data-key="+380671401111">
+      <div class="row"><div class="num">21</div>
+        <div class="who"><h2>Уборка Эксперт</h2>
+          <span class="badge">Прибирання в будинках</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вул. Зарічна, 1Г, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A3%D0%B1%D0%BE%D1%80%D0%BA%D0%B0%20%D0%AD%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82%2C%20%D0%B2%D1%83%D0%BB.%20%D0%97%D0%B0%D1%80%D1%96%D1%87%D0%BD%D0%B0%2C%201%D0%93%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380671401111">+380 67 140 11 11</a><a class="btn" href="https://t.me/+380671401111" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://uborka.com.ua/contacts" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="21" data-key="+380933901596">
+      <div class="row"><div class="num">22</div>
+        <div class="who"><h2>Чиста Хата - Клінінгова компанія Київ. Прибирання квартир, Клінінг Домів, Миття вікон, Хімчистка Килимів і Меблів</h2>
+          <span class="badge">Прибирання будинків і споруд</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Предславинська, 34B, офіс 209, Київ, 03150 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A7%D0%B8%D1%81%D1%82%D0%B0%20%D0%A5%D0%B0%D1%82%D0%B0%20-%20%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%20%D0%9A%D0%B8%D1%97%D0%B2.%20%D0%9F%D1%80%D0%B8%D0%B1%D0%B8%D1%80%D0%B0%D0%BD%D0%BD%D1%8F%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80%2C%20%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%20%D0%94%D0%BE%D0%BC%D1%96%D0%B2%2C%20%D0%9C%D0%B8%D1%82%D1%82%D1%8F%20%D0%B2%D1%96%D0%BA%D0%BE%D0%BD%2C%20%D0%A5%D1%96%D0%BC%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0%20%D0%9A%D0%B8%D0%BB%D0%B8%D0%BC%D1%96%D0%B2%20%D1%96%20%D0%9C%D0%B5%D0%B1%D0%BB%D1%96%D0%B2%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9F%D1%80%D0%B5%D0%B4%D1%81%D0%BB%D0%B0%D0%B2%D0%B8%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%2C%2034B%2C%20%D0%BE%D1%84%D1%96%D1%81%20209%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2003150%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380933901596">+380 93 390 15 96</a><a class="btn" href="https://t.me/+380933901596" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://chysta.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="22" data-key="+380632997071">
+      <div class="row"><div class="num">23</div>
+        <div class="who"><h2>Чистий Погляд / Чистый Взгляд / клининговая компания / коммерческий клининг</h2>
+          <span class="badge">Прибирання будинків і споруд</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">проспект Павла Тичини, 8, Київ, 02098 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A7%D0%B8%D1%81%D1%82%D0%B8%D0%B9%20%D0%9F%D0%BE%D0%B3%D0%BB%D1%8F%D0%B4%20%2F%20%D0%A7%D0%B8%D1%81%D1%82%D1%8B%D0%B9%20%D0%92%D0%B7%D0%B3%D0%BB%D1%8F%D0%B4%20%2F%20%D0%BA%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D1%8F%20%2F%20%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D1%80%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D0%BB%D0%B8%D0%BD%D0%B8%D0%BD%D0%B3%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%B0%20%D0%A2%D0%B8%D1%87%D0%B8%D0%BD%D0%B8%2C%208%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002098%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380632997071">+380 63 299 70 71</a><a class="btn" href="https://t.me/+380632997071" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://c-v.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="23" data-key="+380679119944">
+      <div class="row"><div class="num">24</div>
+        <div class="who"><h2>CLEANHOUSE Cleaning Company</h2>
+          <span class="badge">Прибирання в будинках</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Регенераторна, 4, корп 7, Київ, 02160 · <a href="https://www.google.com/maps/search/?api=1&amp;query=CLEANHOUSE%20Cleaning%20Company%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A0%D0%B5%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%2C%204%2C%20%D0%BA%D0%BE%D1%80%D0%BF%207%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002160%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380679119944">+380 67 911 99 44</a><a class="btn" href="https://t.me/+380679119944" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://cleanhouse.kiev.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="24" data-key="+380987938551">
+      <div class="row"><div class="num">25</div>
+        <div class="who"><h2>MaClean_Клінінгова компанія</h2>
+          <span class="badge">Прибирання будинків і споруд</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Сім'ї Ідзиковських, 39, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=MaClean_%D0%9A%D0%BB%D1%96%D0%BD%D1%96%D0%BD%D0%B3%D0%BE%D0%B2%D0%B0%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D1%96%D1%8F%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A1%D1%96%D0%BC'%D1%97%20%D0%86%D0%B4%D0%B7%D0%B8%D0%BA%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D1%85%2C%2039%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380987938551">+380 98 793 85 51</a><a class="btn" href="https://t.me/+380987938551" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://maclean.com.ua/contacts/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="25" data-key="+380502662765">
+      <div class="row"><div class="num">26</div>
+        <div class="who"><h2>ProClean Kyiv</h2>
+          <span class="badge">Прибирання будинків і споруд</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">Коломийський провулок, 16, Київ, 03022 · <a href="https://www.google.com/maps/search/?api=1&amp;query=ProClean%20Kyiv%2C%20%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D0%B8%D0%B9%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B2%D1%83%D0%BB%D0%BE%D0%BA%2C%2016%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2003022%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380502662765">+380 50 266 27 65</a><a class="btn" href="https://t.me/+380502662765" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://proclean.kyiv.ua/#included" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="26" data-key="+380952341717">
+      <div class="row"><div class="num">27</div>
+        <div class="who"><h2>THE Cleaner</h2>
+          <span class="badge">Прибирання в будинках</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">бульвар Лесі Українки, 26, Київ, 01133 · <a href="https://www.google.com/maps/search/?api=1&amp;query=THE%20Cleaner%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%9B%D0%B5%D1%81%D1%96%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8%2C%2026%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001133%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380952341717">+380 95 234 17 17</a><a class="btn" href="https://t.me/+380952341717" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://thecleaner.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для клінінгових компаній.
+Побачив вас у Google Maps — сайт у вас є.
+Замовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article></main>
+<div id="toast"></div>
+<script>
+const DATA = [{"key":"+380632644681","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.\nСайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380677627111","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.\nСайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380731031500","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.\nСайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380685866562","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.\nСайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380963378705","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.\nСайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380638582017","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps: картка є, а сайту немає — клієнт не бачить ні цін, ні того, що входить у прибирання.\nСайт дає прайс і калькулятор вартості, а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380671106969","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380937653068","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380631518080","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380675606472","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380930935735","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380930909109","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380638000828","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380967322767","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380935073708","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380982585057","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380676777071","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380686023837","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380443603933","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380673485851","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380671401111","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380933901596","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380632997071","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380679119944","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380987938551","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380502662765","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380952341717","message":"Добрий день! Я роблю сайти для клінінгових компаній.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком — а могло б через калькулятор і форму.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для клінінгу, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."}];
+const KEY = "dm-status-clean";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+function refresh(){
+  const sent = Object.values(state).filter(v => v === "sent" || v === "replied").length;
+  document.getElementById("count").textContent = sent + " / " + DATA.length;
+}
+function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.classList.add("on"); setTimeout(()=>el.classList.remove("on"),1400); }
+async function copyText(text){
+  try { await navigator.clipboard.writeText(text); return true; }
+  catch(e){ const a=document.createElement("textarea"); a.value=text; a.setAttribute("readonly","");
+    a.style.position="fixed"; a.style.opacity="0"; document.body.appendChild(a); a.select();
+    a.setSelectionRange(0,text.length); const ok=document.execCommand("copy"); document.body.removeChild(a); return ok; }
+}
+document.querySelectorAll(".card").forEach(card => {
+  const idx = Number(card.dataset.idx); const item = DATA[idx];
+  const btn = card.querySelector(".status");
+  const paint = () => { const v = state[item.key] || "todo"; btn.dataset.status = v;
+    btn.textContent = v === "sent" ? "написав" : v === "replied" ? "відповів" : v === "no" ? "відмова" : "не писав"; };
+  paint();
+  btn.addEventListener("click", () => {
+    const order = ["todo","sent","replied","no"];
+    state[item.key] = order[(order.indexOf(state[item.key] || "todo") + 1) % order.length];
+    save(); paint(); refresh();
+  });
+  card.querySelectorAll(".copy-btn").forEach(b => b.addEventListener("click", async () => {
+    const text = b.dataset.kind === "main" ? item.message : item.follow;
+    if (!await copyText(text)) return toast("Не вдалось скопіювати");
+    b.classList.add("done"); const orig = b.textContent; b.textContent = "Скопійовано";
+    setTimeout(() => { b.textContent = orig; b.classList.remove("done"); }, 1500);
+  }));
+});
+refresh();
+</script></body></html>

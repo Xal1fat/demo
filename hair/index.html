@@ -1,0 +1,673 @@
+<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#141416">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Перукарні · Київ</title>
+<style>
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:#f5f3ee;color:#141416;font-family:-apple-system,system-ui,sans-serif;
+    font-size:16px;line-height:1.45;padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+  header{position:sticky;top:0;z-index:10;background:rgba(245,243,238,.94);backdrop-filter:blur(10px);
+    border-bottom:1px solid #e2ddd4;padding:calc(10px + env(safe-area-inset-top)) 16px 10px}
+  .head-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  h1{font-size:17px;margin:0} .count{font-size:13px;color:#8a8078;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .nav{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+  .nav a{flex:0 0 auto;border:1px solid #d8d1c6;background:#fff;color:#5b544d;border-radius:999px;
+    padding:7px 12px;font-size:12.5px;white-space:nowrap;text-decoration:none}
+  .nav a.on{background:#141416;color:#fff;border-color:#141416}
+  main{padding:12px 12px 0;display:grid;gap:10px}
+  .card{background:#fff;border:1px solid #e6e1d8;border-radius:16px;padding:14px}
+  .row{display:flex;align-items:flex-start;gap:10px}
+  .num{color:#b3aaa0;font-size:13px;padding-top:2px;min-width:22px}
+  .who{flex:1;min-width:0} h2{font-size:16px;margin:0 0 3px;font-weight:600;overflow-wrap:anywhere}
+  .badge{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#8a8078;
+    border:1px solid #e6e1d8;border-radius:999px;padding:2px 8px;margin-right:4px}
+  .badge.nos{color:#7a5a12;border-color:#e9cf8f;background:#fff8e6}
+  .addr{font-size:13px;color:#6b635c;margin-top:6px;overflow-wrap:anywhere}
+  .addr a{color:#6b635c}
+  .status{border:1px solid #d8d1c6;background:#faf8f4;color:#5b544d;border-radius:999px;padding:6px 10px;
+    font:inherit;font-size:11px;flex:0 0 auto}
+  .status[data-status="sent"]{background:#fff3d6;border-color:#e9cf8f;color:#7a5a12}
+  .status[data-status="replied"]{background:#e6f4e9;border-color:#b7dfc2;color:#1f6b35}
+  .status[data-status="no"]{background:#f2f0ec;border-color:#d8d1c6;color:#8a8078}
+  .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+  .copy{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:8px}
+  .btn{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:12px;
+    border:1px solid #d8d1c6;background:#faf8f4;color:#141416;font:inherit;font-size:14px;
+    text-decoration:none;padding:0 10px;text-align:center;min-width:0;overflow-wrap:anywhere}
+  .btn.primary{background:#141416;color:#fff;border-color:#141416}
+  .btn.ghost{color:#5b544d}
+  .btn.done{background:#e6f4e9;border-color:#b7dfc2;color:#1f6b35}
+  details{margin-top:10px} summary{font-size:13px;color:#8a8078;cursor:pointer;padding:4px 0}
+  .msg{font-size:14px;line-height:1.5;margin:8px 0 0;padding:12px;background:#faf8f4;border:1px solid #eae5dc;
+    border-radius:10px;white-space:pre-wrap;overflow-wrap:anywhere} .msg.muted{color:#6b635c;font-size:13px}
+  .empty{text-align:center;color:#8a8078;padding:40px 0;font-size:14px}
+  #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#141416;
+    color:#fff;font-size:14px;padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;
+    transition:.18s;z-index:50} #toast.on{opacity:1;transform:translateX(-50%)}
+  @media (max-width:380px){ .actions{grid-template-columns:1fr} .copy{grid-template-columns:1fr} }
+  @media print{ body{background:#fff} .status,.copy,#toast,.nav{display:none} .card{break-inside:avoid} }
+</style></head><body>
+<header>
+  <div class="head-row"><h1>Перукарні · Київ</h1><span class="count" id="count">0 / 29</span></div>
+  <nav class="nav"><a href="../sweets/" class="">Кондитерські</a><a href="../hair/" class="on">Перукарні</a><a href="../clean/" class="">Клінінг</a><a href="../outreach-kyiv/">Салони</a></nav>
+</header>
+<main id="list">
+    <article class="card" data-idx="0" data-key="+380631202100">
+      <div class="row"><div class="num">01</div>
+        <div class="who"><h2>&quot;BARMALEY&quot; I barbershop</h2>
+          <span class="badge">Перукар</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Урлівська, 15, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%22BARMALEY%22%20I%20barbershop%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A3%D1%80%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%2015%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380631202100">+380 63 120 21 00</a><a class="btn" href="https://t.me/+380631202100" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.
+Сайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="1" data-key="+380442543910">
+      <div class="row"><div class="num">02</div>
+        <div class="who"><h2>Парикмахерская на Печерске &quot;Перукарська Майстерня&quot;</h2>
+          <span class="badge">Перукарня</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Лаврська, 6, Київ, 01010 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9F%D0%B0%D1%80%D0%B8%D0%BA%D0%BC%D0%B0%D1%85%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BD%D0%B0%20%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D1%81%D0%BA%D0%B5%20%22%D0%9F%D0%B5%D1%80%D1%83%D0%BA%D0%B0%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20%D0%9C%D0%B0%D0%B9%D1%81%D1%82%D0%B5%D1%80%D0%BD%D1%8F%22%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9B%D0%B0%D0%B2%D1%80%D1%81%D1%8C%D0%BA%D0%B0%2C%206%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001010%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380442543910">+380 44 254 39 10</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.
+Сайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="2" data-key="+380965077479">
+      <div class="row"><div class="num">03</div>
+        <div class="who"><h2>Перукарня &quot;Папілон&quot;</h2>
+          <span class="badge">Перукарня</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Здолбунівська, 3, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9F%D0%B5%D1%80%D1%83%D0%BA%D0%B0%D1%80%D0%BD%D1%8F%20%22%D0%9F%D0%B0%D0%BF%D1%96%D0%BB%D0%BE%D0%BD%22%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%97%D0%B4%D0%BE%D0%BB%D0%B1%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%203%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380965077479">+380 96 507 74 79</a><a class="btn" href="https://t.me/+380965077479" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.
+Сайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="3" data-key="+380989041220">
+      <div class="row"><div class="num">04</div>
+        <div class="who"><h2>Bella bambino дитяча перукарня</h2>
+          <span class="badge">Офіс фірми</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">Дніпровська набережна, 19A, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Bella%20bambino%20%D0%B4%D0%B8%D1%82%D1%8F%D1%87%D0%B0%20%D0%BF%D0%B5%D1%80%D1%83%D0%BA%D0%B0%D1%80%D0%BD%D1%8F%2C%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%2C%2019A%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380989041220">+380 98 904 12 20</a><a class="btn" href="https://t.me/+380989041220" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.
+Сайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="4" data-key="+380662269670">
+      <div class="row"><div class="num">05</div>
+        <div class="who"><h2>BG studio</h2>
+          <span class="badge">Салон краси</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">ВИ ВИГЛЯДАЄТЕ ВТОМЛЕНИМИ? СПРОБУЙТЕ МАСАЖ Стрес, недосипання та постійна напруга поступово відображаються на зовнішності · <a href="https://www.google.com/maps/search/?api=1&amp;query=BG%20studio%2C%20%D0%92%D0%98%20%D0%92%D0%98%D0%93%D0%9B%D0%AF%D0%94%D0%90%D0%84%D0%A2%D0%95%20%D0%92%D0%A2%D0%9E%D0%9C%D0%9B%D0%95%D0%9D%D0%98%D0%9C%D0%98%3F%20%D0%A1%D0%9F%D0%A0%D0%9E%D0%91%D0%A3%D0%99%D0%A2%D0%95%20%D0%9C%D0%90%D0%A1%D0%90%D0%96%20%D0%A1%D1%82%D1%80%D0%B5%D1%81%2C%20%D0%BD%D0%B5%D0%B4%D0%BE%D1%81%D0%B8%D0%BF%D0%B0%D0%BD%D0%BD%D1%8F%20%D1%82%D0%B0%20%D0%BF%D0%BE%D1%81%D1%82%D1%96%D0%B9%D0%BD%D0%B0%20%D0%BD%D0%B0%D0%BF%D1%80%D1%83%D0%B3%D0%B0%20%D0%BF%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BE%D0%B2%D0%BE%20%D0%B2%D1%96%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B0%D1%8E%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B7%D0%BE%D0%B2%D0%BD%D1%96%D1%88%D0%BD%D0%BE%D1%81%D1%82%D1%96%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380662269670">+380 66 226 96 70</a><a class="btn" href="https://t.me/+380662269670" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.
+Сайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="5" data-key="+380637000711">
+      <div class="row"><div class="num">06</div>
+        <div class="who"><h2>MOOD beauty space</h2>
+          <span class="badge">Салон краси</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Михайла Бойчука, 7/11, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=MOOD%20beauty%20space%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%B0%20%D0%91%D0%BE%D0%B9%D1%87%D1%83%D0%BA%D0%B0%2C%207%2F11%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380637000711">+380 63 700 07 11</a><a class="btn" href="https://t.me/+380637000711" target="_blank" rel="noopener">Telegram</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.
+Сайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="6" data-key="+380442861933">
+      <div class="row"><div class="num">07</div>
+        <div class="who"><h2>Yoko</h2>
+          <span class="badge">Перукарня</span><span class="badge nos">без сайту</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Іоанна Павла II, 28/25, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Yoko%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%86%D0%BE%D0%B0%D0%BD%D0%BD%D0%B0%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%B0%20II%2C%2028%2F25%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380442861933">+380 44 286 19 33</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.
+Сайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="7" data-key="+380661903739">
+      <div class="row"><div class="num">08</div>
+        <div class="who"><h2>&quot;BARMALEY&quot; III barbershop</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Урлівська, 21, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%22BARMALEY%22%20III%20barbershop%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A3%D1%80%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%2021%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380661903739">+380 66 190 37 39</a><a class="btn" href="https://t.me/+380661903739" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://dikidi.net/g109871?p=0.sp" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="8" data-key="+380730003536">
+      <div class="row"><div class="num">09</div>
+        <div class="who"><h2>Барбершоп Ancient</h2>
+          <span class="badge">Перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">бульвар Лесі Українки, 30, Київ, 01133 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF%20Ancient%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%9B%D0%B5%D1%81%D1%96%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8%2C%2030%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001133%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380730003536">+380 73 000 35 36</a><a class="btn" href="https://t.me/+380730003536" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://b376725.alteg.io/company/358665/menu?o=" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="9" data-key="+380671001228">
+      <div class="row"><div class="num">10</div>
+        <div class="who"><h2>Барібал барбершоп</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">проспект Миколи Бажана, 1А, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%91%D0%B0%D1%80%D1%96%D0%B1%D0%B0%D0%BB%20%D0%B1%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B8%20%D0%91%D0%B0%D0%B6%D0%B0%D0%BD%D0%B0%2C%201%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380671001228">+380 67 100 12 28</a><a class="btn" href="https://t.me/+380671001228" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://www.baribal.kyiv.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="10" data-key="+380672838505">
+      <div class="row"><div class="num">11</div>
+        <div class="who"><h2>Перукарня на Урлівській</h2>
+          <span class="badge">Перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Урлівська, 11А, Київ, 02081 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9F%D0%B5%D1%80%D1%83%D0%BA%D0%B0%D1%80%D0%BD%D1%8F%20%D0%BD%D0%B0%20%D0%A3%D1%80%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D1%96%D0%B9%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A3%D1%80%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%2011%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002081%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380672838505">+380 67 283 85 05</a><a class="btn" href="https://t.me/+380672838505" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://urlivska11a-barber.shop/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="11" data-key="+380676654646">
+      <div class="row"><div class="num">12</div>
+        <div class="who"><h2>Салон краси Fargo Ахматової</h2>
+          <span class="badge">Салон краси</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Анни Ахматової, 30, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD%20%D0%BA%D1%80%D0%B0%D1%81%D0%B8%20Fargo%20%D0%90%D1%85%D0%BC%D0%B0%D1%82%D0%BE%D0%B2%D0%BE%D1%97%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%90%D0%BD%D0%BD%D0%B8%20%D0%90%D1%85%D0%BC%D0%B0%D1%82%D0%BE%D0%B2%D0%BE%D1%97%2C%2030%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380676654646">+380 67 665 46 46</a><a class="btn" href="https://t.me/+380676654646" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://www.salonfargo.com/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="12" data-key="+380674661106">
+      <div class="row"><div class="num">13</div>
+        <div class="who"><h2>Салон краси Kika-Style на Печерську</h2>
+          <span class="badge">Перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">В преміум комлексі PecherSKY, вулиця Болсуновська, 2, Київ, 01014 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A1%D0%B0%D0%BB%D0%BE%D0%BD%20%D0%BA%D1%80%D0%B0%D1%81%D0%B8%20Kika-Style%20%D0%BD%D0%B0%20%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D1%83%2C%20%D0%92%20%D0%BF%D1%80%D0%B5%D0%BC%D1%96%D1%83%D0%BC%20%D0%BA%D0%BE%D0%BC%D0%BB%D0%B5%D0%BA%D1%81%D1%96%20PecherSKY%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%91%D0%BE%D0%BB%D1%81%D1%83%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%202%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001014%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380674661106">+380 67 466 11 06</a><a class="btn" href="https://t.me/+380674661106" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://kika-style.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="13" data-key="+380970707237">
+      <div class="row"><div class="num">14</div>
+        <div class="who"><h2>СІЧ СѢЧЬ Barbershop Барбершоп</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Осокорська, 2А, Київ, 02132 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A1%D0%86%D0%A7%20%D0%A1%D1%A2%D0%A7%D0%AC%20Barbershop%20%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9E%D1%81%D0%BE%D0%BA%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%B0%2C%202%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002132%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380970707237">+380 97 070 72 37</a><a class="btn" href="https://t.me/+380970707237" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://barbersich.com/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="14" data-key="+380800331771">
+      <div class="row"><div class="num">15</div>
+        <div class="who"><h2>ЦирульниК Barbershop</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">Русанівська набережна, 4, Київ, 02154 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A6%D0%B8%D1%80%D1%83%D0%BB%D1%8C%D0%BD%D0%B8%D0%9A%20Barbershop%2C%20%D0%A0%D1%83%D1%81%D0%B0%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%2C%204%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002154%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380800331771">+380 80 033 17 71</a><a class="btn ghost" href="https://zirulnik.com/?utm_campaign=google_my_business" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="15" data-key="+380993395125">
+      <div class="row"><div class="num">16</div>
+        <div class="who"><h2>Barberking</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">Дніпровська набережна, 15к, Київ, 02098 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Barberking%2C%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%2C%2015%D0%BA%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002098%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380993395125">+380 99 339 51 25</a><a class="btn" href="https://t.me/+380993395125" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://kyiv.bking.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="16" data-key="+380685237513">
+      <div class="row"><div class="num">17</div>
+        <div class="who"><h2>Barbershop Amigo Барбершоп</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Звіринецька, 63, Київ, 01014 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Barbershop%20Amigo%20%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%97%D0%B2%D1%96%D1%80%D0%B8%D0%BD%D0%B5%D1%86%D1%8C%D0%BA%D0%B0%2C%2063%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001014%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380685237513">+380 68 523 75 13</a><a class="btn" href="https://t.me/+380685237513" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://easyweek.com.ua/amigo" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="17" data-key="+380636122113">
+      <div class="row"><div class="num">18</div>
+        <div class="who"><h2>Barbershop Kraken</h2>
+          <span class="badge">Перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">Дніпровська набережна, 15ж, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Barbershop%20Kraken%2C%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%2C%2015%D0%B6%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380636122113">+380 63 612 21 13</a><a class="btn" href="https://t.me/+380636122113" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://booking.easyweek.com.ua/barbershop-kraken" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="18" data-key="+380934217537">
+      <div class="row"><div class="num">19</div>
+        <div class="who"><h2>BRUTAL Barbershop / Барбершоп Позняки, Осокорки</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Срібнокільська, 1, Київ, 02095 · <a href="https://www.google.com/maps/search/?api=1&amp;query=BRUTAL%20Barbershop%20%2F%20%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF%20%D0%9F%D0%BE%D0%B7%D0%BD%D1%8F%D0%BA%D0%B8%2C%20%D0%9E%D1%81%D0%BE%D0%BA%D0%BE%D1%80%D0%BA%D0%B8%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A1%D1%80%D1%96%D0%B1%D0%BD%D0%BE%D0%BA%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B0%2C%201%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002095%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380934217537">+380 93 421 75 37</a><a class="btn" href="https://t.me/+380934217537" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://brutal.easyweek.com.ua/?ref=google_maps" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="19" data-key="+380930665773">
+      <div class="row"><div class="num">20</div>
+        <div class="who"><h2>CALIFORNIA BARBERSHOP (Печерськ)</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">бульвар Миколи Міхновського, 30/1б, Київ, 01103 · <a href="https://www.google.com/maps/search/?api=1&amp;query=CALIFORNIA%20BARBERSHOP%20(%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D1%81%D1%8C%D0%BA)%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B8%20%D0%9C%D1%96%D1%85%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%2030%2F1%D0%B1%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001103%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380930665773">+380 93 066 57 73</a><a class="btn" href="https://t.me/+380930665773" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://lnk.bio/californiabarbershop" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="20" data-key="+380672820820">
+      <div class="row"><div class="num">21</div>
+        <div class="who"><h2>Fast Line Studio</h2>
+          <span class="badge">Салон краси</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">ЖК Seven, Дніпровська набережна, 20-Б, приміщення 201, Київ, 02095 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Fast%20Line%20Studio%2C%20%D0%96%D0%9A%20Seven%2C%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%2C%2020-%D0%91%2C%20%D0%BF%D1%80%D0%B8%D0%BC%D1%96%D1%89%D0%B5%D0%BD%D0%BD%D1%8F%20201%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002095%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380672820820">+380 67 282 08 20</a><a class="btn" href="https://t.me/+380672820820" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://booking.fastline.studio/?networkId=1&amp;languageId=1&amp;contactSourceId=25&amp;discount=FLGOOGLEUA&amp;openservice=true" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="21" data-key="+380985511323">
+      <div class="row"><div class="num">22</div>
+        <div class="who"><h2>Francis Barbershop/Барбершоп</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">Дніпровська набережна, 18А, Київ, 02095 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Francis%20Barbershop%2F%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF%2C%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%2C%2018%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002095%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380985511323">+380 98 551 13 23</a><a class="btn" href="https://t.me/+380985511323" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://w.wlaunch.net/i/francis.barbershop18" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="22" data-key="+380635164676">
+      <div class="row"><div class="num">23</div>
+        <div class="who"><h2>Frisor Барбершоп — Київ, Павла Тичини</h2>
+          <span class="badge">Перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">проспект Павла Тичини, 9, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Frisor%20%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF%20%E2%80%94%20%D0%9A%D0%B8%D1%97%D0%B2%2C%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%B0%20%D0%A2%D0%B8%D1%87%D0%B8%D0%BD%D0%B8%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%B0%20%D0%A2%D0%B8%D1%87%D0%B8%D0%BD%D0%B8%2C%209%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380635164676">+380 63 516 46 76</a><a class="btn" href="https://t.me/+380635164676" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://n457353.yclients.com/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="23" data-key="+380443344685">
+      <div class="row"><div class="num">24</div>
+        <div class="who"><h2>GC Barbershop/Барбершоп</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">проспект Петра Григоренка, 22/20, Київ, 02081 · <a href="https://www.google.com/maps/search/?api=1&amp;query=GC%20Barbershop%2F%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9F%D0%B5%D1%82%D1%80%D0%B0%20%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B0%2C%2022%2F20%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002081%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380443344685">+380 44 334 46 85</a><a class="btn ghost" href="https://n170773.alteg.io/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="24" data-key="+380967760727">
+      <div class="row"><div class="num">25</div>
+        <div class="who"><h2>HOUSE barbershop</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">ВУЛ. ПРЕДСЛАВИНСЬКА, 55-A М.ЛИБІДСЬКА, OCEAN PLAZA, ЖК ФРАНЦУЗЬКИЙ КВАРТАЛ 2, Київ, 03150 · <a href="https://www.google.com/maps/search/?api=1&amp;query=HOUSE%20barbershop%2C%20%D0%92%D0%A3%D0%9B.%20%D0%9F%D0%A0%D0%95%D0%94%D0%A1%D0%9B%D0%90%D0%92%D0%98%D0%9D%D0%A1%D0%AC%D0%9A%D0%90%2C%2055-A%20%D0%9C.%D0%9B%D0%98%D0%91%D0%86%D0%94%D0%A1%D0%AC%D0%9A%D0%90%2C%20OCEAN%20PLAZA%2C%20%D0%96%D0%9A%20%D0%A4%D0%A0%D0%90%D0%9D%D0%A6%D0%A3%D0%97%D0%AC%D0%9A%D0%98%D0%99%20%D0%9A%D0%92%D0%90%D0%A0%D0%A2%D0%90%D0%9B%202%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2003150%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380967760727">+380 96 776 07 27</a><a class="btn" href="https://t.me/+380967760727" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://www.housebarbershop.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="25" data-key="+380676076606">
+      <div class="row"><div class="num">26</div>
+        <div class="who"><h2>Le Paradis</h2>
+          <span class="badge">Салон краси</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Михайла Бойчука, 2/34, Київ, 01103 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Paradis%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%B0%20%D0%91%D0%BE%D0%B9%D1%87%D1%83%D0%BA%D0%B0%2C%202%2F34%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001103%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380676076606">+380 67 607 66 06</a><a class="btn" href="https://t.me/+380676076606" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://leparadis.site/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="26" data-key="+380673339871">
+      <div class="row"><div class="num">27</div>
+        <div class="who"><h2>LUMBERJACK Барбершоп</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">Дніпровська набережна, 25-А, 2 поверх, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=LUMBERJACK%20%D0%91%D0%B0%D1%80%D0%B1%D0%B5%D1%80%D1%88%D0%BE%D0%BF%2C%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%2C%2025-%D0%90%2C%202%20%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380673339871">+380 67 333 98 71</a><a class="btn" href="https://t.me/+380673339871" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://n42970.alteg.io/company:142293#1" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="27" data-key="+380671097711">
+      <div class="row"><div class="num">28</div>
+        <div class="who"><h2>Riot Barbershop</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">ТРЦ Lavina Mall, проспект Академіка Палладіна, Біля, Київ, 03142 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Riot%20Barbershop%2C%20%D0%A2%D0%A0%D0%A6%20Lavina%20Mall%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D0%BA%D0%B0%20%D0%9F%D0%B0%D0%BB%D0%BB%D0%B0%D0%B4%D1%96%D0%BD%D0%B0%2C%20%D0%91%D1%96%D0%BB%D1%8F%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2003142%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380671097711">+380 67 109 77 11</a><a class="btn" href="https://t.me/+380671097711" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://n1418839.alteg.io/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="28" data-key="+380631950806">
+      <div class="row"><div class="num">29</div>
+        <div class="who"><h2>Underground Barbershop</h2>
+          <span class="badge">Чоловіча перукарня</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Михайла Бойчука, 30, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Underground%20Barbershop%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%B0%20%D0%91%D0%BE%D0%B9%D1%87%D1%83%D0%BA%D0%B0%2C%2030%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380631950806">+380 63 195 08 06</a><a class="btn" href="https://t.me/+380631950806" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://underground-barbershop.kiev.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для перукарень.
+Побачив вас у Google Maps — сайт у вас є.
+Запис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно.</p></details>
+    </article></main>
+<div id="toast"></div>
+<script>
+const DATA = [{"key":"+380631202100","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.\nСайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380442543910","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.\nСайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380965077479","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.\nСайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380989041220","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.\nСайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380662269670","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.\nСайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380637000711","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.\nСайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380442861933","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps: картка є, а сайту немає — записатись можна тільки дзвінком.\nСайт дає онлайн-запис, ціни й фото робіт, а клієнти отримують нагадування. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380661903739","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380730003536","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380671001228","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380672838505","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380676654646","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380674661106","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380970707237","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380800331771","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380993395125","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380685237513","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380636122113","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380934217537","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380930665773","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380672820820","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380985511323","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380635164676","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380443344685","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380967760727","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380676076606","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380673339871","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380671097711","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."},{"key":"+380631950806","message":"Добрий день! Я роблю сайти для перукарень.\nПобачив вас у Google Maps — сайт у вас є.\nЗапис у вас, найімовірніше, через дзвінок або директ — а міг би бути онлайн, у два кліки.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для перукарень, макети тут — https://xal1fat.github.io/. Якщо цікаво, зроблю демо під вас безкоштовно."}];
+const KEY = "dm-status-hair";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+function refresh(){
+  const sent = Object.values(state).filter(v => v === "sent" || v === "replied").length;
+  document.getElementById("count").textContent = sent + " / " + DATA.length;
+}
+function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.classList.add("on"); setTimeout(()=>el.classList.remove("on"),1400); }
+async function copyText(text){
+  try { await navigator.clipboard.writeText(text); return true; }
+  catch(e){ const a=document.createElement("textarea"); a.value=text; a.setAttribute("readonly","");
+    a.style.position="fixed"; a.style.opacity="0"; document.body.appendChild(a); a.select();
+    a.setSelectionRange(0,text.length); const ok=document.execCommand("copy"); document.body.removeChild(a); return ok; }
+}
+document.querySelectorAll(".card").forEach(card => {
+  const idx = Number(card.dataset.idx); const item = DATA[idx];
+  const btn = card.querySelector(".status");
+  const paint = () => { const v = state[item.key] || "todo"; btn.dataset.status = v;
+    btn.textContent = v === "sent" ? "написав" : v === "replied" ? "відповів" : v === "no" ? "відмова" : "не писав"; };
+  paint();
+  btn.addEventListener("click", () => {
+    const order = ["todo","sent","replied","no"];
+    state[item.key] = order[(order.indexOf(state[item.key] || "todo") + 1) % order.length];
+    save(); paint(); refresh();
+  });
+  card.querySelectorAll(".copy-btn").forEach(b => b.addEventListener("click", async () => {
+    const text = b.dataset.kind === "main" ? item.message : item.follow;
+    if (!await copyText(text)) return toast("Не вдалось скопіювати");
+    b.classList.add("done"); const orig = b.textContent; b.textContent = "Скопійовано";
+    setTimeout(() => { b.textContent = orig; b.classList.remove("done"); }, 1500);
+  }));
+});
+refresh();
+</script></body></html>
