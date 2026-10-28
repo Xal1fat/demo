@@ -65,7 +65,7 @@
 
   /* buttons */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;
-    font:inherit;font-size:15px;font-weight:600;letter-spacing:-.01em;border-radius:999px;
+    font:inherit;font-size:15px;font-weight:600;line-height:1.1;letter-spacing:-.01em;border-radius:999px;
     padding:15px 26px;background:var(--dark);color:#fff;text-decoration:none;
     transition:transform var(--t-fast) var(--ease),box-shadow var(--t-normal) var(--ease),background var(--t-fast)}
   .btn:hover{transform:translateY(-1px);box-shadow:0 14px 28px -14px rgba(10,10,11,.55)}
@@ -93,7 +93,7 @@
   .hero p.lead{margin:20px 0 0;color:var(--body);font-size:clamp(1rem,1.6vw,1.12rem);max-width:44ch;line-height:1.55}
 
   .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:28px}
-  .price-hint{font-size:13.5px;color:var(--muted)}
+  .price-hint{font-size:13.5px;color:var(--muted);display:inline-flex;align-items:center;line-height:1.2}
   .price-hint b{color:var(--ink);font-weight:600}
 
   .stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
@@ -286,7 +286,7 @@
 <header>
   <div class="wrap hrow">
     <a class="logo" href="#top"><i>c</i> cakes with benefits</a>
-    <button class="btn sm buy-mini" data-buy>Купити · 499 ₴</button>
+    <button class="btn sm buy-mini" data-buy>Купити · 499 грн</button>
   </div>
 </header>
 
@@ -299,7 +299,7 @@
         <p class="lead">12 технологічних карт: бісквіти, креми й шоколадний декор. Точні грами, вихід на форму і собівартість — щоб не перераховувати навпомацки.</p>
 
         <div class="cta-row">
-          <button class="btn" data-buy>Купити за 499 ₴</button>
+          <button class="btn" data-buy>Купити за 499 грн</button>
           <span class="price-hint"><b>PDF</b> · одразу на пошту</span>
         </div>
 
@@ -318,7 +318,7 @@
             <div class="top">cakes with benefits · 2026</div>
             <h3>Технологічні<br>карти<br><span>тортів</span></h3>
             <div class="bottom"><span>48 сторінок · 12 карт</span><span>PDF</span></div>
-            <div class="badge">499 ₴</div>
+            <div class="badge">499 грн</div>
           </div>
         </div>
       </div>
@@ -456,7 +456,7 @@
   <section class="band" style="padding-top:0">
     <div class="wrap">
       <div class="final">
-        <h2>499 ₴ — і торт перестає бути лотереєю</h2>
+        <h2>499 грн — і торт перестає бути лотереєю</h2>
         <button class="btn" data-buy>Купити посібник</button>
       </div>
     </div>
@@ -474,7 +474,7 @@
 </footer>
 
 <div class="sticky-bar" id="stickyBar">
-  <div class="p">499 ₴<small>PDF на пошту</small></div>
+  <div class="p">499 грн<small>PDF на пошту</small></div>
   <button class="btn" data-buy>Купити</button>
 </div>
 
@@ -487,7 +487,7 @@
 
   <div class="panel-body">
     <div id="formView">
-      <div class="sum"><span>Технологічні карти тортів · PDF</span><b>499 ₴</b></div>
+      <div class="sum"><span>Технологічні карти тортів · PDF</span><b>499 грн</b></div>
 
       <form id="buyForm" novalidate>
         <div class="field">
@@ -516,7 +516,7 @@
       <p id="okMail"></p>
       <div class="receipt">
         <div><span>Замовлення</span><b id="okNumber">CG-2026-0001</b></div>
-        <div><span>Сума</span><b>499 ₴</b></div>
+        <div><span>Сума</span><b>499 грн</b></div>
         <div><span>Отримувач</span><b>Імʼя Прізвище</b></div>
         <div><span>IBAN</span><b>UA00 0000 0000 0000 0000 0000 000</b></div>
         <div><span>Призначення</span><b id="okPurpose">CG-2026-0001</b></div>
