@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://xal1fat.github.io/demo/</loc>
+    <loc>https://xal1fat.github.io/</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://xal1fat.github.io/demo/yoda-cake/</loc>
+    <loc>https://xal1fat.github.io/yoda-cake/</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://xal1fat.github.io/demo/kub-market/</loc>
+    <loc>https://xal1fat.github.io/kub-market/</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://xal1fat.github.io/demo/colorist/</loc>
+    <loc>https://xal1fat.github.io/colorist/</loc>
     <lastmod>2026-10-28</lastmod>
     <priority>0.8</priority>
   </url>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xal1fat.github.io/demo/sitemap.xml
+Sitemap: https://xal1fat.github.io/sitemap.xml
