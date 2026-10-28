@@ -87,9 +87,14 @@
   .pill i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(212,255,63,.28)}
 
   h1{font-size:clamp(2.6rem,7.2vw,4.6rem);line-height:.94;letter-spacing:-.045em;margin:18px 0 0;font-weight:800}
-  h1 .mark{position:relative;display:inline-block;z-index:0}
-  h1 .mark::after{content:"";position:absolute;left:-.06em;right:-.06em;bottom:.06em;height:.32em;
-    background:var(--accent);z-index:-1;border-radius:3px;transform:rotate(-.6deg)}
+  /* маркер: смуга за низом літер, розміри в em — масштабується разом із заголовком */
+  h1 .mark{
+    background-image:linear-gradient(var(--accent),var(--accent));
+    background-repeat:no-repeat;
+    background-size:100% .46em;
+    background-position:0 .30em;
+    padding:0 .04em;
+  }
   .hero p.lead{margin:20px 0 0;color:var(--body);font-size:clamp(1rem,1.6vw,1.12rem);max-width:44ch;line-height:1.55}
 
   .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:28px}
@@ -124,9 +129,9 @@
   .cover h3 span{color:var(--accent)}
   .cover .bottom{display:flex;justify-content:space-between;align-items:flex-end;font-size:11px;
     letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
-  .badge{position:absolute;right:-6px;bottom:56px;background:var(--accent);color:var(--accent-ink);
+  .badge{position:absolute;right:-18px;bottom:64px;z-index:3;background:var(--accent);color:var(--accent-ink);
     font-weight:800;font-size:17px;letter-spacing:-.02em;padding:11px 18px;border-radius:999px;
-    box-shadow:0 18px 30px -18px rgba(90,120,0,.7);transform:rotate(3deg)}
+    box-shadow:0 18px 30px -18px rgba(90,120,0,.7);transform:rotate(3deg);white-space:nowrap}
 
   /* section shell */
   section{scroll-margin-top:80px}
@@ -318,8 +323,8 @@
             <div class="top">cakes with benefits · 2026</div>
             <h3>Технологічні<br>карти<br><span>тортів</span></h3>
             <div class="bottom"><span>48 сторінок · 12 карт</span><span>PDF</span></div>
-            <div class="badge">499 грн</div>
           </div>
+          <div class="badge">499 грн</div>
         </div>
       </div>
     </div>
