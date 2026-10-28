@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141416">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Розсилка · 14 салонів</title>
+<style>
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:#f5f3ee;color:#141416;
+    font-family:-apple-system,"SF Pro Text",system-ui,sans-serif;
+    font-size:16px;line-height:1.45;padding-bottom:calc(28px + env(safe-area-inset-bottom))}
+  header{position:sticky;top:0;z-index:10;background:rgba(245,243,238,.94);
+    backdrop-filter:blur(10px);border-bottom:1px solid #e2ddd4;
+    padding:calc(10px + env(safe-area-inset-top)) 16px 10px}
+  .head-row{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+  h1{font-size:17px;margin:0;letter-spacing:-.01em}
+  .count{font-size:13px;color:#8a8078;font-variant-numeric:tabular-nums}
+  .filters{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:2px}
+  .filters button{flex:0 0 auto;border:1px solid #d8d1c6;background:#fff;color:#5b544d;
+    border-radius:999px;padding:7px 12px;font:inherit;font-size:12.5px;white-space:nowrap}
+  .filters button.on{background:#141416;color:#fff;border-color:#141416}
+  main{padding:12px 12px 0;display:grid;gap:10px}
+  .card{background:#fff;border:1px solid #e6e1d8;border-radius:16px;padding:14px}
+  .row{display:flex;align-items:flex-start;gap:10px}
+  .num{font-variant-numeric:tabular-nums;color:#b3aaa0;font-size:13px;padding-top:2px;min-width:22px}
+  .who{flex:1;min-width:0}
+  h2{font-size:16px;margin:0 0 3px;font-weight:600;letter-spacing:-.01em;overflow-wrap:anywhere}
+  .badge{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+    color:#8a8078;border:1px solid #e6e1d8;border-radius:999px;padding:2px 8px}
+  .status{border:1px solid #d8d1c6;background:#faf8f4;color:#5b544d;border-radius:999px;
+    padding:6px 10px;font:inherit;font-size:11px;letter-spacing:.04em;flex:0 0 auto}
+  .status[data-status="sent"]{background:#fff3d6;border-color:#e9cf8f;color:#7a5a12}
+  .status[data-status="replied"]{background:#e6f4e9;border-color:#b7dfc2;color:#1f6b35}
+  .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+  .copy{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:8px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;
+    border-radius:12px;border:1px solid #d8d1c6;background:#faf8f4;color:#141416;
+    font:inherit;font-size:14px;text-decoration:none;padding:0 12px}
+  .btn.primary{background:#141416;color:#fff;border-color:#141416}
+  .btn.ghost{color:#5b544d}
+  .btn:active{transform:scale(.985)}
+  .btn.done{background:#e6f4e9;border-color:#b7dfc2;color:#1f6b35}
+  details{margin-top:10px}
+  summary{font-size:13px;color:#8a8078;cursor:pointer;padding:4px 0}
+  .msg{font-size:14px;line-height:1.5;margin:8px 0 0;padding:12px;background:#faf8f4;
+    border:1px solid #eae5dc;border-radius:10px;white-space:pre-wrap}
+  .msg.muted{color:#6b635c;margin-top:8px;font-size:13px}
+  .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));
+    transform:translate(-50%,20px);opacity:0;transition:.25s;background:#141416;color:#fff;
+    padding:11px 18px;border-radius:999px;font-size:14px;pointer-events:none;z-index:20}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+  .empty{text-align:center;color:#8a8078;padding:40px 0;font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="head-row">
+    <h1>Розсилка в Instagram</h1>
+    <div class="count" id="count"></div>
+  </div>
+  <div class="filters" role="tablist">
+    <button class="on" data-filter="all">усі</button>
+    <button data-filter="платформа записи">платформа</button>
+    <button data-filter="ссылок нет">без посилань</button>
+    <button data-filter="только соцмережі">соцмережі</button>
+  </div>
+</header>
+<main id="list">
+    <article class="card" data-idx="0" data-cat="платформа записи">
+      <div class="row">
+        <div class="num">01</div>
+        <div class="who">
+          <h2>Beauty studio Trucco</h2>
+          <div class="badge">платформа записи</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/trucco.beauty.studio" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380970025151">+380 97 002 51 51</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Дивився салони краси у Львові — натрапив на ваш профіль.<br>Запис у вас є через Altegio, але свого сайту немає — у пошуку вас не знайти.<br><br>Зробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.<br><br>Макети: https://xal1fat.github.io/<br><br>Можу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав&#x27;язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="1" data-cat="платформа записи">
+      <div class="row">
+        <div class="num">02</div>
+        <div class="who">
+          <h2>GL Nail Studio</h2>
+          <div class="badge">платформа записи</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/gl_nail_studio" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380630156060">+380 63 015 60 60</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Шукав салони краси у Львові — побачив ваші роботи в Instagram.<br>Запис у вас є через Altegio, але свого сайту немає — у пошуку вас не знайти.<br><br>На сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.<br><br>Макети: https://xal1fat.github.io/<br><br>Готовий зробити демо для вашого салону безкоштовно, без зобов&#x27;язань. Цікаво?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Коротко нагадаю: роблю сайти для б&#x27;юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="2" data-cat="платформа записи">
+      <div class="row">
+        <div class="num">03</div>
+        <div class="who">
+          <h2>M BEAUTY ONE</h2>
+          <div class="badge">платформа записи</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/m.beauty.one" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380734083608">+380 73 408 36 08</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Гортав салони краси у Львові, затримався на вашому профілі.<br>Запис у вас є через Bookon, але свого сайту немає — у пошуку вас не знайти.<br><br>Сайт закриває три речі: показати роботи, назвати ціни і прийняти запис без переписок. Заявки йдуть у Telegram, а в пошуку вас стає видно.<br><br>Макети: https://xal1fat.github.io/<br><br>Можу безкоштовно зібрати демо-сайт під вас: побачите результат і вирішите. Написати?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав&#x27;язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="3" data-cat="платформа записи">
+      <div class="row">
+        <div class="num">04</div>
+        <div class="who">
+          <h2>NAIL STUDIO LAim</h2>
+          <div class="badge">платформа записи</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/nail.studio.laim" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380980378911">+380 98 037 89 11</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Дивився манікюрні студії у Львові — натрапив на ваш профіль.<br>Запис у вас є через Bookon, але свого сайту немає — у пошуку вас не знайти.<br><br>Зробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.<br><br>Макети: https://xal1fat.github.io/<br><br>Можу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Коротко нагадаю: роблю сайти для б&#x27;юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="4" data-cat="платформа записи">
+      <div class="row">
+        <div class="num">05</div>
+        <div class="who">
+          <h2>Nice Nail Studio</h2>
+          <div class="badge">платформа записи</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/nice.nail.studio" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380961421211">+380 96 142 12 11</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Шукав манікюрні студії у Львові — побачив ваші роботи в Instagram.<br>Запис у вас є через EasyWeek, але свого сайту немає — у пошуку вас не знайти.<br><br>На сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.<br><br>Макети: https://xal1fat.github.io/<br><br>Готовий зробити демо для вашого салону безкоштовно, без зобов&#x27;язань. Цікаво?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав&#x27;язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="5" data-cat="платформа записи">
+      <div class="row">
+        <div class="num">06</div>
+        <div class="who">
+          <h2>Paradise Beauty Club</h2>
+          <div class="badge">платформа записи</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/paradise_beauty_club" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380930001835">+380 93 000 18 35</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Гортав салони краси у Львові, затримався на вашому профілі.<br>Запис у вас є через Altegio, але свого сайту немає — у пошуку вас не знайти.<br><br>Сайт закриває три речі: показати роботи, назвати ціни і прийняти запис без переписок. Заявки йдуть у Telegram, а в пошуку вас стає видно.<br><br>Макети: https://xal1fat.github.io/<br><br>Можу безкоштовно зібрати демо-сайт під вас: побачите результат і вирішите. Написати?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Коротко нагадаю: роблю сайти для б&#x27;юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="6" data-cat="платформа записи">
+      <div class="row">
+        <div class="num">07</div>
+        <div class="who">
+          <h2>Манікюр-педикюр MK.PROJECCT</h2>
+          <div class="badge">платформа записи</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/mk.projecct" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380992476505">+380 99 247 65 05</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Дивився салони краси у Львові — натрапив на ваш профіль.<br>Запис у вас є через Bookon, але свого сайту немає — у пошуку вас не знайти.<br><br>Зробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.<br><br>Макети: https://xal1fat.github.io/<br><br>Можу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав&#x27;язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="7" data-cat="ссылок нет">
+      <div class="row">
+        <div class="num">08</div>
+        <div class="who">
+          <h2>Nail Art Студія Оксани Балобанової</h2>
+          <div class="badge">ссылок нет</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/balobanova_nail_art" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380672659915">+380 67 265 99 15</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Шукав манікюрні студії у Львові — побачив ваші роботи в Instagram.<br>Все тримається на профілі: ні сайту, ні запису, тільки директ.<br><br>На сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.<br><br>Макети: https://xal1fat.github.io/<br><br>Готовий зробити демо для вашого салону безкоштовно, без зобов&#x27;язань. Цікаво?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Коротко нагадаю: роблю сайти для б&#x27;юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="8" data-cat="ссылок нет">
+      <div class="row">
+        <div class="num">09</div>
+        <div class="who">
+          <h2>Вікторія-твій перукар</h2>
+          <div class="badge">ссылок нет</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/hair.by.viktoria_l" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380672034663">+380 67 203 46 63</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Гортав перукарні у Львові, затримався на вашому профілі.<br>Все тримається на профілі: ні сайту, ні запису, тільки директ.<br><br>Сайт закриває три речі: показати роботи, назвати ціни і прийняти запис без переписок. Заявки йдуть у Telegram, а в пошуку вас стає видно.<br><br>Макети: https://xal1fat.github.io/<br><br>Можу безкоштовно зібрати демо-сайт під вас: побачите результат і вирішите. Написати?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав&#x27;язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="9" data-cat="ссылок нет">
+      <div class="row">
+        <div class="num">10</div>
+        <div class="who">
+          <h2>Манікюр Львів | BOZHENA beauty studio</h2>
+          <div class="badge">ссылок нет</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/bozhenabeautystudio" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380670775010">+380 67 077 50 10</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Дивився салони краси у Львові — натрапив на ваш профіль.<br>Все тримається на профілі: ні сайту, ні запису, тільки директ.<br><br>Зробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.<br><br>Макети: https://xal1fat.github.io/<br><br>Можу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Коротко нагадаю: роблю сайти для б&#x27;юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="10" data-cat="ссылок нет">
+      <div class="row">
+        <div class="num">11</div>
+        <div class="who">
+          <h2>Мезодерм</h2>
+          <div class="badge">ссылок нет</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/mezoderm.lviv" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380672722515">+380 67 272 25 15</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Шукав косметологію у Львові — побачив ваші роботи в Instagram.<br>Все тримається на профілі: ні сайту, ні запису, тільки директ.<br><br>На сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.<br><br>Макети: https://xal1fat.github.io/<br><br>Готовий зробити демо для вашого салону безкоштовно, без зобов&#x27;язань. Цікаво?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав&#x27;язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="11" data-cat="ссылок нет">
+      <div class="row">
+        <div class="num">12</div>
+        <div class="who">
+          <h2>Твій Стиль</h2>
+          <div class="badge">ссылок нет</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/saloneyourstyle" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380962752000">+380 96 275 20 00</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Гортав салони краси у Львові, затримався на вашому профілі.<br>Все тримається на профілі: ні сайту, ні запису, тільки директ.<br><br>Сайт закриває три речі: показати роботи, назвати ціни і прийняти запис без переписок. Заявки йдуть у Telegram, а в пошуку вас стає видно.<br><br>Макети: https://xal1fat.github.io/<br><br>Можу безкоштовно зібрати демо-сайт під вас: побачите результат і вирішите. Написати?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Коротко нагадаю: роблю сайти для б&#x27;юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="12" data-cat="только соцмережі">
+      <div class="row">
+        <div class="num">13</div>
+        <div class="who">
+          <h2>Bubble space</h2>
+          <div class="badge">только соцмережі</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/bubble___space" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380686494398">+380 68 649 43 98</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Дивився манікюрні студії у Львові — натрапив на ваш профіль.<br>Свого сайту немає — усе живе в Instagram та інших соцмережах.<br><br>Зробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.<br><br>Макети: https://xal1fat.github.io/<br><br>Можу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав&#x27;язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно.</p>
+      </details>
+    </article>
+    <article class="card" data-idx="13" data-cat="только соцмережі">
+      <div class="row">
+        <div class="num">14</div>
+        <div class="who">
+          <h2>Центр здорової шкіри Космея</h2>
+          <div class="badge">только соцмережі</div>
+        </div>
+        <button class="status" data-status="todo" aria-label="Статус">не писав</button>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="https://instagram.com/kosmeya_cosmetics" target="_blank" rel="noopener">Профіль ↗</a>
+        <a class="btn" href="tel:+380682019969">+380 68 201 99 69</a>
+      </div>
+
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+
+      <details>
+        <summary>Текст повідомлення</summary>
+        <p class="msg" data-kind="main">Добрий день! Шукав косметологію у Львові — побачив ваші роботи в Instagram.<br>Свого сайту немає — усе живе в Instagram та інших соцмережах.<br><br>На сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.<br><br>Макети: https://xal1fat.github.io/<br><br>Готовий зробити демо для вашого салону безкоштовно, без зобов&#x27;язань. Цікаво?</p>
+        <p class="msg muted" data-kind="follow">Добрий день! Коротко нагадаю: роблю сайти для б&#x27;юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно.</p>
+      </details>
+    </article><div class="empty" id="empty" hidden>Нічого не залишилось у цьому фільтрі</div></main>
+<div class="toast" id="toast"></div>
+
+<script>
+const DATA = [{"name": "Beauty studio Trucco", "cat": "платформа записи", "handle": "trucco.beauty.studio", "profile": "https://instagram.com/trucco.beauty.studio", "phone": "+380 97 002 51 51", "phone_digits": "+380970025151", "message": "Добрий день! Дивився салони краси у Львові — натрапив на ваш профіль.\nЗапис у вас є через Altegio, але свого сайту немає — у пошуку вас не знайти.\n\nЗробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.\n\nМакети: https://xal1fat.github.io/\n\nМожу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?", "follow": "Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав'язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно."}, {"name": "GL Nail Studio", "cat": "платформа записи", "handle": "gl_nail_studio", "profile": "https://instagram.com/gl_nail_studio", "phone": "+380 63 015 60 60", "phone_digits": "+380630156060", "message": "Добрий день! Шукав салони краси у Львові — побачив ваші роботи в Instagram.\nЗапис у вас є через Altegio, але свого сайту немає — у пошуку вас не знайти.\n\nНа сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.\n\nМакети: https://xal1fat.github.io/\n\nГотовий зробити демо для вашого салону безкоштовно, без зобов'язань. Цікаво?", "follow": "Добрий день! Коротко нагадаю: роблю сайти для б'юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно."}, {"name": "M BEAUTY ONE", "cat": "платформа записи", "handle": "m.beauty.one", "profile": "https://instagram.com/m.beauty.one", "phone": "+380 73 408 36 08", "phone_digits": "+380734083608", "message": "Добрий день! Гортав салони краси у Львові, затримався на вашому профілі.\nЗапис у вас є через Bookon, але свого сайту немає — у пошуку вас не знайти.\n\nСайт закриває три речі: показати роботи, назвати ціни і прийняти запис без переписок. Заявки йдуть у Telegram, а в пошуку вас стає видно.\n\nМакети: https://xal1fat.github.io/\n\nМожу безкоштовно зібрати демо-сайт під вас: побачите результат і вирішите. Написати?", "follow": "Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав'язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно."}, {"name": "NAIL STUDIO LAim", "cat": "платформа записи", "handle": "nail.studio.laim", "profile": "https://instagram.com/nail.studio.laim", "phone": "+380 98 037 89 11", "phone_digits": "+380980378911", "message": "Добрий день! Дивився манікюрні студії у Львові — натрапив на ваш профіль.\nЗапис у вас є через Bookon, але свого сайту немає — у пошуку вас не знайти.\n\nЗробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.\n\nМакети: https://xal1fat.github.io/\n\nМожу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?", "follow": "Добрий день! Коротко нагадаю: роблю сайти для б'юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно."}, {"name": "Nice Nail Studio", "cat": "платформа записи", "handle": "nice.nail.studio", "profile": "https://instagram.com/nice.nail.studio", "phone": "+380 96 142 12 11", "phone_digits": "+380961421211", "message": "Добрий день! Шукав манікюрні студії у Львові — побачив ваші роботи в Instagram.\nЗапис у вас є через EasyWeek, але свого сайту немає — у пошуку вас не знайти.\n\nНа сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.\n\nМакети: https://xal1fat.github.io/\n\nГотовий зробити демо для вашого салону безкоштовно, без зобов'язань. Цікаво?", "follow": "Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав'язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно."}, {"name": "Paradise Beauty Club", "cat": "платформа записи", "handle": "paradise_beauty_club", "profile": "https://instagram.com/paradise_beauty_club", "phone": "+380 93 000 18 35", "phone_digits": "+380930001835", "message": "Добрий день! Гортав салони краси у Львові, затримався на вашому профілі.\nЗапис у вас є через Altegio, але свого сайту немає — у пошуку вас не знайти.\n\nСайт закриває три речі: показати роботи, назвати ціни і прийняти запис без переписок. Заявки йдуть у Telegram, а в пошуку вас стає видно.\n\nМакети: https://xal1fat.github.io/\n\nМожу безкоштовно зібрати демо-сайт під вас: побачите результат і вирішите. Написати?", "follow": "Добрий день! Коротко нагадаю: роблю сайти для б'юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно."}, {"name": "Манікюр-педикюр MK.PROJECCT", "cat": "платформа записи", "handle": "mk.projecct", "profile": "https://instagram.com/mk.projecct", "phone": "+380 99 247 65 05", "phone_digits": "+380992476505", "message": "Добрий день! Дивився салони краси у Львові — натрапив на ваш профіль.\nЗапис у вас є через Bookon, але свого сайту немає — у пошуку вас не знайти.\n\nЗробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.\n\nМакети: https://xal1fat.github.io/\n\nМожу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?", "follow": "Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав'язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно."}, {"name": "Nail Art Студія Оксани Балобанової", "cat": "ссылок нет", "handle": "balobanova_nail_art", "profile": "https://instagram.com/balobanova_nail_art", "phone": "+380 67 265 99 15", "phone_digits": "+380672659915", "message": "Добрий день! Шукав манікюрні студії у Львові — побачив ваші роботи в Instagram.\nВсе тримається на профілі: ні сайту, ні запису, тільки директ.\n\nНа сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.\n\nМакети: https://xal1fat.github.io/\n\nГотовий зробити демо для вашого салону безкоштовно, без зобов'язань. Цікаво?", "follow": "Добрий день! Коротко нагадаю: роблю сайти для б'юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно."}, {"name": "Вікторія-твій перукар", "cat": "ссылок нет", "handle": "hair.by.viktoria_l", "profile": "https://instagram.com/hair.by.viktoria_l", "phone": "+380 67 203 46 63", "phone_digits": "+380672034663", "message": "Добрий день! Гортав перукарні у Львові, затримався на вашому профілі.\nВсе тримається на профілі: ні сайту, ні запису, тільки директ.\n\nСайт закриває три речі: показати роботи, назвати ціни і прийняти запис без переписок. Заявки йдуть у Telegram, а в пошуку вас стає видно.\n\nМакети: https://xal1fat.github.io/\n\nМожу безкоштовно зібрати демо-сайт під вас: побачите результат і вирішите. Написати?", "follow": "Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав'язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно."}, {"name": "Манікюр Львів | BOZHENA beauty studio", "cat": "ссылок нет", "handle": "bozhenabeautystudio", "profile": "https://instagram.com/bozhenabeautystudio", "phone": "+380 67 077 50 10", "phone_digits": "+380670775010", "message": "Добрий день! Дивився салони краси у Львові — натрапив на ваш профіль.\nВсе тримається на профілі: ні сайту, ні запису, тільки директ.\n\nЗробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.\n\nМакети: https://xal1fat.github.io/\n\nМожу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?", "follow": "Добрий день! Коротко нагадаю: роблю сайти для б'юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно."}, {"name": "Мезодерм", "cat": "ссылок нет", "handle": "mezoderm.lviv", "profile": "https://instagram.com/mezoderm.lviv", "phone": "+380 67 272 25 15", "phone_digits": "+380672722515", "message": "Добрий день! Шукав косметологію у Львові — побачив ваші роботи в Instagram.\nВсе тримається на профілі: ні сайту, ні запису, тільки директ.\n\nНа сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.\n\nМакети: https://xal1fat.github.io/\n\nГотовий зробити демо для вашого салону безкоштовно, без зобов'язань. Цікаво?", "follow": "Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав'язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно."}, {"name": "Твій Стиль", "cat": "ссылок нет", "handle": "saloneyourstyle", "profile": "https://instagram.com/saloneyourstyle", "phone": "+380 96 275 20 00", "phone_digits": "+380962752000", "message": "Добрий день! Гортав салони краси у Львові, затримався на вашому профілі.\nВсе тримається на профілі: ні сайту, ні запису, тільки директ.\n\nСайт закриває три речі: показати роботи, назвати ціни і прийняти запис без переписок. Заявки йдуть у Telegram, а в пошуку вас стає видно.\n\nМакети: https://xal1fat.github.io/\n\nМожу безкоштовно зібрати демо-сайт під вас: побачите результат і вирішите. Написати?", "follow": "Добрий день! Коротко нагадаю: роблю сайти для б'юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно."}, {"name": "Bubble space", "cat": "только соцмережі", "handle": "bubble___space", "profile": "https://instagram.com/bubble___space", "phone": "+380 68 649 43 98", "phone_digits": "+380686494398", "message": "Добрий день! Дивився манікюрні студії у Львові — натрапив на ваш профіль.\nСвого сайту немає — усе живе в Instagram та інших соцмережах.\n\nЗробив би сайт, який працює замість переписок: послуги з цінами, галерея робіт, онлайн-запис і заявка в Telegram. Плюс вас починають знаходити в Google.\n\nМакети: https://xal1fat.github.io/\n\nМожу зібрати демо під вас безкоштовно — подивитесь, як це виглядає на вашому матеріалі. Написати?", "follow": "Добрий день! Надсилав вам повідомлення про демо-сайт — не хочу нав'язуватись, просто нагадаю: макети тут https://xal1fat.github.io/. Для вас можу зробити демо безкоштовно."}, {"name": "Центр здорової шкіри Космея", "cat": "только соцмережі", "handle": "kosmeya_cosmetics", "profile": "https://instagram.com/kosmeya_cosmetics", "phone": "+380 68 201 99 69", "phone_digits": "+380682019969", "message": "Добрий день! Шукав косметологію у Львові — побачив ваші роботи в Instagram.\nСвого сайту немає — усе живе в Instagram та інших соцмережах.\n\nНа сайті було б усе, що зазвичай питають у директ: ціни, вільні вікна, приклади робіт. Запис без дзвінків, заявка падає в Telegram, а Google починає вас показувати.\n\nМакети: https://xal1fat.github.io/\n\nГотовий зробити демо для вашого салону безкоштовно, без зобов'язань. Цікаво?", "follow": "Добрий день! Коротко нагадаю: роблю сайти для б'юті, ось макети — https://xal1fat.github.io/. Якщо є інтерес, зберу демо під ваш салон безкоштовно."}];
+const KEY = "dm-status-v1";
+
+function load() {
+  try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { return {}; }
+}
+function save(state) {
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+}
+
+let state = load();
+
+function refreshCount() {
+  const total = DATA.length;
+  const sent = Object.values(state).filter(v => v !== "todo").length;
+  document.getElementById("count").textContent = sent + " / " + total;
+}
+
+function toast(text) {
+  const el = document.getElementById("toast");
+  el.textContent = text;
+  el.classList.add("on");
+  setTimeout(() => el.classList.remove("on"), 1400);
+}
+
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch (e) {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+    area.setSelectionRange(0, text.length);
+    const ok = document.execCommand("copy");
+    document.body.removeChild(area);
+    return ok;
+  }
+}
+
+document.querySelectorAll(".card").forEach(card => {
+  const idx = Number(card.dataset.idx);
+  const item = DATA[idx];
+
+  const statusBtn = card.querySelector(".status");
+  const paint = () => {
+    const value = state[item.handle] || "todo";
+    statusBtn.dataset.status = value;
+    statusBtn.textContent = value === "sent" ? "написав" : value === "replied" ? "відповів" : "не писав";
+  };
+  paint();
+  statusBtn.addEventListener("click", () => {
+    const order = ["todo", "sent", "replied"];
+    const current = state[item.handle] || "todo";
+    state[item.handle] = order[(order.indexOf(current) + 1) % order.length];
+    save(state);
+    paint();
+    refreshCount();
+  });
+
+  card.querySelectorAll(".copy-btn").forEach(button => {
+    button.addEventListener("click", async () => {
+      const kind = button.dataset.kind;
+      const text = kind === "main" ? item.message : item.follow;
+      const ok = await copyText(text);
+      if (!ok) return toast("Не вдалось скопіювати");
+      button.classList.add("done");
+      const original = button.textContent;
+      button.textContent = "Скопійовано";
+      setTimeout(() => { button.textContent = original; button.classList.remove("done"); }, 1500);
+    });
+  });
+});
+
+document.querySelectorAll(".filters button").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".filters button").forEach(b => b.classList.remove("on"));
+    button.classList.add("on");
+    const filter = button.dataset.filter;
+    let visible = 0;
+    document.querySelectorAll(".card").forEach(card => {
+      const show = filter === "all" || card.dataset.cat === filter;
+      card.hidden = !show;
+      if (show) visible++;
+    });
+    document.getElementById("empty").hidden = visible !== 0;
+  });
+});
+
+refreshCount();
+</script>
+</body>
+</html>
