@@ -29,6 +29,16 @@
 </style>
 </head>
 <body>
+<script>
+  /* Сайт переехал с /demo/ в корень: старые ссылки ведём на новый путь. */
+  (function () {
+    var path = location.pathname;
+    var legacy = path === "/demo" || path.indexOf("/demo/") === 0;
+    if (!legacy) return;
+    var rest = path.replace(/^\/demo/, "");
+    location.replace((rest || "/") + location.search + location.hash);
+  })();
+</script>
 <div class="wrap">
   <div class="code">помилка 404</div>
   <h1>Такої сторінки немає</h1>
