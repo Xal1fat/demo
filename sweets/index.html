@@ -15,6 +15,10 @@
   .nav a{flex:0 0 auto;border:1px solid #d8d1c6;background:#fff;color:#5b544d;border-radius:999px;
     padding:7px 12px;font-size:12.5px;white-space:nowrap;text-decoration:none}
   .nav a.on{background:#141416;color:#fff;border-color:#141416}
+  .chips{display:flex;gap:8px;margin-top:8px}
+  .chips button{flex:1;border:1px solid #d8d1c6;background:#fff;color:#5b544d;border-radius:10px;
+    padding:8px 10px;font:inherit;font-size:12.5px}
+  .chips button.on{background:#141416;color:#fff;border-color:#141416}
   main{padding:12px 12px 0;display:grid;gap:10px}
   .card{background:#fff;border:1px solid #e6e1d8;border-radius:16px;padding:14px}
   .row{display:flex;align-items:flex-start;gap:10px}
@@ -51,16 +55,20 @@
   @media print{ body{background:#fff} .status,.copy,#toast,.nav{display:none} .card{break-inside:avoid} }
 </style></head><body>
 <header>
-  <div class="head-row"><h1>Кондитерські · Київ</h1><span class="count" id="count">0 / 32</span></div>
-  <div class="sub">32 бізнесів · Instagram у 21</div>
+  <div class="head-row"><h1>Кондитерські · Київ</h1><span class="count" id="count">0 / 15</span></div>
+  <div class="sub">15 без сайту · Instagram у 21 із 32</div>
   <nav class="nav"><a href="../sweets/" class="on">Кондитерські</a><a href="../hair/" class="">Перукарні</a><a href="../clean/" class="">Клінінг</a><a href="../outreach-kyiv/">Салони</a></nav>
+  <div class="chips">
+    <button data-f="focus" class="on">Без сайту · 15</button>
+    <button data-f="all">Усі · 32</button>
+  </div>
 </header>
 <main id="list">
-    <article class="card" data-idx="0" data-key="+380956213353">
+    <article class="card" data-idx="0" data-key="+380956213353" data-focus="1">
       <div class="row"><div class="num">01</div>
         <div class="who"><h2>Кондитер Позняки</h2>
           <div class="handle">@margorita_confect</div>
-          <span class="badge">Магазин випічки</span><span class="badge nos">без сайту</span>
+          <span class="badge">Магазин випічки</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вулиця Анни Ахматової, 11, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%20%D0%9F%D0%BE%D0%B7%D0%BD%D1%8F%D0%BA%D0%B8%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%90%D0%BD%D0%BD%D0%B8%20%D0%90%D1%85%D0%BC%D0%B0%D1%82%D0%BE%D0%B2%D0%BE%D1%97%2C%2011%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -71,17 +79,17 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="1" data-key="+380999018489">
+    <article class="card" data-idx="1" data-key="+380999018489" data-focus="1">
       <div class="row"><div class="num">02</div>
         <div class="who"><h2>Торти на заказ в Киеве | Позняки Осокорки | FuckDiet</h2>
           <div class="handle">@fuckdiet_</div>
-          <span class="badge">Магазин випічки</span><span class="badge nos">без сайту</span>
+          <span class="badge">Магазин випічки</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вулиця Осокорська, 2А, Київ, 02132 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A2%D0%BE%D1%80%D1%82%D0%B8%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%20%D0%B2%20%D0%9A%D0%B8%D0%B5%D0%B2%D0%B5%20%7C%20%D0%9F%D0%BE%D0%B7%D0%BD%D1%8F%D0%BA%D0%B8%20%D0%9E%D1%81%D0%BE%D0%BA%D0%BE%D1%80%D0%BA%D0%B8%20%7C%20FuckDiet%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9E%D1%81%D0%BE%D0%BA%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%B0%2C%202%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002132%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -92,17 +100,17 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="2" data-key="+380990003515">
+    <article class="card" data-idx="2" data-key="+380990003515" data-focus="1">
       <div class="row"><div class="num">03</div>
         <div class="who"><h2>Торти на замовлення alexandra_the_cakery</h2>
           <div class="handle">@alexandra_the_cakery</div>
-          <span class="badge">Кондитерські вироби</span><span class="badge nos">без сайту</span>
+          <span class="badge">Кондитерські вироби</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">Оболонський проспект, 5, Київ, 04205 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A2%D0%BE%D1%80%D1%82%D0%B8%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F%20alexandra_the_cakery%2C%20%D0%9E%D0%B1%D0%BE%D0%BB%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%205%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2004205%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -113,17 +121,17 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="3" data-key="+380686603528">
+    <article class="card" data-idx="3" data-key="+380686603528" data-focus="1">
       <div class="row"><div class="num">04</div>
         <div class="who"><h2>BK bakery</h2>
           <div class="handle">@bk.bakery.kyiv</div>
-          <span class="badge">Магазин випічки</span><span class="badge nos">без сайту</span>
+          <span class="badge">Магазин випічки</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">бульвар Миколи Міхновського, 14-16, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=BK%20bakery%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B8%20%D0%9C%D1%96%D1%85%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%2014-16%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -134,17 +142,17 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="4" data-key="+380994720740">
+    <article class="card" data-idx="4" data-key="+380994720740" data-focus="1">
       <div class="row"><div class="num">05</div>
         <div class="who"><h2>Chris cake</h2>
           <div class="handle">@chriscake_kyiv</div>
-          <span class="badge">Кондитерські вироби</span><span class="badge nos">без сайту</span>
+          <span class="badge">Кондитерські вироби</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">Lesi Ukrainky Blvd, 28 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Chris%20cake%2C%20Lesi%20Ukrainky%20Blvd%2C%2028%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -155,17 +163,38 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="5" data-key="+380634872417">
+    <article class="card" data-idx="5" data-key="+380637249197" data-focus="1">
       <div class="row"><div class="num">06</div>
+        <div class="who"><h2>Etan Cake</h2>
+          <div class="handle">@etan_cake</div>
+          <span class="badge">Магазин випічки</span><span class="badge nos">тільки запис</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">Dniprovska Embankment, 14 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Etan%20Cake%2C%20Dniprovska%20Embankment%2C%2014%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/etan_cake" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380637249197">+380 63 724 91 97</a><a class="btn ghost" href="https://t.me/+380637249197" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://etancake.choiceqr.com/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gmb" target="_blank" rel="noopener">Запис ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
+Побачив вас у Google Maps: онлайн-запис у вас уже є, а сайту немає — у пошуку вас не знайти.
+Сайт робимо навколо запису, міняти систему не треба: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="6" data-key="+380634872417" data-focus="1">
+      <div class="row"><div class="num">07</div>
         <div class="who"><h2>feeltr</h2>
           <div class="handle">@fee1tr</div>
-          <span class="badge">Кондитерська</span><span class="badge nos">без сайту</span>
+          <span class="badge">Кондитерська</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вулиця Осокорська, 2А, Київ, 02137 · <a href="https://www.google.com/maps/search/?api=1&amp;query=feeltr%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9E%D1%81%D0%BE%D0%BA%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%B0%2C%202%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002137%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -176,17 +205,17 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="6" data-key="+380954246881">
-      <div class="row"><div class="num">07</div>
+    <article class="card" data-idx="7" data-key="+380954246881" data-focus="1">
+      <div class="row"><div class="num">08</div>
         <div class="who"><h2>OFEDYNA</h2>
           <div class="handle">@o.fedyna</div>
-          <span class="badge">Кондитерські вироби</span><span class="badge nos">без сайту</span>
+          <span class="badge">Кондитерські вироби</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">Оболонський проспект, 26, Київ, 04205 · <a href="https://www.google.com/maps/search/?api=1&amp;query=OFEDYNA%2C%20%D0%9E%D0%B1%D0%BE%D0%BB%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%2026%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2004205%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -197,17 +226,17 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="7" data-key="+380960005745">
-      <div class="row"><div class="num">08</div>
+    <article class="card" data-idx="8" data-key="+380960005745" data-focus="1">
+      <div class="row"><div class="num">09</div>
         <div class="who"><h2>Panier. Десерти | Піца | Кава</h2>
           <div class="handle">@panier.kyiv</div>
-          <span class="badge">Магазин випічки</span><span class="badge nos">без сайту</span>
+          <span class="badge">Магазин випічки</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вулиця Олени Пчілки, 2, Київ, 02081 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Panier.%20%D0%94%D0%B5%D1%81%D0%B5%D1%80%D1%82%D0%B8%20%7C%20%D0%9F%D1%96%D1%86%D0%B0%20%7C%20%D0%9A%D0%B0%D0%B2%D0%B0%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9E%D0%BB%D0%B5%D0%BD%D0%B8%20%D0%9F%D1%87%D1%96%D0%BB%D0%BA%D0%B8%2C%202%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002081%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -218,17 +247,17 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="8" data-key="+380961630130">
-      <div class="row"><div class="num">09</div>
+    <article class="card" data-idx="9" data-key="+380961630130" data-focus="1">
+      <div class="row"><div class="num">10</div>
         <div class="who"><h2>Sunny Bakery Desserts</h2>
           <div class="handle">@sunnybakerydesserts</div>
-          <span class="badge">Кондитерська</span><span class="badge nos">без сайту</span>
+          <span class="badge">Кондитерська</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вулиця Професора Підвисоцького, 3, Київ, 01103 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Sunny%20Bakery%20Desserts%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9F%D1%80%D0%BE%D1%84%D0%B5%D1%81%D0%BE%D1%80%D0%B0%20%D0%9F%D1%96%D0%B4%D0%B2%D0%B8%D1%81%D0%BE%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%203%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001103%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -239,17 +268,17 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="9" data-key="Кондитерська Діана">
-      <div class="row"><div class="num">10</div>
+    <article class="card" data-idx="10" data-key="Кондитерська Діана" data-focus="1">
+      <div class="row"><div class="num">11</div>
         <div class="who"><h2>Кондитерська Діана</h2>
           <div class="handle">@tort_diana</div>
-          <span class="badge">Кондитерська</span><span class="badge nos">без сайту</span>
+          <span class="badge">Кондитерська</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вул. Професора Підвисоцького, 4б, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20%D0%94%D1%96%D0%B0%D0%BD%D0%B0%2C%20%D0%B2%D1%83%D0%BB.%20%D0%9F%D1%80%D0%BE%D1%84%D0%B5%D1%81%D0%BE%D1%80%D0%B0%20%D0%9F%D1%96%D0%B4%D0%B2%D0%B8%D1%81%D0%BE%D1%86%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%204%D0%B1%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -260,17 +289,17 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="10" data-key="Cakes With Benefits">
-      <div class="row"><div class="num">11</div>
+    <article class="card" data-idx="11" data-key="Cakes With Benefits" data-focus="1">
+      <div class="row"><div class="num">12</div>
         <div class="who"><h2>Cakes With Benefits</h2>
           <div class="handle">@cakes_with_benefits</div>
-          <span class="badge">Магазин випічки</span><span class="badge nos">без сайту</span>
+          <span class="badge">Магазин випічки</span><span class="badge nos">тільки Instagram</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">ЖК Озерні зорі, вулиця Юрія Шумського, 3г, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Cakes%20With%20Benefits%2C%20%D0%96%D0%9A%20%D0%9E%D0%B7%D0%B5%D1%80%D0%BD%D1%96%20%D0%B7%D0%BE%D1%80%D1%96%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%AE%D1%80%D1%96%D1%8F%20%D0%A8%D1%83%D0%BC%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%203%D0%B3%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -281,224 +310,35 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.
+Сайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="11" data-key="+380638590798">
-      <div class="row"><div class="num">12</div>
-        <div class="who"><h2>Кафе-кондитерська MILLY FILLY</h2>
-          <div class="handle">@millyfilly.kyiv</div>
-          <span class="badge">Ресторан-кондитерська</span>
-        </div>
-        <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">вулиця Князів Острозьких, 5/2А, Київ, 01010 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%B0%D1%84%D0%B5-%D0%BA%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20MILLY%20FILLY%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9A%D0%BD%D1%8F%D0%B7%D1%96%D0%B2%20%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B7%D1%8C%D0%BA%D0%B8%D1%85%2C%205%2F2%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001010%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/millyfilly.kyiv" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380638590798">+380 63 859 07 98</a><a class="btn ghost" href="https://t.me/+380638590798" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://millyfilly.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
-      <div class="copy">
-        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
-        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
-      </div>
-      <details><summary>Текст повідомлення</summary>
-        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
-Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
-        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
-    </article>
-    <article class="card" data-idx="12" data-key="+380989979725">
+    <article class="card" data-idx="12" data-key="+380682310000" data-focus="1">
       <div class="row"><div class="num">13</div>
-        <div class="who"><h2>Комбінат</h2>
-          <div class="handle">@kombinatkyiv</div>
-          <span class="badge">Кондитерські вироби</span>
+        <div class="who"><h2>Кондитерська &quot;Гармонія&quot;</h2>
+          
+          <span class="badge">Кондитерська</span><span class="badge nos">тільки запис</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">24 а, проспект Володимира Івасюка, Київ, 04210 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BC%D0%B1%D1%96%D0%BD%D0%B0%D1%82%2C%2024%20%D0%B0%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%B0%20%D0%86%D0%B2%D0%B0%D1%81%D1%8E%D0%BA%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2004210%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/kombinatkyiv" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380989979725">+380 98 997 97 25</a><a class="btn ghost" href="https://t.me/+380989979725" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://kmbnt.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="addr">вулиця Здолбунівська, 7а, Київ, 02081 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20%22%D0%93%D0%B0%D1%80%D0%BC%D0%BE%D0%BD%D1%96%D1%8F%22%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%97%D0%B4%D0%BE%D0%BB%D0%B1%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%207%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002081%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="tel:+380682310000">+380 68 231 00 00</a><a class="btn ghost" href="https://t.me/+380682310000" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://harmoniia.choiceqr.com/" target="_blank" rel="noopener">Запис ↗</a></div>
       <div class="copy">
         <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
         <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Побачив вас у Google Maps: онлайн-запис у вас уже є, а сайту немає — у пошуку вас не знайти.
+Сайт робимо навколо запису, міняти систему не треба: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
 Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="13" data-key="+380509991077">
+    <article class="card" data-idx="13" data-key="+380973263325" data-focus="1">
       <div class="row"><div class="num">14</div>
-        <div class="who"><h2>Кондитерська «Арабеска»</h2>
-          <div class="handle">@arabesque.cakes</div>
-          <span class="badge">Магазин тортів</span>
-        </div>
-        <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">бульвар Миколи Міхновського, 5, Київ, 01042 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20%C2%AB%D0%90%D1%80%D0%B0%D0%B1%D0%B5%D1%81%D0%BA%D0%B0%C2%BB%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B8%20%D0%9C%D1%96%D1%85%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%205%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001042%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/arabesque.cakes" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380509991077">+380 50 999 10 77</a><a class="btn ghost" href="https://t.me/+380509991077" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://arabesque.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
-      <div class="copy">
-        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
-        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
-      </div>
-      <details><summary>Текст повідомлення</summary>
-        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
-Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
-        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
-    </article>
-    <article class="card" data-idx="14" data-key="+380958186999">
-      <div class="row"><div class="num">15</div>
-        <div class="who"><h2>Cafe Delicio:us</h2>
-          <div class="handle">@delicio.us.cafe</div>
-          <span class="badge">Ресторан-кондитерська</span>
-        </div>
-        <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">вулиця Авiаконструктора Iгоря Сiкорського, 1, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Delicio%3Aus%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%90%D0%B2i%D0%B0%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0%20I%D0%B3%D0%BE%D1%80%D1%8F%20%D0%A1i%D0%BA%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%201%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/delicio.us.cafe" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380958186999">+380 95 818 69 99</a><a class="btn ghost" href="https://t.me/+380958186999" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://www.deliciouscafe.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
-      <div class="copy">
-        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
-        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
-      </div>
-      <details><summary>Текст повідомлення</summary>
-        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
-Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
-        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
-    </article>
-    <article class="card" data-idx="15" data-key="+380974272600">
-      <div class="row"><div class="num">16</div>
-        <div class="who"><h2>Cake Bar</h2>
-          <div class="handle">@cake___bar</div>
-          <span class="badge">Ресторан-кондитерська</span>
-        </div>
-        <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">вул. Трускавецька, 8, Київ, 02095 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Cake%20Bar%2C%20%D0%B2%D1%83%D0%BB.%20%D0%A2%D1%80%D1%83%D1%81%D0%BA%D0%B0%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0%2C%208%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002095%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/cake___bar" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380974272600">+380 97 427 26 00</a><a class="btn ghost" href="https://t.me/+380974272600" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://www.cakebar.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
-      <div class="copy">
-        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
-        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
-      </div>
-      <details><summary>Текст повідомлення</summary>
-        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
-Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
-        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
-    </article>
-    <article class="card" data-idx="16" data-key="+380679033377">
-      <div class="row"><div class="num">17</div>
-        <div class="who"><h2>Éclair Little Artwork</h2>
-          <div class="handle">@eclair_littleartwork</div>
-          <span class="badge">Кондитерські вироби</span>
-        </div>
-        <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">вулиця Костьольна, 6, Київ, 01001 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%C3%89clair%20Little%20Artwork%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9A%D0%BE%D1%81%D1%82%D1%8C%D0%BE%D0%BB%D1%8C%D0%BD%D0%B0%2C%206%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001001%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/eclair_littleartwork" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380679033377">+380 67 903 33 77</a><a class="btn ghost" href="https://t.me/+380679033377" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://arteclair.com/" target="_blank" rel="noopener">Сайт ↗</a></div>
-      <div class="copy">
-        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
-        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
-      </div>
-      <details><summary>Текст повідомлення</summary>
-        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
-Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
-        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
-    </article>
-    <article class="card" data-idx="17" data-key="+380637249197">
-      <div class="row"><div class="num">18</div>
-        <div class="who"><h2>Etan Cake</h2>
-          <div class="handle">@etan_cake</div>
-          <span class="badge">Магазин випічки</span>
-        </div>
-        <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">Dniprovska Embankment, 14 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Etan%20Cake%2C%20Dniprovska%20Embankment%2C%2014%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/etan_cake" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380637249197">+380 63 724 91 97</a><a class="btn ghost" href="https://t.me/+380637249197" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://etancake.choiceqr.com/?utm_source=google&amp;utm_medium=organic&amp;utm_campaign=gmb" target="_blank" rel="noopener">Сайт ↗</a></div>
-      <div class="copy">
-        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
-        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
-      </div>
-      <details><summary>Текст повідомлення</summary>
-        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
-Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
-        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
-    </article>
-    <article class="card" data-idx="18" data-key="+380675438404">
-      <div class="row"><div class="num">19</div>
-        <div class="who"><h2>Exclusive Cake</h2>
-          <div class="handle">@exclusive.cake.kyiv</div>
-          <span class="badge">Магазин випічки</span>
-        </div>
-        <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">вулиця Центральна, 19, Київ, 02132 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Exclusive%20Cake%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%2C%2019%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002132%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/exclusive.cake.kyiv" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380675438404">+380 67 543 84 04</a><a class="btn ghost" href="https://t.me/+380675438404" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://exclusive-cake.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
-      <div class="copy">
-        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
-        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
-      </div>
-      <details><summary>Текст повідомлення</summary>
-        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
-Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
-        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
-    </article>
-    <article class="card" data-idx="19" data-key="+380684971998">
-      <div class="row"><div class="num">20</div>
-        <div class="who"><h2>Kalyna</h2>
-          <div class="handle">@kalyna.kyiv</div>
-          <span class="badge">Кондитерська</span>
-        </div>
-        <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">вулиця Князів Острозьких, 29A, Київ, 01011 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Kalyna%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9A%D0%BD%D1%8F%D0%B7%D1%96%D0%B2%20%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B7%D1%8C%D0%BA%D0%B8%D1%85%2C%2029A%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001011%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/kalyna.kyiv" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380684971998">+380 68 497 19 98</a><a class="btn ghost" href="https://t.me/+380684971998" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://kalina.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
-      <div class="copy">
-        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
-        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
-      </div>
-      <details><summary>Текст повідомлення</summary>
-        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
-Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
-        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
-    </article>
-    <article class="card" data-idx="20" data-key="+380675262811">
-      <div class="row"><div class="num">21</div>
-        <div class="who"><h2>le Krendel</h2>
-          <div class="handle">@le_krendel</div>
-          <span class="badge">Кондитерська</span>
-        </div>
-        <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">Дніпровська набережна, 19В, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=le%20Krendel%2C%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%2C%2019%D0%92%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="https://instagram.com/le_krendel" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380675262811">+380 67 526 28 11</a><a class="btn ghost" href="https://t.me/+380675262811" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://www.lekrendel.com.ua/kontakti/" target="_blank" rel="noopener">Сайт ↗</a></div>
-      <div class="copy">
-        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
-        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
-      </div>
-      <details><summary>Текст повідомлення</summary>
-        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Знайшов вас в Instagram, а потім і сайт.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
-Макети: https://xal1fat.github.io/
-Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
-        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
-    </article>
-    <article class="card" data-idx="21" data-key="+380973263325">
-      <div class="row"><div class="num">22</div>
         <div class="who"><h2>Кондитерська Puccini Dolce</h2>
           
           <span class="badge">Кондитерські вироби</span><span class="badge nos">без сайту</span>
@@ -512,14 +352,14 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив вас у Google Maps: картка є, а сайту немає — меню, ціни й фото тортів подивитись ніде, тільки телефон.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив вас у Google Maps: картка є, а сайту немає — ні цін, ні запису, тільки телефон.
+Сайт збирає це в одне місце: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="22" data-key="+380980006998">
-      <div class="row"><div class="num">23</div>
+    <article class="card" data-idx="14" data-key="+380980006998" data-focus="1">
+      <div class="row"><div class="num">15</div>
         <div class="who"><h2>Confectionery «Merry»</h2>
           
           <span class="badge">Кондитерська</span><span class="badge nos">без сайту</span>
@@ -533,38 +373,206 @@
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив вас у Google Maps: картка є, а сайту немає — меню, ціни й фото тортів подивитись ніде, тільки телефон.
-Сайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
+Побачив вас у Google Maps: картка є, а сайту немає — ні цін, ні запису, тільки телефон.
+Сайт збирає це в одне місце: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="23" data-key="+380682310000">
-      <div class="row"><div class="num">24</div>
-        <div class="who"><h2>Кондитерська &quot;Гармонія&quot;</h2>
-          
-          <span class="badge">Кондитерська</span>
+    <article class="card" data-idx="15" data-key="+380638590798" data-focus="0" hidden>
+      <div class="row"><div class="num">16</div>
+        <div class="who"><h2>Кафе-кондитерська MILLY FILLY</h2>
+          <div class="handle">@millyfilly.kyiv</div>
+          <span class="badge">Ресторан-кондитерська</span><span class="badge">є сайт</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
-      <div class="addr">вулиця Здолбунівська, 7а, Київ, 02081 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20%22%D0%93%D0%B0%D1%80%D0%BC%D0%BE%D0%BD%D1%96%D1%8F%22%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%97%D0%B4%D0%BE%D0%BB%D0%B1%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%2C%207%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002081%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
-      <div class="actions"><a class="btn primary" href="tel:+380682310000">+380 68 231 00 00</a><a class="btn ghost" href="https://t.me/+380682310000" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://harmoniia.choiceqr.com/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="addr">вулиця Князів Острозьких, 5/2А, Київ, 01010 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%B0%D1%84%D0%B5-%D0%BA%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20MILLY%20FILLY%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9A%D0%BD%D1%8F%D0%B7%D1%96%D0%B2%20%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B7%D1%8C%D0%BA%D0%B8%D1%85%2C%205%2F2%D0%90%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001010%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/millyfilly.kyiv" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380638590798">+380 63 859 07 98</a><a class="btn ghost" href="https://t.me/+380638590798" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://millyfilly.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
       <div class="copy">
         <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
         <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
       </div>
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
-Побачив вас у Google Maps — сайт у вас є.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Знайшов вас в Instagram, а потім і сайт.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="24" data-key="+380983696509">
+    <article class="card" data-idx="16" data-key="+380989979725" data-focus="0" hidden>
+      <div class="row"><div class="num">17</div>
+        <div class="who"><h2>Комбінат</h2>
+          <div class="handle">@kombinatkyiv</div>
+          <span class="badge">Кондитерські вироби</span><span class="badge">є сайт</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">24 а, проспект Володимира Івасюка, Київ, 04210 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BC%D0%B1%D1%96%D0%BD%D0%B0%D1%82%2C%2024%20%D0%B0%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%B0%20%D0%86%D0%B2%D0%B0%D1%81%D1%8E%D0%BA%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2004210%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/kombinatkyiv" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380989979725">+380 98 997 97 25</a><a class="btn ghost" href="https://t.me/+380989979725" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://kmbnt.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
+Знайшов вас в Instagram, а потім і сайт.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="17" data-key="+380509991077" data-focus="0" hidden>
+      <div class="row"><div class="num">18</div>
+        <div class="who"><h2>Кондитерська «Арабеска»</h2>
+          <div class="handle">@arabesque.cakes</div>
+          <span class="badge">Магазин тортів</span><span class="badge">є сайт</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">бульвар Миколи Міхновського, 5, Київ, 01042 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20%C2%AB%D0%90%D1%80%D0%B0%D0%B1%D0%B5%D1%81%D0%BA%D0%B0%C2%BB%2C%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%20%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%B8%20%D0%9C%D1%96%D1%85%D0%BD%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%205%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001042%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/arabesque.cakes" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380509991077">+380 50 999 10 77</a><a class="btn ghost" href="https://t.me/+380509991077" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://arabesque.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
+Знайшов вас в Instagram, а потім і сайт.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="18" data-key="+380958186999" data-focus="0" hidden>
+      <div class="row"><div class="num">19</div>
+        <div class="who"><h2>Cafe Delicio:us</h2>
+          <div class="handle">@delicio.us.cafe</div>
+          <span class="badge">Ресторан-кондитерська</span><span class="badge">є сайт</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Авiаконструктора Iгоря Сiкорського, 1, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Cafe%20Delicio%3Aus%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%90%D0%B2i%D0%B0%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%B0%20I%D0%B3%D0%BE%D1%80%D1%8F%20%D0%A1i%D0%BA%D0%BE%D1%80%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%201%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/delicio.us.cafe" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380958186999">+380 95 818 69 99</a><a class="btn ghost" href="https://t.me/+380958186999" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://www.deliciouscafe.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
+Знайшов вас в Instagram, а потім і сайт.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="19" data-key="+380974272600" data-focus="0" hidden>
+      <div class="row"><div class="num">20</div>
+        <div class="who"><h2>Cake Bar</h2>
+          <div class="handle">@cake___bar</div>
+          <span class="badge">Ресторан-кондитерська</span><span class="badge">є сайт</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вул. Трускавецька, 8, Київ, 02095 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Cake%20Bar%2C%20%D0%B2%D1%83%D0%BB.%20%D0%A2%D1%80%D1%83%D1%81%D0%BA%D0%B0%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0%2C%208%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002095%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/cake___bar" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380974272600">+380 97 427 26 00</a><a class="btn ghost" href="https://t.me/+380974272600" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://www.cakebar.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
+Знайшов вас в Instagram, а потім і сайт.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="20" data-key="+380679033377" data-focus="0" hidden>
+      <div class="row"><div class="num">21</div>
+        <div class="who"><h2>Éclair Little Artwork</h2>
+          <div class="handle">@eclair_littleartwork</div>
+          <span class="badge">Кондитерські вироби</span><span class="badge">є сайт</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Костьольна, 6, Київ, 01001 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%C3%89clair%20Little%20Artwork%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9A%D0%BE%D1%81%D1%82%D1%8C%D0%BE%D0%BB%D1%8C%D0%BD%D0%B0%2C%206%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001001%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/eclair_littleartwork" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380679033377">+380 67 903 33 77</a><a class="btn ghost" href="https://t.me/+380679033377" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="http://arteclair.com/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
+Знайшов вас в Instagram, а потім і сайт.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="21" data-key="+380675438404" data-focus="0" hidden>
+      <div class="row"><div class="num">22</div>
+        <div class="who"><h2>Exclusive Cake</h2>
+          <div class="handle">@exclusive.cake.kyiv</div>
+          <span class="badge">Магазин випічки</span><span class="badge">є сайт</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Центральна, 19, Київ, 02132 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Exclusive%20Cake%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%2C%2019%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002132%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/exclusive.cake.kyiv" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380675438404">+380 67 543 84 04</a><a class="btn ghost" href="https://t.me/+380675438404" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://exclusive-cake.com.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
+Знайшов вас в Instagram, а потім і сайт.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="22" data-key="+380684971998" data-focus="0" hidden>
+      <div class="row"><div class="num">23</div>
+        <div class="who"><h2>Kalyna</h2>
+          <div class="handle">@kalyna.kyiv</div>
+          <span class="badge">Кондитерська</span><span class="badge">є сайт</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">вулиця Князів Острозьких, 29A, Київ, 01011 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Kalyna%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9A%D0%BD%D1%8F%D0%B7%D1%96%D0%B2%20%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B7%D1%8C%D0%BA%D0%B8%D1%85%2C%2029A%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001011%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/kalyna.kyiv" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380684971998">+380 68 497 19 98</a><a class="btn ghost" href="https://t.me/+380684971998" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://kalina.ua/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
+Знайшов вас в Instagram, а потім і сайт.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="23" data-key="+380675262811" data-focus="0" hidden>
+      <div class="row"><div class="num">24</div>
+        <div class="who"><h2>le Krendel</h2>
+          <div class="handle">@le_krendel</div>
+          <span class="badge">Кондитерська</span><span class="badge">є сайт</span>
+        </div>
+        <button class="status" data-status="todo">не писав</button></div>
+      <div class="addr">Дніпровська набережна, 19В, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=le%20Krendel%2C%20%D0%94%D0%BD%D1%96%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%2C%2019%D0%92%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
+      <div class="actions"><a class="btn primary" href="https://instagram.com/le_krendel" target="_blank" rel="noopener">Instagram ↗</a><a class="btn" href="tel:+380675262811">+380 67 526 28 11</a><a class="btn ghost" href="https://t.me/+380675262811" target="_blank" rel="noopener">Telegram</a><a class="btn ghost" href="https://www.lekrendel.com.ua/kontakti/" target="_blank" rel="noopener">Сайт ↗</a></div>
+      <div class="copy">
+        <button class="btn copy-btn" data-kind="main">Скопіювати повідомлення</button>
+        <button class="btn copy-btn ghost" data-kind="follow">Нагадування</button>
+      </div>
+      <details><summary>Текст повідомлення</summary>
+        <p class="msg">Добрий день! Я роблю сайти для кондитерських.
+Знайшов вас в Instagram, а потім і сайт.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
+Макети: https://xal1fat.github.io/
+Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
+        <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
+    </article>
+    <article class="card" data-idx="24" data-key="+380983696509" data-focus="0" hidden>
       <div class="row"><div class="num">25</div>
         <div class="who"><h2>Кондитерська Mr.Sweet торт на замовлення Київ, капкейки, пряники</h2>
           
-          <span class="badge">Магазин тортів</span>
+          <span class="badge">Магазин тортів</span><span class="badge">є сайт</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr"> · Кондитерська Mr Sweet, Budindustrii St, 6 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20Mr.Sweet%20%D1%82%D0%BE%D1%80%D1%82%20%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BC%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F%20%D0%9A%D0%B8%D1%97%D0%B2%2C%20%D0%BA%D0%B0%D0%BF%D0%BA%D0%B5%D0%B9%D0%BA%D0%B8%2C%20%D0%BF%D1%80%D1%8F%D0%BD%D0%B8%D0%BA%D0%B8%2C%20%EF%95%8A%20%C2%B7%20%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20Mr%20Sweet%2C%20Budindustrii%20St%2C%206%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -576,16 +584,16 @@
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
 Побачив вас у Google Maps — сайт у вас є.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="25" data-key="+380937025253">
+    <article class="card" data-idx="25" data-key="+380937025253" data-focus="0" hidden>
       <div class="row"><div class="num">26</div>
         <div class="who"><h2>Наша Лавка</h2>
           
-          <span class="badge">Магазин випічки</span>
+          <span class="badge">Магазин випічки</span><span class="badge">є сайт</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вулиця Анни Ахматової, 50, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9D%D0%B0%D1%88%D0%B0%20%D0%9B%D0%B0%D0%B2%D0%BA%D0%B0%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%90%D0%BD%D0%BD%D0%B8%20%D0%90%D1%85%D0%BC%D0%B0%D1%82%D0%BE%D0%B2%D0%BE%D1%97%2C%2050%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -597,16 +605,16 @@
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
 Побачив вас у Google Maps — сайт у вас є.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="26" data-key="+380677202303">
+    <article class="card" data-idx="26" data-key="+380677202303" data-focus="0" hidden>
       <div class="row"><div class="num">27</div>
         <div class="who"><h2>ПЕКАРНЯ MAKINGCAKE</h2>
           
-          <span class="badge">Магазин випічки</span>
+          <span class="badge">Магазин випічки</span><span class="badge">є сайт</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">проспект Павла Тичини, 4, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9F%D0%95%D0%9A%D0%90%D0%A0%D0%9D%D0%AF%20MAKINGCAKE%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%9F%D0%B0%D0%B2%D0%BB%D0%B0%20%D0%A2%D0%B8%D1%87%D0%B8%D0%BD%D0%B8%2C%204%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -618,16 +626,16 @@
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
 Побачив вас у Google Maps — сайт у вас є.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="27" data-key="+380660665600">
+    <article class="card" data-idx="27" data-key="+380660665600" data-focus="0" hidden>
       <div class="row"><div class="num">28</div>
         <div class="who"><h2>Печерська Пекарня</h2>
           
-          <span class="badge">Пекарня</span>
+          <span class="badge">Пекарня</span><span class="badge">є сайт</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вулиця Князів Острозьких, 24, Київ, 01010 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20%D0%9F%D0%B5%D0%BA%D0%B0%D1%80%D0%BD%D1%8F%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9A%D0%BD%D1%8F%D0%B7%D1%96%D0%B2%20%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B7%D1%8C%D0%BA%D0%B8%D1%85%2C%2024%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2001010%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -639,16 +647,16 @@
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
 Побачив вас у Google Maps — сайт у вас є.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="28" data-key="+380953334334">
+    <article class="card" data-idx="28" data-key="+380953334334" data-focus="0" hidden>
       <div class="row"><div class="num">29</div>
         <div class="who"><h2>ТМ НЕКТАР</h2>
           
-          <span class="badge">Магазин випічки</span>
+          <span class="badge">Магазин випічки</span><span class="badge">є сайт</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">проспект Степана Бандери, 28, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A2%D0%9C%20%D0%9D%D0%95%D0%9A%D0%A2%D0%90%D0%A0%2C%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD%D0%B0%20%D0%91%D0%B0%D0%BD%D0%B4%D0%B5%D1%80%D0%B8%2C%2028%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -660,16 +668,16 @@
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
 Побачив вас у Google Maps — сайт у вас є.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="29" data-key="+380773535858">
+    <article class="card" data-idx="29" data-key="+380773535858" data-focus="0" hidden>
       <div class="row"><div class="num">30</div>
         <div class="who"><h2>Sweet Chef | Кондитерська - кав'ярня</h2>
           
-          <span class="badge">Кафе</span>
+          <span class="badge">Кафе</span><span class="badge">є сайт</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr"> · Obolonskyi Ave, 26а · <a href="https://www.google.com/maps/search/?api=1&amp;query=Sweet%20Chef%20%7C%20%D0%9A%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20-%20%D0%BA%D0%B0%D0%B2'%D1%8F%D1%80%D0%BD%D1%8F%2C%20%EE%A4%B4%20%C2%B7%20Obolonskyi%20Ave%2C%2026%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -681,16 +689,16 @@
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
 Побачив вас у Google Maps — сайт у вас є.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="30" data-key="+380633535858">
+    <article class="card" data-idx="30" data-key="+380633535858" data-focus="0" hidden>
       <div class="row"><div class="num">31</div>
         <div class="who"><h2>Sweet Chef | кондитерська - пекарня - кав'ярня</h2>
           
-          <span class="badge">Магазин випічки</span>
+          <span class="badge">Магазин випічки</span><span class="badge">є сайт</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вулиця Михайла Драгоманова, 44а, Київ, 02000 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Sweet%20Chef%20%7C%20%D0%BA%D0%BE%D0%BD%D0%B4%D0%B8%D1%82%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0%20-%20%D0%BF%D0%B5%D0%BA%D0%B0%D1%80%D0%BD%D1%8F%20-%20%D0%BA%D0%B0%D0%B2'%D1%8F%D1%80%D0%BD%D1%8F%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%B0%20%D0%94%D1%80%D0%B0%D0%B3%D0%BE%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0%2C%2044%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002000%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -702,16 +710,16 @@
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
 Побачив вас у Google Maps — сайт у вас є.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article>
-    <article class="card" data-idx="31" data-key="+380676328384">
+    <article class="card" data-idx="31" data-key="+380676328384" data-focus="0" hidden>
       <div class="row"><div class="num">32</div>
         <div class="who"><h2>Zefiroom</h2>
           
-          <span class="badge">Ресторан-кондитерська</span>
+          <span class="badge">Ресторан-кондитерська</span><span class="badge">є сайт</span>
         </div>
         <button class="status" data-status="todo">не писав</button></div>
       <div class="addr">вулиця Юрія Шумського, 1а, Київ, 02098 · <a href="https://www.google.com/maps/search/?api=1&amp;query=Zefiroom%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%AE%D1%80%D1%96%D1%8F%20%D0%A8%D1%83%D0%BC%D1%81%D1%8C%D0%BA%D0%BE%D0%B3%D0%BE%2C%201%D0%B0%2C%20%D0%9A%D0%B8%D1%97%D0%B2%2C%2002098%2C%20%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">мапа ↗</a></div>
@@ -723,21 +731,22 @@
       <details><summary>Текст повідомлення</summary>
         <p class="msg">Добрий день! Я роблю сайти для кондитерських.
 Побачив вас у Google Maps — сайт у вас є.
-Замовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.
+Не пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.
 Макети: https://xal1fat.github.io/
 Можу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?</p>
         <p class="msg muted">Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно.</p></details>
     </article></main>
 <div id="toast"></div>
 <script>
-const DATA = [{"key":"+380956213353","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380999018489","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380990003515","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380686603528","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380994720740","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380634872417","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380954246881","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380960005745","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380961630130","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"Кондитерська Діана","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"Cakes With Benefits","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — усе живе в ленті: ні меню з цінами, ні фото тортів в одному місці — тільки директ.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380638590798","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380989979725","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380509991077","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380958186999","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380974272600","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380679033377","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380637249197","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380675438404","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380684971998","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380675262811","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380973263325","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps: картка є, а сайту немає — меню, ціни й фото тортів подивитись ніде, тільки телефон.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380980006998","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps: картка є, а сайту немає — меню, ціни й фото тортів подивитись ніде, тільки телефон.\nСайт дає каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380682310000","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380983696509","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380937025253","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380677202303","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380660665600","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380953334334","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380773535858","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380633535858","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380676328384","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nЗамовлення у вас, найімовірніше, йде дзвінком або в директ — а могло б через форму й Telegram.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."}];
+const DATA = [{"key":"+380956213353","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380999018489","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380990003515","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380686603528","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380994720740","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380637249197","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps: онлайн-запис у вас уже є, а сайту немає — у пошуку вас не знайти.\nСайт робимо навколо запису, міняти систему не треба: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380634872417","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380954246881","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380960005745","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380961630130","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"Кондитерська Діана","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"Cakes With Benefits","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив ваш профіль в Instagram — сайту немає, уся інформація тільки в ленті й у директ.\nСайт робить із цього одну сторінку: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google. Посилання в шапці профілю, замість «напишіть у директ».\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380682310000","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps: онлайн-запис у вас уже є, а сайту немає — у пошуку вас не знайти.\nСайт робимо навколо запису, міняти систему не треба: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380973263325","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps: картка є, а сайту немає — ні цін, ні запису, тільки телефон.\nСайт збирає це в одне місце: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380980006998","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps: картка є, а сайту немає — ні цін, ні запису, тільки телефон.\nСайт збирає це в одне місце: каталог із цінами, фото робіт і замовлення у два кліки — а заявки падають у Telegram. Плюс вас починають знаходити в Google.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — подивитесь на своєму матеріалі. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380638590798","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380989979725","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380509991077","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380958186999","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380974272600","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380679033377","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380675438404","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380684971998","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380675262811","message":"Добрий день! Я роблю сайти для кондитерських.\nЗнайшов вас в Instagram, а потім і сайт.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380983696509","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380937025253","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380677202303","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380660665600","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380953334334","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380773535858","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380633535858","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."},{"key":"+380676328384","message":"Добрий день! Я роблю сайти для кондитерських.\nПобачив вас у Google Maps — сайт у вас є.\nНе пропоную переробляти його з нуля. Зазвичай бракує запису/заявок у Telegram і швидкості на телефоні — показав би, як це виглядає, на вашому матеріалі.\nМакети: https://xal1fat.github.io/\nМожу безкоштовно зібрати демо під вас — порівняєте з поточним. Скинути приклад?","follow":"Добрий день! Нагадаю про себе: роблю сайти для кондитерських, макети тут — https://xal1fat.github.io/. Якщо цікаво, зберу демо під вас безкоштовно."}];
 const KEY = "dm-status-sweets";
 let state = {};
 try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
 function refresh(){
-  const sent = Object.values(state).filter(v => v === "sent" || v === "replied").length;
-  document.getElementById("count").textContent = sent + " / " + DATA.length;
+  const vis = [...document.querySelectorAll(".card")].filter(c => !c.hidden);
+  const sent = vis.filter(c => { const s = state[DATA[Number(c.dataset.idx)].key]; return s === "sent" || s === "replied"; }).length;
+  document.getElementById("count").textContent = sent + " / " + vis.length;
 }
 function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.classList.add("on"); setTimeout(()=>el.classList.remove("on"),1400); }
 async function copyText(text){
@@ -764,5 +773,12 @@ document.querySelectorAll(".card").forEach(card => {
     setTimeout(() => { b.textContent = orig; b.classList.remove("done"); }, 1500);
   }));
 });
+document.querySelectorAll(".chips button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".chips button").forEach(x => x.classList.remove("on"));
+  b.classList.add("on");
+  const f = b.dataset.f;
+  document.querySelectorAll(".card").forEach(c => { c.hidden = f === "focus" ? c.dataset.focus !== "1" : false; });
+  refresh();
+}));
 refresh();
 </script></body></html>
