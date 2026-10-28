@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Технологічні карти тортів — PDF-посібник · cakes with benefits</title>
+<meta name="description" content="12 технологічних карт: бісквіти, креми, шоколадний декор. Точні грамівки, вихід і собівартість. PDF, одразу на пошту після оплати.">
+<meta name="theme-color" content="#FAF4EC">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="product">
+<meta property="og:title" content="Технологічні карти тортів — PDF-посібник">
+<meta property="og:description" content="12 карт з точними грамівками, виходом і собівартістю. PDF, одразу на пошту.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF4EC; --paper:#FFFDFA; --ink:#2A1A13; --body:#5C4A40; --muted:#8C7A6E;
+    --line:#E8DCD0; --pink:#E8447F; --pink-soft:#FBE3EC; --caramel:#B9783F; --choco:#170F0C;
+    --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope","Segoe UI",system-ui,sans-serif;
+    --r:18px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.05;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+  .lab{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--caramel)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--ink);color:#fff;
+    border:0;border-radius:99px;padding:17px 30px;font-family:var(--sans);font-size:13px;font-weight:700;
+    letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+  .btn:hover{background:var(--pink);transform:translateY(-1px);box-shadow:0 12px 28px rgba(232,68,127,.25)}
+  .btn.pink{background:var(--pink)}
+  .btn.pink:hover{background:#d3316c}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+  .btn.ghost:hover{background:var(--ink);color:#fff;box-shadow:none}
+
+  /* header */
+  header{position:sticky;top:0;z-index:40;background:rgba(250,244,236,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .hrow{display:flex;align-items:center;gap:18px;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:20px}
+  .brand img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+  .price-chip{margin-left:auto;font-size:13px;color:var(--muted)}
+  .price-chip b{color:var(--ink);font-size:15px}
+  header .btn{padding:12px 22px;font-size:11.5px}
+
+  /* hero */
+  .hero{padding:64px 0 56px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-10%;top:-20%;width:55%;height:130%;border-radius:50%;
+    background:radial-gradient(closest-side,rgba(232,68,127,.07),transparent 70%);pointer-events:none}
+  .hgrid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center;position:relative;z-index:1}
+  .kicker{display:inline-flex;align-items:center;gap:9px;background:var(--pink-soft);color:#B32A5B;border-radius:99px;
+    padding:7px 14px;font-size:11.5px;font-weight:600;letter-spacing:.04em}
+  .kicker i{width:6px;height:6px;border-radius:50%;background:var(--pink);font-style:normal}
+  h1{font-size:clamp(38px,5.1vw,68px);margin:20px 0 18px}
+  h1 em{font-style:italic;color:var(--pink)}
+  .lead{color:var(--body);font-size:17px;max-width:44ch;margin:0 0 24px}
+  .bullets{list-style:none;padding:0;margin:0 0 28px;display:grid;gap:9px}
+  .bullets li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:14.5px;color:var(--body)}
+  .bullets li b{color:var(--ink);font-weight:600}
+  .bullets svg{color:var(--pink)}
+  .hbuy{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .hprice{font-family:var(--serif);font-size:38px;line-height:1}
+  .hprice span{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .hnote{font-size:12px;color:var(--muted);margin-top:14px}
+
+  /* cover */
+  .cover-wrap{position:relative;display:flex;justify-content:center}
+  .cover{position:relative;width:320px;aspect-ratio:3/4;border-radius:6px;overflow:hidden;background:var(--choco);
+    box-shadow:0 36px 70px rgba(50,25,15,.35);transform:rotate(-2deg)}
+  .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.92}
+  .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,10,6,.15),rgba(20,10,6,.82))}
+  .cover-txt{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:space-between;padding:26px}
+  .cover-top{display:flex;justify-content:space-between;color:rgba(255,255,255,.75);font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+  .cover h3{color:#fff;font-size:34px;line-height:1.02}
+  .cover small{display:block;color:rgba(255,255,255,.7);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-top:10px}
+  .cover .pages{color:rgba(255,255,255,.55);font-size:10.5px}
+  .badge-float{position:absolute;right:6px;bottom:36px;background:var(--pink);color:#fff;border-radius:99px;
+    padding:11px 16px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    box-shadow:0 10px 24px rgba(232,68,127,.35);transform:rotate(-2deg)}
+
+  /* sections */
+  section{padding:64px 0}
+  .shead{max-width:620px;margin-bottom:36px}
+  .shead h2{font-size:clamp(28px,3.6vw,46px);margin:12px 0 10px}
+  .shead p{margin:0;color:var(--body);font-size:15px}
+
+  /* for whom */
+  .who{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .who article{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+  .who .ic{width:38px;height:38px;border-radius:50%;background:var(--pink-soft);display:grid;place-items:center;color:var(--pink);margin-bottom:16px}
+  .who h3{font-size:22px;margin-bottom:8px}
+  .who p{margin:0;color:var(--body);font-size:14px}
+
+  /* inside */
+  .inside{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line)}
+  .chapter{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:26px 26px 26px 0;border-bottom:1px solid var(--line)}
+  .chapter:nth-child(odd){border-right:1px solid var(--line);padding-right:40px}
+  .chapter:nth-child(even){padding-left:40px}
+  .chapter .n{font-family:var(--serif);font-size:30px;color:var(--caramel);line-height:1}
+  .chapter h3{font-size:21px;margin-bottom:6px}
+  .chapter p{margin:0;color:var(--body);font-size:13.5px}
+
+  /* pages preview */
+  .pages-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .page{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px;box-shadow:0 18px 40px rgba(60,30,18,.08);
+    font-size:10.5px;color:var(--body)}
+  .page .ph{display:flex;justify-content:space-between;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  .page h4{font-family:var(--serif);font-size:19px;color:var(--ink);margin:0 0 4px;font-weight:600}
+  .page .sub{font-size:9.5px;color:var(--muted);margin-bottom:14px}
+  .page table{width:100%;border-collapse:collapse;font-size:9.5px}
+  .page th{text-align:left;font-weight:600;color:var(--muted);font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  .page td{padding:5px 0;border-bottom:1px solid #F1E8DF}
+  .page tr:last-child td{border-bottom:0}
+  .page td:last-child,.page th:last-child{text-align:right}
+  .page .total{display:flex;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-weight:600;color:var(--ink);font-size:10px}
+  .page .note{font-size:8.5px;color:var(--muted);margin-top:10px;line-height:1.5}
+  .pages-note{text-align:center;font-size:12.5px;color:var(--muted);margin-top:18px}
+
+  /* author */
+  .author{background:var(--choco);color:#F7EFE6;border-radius:26px;padding:46px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+  .author .lab{color:#E8A9C2}
+  .author h2{font-size:clamp(26px,3.2vw,40px);margin:12px 0 14px;color:#fff}
+  .author p{color:rgba(247,239,230,.72);font-size:14.5px;margin:0 0 18px;max-width:46ch}
+  .astats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;border-top:1px solid rgba(255,255,255,.14);padding-top:20px}
+  .astats b{display:block;font-family:var(--serif);font-size:32px;color:#fff;line-height:1}
+  .astats span{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(247,239,230,.5)}
+  .author-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .author-photos img{border-radius:12px;width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+  .author-photos img:first-child{transform:translateY(16px)}
+
+  /* reviews */
+  .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .rev{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+  .rev p{font-family:var(--serif);font-size:20px;line-height:1.35;margin:0 0 16px;color:var(--ink)}
+  .rev .who-s{font-size:12px;color:var(--muted)}
+  .rev .who-s b{color:var(--ink);font-weight:600}
+  .revs-note{font-size:11.5px;color:var(--muted);margin-top:14px}
+
+  /* price */
+  .buy{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:44px;display:grid;grid-template-columns:1fr .9fr;gap:44px;align-items:center}
+  .buy h2{font-size:clamp(26px,3.4vw,42px);margin:10px 0 10px}
+  .buy p{color:var(--body);font-size:14.5px;margin:0 0 18px}
+  .steps{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .steps li{display:grid;grid-template-columns:26px 1fr;gap:12px;font-size:13.5px;color:var(--body)}
+  .steps b{width:26px;height:26px;border-radius:50%;background:var(--pink-soft);color:#B32A5B;display:grid;place-items:center;font-size:11px}
+  .buybox{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:26px;text-align:center}
+  .buybox .old{font-size:13px;color:var(--muted);text-decoration:line-through}
+  .buybox .now{font-family:var(--serif);font-size:56px;line-height:1;margin:6px 0 4px}
+  .buybox .now small{font-family:var(--sans);font-size:14px;color:var(--muted);letter-spacing:.06em}
+  .buybox .btn{width:100%;margin-top:16px}
+  .buybox .safe{font-size:11px;color:var(--muted);margin-top:12px}
+
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:18px 0}
+  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-family:var(--serif);font-size:22px;line-height:1.3}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:var(--sans);font-size:20px;color:var(--pink);font-weight:400}
+  details[open] summary::after{content:"–"}
+  details p{margin:10px 0 0;color:var(--body);font-size:14px;max-width:66ch}
+
+  footer{padding:46px 0 36px;border-top:1px solid var(--line);margin-top:20px}
+  .fg{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start}
+  .fg p{margin:0;color:var(--muted);font-size:13px;max-width:44ch}
+  .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:26px;padding-top:16px;border-top:1px solid var(--line)}
+
+  /* sticky mobile */
+  .sticky{display:none}
+
+  /* modal */
+  .overlay{position:fixed;inset:0;background:rgba(23,15,12,.6);backdrop-filter:blur(6px);z-index:80;display:none;align-items:center;justify-content:center;padding:20px}
+  .overlay.on{display:flex}
+  .modal{background:var(--paper);border-radius:22px;max-width:440px;width:100%;padding:30px;position:relative;box-shadow:0 40px 90px rgba(30,15,10,.4)}
+  .modal h3{font-size:30px;margin:0 0 6px}
+  .modal p{color:var(--body);font-size:13.5px;margin:0 0 18px}
+  .modal label{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+  .modal input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--cream);
+    font:inherit;font-size:14px;color:var(--ink);margin-bottom:14px}
+  .modal input:focus{outline:none;border-color:var(--pink)}
+  .modal .btn{width:100%}
+  .modal .close{position:absolute;right:14px;top:12px;background:none;border:0;font-size:24px;line-height:1;color:var(--muted);cursor:pointer}
+  .modal .demo-note{font-size:10.5px;color:var(--muted);margin:14px 0 0;text-align:center}
+  .success{text-align:center;padding:10px 0}
+  .success .ok{width:58px;height:58px;border-radius:50%;background:#E7F5EC;color:#1F7A45;display:grid;place-items:center;margin:0 auto 16px}
+  .success h3{margin-bottom:8px}
+
+  @media (max-width:900px){
+    .wrap{padding:0 18px}
+    .hgrid{grid-template-columns:1fr;gap:34px}
+    .cover{width:280px}
+    .hero{padding:40px 0 34px}
+    .who{grid-template-columns:1fr}
+    .inside{grid-template-columns:1fr}
+    .chapter,.chapter:nth-child(odd),.chapter:nth-child(even){padding:22px 0;border-right:0}
+    .pages-row{grid-template-columns:1fr}
+    .author{grid-template-columns:1fr;padding:28px;gap:26px}
+    .revs{grid-template-columns:1fr}
+    .buy{grid-template-columns:1fr;padding:26px;gap:26px}
+    section{padding:44px 0}
+    .price-chip{display:none}
+    header .btn{display:none}
+    .sticky{display:flex;align-items:center;gap:12px;position:fixed;left:0;right:0;bottom:0;z-index:60;
+      padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(250,244,236,.96);
+      backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+    .sticky .p{font-family:var(--serif);font-size:26px;line-height:1}
+    .sticky .btn{flex:1;padding:14px 16px;font-size:11.5px}
+    body{padding-bottom:72px}
+  }
+  @media print{ .sticky,header,.overlay{display:none} body{background:#fff} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hrow">
+    <div class="brand"><img src="img/logo.jpg" alt="cakes with benefits"><span>cakes with benefits</span></div>
+    <div class="price-chip">PDF-посібник · <b>499 ₴</b></div>
+    <button class="btn pink" onclick="openBuy()">Купити</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hgrid">
+      <div>
+        <span class="kicker"><i></i>Електронний посібник · 48 сторінок</span>
+        <h1>Торт, який виходить <em>з&nbsp;першого&nbsp;разу</em></h1>
+        <p class="lead">12 технологічних карт: бісквіти, креми й шоколадний декор. З точними грамівками, виходом на форму та собівартістю — щоб не перераховувати навпомацки.</p>
+        <ul class="bullets">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><b>Точні грамівки</b> — не «на око», а таблиця з відсотками</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><b>Вихід і собівартість</b> — рахуєте ціну, а не вгадуєте</span>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><b>PDF на пошту</b> — одразу після оплати, без очікування</span>
+          </li>
+        </ul>
+        <div class="hbuy">
+          <button class="btn pink" onclick="openBuy()">Купити за 499 ₴</button>
+          <div class="hprice">499 ₴<span>за весь посібник</span></div>
+        </div>
+        <div class="hnote">Оплата карткою · файл приходить на пошту за хвилину</div>
+      </div>
+
+      <div class="cover-wrap">
+        <div class="cover">
+          <img src="img/cake-05.jpg" alt="Торт ручної роботи — приклад з посібника">
+          <div class="cover-txt">
+            <div class="cover-top"><span>cakes with benefits</span><span>PDF</span></div>
+            <div>
+              <h3>Технологічні карти тортів</h3>
+              <small>12 карт · бісквіти · креми · декор</small>
+            </div>
+            <div class="pages">48 сторінок · українською</div>
+          </div>
+        </div>
+        <div class="badge-float">Одразу на пошту</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section id="who">
+    <div class="shead">
+      <div class="lab">01 — для кого</div>
+      <h2>Кому це справді потрібно</h2>
+      <p>Не «всім, хто любить солодке», а тим, хто вже пече — або збирається продавати.</p>
+    </div>
+    <div class="who">
+      <article>
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/></svg></div>
+        <h3>Тільки починаєте</h3>
+        <p>Щоб перший торт не став останнім. Базові карти зрозумілі навіть без досвіду роботи з вагами й формами.</p>
+      </article>
+      <article>
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M6 16V8l6-4 6 4v8"/></svg></div>
+        <h3>Печете на замовлення</h3>
+        <p>Коли треба порахувати собівартість і назвати ціну, а не працювати «в нуль» на кожному торті.</p>
+      </article>
+      <article>
+        <div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 7v10l8 5 8-5V7z"/></svg></div>
+        <h3>Хочете складний декор</h3>
+        <p>Шоколад, фігури, квіти — щоб конструкція тримала форму й не падала на здачі.</p>
+      </article>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="inside">
+    <div class="shead">
+      <div class="lab">02 — що всередині</div>
+      <h2>Шість розділів, 12 карт</h2>
+      <p>Кожна карта — це таблиця: інгредієнт, вага, відсоток, вихід і собівартість на один кілограм.</p>
+    </div>
+    <div class="inside">
+      <div class="chapter"><div class="n">01</div><div><h3>Бісквіти</h3><p>Ванільний, шоколадний, червоний оксамит і горіховий. Пропорції, які не осідають.</p></div></div>
+      <div class="chapter"><div class="n">02</div><div><h3>Креми, що тримають</h3><p>Стабільні начинки, які не течуть під вагою декору й не рвуть зріз.</p></div></div>
+      <div class="chapter"><div class="n">03</div><div><h3>Шоколадний декор</h3><p>Темперування, фігури, квіти й написи. Що робити, коли шоколад «сіріє».</p></div></div>
+      <div class="chapter"><div class="n">04</div><div><h3>Збірка та вага</h3><p>Як розрахувати каркас, щоб торт не просів під фігурою.</p></div></div>
+      <div class="chapter"><div class="n">05</div><div><h3>Собівартість</h3><p>Формула перерахунку на будь-яку форму й на будь-який вихід.</p></div></div>
+      <div class="chapter"><div class="n">06</div><div><h3>Чек-листи</h3><p>Що купити, що зробити за день до і що — у день здачі.</p></div></div>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="pages">
+    <div class="shead">
+      <div class="lab">03 — як виглядає</div>
+      <h2>Сторінки зсередини</h2>
+      <p>Три типи сторінок: карта бісквіта, карта крему й збірка торта.</p>
+    </div>
+    <div class="pages-row">
+      <div class="page">
+        <div class="ph"><span>карта 01</span><span>с. 6</span></div>
+        <h4>Ванільний бісквіт</h4>
+        <div class="sub">Форма 20 см · 3 яруси · вихід 1,6 кг</div>
+        <table>
+          <tr><th>Складник</th><th>г</th><th>%</th></tr>
+          <tr><td>Яйця</td><td>300</td><td>33</td></tr>
+          <tr><td>Цукор</td><td>270</td><td>30</td></tr>
+          <tr><td>Борошно</td><td>240</td><td>27</td></tr>
+          <tr><td>Олія</td><td>90</td><td>10</td></tr>
+        </table>
+        <div class="total"><span>Разом</span><span>900 г</span></div>
+        <div class="note">Вихід після випікання — 780 г. Час: 32 хв при 170 °C.</div>
+      </div>
+      <div class="page">
+        <div class="ph"><span>карта 04</span><span>с. 18</span></div>
+        <h4>Крем на білому шоколаді</h4>
+        <div class="sub">Стабільний під декор · вихід 1,2 кг</div>
+        <table>
+          <tr><th>Складник</th><th>г</th><th>%</th></tr>
+          <tr><td>Білий шоколад</td><td>380</td><td>32</td></tr>
+          <tr><td>Вершки 33%</td><td>420</td><td>35</td></tr>
+          <tr><td>Маскарпоне</td><td>340</td><td>28</td></tr>
+          <tr><td>Желатин</td><td>60</td><td>5</td></tr>
+        </table>
+        <div class="total"><span>Разом</span><span>1 200 г</span></div>
+        <div class="note">Тримає форму 6 годин при +22 °C. Не тече на зрізі.</div>
+      </div>
+      <div class="page">
+        <div class="ph"><span>карта 09</span><span>с. 34</span></div>
+        <h4>Збірка на 3 кг</h4>
+        <div class="sub">Каркас · вага · час</div>
+        <table>
+          <tr><th>Етап</th><th>Час</th><th>Вага</th></tr>
+          <tr><td>Бісквіт</td><td>40 хв</td><td>1,6 кг</td></tr>
+          <tr><td>Просочення</td><td>10 хв</td><td>120 г</td></tr>
+          <tr><td>Крем</td><td>25 хв</td><td>900 г</td></tr>
+          <tr><td>Декор</td><td>60 хв</td><td>380 г</td></tr>
+        </table>
+        <div class="total"><span>Разом</span><span>3 000 г</span></div>
+        <div class="note">Каркас ставиться до декору. Перевірка ваги — перед фігурою.</div>
+      </div>
+    </div>
+    <div class="pages-note">Це фрагменти макета. У посібнику — 48 сторінок і 12 повних карт.</div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="author">
+    <div class="author">
+      <div>
+        <div class="lab">04 — автор</div>
+        <h2>cakes with benefits</h2>
+        <p>Київ. Торти, шоколад і технологічні карти. Декор — виключно з шоколаду: фігури, квіти, написи. Можливі варіанти без білого цукру, глютену й молочних продуктів.</p>
+        <div class="astats">
+          <div><b>855</b><span>робіт</span></div>
+          <div><b>7 259</b><span>підписників</span></div>
+          <div><b>100%</b><span>шоколадний декор</span></div>
+        </div>
+      </div>
+      <div class="author-photos">
+        <img src="img/cake-01.jpg" alt="Шоколадний торт з фігурою дракона">
+        <img src="img/cake-04.jpg" alt="Торт у вигляді книги">
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="reviews">
+    <div class="shead">
+      <div class="lab">05 — відгуки</div>
+      <h2>Що кажуть ті, хто вже спек</h2>
+    </div>
+    <div class="revs">
+      <div class="rev">
+        <p>«Нарешті зрозуміла, чому мій бісквіт осідав. Справа була в пропорції, а не в духовці».</p>
+        <div class="who-s"><b>Олена</b> · кондитер, Київ</div>
+      </div>
+      <div class="rev">
+        <p>«Порахувала собівартість — і підняла ціну на 30%. Ніхто не пішов, бо торт став стабільним».</p>
+        <div class="who-s"><b>Марія</b> · пече на замовлення</div>
+      </div>
+      <div class="rev">
+        <p>«Карта збірки на 3 кг — те, чого не вистачало. Фігура більше не падає».</p>
+        <div class="who-s"><b>Ірина</b> · кондитерська, Львів</div>
+      </div>
+    </div>
+    <div class="revs-note">У демо відгуки умовні — у робочій версії поставимо ваші.</div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="buy">
+    <div class="buy">
+      <div>
+        <div class="lab">06 — оплата</div>
+        <h2>Що буде після оплати</h2>
+        <p>Нічого не треба чекати й писати в директ. Усе відбувається саме.</p>
+        <ul class="steps">
+          <li><b>1</b><span>Оплачуєте карткою на цій сторінці.</span></li>
+          <li><b>2</b><span>На пошту приходить лист із файлом — за хвилину.</span></li>
+          <li><b>3</b><span>Читаєте на телефоні або друкуєте. Доступ безстроковий.</span></li>
+        </ul>
+      </div>
+      <div class="buybox">
+        <div class="old">799 ₴</div>
+        <div class="now">499 <small>₴</small></div>
+        <div class="hnote" style="margin:0 0 4px">PDF · 48 сторінок · назавжди</div>
+        <button class="btn pink" onclick="openBuy()">Купити посібник</button>
+        <div class="safe">Оплата карткою · чек на пошту</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <section id="faq">
+    <div class="shead">
+      <div class="lab">07 — питання</div>
+      <h2>Часті питання</h2>
+    </div>
+    <details open>
+      <summary>Це підійде, якщо я новачок?</summary>
+      <p>Так. Перші карти — базові бісквіти й креми, вони зрозумілі без досвіду. Складніші — декор і збірка — йдуть після них.</p>
+    </details>
+    <details>
+      <summary>У якому форматі посібник?</summary>
+      <p>PDF, 48 сторінок, українською. Читається з телефона, планшета й комп’ютера. Можна роздрукувати.</p>
+    </details>
+    <details>
+      <summary>Як швидко прийде файл?</summary>
+      <p>Одразу після оплати — на пошту, яку ви вкажете. Якщо листа немає, перевірте папку «Спам».</p>
+    </details>
+    <details>
+      <summary>Чи будуть оновлення?</summary>
+      <p>Так, нові карти й виправлення надсилаю безкоштовно на ту саму пошту.</p>
+    </details>
+    <details>
+      <summary>Можна оплатити не карткою?</summary>
+      <p>У демо-версії оплата не підключена. У робочій — картка, Apple Pay і Google Pay.</p>
+    </details>
+  </section>
+</div>
+
+<div class="wrap">
+  <footer>
+    <div class="fg">
+      <div class="brand"><img src="img/logo.jpg" alt=""><span>cakes with benefits</span></div>
+      <p>Технологічні карти тортів · Київ<br>Питання — у директ @cakes_with_benefits</p>
+    </div>
+    <div class="legal">
+      <span>Демо-макет: ціни, відгуки та сторінки умовні. Фото — з відкритого профілю Instagram.</span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+</div>
+
+<div class="sticky">
+  <div class="p">499 ₴</div>
+  <button class="btn pink" onclick="openBuy()">Купити</button>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal">
+    <button class="close" onclick="closeBuy()" aria-label="Закрити">×</button>
+    <div id="formView">
+      <h3>Купити посібник</h3>
+      <p>PDF, 48 сторінок. Файл прийде на пошту одразу після оплати.</p>
+      <label>Ваше ім’я</label>
+      <input id="f-name" placeholder="Олена" autocomplete="name">
+      <label>Email для файлу</label>
+      <input id="f-email" type="email" placeholder="olena@example.com" autocomplete="email">
+      <button class="btn pink" onclick="pay()">Оплатити 499 ₴</button>
+      <div class="demo-note">Демо-режим: реальна оплата не підключена</div>
+    </div>
+    <div id="okView" style="display:none">
+      <div class="success">
+        <div class="ok">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <h3>Готово!</h3>
+        <p id="okText">Файл надіслано на пошту.</p>
+        <button class="btn ghost" onclick="closeBuy()">Закрити</button>
+        <div class="demo-note">Демо: лист не надсилається</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openBuy(){ document.getElementById('overlay').classList.add('on'); document.body.style.overflow='hidden'; }
+  function closeBuy(){ document.getElementById('overlay').classList.remove('on'); document.body.style.overflow='';
+    setTimeout(()=>{ document.getElementById('formView').style.display='block'; document.getElementById('okView').style.display='none'; }, 200); }
+  function pay(){
+    const email = document.getElementById('f-email').value.trim();
+    const name = document.getElementById('f-name').value.trim();
+    if(!email || !email.includes('@')){ document.getElementById('f-email').focus(); return; }
+    document.getElementById('okText').textContent = (name ? name + ', ' : '') + 'файл надіслано на ' + email + '.';
+    document.getElementById('formView').style.display='none';
+    document.getElementById('okView').style.display='block';
+  }
+  document.getElementById('overlay').addEventListener('click', e => { if(e.target.id==='overlay') closeBuy(); });
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeBuy(); });
+</script>
+</body>
+</html>
