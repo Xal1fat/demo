@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fade & Co — barbershop in Sheffield</title>
+<meta name="description" content="Barbershop in Sheffield: skin fades, beard work, hot towel shaves. Book online in 20 seconds — no phone calls.">
+<meta name="theme-color" content="#12110f">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2312110f'/%3E%3Cpath d='M9 9l14 14M23 9L9 23' stroke='%23e0a05a' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12110f; --coal:#1b1917; --paper:#f2efe9; --body:#57534d; --muted:#8d887f;
+    --line:rgba(18,17,15,.14); --accent:#e0a05a; --accent-ink:#2a1c0c;
+    --sans:"Archivo",-apple-system,system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+    font-size:16px;line-height:1.5;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .shell{max-width:1120px;margin:0 auto;padding:0 24px}
+  .mono{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+
+  /* header */
+  .top{background:var(--ink);color:var(--paper)}
+  .top .row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+  .brand{font-weight:800;font-size:17px;letter-spacing:-.03em;text-decoration:none}
+  .brand span{color:var(--accent)}
+  .top nav{display:none;gap:22px;font-size:13px;color:#b9b3a8}
+  .top nav a{text-decoration:none}
+  @media(min-width:820px){.top nav{display:flex}}
+  .top .call{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    text-decoration:none;border:1px solid rgba(242,239,233,.35);padding:10px 14px}
+  .top .call:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* hero */
+  .hero{padding:56px 0 48px}
+  @media(min-width:900px){.hero{padding:84px 0 64px}}
+  .hero-grid{display:grid;gap:40px}
+  @media(min-width:900px){.hero-grid{grid-template-columns:1.25fr .75fr;gap:56px;align-items:end}}
+  h1{font-size:clamp(2.4rem,6.4vw,4.4rem);line-height:.94;letter-spacing:-.045em;margin:0;font-weight:800;max-width:15ch}
+  h1 em{font-style:normal;color:#a8763f}
+  .lead{margin:20px 0 0;color:var(--body);font-size:clamp(1rem,1.5vw,1.1rem);max-width:44ch}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 24px;
+    font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+    text-decoration:none;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;transition:.18s}
+  .btn:hover{background:transparent;color:var(--ink)}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+  .btn.accent{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .btn.accent:hover{background:transparent;color:var(--ink);border-color:var(--ink)}
+
+  .status{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+  .status li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);
+    font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .status b{color:var(--ink);font-weight:500}
+  .open{color:#2c5b45}
+
+  /* sections */
+  .sec{padding:52px 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+  h2{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.05;letter-spacing:-.035em;margin:0;font-weight:800}
+  .sub{color:var(--body);margin:8px 0 0;font-size:15px;max-width:52ch}
+
+  /* price list */
+  .prices{display:grid;gap:0;border-top:1px solid var(--line)}
+  .price{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline;
+    padding:16px 0;border-bottom:1px solid var(--line);cursor:pointer;background:none;border-left:0;border-right:0;border-top:0;
+    font:inherit;text-align:left;color:inherit;transition:.15s;width:100%}
+  .price:hover{background:rgba(224,160,90,.12)}
+  .price .name{font-size:17px;font-weight:600;letter-spacing:-.015em}
+  .price .desc{display:block;margin-top:3px;font-size:13px;color:var(--muted);font-weight:400;letter-spacing:0}
+  .price .cost{font-family:var(--mono);font-size:15px;white-space:nowrap}
+  .price .cost small{display:block;font-size:10px;color:var(--muted);letter-spacing:.06em;text-align:right;margin-top:2px}
+
+  /* team */
+  .team{display:grid;gap:14px}
+  @media(min-width:760px){.team{grid-template-columns:repeat(3,1fr)}}
+  .barber{border:1px solid var(--line);padding:20px;background:#fff}
+  .barber .ini{width:44px;height:44px;background:var(--ink);color:var(--accent);display:grid;place-items:center;
+    font-weight:800;font-size:15px;margin-bottom:14px}
+  .barber h3{margin:0 0 4px;font-size:17px;letter-spacing:-.02em}
+  .barber p{margin:0;font-size:13.5px;color:var(--muted)}
+  .barber .tag{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+  /* booking */
+  .book{background:var(--ink);color:var(--paper);padding:52px 0}
+  .book h2{color:var(--paper)}
+  .book .sub{color:#b9b3a8}
+  .book-grid{display:grid;gap:32px;margin-top:28px}
+  @media(min-width:900px){.book-grid{grid-template-columns:1.1fr .9fr;gap:48px}}
+  .field{display:grid;gap:6px;margin-bottom:12px}
+  .field label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#9c968b}
+  .field input,.field select{font:inherit;font-size:15px;padding:13px 14px;border:1px solid rgba(242,239,233,.22);
+    background:rgba(255,255,255,.04);color:var(--paper);border-radius:0}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--accent)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:#9c968b;margin:4px 0 14px}
+  .consent input{width:17px;height:17px;margin-top:1px;accent-color:var(--accent)}
+  .err{color:#e08a7a;font-size:12.5px;min-height:16px;margin:0 0 8px}
+  .done{display:none;border:1px solid rgba(224,160,90,.5);padding:18px;background:rgba(224,160,90,.08)}
+  .done b{display:block;font-size:17px;margin-bottom:4px}
+  .done p{margin:0;font-size:13.5px;color:#c8c2b6}
+  .side{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#9c968b;line-height:2}
+  .side b{color:var(--paper);font-weight:500}
+
+  footer{padding:26px 0 44px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+  .demo{background:var(--accent);color:var(--accent-ink);font-family:var(--mono);font-size:10.5px;
+    letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:8px 12px}
+  @media(max-width:640px){.demo{font-size:9.5px}}
+</style>
+</head>
+<body>
+
+<div class="demo">demo site · Fade &amp; Co is a fictional shop · sample prices</div>
+
+<header class="top">
+  <div class="shell row">
+    <a class="brand" href="#top">Fade<span>&amp;</span>Co</a>
+    <nav>
+      <a href="#prices">Prices</a>
+      <a href="#team">Barbers</a>
+      <a href="#book">Book</a>
+      <a href="#visit">Find us</a>
+    </nav>
+    <a class="call" href="tel:+441140000000">0114 000 0000</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <h1>Skin fades,<br>beards and<br><em>hot towel</em> shaves</h1>
+        <p class="lead">Walk-ins welcome, but the good slots go to people who book. Twenty seconds here beats a phone call or a DM.</p>
+        <div class="cta">
+          <a class="btn accent" href="#book">Book a chair</a>
+          <a class="btn ghost" href="#prices">See prices</a>
+        </div>
+      </div>
+
+      <ul class="status">
+        <li><span>Open today</span><b class="open">9:00 — 19:00</b></li>
+        <li><span>Walk-ins</span><b>until 17:00</b></li>
+        <li><span>Average wait</span><b>15 min</b></li>
+        <li><span>Chairs</span><b>3</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="prices">
+    <div class="shell">
+      <div class="sec-head">
+        <div>
+          <h2>Prices</h2>
+          <p class="sub">Tap a service to start a booking with it. No hidden extras — beard line-up is included in every cut.</p>
+        </div>
+        <span class="mono" style="color:var(--muted)">cash &amp; card</span>
+      </div>
+
+      <div class="prices" id="prices-list">
+        <button class="price" data-service="Skin fade">
+          <span class="name">Skin fade<span class="desc">Clipper to skin, blended, styled</span></span>
+          <span class="cost">£18<small>30 min</small></span>
+        </button>
+        <button class="price" data-service="Cut &amp; beard">
+          <span class="name">Cut &amp; beard<span class="desc">Full cut plus beard shape and line-up</span></span>
+          <span class="cost">£26<small>45 min</small></span>
+        </button>
+        <button class="price" data-service="Hot towel shave">
+          <span class="name">Hot towel shave<span class="desc">Straight razor, hot towels, balm</span></span>
+          <span class="cost">£22<small>40 min</small></span>
+        </button>
+        <button class="price" data-service="Kids cut">
+          <span class="name">Kids cut<span class="desc">Under 12, no clipper-shy drama</span></span>
+          <span class="cost">£12<small>25 min</small></span>
+        </button>
+        <button class="price" data-service="Buzz cut">
+          <span class="name">Buzz cut<span class="desc">One length, tidy up</span></span>
+          <span class="cost">£10<small>15 min</small></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="team">
+    <div class="shell">
+      <div class="sec-head">
+        <div>
+          <h2>Who's cutting</h2>
+          <p class="sub">Three chairs, three specialities. You can pick your barber when you book.</p>
+        </div>
+      </div>
+
+      <div class="team">
+        <div class="barber"><div class="ini">JM</div><h3>Jamie</h3><p>Owner. Eleven years on fades.</p><div class="tag">skin fade · scissor work</div></div>
+        <div class="barber"><div class="ini">TD</div><h3>Tomas</h3><p>Beards and straight razor.</p><div class="tag">shaves · beard sculpt</div></div>
+        <div class="barber"><div class="ini">RK</div><h3>Rae</h3><p>Textured crops, curly hair.</p><div class="tag">crops · curls · kids</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="shell">
+      <h2>Book a chair</h2>
+      <p class="sub">Pick a service and a time. You'll get a confirmation by text — no account, no app.</p>
+
+      <div class="book-grid">
+        <form id="booking" novalidate>
+          <div class="field">
+            <label for="service">Service</label>
+            <select id="service" required>
+              <option>Skin fade — £18</option>
+              <option>Cut &amp; beard — £26</option>
+              <option>Hot towel shave — £22</option>
+              <option>Kids cut — £12</option>
+              <option>Buzz cut — £10</option>
+            </select>
+          </div>
+
+          <div class="row2">
+            <div class="field">
+              <label for="date">Date</label>
+              <input id="date" type="date" required>
+            </div>
+            <div class="field">
+              <label for="time">Time</label>
+              <select id="time" required>
+                <option>09:00</option><option>10:00</option><option>11:00</option>
+                <option>12:00</option><option>13:00</option><option>14:00</option>
+                <option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Jordan" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Mobile</label>
+            <input id="phone" type="tel" inputmode="tel" placeholder="07700 900123" autocomplete="tel" required>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="agree">
+            <span>Text me a reminder about this booking</span>
+          </label>
+
+          <p class="err" id="err" role="alert"></p>
+          <button class="btn accent" type="submit" style="width:100%">Confirm booking</button>
+          <p class="mono" style="color:#7d776c;margin:10px 0 0;font-size:10px">Demo: nothing is sent anywhere</p>
+        </form>
+
+        <div>
+          <div class="done" id="done">
+            <b>Chair booked</b>
+            <p id="doneText"></p>
+          </div>
+          <div class="side" style="margin-top:18px">
+            <div>Address — <b>123 Example Rd, Sheffield S1 1AA</b></div>
+            <div>Mon–Fri — <b>9:00–19:00</b></div>
+            <div>Saturday — <b>9:00–18:00</b></div>
+            <div>Sunday — <b>10:00–16:00</b></div>
+            <div>Phone — <b>0114 000 0000</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit">
+    <div class="shell">
+      <div class="sec-head">
+        <div>
+          <h2>Find us</h2>
+          <p class="sub">Two minutes from the tram stop, next to the corner shop. Card and cash both fine.</p>
+        </div>
+        <a class="btn ghost" href="https://maps.google.com/?q=Sheffield" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="shell">
+  <span>Fade &amp; Co · Sheffield</span>
+  <span>Demo layout · fictional shop</span>
+</footer>
+
+<script>
+(function () {
+  var form = document.getElementById('booking');
+  var service = document.getElementById('service');
+  var err = document.getElementById('err');
+  var done = document.getElementById('done');
+  var doneText = document.getElementById('doneText');
+
+  // минимальная дата — сегодня
+  var today = new Date();
+  var iso = today.toISOString().slice(0, 10);
+  document.getElementById('date').min = iso;
+  document.getElementById('date').value = iso;
+
+  // клик по услуге — подставить её в форму и прокрутить
+  document.querySelectorAll('.price').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var name = btn.dataset.service.replace(/&amp;/g, '&');
+      var label = name.toLowerCase();
+      for (var i = 0; i < service.options.length; i++) {
+        if (service.options[i].text.toLowerCase().indexOf(label) === 0) {
+          service.selectedIndex = i;
+          break;
+        }
+      }
+      document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var phone = document.getElementById('phone').value.replace(/[^\d+]/g, '');
+
+    if (name.length < 2) { err.textContent = 'Enter your name.'; return; }
+    if (phone.replace(/\D/g, '').length < 10) { err.textContent = 'Check the mobile number.'; return; }
+    if (!document.getElementById('agree').checked) { err.textContent = 'Tick the reminder box, or nothing will be sent.'; return; }
+
+    err.textContent = '';
+    var date = document.getElementById('date').value;
+    var time = document.getElementById('time').value;
+    done.style.display = 'block';
+    doneText.textContent = name + ', ' + service.options[service.selectedIndex].text.toLowerCase() +
+      ' on ' + date + ' at ' + time + '. We\'ll text ' + phone + ' if anything changes.';
+    done.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+</body>
+</html>
