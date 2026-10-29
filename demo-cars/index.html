@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Eddy Cars — авто з США під ключ</title>
+<style>
+  :root{
+    --bg:#0a0b0d; --surface:#111214; --surface2:#15171a; --line:#23252a;
+    --text:#f1f1ee; --muted:#8a8f96; --accent:#c8ff3e;
+    --amber:#ffb545; --blue:#5aa9ff; --green:#38d39f; --grey:#6e737a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+  /* header */
+  header{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(10,11,13,.92);
+    backdrop-filter:blur(12px);z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.16em;font-size:13px}
+  .logo .mark{width:26px;height:26px;border:1px solid var(--accent);color:var(--accent);
+    display:grid;place-items:center;font-size:11px;letter-spacing:0}
+  nav.links{display:flex;gap:26px;font-size:13.5px;color:var(--muted)}
+  nav.links a:hover{color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border-radius:8px;
+    border:1px solid var(--line);font-size:13.5px;color:var(--text);background:var(--surface)}
+  .btn.accent{background:var(--accent);border-color:var(--accent);color:#0a0b0d;font-weight:600}
+  /* hero */
+  .hero{padding:54px 0 26px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+  h1{font-size:52px;line-height:1.03;letter-spacing:-.03em;margin:0 0 16px;font-weight:600;max-width:640px}
+  h1 em{font-style:normal;color:var(--accent)}
+  .lead{color:var(--muted);max-width:470px;margin:0;font-size:15.5px}
+  .stats{display:flex;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:0 0 auto}
+  .stat{padding:14px 20px;border-right:1px solid var(--line);min-width:110px}
+  .stat:last-child{border-right:0}
+  .stat b{display:block;font-size:22px;letter-spacing:-.02em}
+  .stat span{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  /* filters */
+  .filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:18px 0 26px;border-top:1px solid var(--line)}
+  .chip{height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);color:var(--muted);
+    font-size:13px;display:inline-flex;align-items:center;gap:8px;background:var(--surface)}
+  .chip.on{background:var(--text);color:#0a0b0d;border-color:var(--text);font-weight:600}
+  .chip .dot{width:6px;height:6px;border-radius:50%}
+  .spacer{flex:1}
+  .select{height:36px;padding:0 34px 0 14px;border-radius:8px;border:1px solid var(--line);
+    background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238a8f96' fill='none'/%3E%3C/svg%3E") no-repeat right 13px center;
+    color:var(--text);font-size:13px;display:inline-flex;align-items:center}
+  /* grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-bottom:56px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+    display:flex;flex-direction:column}
+  .shot{position:relative;aspect-ratio:16/10;background:#1b1d21;overflow:hidden}
+  .shot img{width:100%;height:100%;object-fit:cover;display:block}
+  .badge{position:absolute;top:12px;left:12px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+    padding:5px 9px;border-radius:6px;font-weight:600;background:#0a0b0dcc;backdrop-filter:blur(6px)}
+  .b-auction{color:var(--amber)} .b-transit{color:var(--blue)} .b-lot{color:var(--green)} .b-sold{color:var(--grey)}
+  .body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card h3{margin:0;font-size:16.5px;font-weight:600;letter-spacing:-.01em}
+  .meta{font-size:13px;color:var(--muted)}
+  .vin{font-family:ui-monospace,"SF Mono",monospace;font-size:11.5px;color:#5f646b;
+    border-top:1px dashed var(--line);padding-top:10px}
+  .price{display:flex;align-items:baseline;justify-content:space-between;margin-top:auto;padding-top:4px}
+  .price b{font-size:19px;letter-spacing:-.02em}
+  .price span{font-size:11.5px;color:var(--muted)}
+  .arrow{color:var(--accent);font-size:13px}
+  /* cta */
+  .cta{border:1px solid var(--line);border-radius:16px;padding:34px;margin-bottom:56px;display:flex;
+    align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(180deg,#121316,#0d0e10)}
+  .cta h2{margin:0 0 6px;font-size:26px;letter-spacing:-.02em}
+  .cta p{margin:0;color:var(--muted);font-size:14px;max-width:520px}
+  footer{border-top:1px solid var(--line);padding:22px 0 40px;color:#5f646b;font-size:12px;
+    display:flex;justify-content:space-between;gap:20px}
+  @media (max-width:900px){
+    .wrap{padding:0 18px}
+    h1{font-size:34px}
+    .hero{flex-direction:column;align-items:flex-start;padding:32px 0 20px}
+    .grid{grid-template-columns:1fr}
+    .cta{flex-direction:column;align-items:flex-start;padding:24px}
+    nav.links{display:none}
+  }
+</style></head><body>
+<header><div class="wrap nav">
+  <div class="logo"><span class="mark">EC</span>EDDY CARS</div>
+  <nav class="links"><a href="#">Каталог</a><a href="#">Як це працює</a><a href="#">Доставка</a><a href="#">Контакти</a></nav>
+  <a class="btn accent" href="#">Написати в Telegram</a>
+</div></header>
+
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Авто з США — <em>під ключ</em>, з ціною одразу в картці</h1>
+      <p class="lead">Ставка, доставка, розмитнення — вже в сумі. Не треба писати, щоб дізнатися, скільки вийде насправді.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>18</b><span>в наявності</span></div>
+      <div class="stat"><b>6</b><span>в дорозі</span></div>
+      <div class="stat"><b>4</b><span>на складі</span></div>
+    </div>
+  </section>
+
+  <div class="filters">
+    <span class="chip on">Усі</span>
+    <span class="chip"><i class="dot" style="background:var(--amber)"></i>На аукціоні</span>
+    <span class="chip"><i class="dot" style="background:var(--blue)"></i>В дорозі</span>
+    <span class="chip"><i class="dot" style="background:var(--green)"></i>На складі</span>
+    <span class="spacer"></span>
+    <span class="select">Марка</span>
+    <span class="select">Рік</span>
+    <span class="select">Бюджет</span>
+  </div>
+
+  <div class="grid">
+    <article class="card">
+      <div class="shot"><span class="badge b-auction">На аукціоні</span>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/2020_Toyota_Camry_XSE_front.jpg/1280px-2020_Toyota_Camry_XSE_front.jpg" alt="Toyota Camry XSE 2020"></div>
+      <div class="body">
+        <h3>Toyota Camry XSE 2020</h3>
+        <div class="meta">62 400 mi · 2.5 · передній привід</div>
+        <div class="vin">VIN 4T1K61AK5LU•••418</div>
+        <div class="price"><div><b>$19 800</b> <span>під ключ</span></div><span class="arrow">Детальніше →</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot"><span class="badge b-transit">В дорозі</span>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Toyota_RAV4_Hybrid_%28XA50%29_DSC_2709.jpg/1280px-Toyota_RAV4_Hybrid_%28XA50%29_DSC_2709.jpg" alt="Toyota RAV4 Hybrid"></div>
+      <div class="body">
+        <h3>Toyota RAV4 Hybrid 2021</h3>
+        <div class="meta">41 200 mi · 2.5 hybrid · повний привід</div>
+        <div class="vin">VIN JTMB6RFV0MD•••907</div>
+        <div class="price"><div><b>$27 300</b> <span>під ключ</span></div><span class="arrow">Детальніше →</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot"><span class="badge b-lot">На складі</span>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/BMW_X5_%28G05%29_China.jpg/1280px-BMW_X5_%28G05%29_China.jpg" alt="BMW X5 xDrive40i"></div>
+      <div class="body">
+        <h3>BMW X5 xDrive40i 2020</h3>
+        <div class="meta">48 900 mi · 3.0 · повний привід</div>
+        <div class="vin">VIN 5UXCR6C08L9•••233</div>
+        <div class="price"><div><b>$41 200</b> <span>під ключ</span></div><span class="arrow">Детальніше →</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot"><span class="badge b-auction">На аукціоні</span>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Audi_Q5_FY_50_TFSI_e_Facelift_IMG_5284.jpg/1280px-Audi_Q5_FY_50_TFSI_e_Facelift_IMG_5284.jpg" alt="Audi Q5"></div>
+      <div class="body">
+        <h3>Audi Q5 45 TFSI 2021</h3>
+        <div class="meta">33 500 mi · 2.0 · quattro</div>
+        <div class="vin">VIN WA1BNAFY7L2•••061</div>
+        <div class="price"><div><b>$29 400</b> <span>під ключ</span></div><span class="arrow">Детальніше →</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot"><span class="badge b-transit">В дорозі</span>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/2019_Tesla_Model_3_Long_Range_Dual_Motor_in_Red_Multi-Coat%2C_front_left%2C_2021-05-30.jpg/1280px-2019_Tesla_Model_3_Long_Range_Dual_Motor_in_Red_Multi-Coat%2C_front_left%2C_2021-05-30.jpg" alt="Tesla Model 3"></div>
+      <div class="body">
+        <h3>Tesla Model 3 Long Range 2019</h3>
+        <div class="meta">54 800 mi · електрика · AWD</div>
+        <div class="vin">VIN 5YJ3E1EB2KF•••575</div>
+        <div class="price"><div><b>$21 900</b> <span>під ключ</span></div><span class="arrow">Детальніше →</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="shot"><span class="badge b-lot">На складі</span>
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2018_Ford_F-150_Crew_Cab_front_5.26.18.jpg/1280px-2018_Ford_F-150_Crew_Cab_front_5.26.18.jpg" alt="Ford F-150"></div>
+      <div class="body">
+        <h3>Ford F-150 XLT 2018</h3>
+        <div class="meta">96 300 mi · 3.5 EcoBoost · 4x4</div>
+        <div class="vin">VIN 1FTEW1EP7JK•••884</div>
+        <div class="price"><div><b>$24 100</b> <span>під ключ</span></div><span class="arrow">Детальніше →</span></div>
+      </div>
+    </article>
+  </div>
+
+  <section class="cta">
+    <div>
+      <h2>Не знайшли своє авто?</h2>
+      <p>Підберемо під бюджет і покажемо лоти з аукціону ще до ставки — з повною історією й кінцевою ціною.</p>
+    </div>
+    <a class="btn accent" href="#">Підібрати авто</a>
+  </section>
+
+  <footer>
+    <span>© 2026 Eddy Cars · демонстраційний макет</span>
+    <span>Дані, VIN і ціни вигадані. Фото — Wikimedia Commons.</span>
+  </footer>
+</div>
+</body></html>
