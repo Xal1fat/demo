@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Мадейра, 9–15 листопада — ДАЛІ</title>
+<style>
+  :root{--cream:#f4efe6;--paper:#fbf8f2;--ink:#1b1a17;--muted:#6f6a5f;--line:#e0d8c9;--terra:#b4552f}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:16px;line-height:1.55;
+    -webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+  header{position:sticky;top:0;z-index:20;background:rgba(244,239,230,.93);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{font-family:Georgia,serif;font-size:22px;letter-spacing:.26em}
+  .brand small{display:block;font-family:-apple-system,system-ui,sans-serif;font-size:9.5px;letter-spacing:.24em;color:var(--muted);margin-top:3px}
+  nav.menu{display:flex;gap:30px;font-size:13.5px;color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 22px;border-radius:2px;
+    background:var(--ink);color:var(--cream);font-size:13.5px;border:1px solid var(--ink);cursor:pointer}
+  .btn.ghost{background:transparent;color:var(--ink)}
+  .btn.wide{width:100%}
+  /* hero */
+  .hero{position:relative;height:520px;overflow:hidden}
+  .hero img{width:100%;height:100%;object-fit:cover;display:block}
+  .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,10,.15),rgba(12,12,10,.72))}
+  .hero-in{position:absolute;inset:auto 0 0 0;padding:0 0 44px;z-index:2;color:#fff}
+  .kicker{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;opacity:.8;margin-bottom:12px}
+  .hero h1{font-family:Georgia,serif;font-weight:400;font-size:64px;line-height:1;margin:0;letter-spacing:-.02em}
+  .hero .sub{margin:14px 0 0;font-size:16px;opacity:.85;max-width:560px}
+  .chips{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+  .chips span{border:1px solid rgba(255,255,255,.35);padding:7px 13px;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase}
+  /* layout */
+  .crumb{padding:22px 0 0;font-size:12.5px;color:var(--muted);letter-spacing:.03em}
+  .layout{display:grid;grid-template-columns:1.25fr .75fr;gap:54px;padding:26px 0 60px}
+  h2{font-family:Georgia,serif;font-weight:400;font-size:31px;letter-spacing:-.01em;margin:0 0 16px}
+  .block{padding:30px 0;border-top:1px solid var(--line)}
+  .block:first-child{border-top:0;padding-top:10px}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:6px}
+  .facts div{background:var(--paper);padding:14px 16px}
+  .facts b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;font-weight:400}
+  /* days */
+  .days{list-style:none;padding:0;margin:0}
+  .days li{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .days .d{font-family:Georgia,serif;font-size:15px;color:var(--terra);letter-spacing:.02em}
+  .days h3{margin:0 0 3px;font-size:15.5px;font-weight:600}
+  .days p{margin:0;color:var(--muted);font-size:14px}
+  /* incl */
+  .incl{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  .incl ul{margin:0;padding:0;list-style:none;font-size:14.5px}
+  .incl li{padding:7px 0 7px 22px;position:relative;border-bottom:1px solid var(--line)}
+  .incl li:before{content:"—";position:absolute;left:0;color:var(--terra)}
+  .incl .no li:before{content:"×";color:#a9a294}
+  .incl h4{margin:0 0 10px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:400}
+  /* gallery */
+  .gal{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
+  .gal img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+  /* aside */
+  .aside{position:sticky;top:98px;align-self:start}
+  .panel{border:1px solid var(--line);background:var(--paper);padding:26px}
+  .panel .price{font-family:Georgia,serif;font-size:38px;line-height:1;margin:0}
+  .panel .per{color:var(--muted);font-size:12.5px;margin:6px 0 18px}
+  .panel dl{margin:0 0 18px;font-size:13.5px;display:grid;grid-template-columns:auto 1fr;gap:8px 14px}
+  .panel dt{color:var(--muted)}
+  .panel dd{margin:0;text-align:right}
+  .left{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--terra);margin:0 0 14px;
+    letter-spacing:.04em;text-transform:uppercase}
+  .dot{width:6px;height:6px;background:var(--terra);border-radius:50%}
+  .form{margin-top:18px;border-top:1px solid var(--line);padding-top:18px}
+  .form p{margin:0 0 10px;font-size:13px;color:var(--muted)}
+  .field{width:100%;height:44px;border:1px solid var(--line);background:#fff;padding:0 13px;font:inherit;font-size:14px;
+    margin-bottom:9px;border-radius:2px}
+  .note{font-size:11.5px;color:#a9a294;margin:10px 0 0}
+  footer{border-top:1px solid var(--line);padding:24px 0 50px;display:flex;justify-content:space-between;gap:30px;
+    color:#8d8779;font-size:12px}
+  @media(max-width:900px){
+    .wrap{padding:0 18px}
+    .hero{height:400px} .hero h1{font-size:38px}
+    .layout{grid-template-columns:1fr;gap:26px;padding-top:18px}
+    .aside{position:static}
+    .incl,.facts{grid-template-columns:1fr}
+    nav.menu{display:none}
+  }
+</style></head><body>
+<header><div class="wrap nav">
+  <div class="brand">ДАЛІ<small>АВТОРСЬКІ ТУРИ</small></div>
+  <nav class="menu"><a href="index.html">Тури</a><a href="#">Як це працює</a><a href="#">Мадейра</a><a href="#">Про нас</a></nav>
+  <a class="btn" href="#">Написати в Telegram</a>
+</div></header>
+
+<div class="hero">
+  <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/View_from_Miradouro_do_Pico_do_Arieiro_-_Madeira_01.jpg/1920px-View_from_Miradouro_do_Pico_do_Arieiro_-_Madeira_01.jpg" alt="Мадейра">
+  <div class="wrap hero-in">
+    <div class="kicker">Португалія · Атлантика</div>
+    <h1>Мадейра</h1>
+    <p class="sub">Острів, де дорога йде над хмарами, а океан починається одразу за поворотом.</p>
+    <div class="chips"><span>9–15 листопада</span><span>7 днів</span><span>8 людей</span><span>2 місця</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="crumb"><a href="index.html">Тури</a> / Мадейра · 9–15 листопада</div>
+
+  <div class="layout">
+    <div>
+      <div class="block">
+        <h2>Коротко</h2>
+        <div class="facts">
+          <div><b>Дати</b>9–15 листопада 2026</div>
+          <div><b>Тривалість</b>7 днів / 6 ночей</div>
+          <div><b>Група</b>до 8 людей</div>
+          <div><b>Складність</b>легка, 2–3 години ходи на день</div>
+          <div><b>Проживання</b>готелі 3–4*, двомісні номери</div>
+          <div><b>Харчування</b>сніданки включено</div>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2>Що вас чекає</h2>
+        <p style="color:var(--muted);margin:0">Ми не бігаємо по пам'ятках. За сім днів встигаємо і гори, і океан, і вечері в портових містечках — без поспіху й без автобусних вікон.</p>
+      </div>
+
+      <div class="block">
+        <h2>Маршрут</h2>
+        <ul class="days">
+          <li><span class="d">День 1</span><div><h3>Фуншал</h3><p>Зустріч в аеропорту, заселення, вечеря в старому місті. Знайомимось.</p></div></li>
+          <li><span class="d">День 2</span><div><h3>Понта-де-Сан-Лоуренсу</h3><p>Східний край острова: скелі, вітер, найкращі кольори Атлантики.</p></div></li>
+          <li><span class="d">День 3</span><div><h3>Піку-ду-Аріейру</h3><p>Світанок над хмарами, потім трек до Піку-Руйво — 6 км найвідомішого маршруту.</p></div></li>
+          <li><span class="d">День 4</span><div><h3>Фанал</h3><p>Лавровий ліс у тумані. Той самий, з фотографій, які здаються обробленими.</p></div></li>
+          <li><span class="d">День 5</span><div><h3>Порту-Моніш</h3><p>Природні басейни у лаві й ніч у місті на краю острова.</p></div></li>
+          <li><span class="d">День 6</span><div><h3>Південний берег</h3><p>Камара-де-Лобуш, бананові плантації, вечеря з видом на океан.</p></div></li>
+          <li><span class="d">День 7</span><div><h3>Аеропорт</h3><p>Сніданок, трансфер, і ви вже плануєте наступний.</p></div></li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h2>Фото</h2>
+        <div class="gal">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Ponta_de_S%C3%A3o_Louren%C3%A7o%2C_Madeira%2C_Portugal%2C_2019-05-28%2C_DD_31.jpg/1920px-Ponta_de_S%C3%A3o_Louren%C3%A7o%2C_Madeira%2C_Portugal%2C_2019-05-28%2C_DD_31.jpg" alt="Понта-де-Сан-Лоуренсу">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Foggy_Fanal_forest_in_Seixal%2C_Porto_Moniz%2C_Madeira%2C_2023_May.jpg/1920px-Foggy_Fanal_forest_in_Seixal%2C_Porto_Moniz%2C_Madeira%2C_2023_May.jpg" alt="Фанал">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Piscinas_naturais_-_Porto_Moniz_-_Madeira_01.jpg/1920px-Piscinas_naturais_-_Porto_Moniz_-_Madeira_01.jpg" alt="Порту-Моніш">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/View_from_Miradouro_do_Pico_do_Arieiro_-_Madeira_01.jpg/1920px-View_from_Miradouro_do_Pico_do_Arieiro_-_Madeira_01.jpg" alt="Піку-ду-Аріейру">
+        </div>
+      </div>
+
+      <div class="block">
+        <h2>Що входить</h2>
+        <div class="incl">
+          <div>
+            <h4>Входить у ціну</h4>
+            <ul>
+              <li>6 ночей у готелях 3–4*</li>
+              <li>Сніданки щодня</li>
+              <li>Трансфери й орендоване авто</li>
+              <li>Гід на весь маршрут</li>
+              <li>Вхідні квитки на треки</li>
+            </ul>
+          </div>
+          <div class="no">
+            <h4>Не входить</h4>
+            <ul>
+              <li>Авіаквитки (підберемо разом)</li>
+              <li>Обіди й вечері — 20–30 € на день</li>
+              <li>Страховка</li>
+              <li>Особисті витрати</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="aside">
+      <div class="panel">
+        <p class="left"><span class="dot"></span>2 місця з 8</p>
+        <p class="price">1 450 €</p>
+        <p class="per">за людину, двомісне розміщення</p>
+        <dl>
+          <dt>Дати</dt><dd>9–15 листопада</dd>
+          <dt>Депозит</dt><dd>300 €</dd>
+          <dt>Решта</dt><dd>до 10 жовтня</dd>
+          <dt>Група</dt><dd>до 8 людей</dd>
+        </dl>
+        <a class="btn wide" href="#">Забронювати місце</a>
+        <div class="form">
+          <p>Або залиште контакт — надішлемо програму PDF і відповімо на питання.</p>
+          <input class="field" placeholder="Ім'я">
+          <input class="field" placeholder="Телефон або @telegram">
+          <a class="btn ghost wide" href="#">Отримати програму</a>
+          <p class="note">Заявка йде в Telegram. Відповідаємо протягом дня.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <span>© 2026 ДАЛІ · демонстраційний макет</span>
+    <span>Дати, ціни й місця вигадані. Фото — Wikimedia Commons.</span>
+  </footer>
+</div>
+</body></html>
