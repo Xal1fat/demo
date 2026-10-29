@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Приклади робіт — сайти для малого бізнесу</title>
-<meta name="description" content="Демо-макети сайтів для салонів краси, кондитерських і майстрів: каталог, онлайн-запис, кошик. Живий сайт салону з записом у Telegram.">
+<title>Сайти для салонів, барбершопів і майстрів — приклади робіт</title>
+<meta name="description" content="Роблю сайти з онлайн-записом, каталогом послуг і заявками в Telegram. Демо-проекти, які можна відкрити й поклікати. Живий сайт салону з робочим бекендом.">
 <meta name="theme-color" content="#fbf7f8">
 <meta name="author" content="Xal1fat">
 
-<!-- og: посилання в Telegram/WhatsApp показує превʼю -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Приклади робіт">
+<meta property="og:site_name" content="Сайти для малого бізнесу">
 <meta property="og:locale" content="uk_UA">
-<meta property="og:title" content="Сайти для малого бізнесу — приклади робіт">
-<meta property="og:description" content="Живий сайт салону з онлайн-записом, ремонт інтер'єрів, кондитерська, streetwear-каталог і портфоліо колориста.">
+<meta property="og:title" content="Сайти для салонів, барбершопів і майстрів">
+<meta property="og:description" content="Онлайн-запис, каталог послуг, заявки в Telegram. Шість демо, які можна відкрити й поклікати, і живий сайт салону з робочим бекендом.">
 <meta property="og:url" content="https://xal1fat.github.io/">
 <meta property="og:image" content="https://xal1fat.github.io/og-cover.jpg">
 <meta property="og:image:width" content="1200">
@@ -21,55 +20,130 @@
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:alt" content="Обкладинка: приклади сайтів для малого бізнесу">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Сайти для малого бізнесу — приклади робіт">
-<meta name="twitter:description" content="Живий сайт салону з онлайн-записом, ремонт інтер'єрів, кондитерська, streetwear-каталог і портфоліо колориста.">
+<meta name="twitter:title" content="Сайти для салонів, барбершопів і майстрів">
+<meta name="twitter:description" content="Онлайн-запис, каталог послуг, заявки в Telegram. Демо, які можна поклікати.">
 <meta name="twitter:image" content="https://xal1fat.github.io/og-cover.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23231a1d'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23dd7ba3'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23231a1d'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23dd7ba3'/%3E%3C/svg%3E">
 
 <style>
-  :root{ --ink:#231a1d; --body:#5f5055; --muted:#8d7d83; --line:#e8dfe2; --bg:#fbf7f8; --card:#fff; --pink:#dd7ba3; --pink-deep:#c25f88; }
+  :root{ --ink:#231a1d; --body:#5f5055; --muted:#8d7d83; --line:#e8dfe2; --bg:#fbf7f8; --card:#fff; --pink:#dd7ba3; --pink-deep:#c25f88; --ok:#3f6b4a; }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",system-ui,sans-serif;
-    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   a{color:inherit}
+  :focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+
+  /* ── первый экран ── */
   header{padding:56px 0 26px}
-  h1{font-size:clamp(30px,5vw,50px);line-height:1.02;letter-spacing:-0.04em;margin:0 0 14px;font-weight:800}
+  h1{font-size:clamp(30px,5vw,50px);line-height:1.02;letter-spacing:-0.04em;margin:0 0 14px;font-weight:800;max-width:18ch}
   .lead{color:var(--body);max-width:56ch;margin:0;font-size:16.5px}
   .micro{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  h1 em{font-style:normal;color:var(--pink-deep)}
+
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;
+    font:inherit;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+    padding:16px 26px;text-decoration:none;background:var(--pink);color:#2a1520;transition:.2s}
+  .btn:hover{background:#f4a6c6}
+  .btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+  .btn.ghost:hover{border-color:var(--ink);background:#fff}
+  .btn small{display:block;font-size:11px;letter-spacing:.04em;text-transform:none;font-weight:500;opacity:.75}
+
+  /* выбор ниши */
+  .niche{margin-top:26px;padding:18px 20px;background:#fff;border:1px solid var(--line)}
+  .niche p{margin:0 0 12px;font-size:13px;color:var(--body)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips button{font:inherit;font-size:13px;padding:9px 15px;border-radius:999px;border:1px solid var(--line);
+    background:#fff;color:var(--body);cursor:pointer;transition:.15s}
+  .chips button:hover{border-color:var(--pink)}
+  .chips button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .niche .hint{margin:12px 0 0;font-size:12px;color:var(--muted)}
+
+  /* ── карточки работ ── */
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:22px 0 10px}
   .card{background:var(--card);border:1px solid var(--line);text-decoration:none;color:inherit;display:flex;flex-direction:column;
     transition:transform .2s, box-shadow .2s;overflow:hidden}
   .card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(60,30,45,.10)}
-  .card:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
-  .card .shot{aspect-ratio:16/10;overflow:hidden;background:#efe7ea;display:block}
+  .card .shot{aspect-ratio:16/10;overflow:hidden;background:#efe7ea;display:block;position:relative}
   .card .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s}
   .card:hover .shot img{transform:scale(1.03)}
-  .card .txt{padding:18px 20px 20px}
+  .card .txt{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
   .card .tag{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-deep);font-weight:700}
+  .card .tag.real{color:var(--ok)}
   .card h2{font-size:19px;margin:6px 0 6px;letter-spacing:-0.02em;font-weight:800}
   .card p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.5}
-  .card .go{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
-    border-bottom:1px solid var(--pink);color:var(--ink);padding-bottom:2px}
+  .card .go{display:inline-block;margin-top:auto;padding-top:14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    border-bottom:1px solid var(--pink);color:var(--ink);padding-bottom:2px;align-self:flex-start}
+  .status{position:absolute;left:12px;top:12px;background:rgba(35,26,29,.86);color:#fff;font-size:10px;
+    letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;backdrop-filter:blur(4px)}
+  .status.real{background:rgba(63,107,74,.92)}
   .wide{grid-column:1 / -1}
   .wide .shot{aspect-ratio:16/7}
-  .note{margin:36px 0 0;padding:20px 22px;background:#fff;border:1px solid var(--line);color:var(--body);font-size:14px}
-  .note b{color:var(--ink)}
 
-  /* як це працює */
-  .how{padding:56px 0 8px}
-  .how h2{font-size:clamp(22px,3vw,30px);letter-spacing:-0.03em;margin:0 0 8px;font-weight:800}
-  .how .sub{color:var(--body);margin:0 0 26px;max-width:60ch;font-size:15px}
+  /* ── секции ── */
+  .sec{padding:56px 0 8px}
+  .sec h2{font-size:clamp(22px,3vw,30px);letter-spacing:-0.03em;margin:0 0 8px;font-weight:800;max-width:24ch}
+  .sec .sub{color:var(--body);margin:0 0 26px;max-width:62ch;font-size:15px}
+
+  /* кейс салона */
+  .case{display:grid;gap:24px;background:#fff;border:1px solid var(--line);padding:26px}
+  @media(min-width:900px){.case{grid-template-columns:1.05fr .95fr;gap:34px;padding:32px}}
+  .case-visual{display:grid;gap:10px;align-content:start}
+  .case-visual img{border:1px solid var(--line);display:block;width:100%;height:auto;object-fit:cover;object-position:top}
+  .shot-desk{aspect-ratio:16/10}
+  .case-row{display:grid;grid-template-columns:.46fr .54fr;gap:10px}
+  .shot-phone,.shot-form{height:230px}
+  @media(max-width:520px){.shot-phone,.shot-form{height:170px}}
+  .checklist{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+  .checklist li{position:relative;padding-left:26px;font-size:14.5px;color:var(--body)}
+  .checklist li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok);font-weight:700}
+  .checklist li.no::before{content:"—";color:var(--muted)}
+  .subhead{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-deep);
+    font-weight:700;margin:26px 0 0}
+
+  /* пакеты */
+  .packs{display:grid;gap:16px}
+  @media(min-width:860px){.packs{grid-template-columns:repeat(3,1fr)}}
+  .pack{background:#fff;border:1px solid var(--line);padding:22px 20px;display:flex;flex-direction:column}
+  .pack.main{border-color:var(--pink);box-shadow:0 12px 30px rgba(194,95,136,.10)}
+  .pack .k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-deep);font-weight:700}
+  .pack h3{margin:8px 0 6px;font-size:19px;letter-spacing:-.02em}
+  .pack .for{margin:0 0 14px;font-size:13px;color:var(--muted)}
+  .pack ul{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;font-size:13.5px;color:var(--body)}
+  .pack ul li{position:relative;padding-left:18px}
+  .pack ul li::before{content:"·";position:absolute;left:4px;top:-1px;color:var(--pink-deep);font-weight:700;font-size:18px}
+  .pack .not{font-size:12.5px;color:var(--muted);margin:0 0 16px}
+  .pack .not b{color:var(--body);font-weight:600}
+  .pack .btn{margin-top:auto;width:100%}
+  .price-note{margin:16px 0 0;font-size:13px;color:var(--muted)}
+
+  /* процесс */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;list-style:none;padding:0;margin:0}
   .steps li{background:#fff;border:1px solid var(--line);padding:20px 20px 22px}
   .steps b{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-deep);margin-bottom:10px}
   .steps h3{margin:0 0 6px;font-size:16px;letter-spacing:-0.02em}
   .steps p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.5}
+  .split{display:grid;gap:16px;margin-top:22px}
+  @media(min-width:760px){.split{grid-template-columns:1fr 1fr}}
+  .split div{background:#fff;border:1px solid var(--line);padding:20px 22px}
+  .split h3{margin:0 0 10px;font-size:15px;letter-spacing:-.01em}
+  .split ul{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:13.5px;color:var(--body)}
+  .split li{position:relative;padding-left:18px}
+  .split li::before{content:"—";position:absolute;left:0;color:var(--muted)}
 
-  /* контакти */
-  .contact{margin:48px 0 0;background:#231a1d;color:#f6ecef;padding:36px 32px;border-radius:2px}
+  /* доверие */
+  .trust{background:#fff;border:1px solid var(--line);padding:24px 26px}
+  .trust h3{margin:0 0 8px;font-size:16px}
+  .trust p{margin:0 0 12px;font-size:14px;color:var(--body)}
+  .tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .tech span{font-size:12px;letter-spacing:.04em;border:1px solid var(--line);padding:5px 10px;color:var(--body)}
+
+  /* контакты */
+  .contact{margin:48px 0 0;background:#231a1d;color:#f6ecef;padding:36px 32px}
   .contact .micro{color:#c9a9b5;margin-bottom:14px}
   .contact h2{font-size:clamp(22px,3.4vw,32px);line-height:1.1;letter-spacing:-0.03em;margin:0 0 10px;font-weight:800;max-width:22ch}
   .contact p{margin:0 0 22px;color:#cbb7bf;max-width:52ch;font-size:14.5px}
@@ -79,132 +153,334 @@
   .cbtn:hover{background:#f4a6c6}
   .cbtn.ghost{background:none;color:#f6ecef;border:1px solid rgba(246,236,239,.32)}
   .cbtn.ghost:hover{border-color:#f6ecef;background:rgba(246,236,239,.08)}
-  .cbtn:focus-visible{outline:2px solid #f4a6c6;outline-offset:3px}
   .contact .hint{margin:18px 0 0;font-size:12px;color:#9a8189;letter-spacing:.04em}
 
+  .note{margin:28px 0 0;padding:20px 22px;background:#fff;border:1px solid var(--line);color:var(--body);font-size:14px}
+  .note b{color:var(--ink)}
+
   footer{padding:30px 0 60px;color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
   @media (max-width:760px){
     .grid{grid-template-columns:1fr}
     .wide .shot{aspect-ratio:16/10}
     header{padding-top:34px}
     .steps{grid-template-columns:1fr}
     .contact{padding:28px 22px}
+    .btn{width:100%}
+    .cta-row{display:grid;gap:10px}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header>
-    <div class="micro">приклади робіт</div>
-    <h1>Сайти для малого бізнесу</h1>
-    <p class="lead">П'ять прикладів з різних сфер — б'юті, ремонт, кондитерська, streetwear, колорист. Скрізь один підхід: живий каталог, онлайн-запис, робоча корзина, адаптив під телефон.</p>
+  <header id="top">
+    <div class="micro">сайти для малого бізнесу</div>
+    <h1>Сайти для салонів, барбершопів і <em>майстрів</em></h1>
+    <p class="lead">Онлайн-запис, каталог послуг і заявки в Telegram — замість «напишіть у директ і зачекайте». Збираю під ваш бізнес: ваші фото, ціни й розклад.</p>
+
+    <div class="cta-row">
+      <a class="btn tg" href="https://t.me/massiveboy" target="_blank" rel="noopener"
+         data-default="https://t.me/massiveboy?text=%D0%92%D1%96%D1%82%D0%B0%D1%8E%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B4%D1%96%D0%B7%D0%BD%D0%B0%D1%82%D0%B8%D1%81%D1%8F%20%D0%B2%D0%B0%D1%80%D1%82%D1%96%D1%81%D1%82%D1%8C%20%D1%81%D0%B0%D0%B9%D1%82%D1%83%20%D0%B4%D0%BB%D1%8F%20%D0%BC%D0%BE%D0%B3%D0%BE%20%D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%D1%83">
+        Отримати демо для мого бізнесу
+      </a>
+      <a class="btn ghost" href="#works">Дивитись роботи</a>
+    </div>
+
+    <div class="niche">
+      <p>Оберіть нішу — підставлю її в текст повідомлення:</p>
+      <div class="chips" id="chips">
+        <button type="button" class="on" data-msg="Вітаю! Хочу дізнатися вартість сайту для мого бізнесу">Не визначився</button>
+        <button type="button" data-msg="Вітаю! Хочу сайт для салону краси">Салон краси</button>
+        <button type="button" data-msg="Вітаю! Хочу сайт для барбершопу">Барбершоп</button>
+        <button type="button" data-msg="Вітаю! Хочу сайт для приватного майстра">Приватний майстер</button>
+      </div>
+      <p class="hint">Демо безкоштовне: показую, як виглядатиме ваш сайт, до будь-яких оплат.</p>
+    </div>
   </header>
 
-  <div class="grid">
+  <section id="works">
+    <div class="micro" style="margin-bottom:10px">роботи</div>
+    <h2 style="font-size:clamp(22px,3vw,30px);letter-spacing:-.03em;margin:0 0 8px;font-weight:800">Шість прикладів, які можна відкрити</h2>
+    <p class="lead" style="font-size:15px">Усі — демо-проекти з вигаданими даними. П'ять показують верстку й сценарії, один має справжній бекенд: заявка реально зберігається в базі.</p>
 
-    <a class="card wide" href="https://beauty-studio-blue.vercel.app" target="_blank" rel="noopener">
-      <span class="shot"><img src="salon.jpg" alt="Головна сторінка сайту «Beauty Studio Blue»: заголовок «Красота в деталях» і фото перукарки за роботою"></span>
-      <div class="txt">
-        <span class="tag">робочий сайт</span>
-        <h2>Салон краси з онлайн-записом</h2>
-        <p>Запис на послугу й час, заявки в панель керування, повідомлення в Telegram. Це вже запущений сайт, а не макет.</p>
-        <span class="go">відкрити сайт</span>
+    <div class="grid">
+
+      <a class="card wide" href="https://beauty-studio-blue.vercel.app" target="_blank" rel="noopener">
+        <span class="shot">
+          <img src="salon.jpg" alt="Головна сторінка сайту салону: заголовок «Красота в деталях» і фото перукарки за роботою">
+          <span class="status real">демо · робочий бекенд</span>
+        </span>
+        <div class="txt">
+          <span class="tag real">салон краси · Next.js + Supabase</span>
+          <h2>Салон краси з онлайн-записом</h2>
+          <p>Завдання: прибрати запис через директ. Клієнт обирає послугу, майстра й час, заявка зберігається в базі та приходить власнику в Telegram. Є адмінка зі статусами.</p>
+          <span class="go">відкрити демо</span>
+        </div>
+      </a>
+
+      <a class="card wide" href="terra/" target="_blank" rel="noopener">
+        <span class="shot">
+          <img src="terra.jpg" alt="Макет сайту TERRA: темний герой з фотографією інтер'єру та слоганом «Тихі інтер'єри з характером»" loading="lazy">
+          <span class="status">демо-проект</span>
+        </span>
+        <div class="txt">
+          <span class="tag">ремонт та інтер'єри</span>
+          <h2>Ремонт квартир і резиденцій</h2>
+          <p>Завдання: виглядати як архітектурне бюро, а не як бригада. Темна editorial-верстка, об'єкти замість карток, калькулятор бюджету.</p>
+          <span class="go">відкрити демо</span>
+        </div>
+      </a>
+
+      <a class="card" href="yoda-cake/" target="_blank" rel="noopener">
+        <span class="shot">
+          <img src="yoda-cake.jpg" alt="Макет кондитерської «yoda.cake»: темна тема, торт із вишнями і заголовок «Торти, які памʼятають»" loading="lazy">
+          <span class="status">демо-проект</span>
+        </span>
+        <div class="txt">
+          <span class="tag">кондитерська</span>
+          <h2>Торти та бенто на замовлення</h2>
+          <p>Завдання: показати асортимент із цінами й вагою та дати зібрати замовлення без переписки про склад.</p>
+          <span class="go">відкрити демо</span>
+        </div>
+      </a>
+
+      <a class="card" href="kub-market/" target="_blank" rel="noopener">
+        <span class="shot">
+          <img src="kub-market.jpg" alt="Макет магазину «KUB MARKET»: каталог речей з фільтрами по розміру і статусом наявності" loading="lazy">
+          <span class="status">демо-проект</span>
+        </span>
+        <div class="txt">
+          <span class="tag">streetwear-перепродаж</span>
+          <h2>Каталог речей з фільтрами</h2>
+          <p>Завдання: коли кожна річ в одному екземплярі — показати розмір і статус, щоб не продати двічі.</p>
+          <span class="go">відкрити демо</span>
+        </div>
+      </a>
+
+      <a class="card" href="colorist/" target="_blank" rel="noopener">
+        <span class="shot">
+          <img src="colorist.jpg" alt="Макет портфоліо колориста «Лєна Чаклує»: градієнтний заголовок і галерея робіт" loading="lazy">
+          <span class="status">демо-проект</span>
+        </span>
+        <div class="txt">
+          <span class="tag">колорист</span>
+          <h2>Портфоліо майстра з фарбування</h2>
+          <p>Завдання: показати складні кольори, які губляться в стрічці Instagram, і дати записатися з тієї ж сторінки.</p>
+          <span class="go">відкрити демо</span>
+        </div>
+      </a>
+
+      <a class="card" href="estate/" target="_blank" rel="noopener">
+        <span class="shot">
+          <img src="estate.jpg" alt="Макет сайту таунхаусів: генплан ділянок і каталог планувань" loading="lazy">
+          <span class="status">демо-проект</span>
+        </span>
+        <div class="txt">
+          <span class="tag">нерухомість</span>
+          <h2>Таунхауси: генплан і планування</h2>
+          <p>Завдання: дати покупцю обрати ділянку й планування без дзвінка менеджеру. Каталог, фільтри, калькулятор іпотеки.</p>
+          <span class="go">відкрити демо</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="sec" id="case">
+    <div class="micro">кейс</div>
+    <h2>Салон краси: що там насправді працює</h2>
+    <p class="sub">Це демо-проект із вигаданою назвою, адресою й цінами. Але бекенд справжній — я перевіряв його перед публікацією цієї сторінки.</p>
+
+    <div class="case">
+      <div class="case-visual">
+        <img class="shot-desk" src="case-desktop.jpg" alt="Головна сторінка салону на десктопі" width="1400" height="875" loading="lazy">
+        <div class="case-row">
+          <img class="shot-phone" src="case-mobile.jpg" alt="Головна сторінка салону на телефоні" width="700" height="1515" loading="lazy">
+          <img class="shot-form" src="case-booking.jpg" alt="Форма онлайн-запису з вибором послуги, майстра й часу" width="1200" height="833" loading="lazy">
+        </div>
       </div>
-    </a>
 
-    <a class="card wide" href="terra/" target="_blank" rel="noopener">
-      <span class="shot"><img src="terra.jpg" alt="Макет сайту TERRA: темний герой з фотографією інтер'єру та слоганом «Тихі інтер'єри з характером»" loading="lazy"></span>
-      <div class="txt">
-        <span class="tag">ремонт та інтер'єри</span>
-        <h2>Ремонт квартир і резиденцій</h2>
-        <p>Темна editorial-верстка, об'єкти замість карток, калькулятор бюджету. Для приватного підрядника, який хоче виглядати як архітектурне бюро, а не як будівельна бригада.</p>
-        <span class="go">дивитись макет</span>
+      <div>
+        <div class="subhead">що реалізовано</div>
+        <ul class="checklist">
+          <li>Форма запису: послуга, майстер, дата й час. Валідація на сервері, а не тільки в браузері.</li>
+          <li>Заявка зберігається в Supabase. Перевірено запитом до живого API — відповідь «ok».</li>
+          <li>Повідомлення власнику в Telegram. Якщо Telegram недоступний — заявка все одно збережена.</li>
+          <li>Адмінка з паролем: список заявок, пошук, фільтри, зміна статусу.</li>
+          <li>Мобільна версія від 320 px, галерея з лайтбоксом, 9 секцій, 16 послуг у 4 категоріях.</li>
+        </ul>
+
+        <div class="subhead">чого тут немає</div>
+        <ul class="checklist">
+          <li class="no">Перевірки зайнятості слотів — розклад показовий.</li>
+          <li class="no">Оплати онлайн — запис без передоплати.</li>
+          <li class="no">Реальних відгуків — вони демонстраційні й позначені як такі.</li>
+        </ul>
+
+        <div class="subhead">що адаптується під вас</div>
+        <p style="margin:10px 0 0;font-size:14px;color:var(--body)">Кольори, логотип, назва, послуги й ціни, майстри, фото, контакти, графік роботи, тексти.</p>
       </div>
-    </a>
+    </div>
+  </section>
 
-    <a class="card" href="yoda-cake/" target="_blank" rel="noopener">
-      <span class="shot"><img src="yoda-cake.jpg" alt="Макет кондитерської «yoda.cake»: темна тема, торт із вишнями і заголовок «Торти, які памʼятають»" loading="lazy"></span>
-      <div class="txt">
-        <span class="tag">кондитерська</span>
-        <h2>Торти та бенто на замовлення</h2>
-        <p>Темна тема, каталог із цінами й вагою, кошик, що рахує суму, блок доставки та сертифікатів.</p>
-        <span class="go">дивитись макет</span>
+  <section class="sec" id="packages">
+    <div class="micro">пакети</div>
+    <h2>Три формати роботи</h2>
+    <p class="sub">Ціни не публікую навмання: вартість залежить від кількості сторінок і функцій. Назву точну суму після короткого брифу — зазвичай це 10–15 хвилин у Telegram.</p>
+
+    <div class="packs">
+      <div class="pack">
+        <span class="k">Старт</span>
+        <h3>Візитка</h3>
+        <p class="for">Майстер або невелика студія, якій треба «є куди надіслати» замість посилання на Instagram.</p>
+        <ul>
+          <li>Односторінковий сайт, 4–5 блоків</li>
+          <li>Послуги з цінами</li>
+          <li>Форма заявки → Telegram</li>
+          <li>Адаптив під телефон</li>
+          <li>Базове SEO: title, опис, favicon</li>
+        </ul>
+        <p class="not"><b>Не входить:</b> домен, тексти, фото, складні інтеграції.</p>
+        <a class="btn tg" href="https://t.me/massiveboy" target="_blank" rel="noopener">Обговорити проект</a>
       </div>
-    </a>
 
-    <a class="card" href="kub-market/" target="_blank" rel="noopener">
-      <span class="shot"><img src="kub-market.jpg" alt="Макет магазину «KUB MARKET»: каталог речей з фільтрами по розміру і статусом наявності" loading="lazy"></span>
-      <div class="txt">
-        <span class="tag">streetwear-перепродаж</span>
-        <h2>Каталог речей з фільтрами</h2>
-        <p>Кожна річ в одному екземплярі: фільтр по розміру, статус «в наявності / заброньовано / продано».</p>
-        <span class="go">дивитись макет</span>
+      <div class="pack main">
+        <span class="k">Бізнес</span>
+        <h3>Сайт із записом</h3>
+        <p class="for">Салон, барбершоп або студія, де адміністратор щодня відповідає на «а коли є вікно?».</p>
+        <ul>
+          <li>5–7 сторінок або лендинг із каталогом</li>
+          <li>Онлайн-запис: послуга, майстер, час</li>
+          <li>Заявки в Telegram</li>
+          <li>Галерея робіт і блок майстрів</li>
+          <li>Адмінка зі списком заявок</li>
+          <li>Аналітика відвідувань</li>
+        </ul>
+        <p class="not"><b>Не входить:</b> оплата онлайн, розклад із зайнятістю, домен.</p>
+        <a class="btn tg" href="https://t.me/massiveboy" target="_blank" rel="noopener">Обговорити проект</a>
       </div>
-    </a>
 
-    <a class="card wide" href="colorist/" target="_blank" rel="noopener">
-      <span class="shot"><img src="colorist.jpg" alt="Макет портфоліо колориста «Лєна Чаклує»: градієнтний заголовок і галерея робіт" loading="lazy"></span>
-      <div class="txt">
-        <span class="tag">колорист</span>
-        <h2>Портфоліо майстра з фарбування</h2>
-        <p>Спектральна палітра, лента робіт, прайс і форма запису. Демонструє, як показати складні кольори, які губляться в стрічці Instagram.</p>
-        <span class="go">дивитись макет</span>
+      <div class="pack">
+        <span class="k">Індивідуальний</span>
+        <h3>Під задачу</h3>
+        <p class="for">Каталог із фільтрами, калькулятор, кілька мов, інтеграції з вашими сервісами.</p>
+        <ul>
+          <li>Структура під ваш процес</li>
+          <li>Каталог, фільтри, кошик</li>
+          <li>Інтеграції: CRM, оплата, таблиці</li>
+          <li>Кілька мов</li>
+          <li>Передача коду й документації</li>
+        </ul>
+        <p class="not"><b>Не входить:</b> платні сервіси й підписки — оплачуються окремо.</p>
+        <a class="btn tg" href="https://t.me/massiveboy" target="_blank" rel="noopener">Обговорити проект</a>
       </div>
-    </a>
+    </div>
 
-  </div>
+    <p class="price-note">У вартість входять дизайн, верстка, адаптив, перевірка форм і публікація. Окремо: домен (300–500 ₴/рік), платні сервіси (пошта, база, хостинг), підтримка після запуску.</p>
+  </section>
 
-  <section class="how">
+  <section class="sec" id="process">
     <div class="micro">як це працює</div>
-    <h2>Від макета до запуску — три кроки</h2>
-    <p class="sub">Макети вище — це не картинки, а робочі сторінки: можна відкрити на телефоні, поклікати фільтри й корзину.</p>
+    <h2>Від брифу до запуску</h2>
+
     <ol class="steps">
-      <li>
-        <b>01 — макет</b>
-        <h3>Роблю демо під ваш бізнес</h3>
-        <p>Беру ваші фото, послуги й ціни. Через кілька днів у вас є посилання, яке можна показати.</p>
-      </li>
-      <li>
-        <b>02 — правки</b>
-        <h3>Доводимо разом</h3>
-        <p>Тексти, кольори, порядок блоків. Правки в межах макета — без окремих рахунків.</p>
-      </li>
-      <li>
-        <b>03 — запуск</b>
-        <h3>Домен, запис, аналітика</h3>
-        <p>Підключаю домен, форму запису й повідомлення в Telegram. Далі — підтримка за потреби.</p>
-      </li>
+      <li><b>01 — бриф</b><h3>Розбираємось у бізнесі</h3><p>Що продаєте, хто клієнт, які функції потрібні. 10–15 хвилин у Telegram.</p></li>
+      <li><b>02 — структура</b><h3>Погоджуємо вигляд</h3><p>Показую структуру й макет на ваших матеріалах. Правимо до «так».</p></li>
+      <li><b>03 — розробка</b><h3>Роблю сайт</h3><p>Верстка, адаптив під телефон, форми, інтеграції.</p></li>
+      <li><b>04 — перевірка</b><h3>Тестую сценарії</h3><p>Заявки, пошта, Telegram, мобільні екрани, швидкість. Показую, що все працює.</p></li>
+      <li><b>05 — запуск</b><h3>Публікуємо</h3><p>Домен, публікація, передача доступів і коротка інструкція.</p></li>
     </ol>
+
+    <div class="split">
+      <div>
+        <h3>Що входить у роботу</h3>
+        <ul>
+          <li>Дизайн і верстка під ваш бренд</li>
+          <li>Адаптив: телефон, планшет, десктоп</li>
+          <li>Форми й перевірка, що заявки доходять</li>
+          <li>Базове SEO й метатеги</li>
+          <li>Публікація та передача доступів</li>
+          <li>Правки в межах узгодженого макета</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Що оплачується окремо</h3>
+        <ul>
+          <li>Домен — 300–500 ₴/рік</li>
+          <li>Платні сервіси: пошта, база, хостинг</li>
+          <li>Додаткові інтеграції поза макетом</li>
+          <li>Тексти й фото — або ваші, або окремо</li>
+          <li>Підтримка після запуску — за потреби</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="trust">
+    <div class="micro">чесно</div>
+    <h2>Що ви тут не побачите</h2>
+    <div class="trust">
+      <h3>Без вигаданих доказів</h3>
+      <p>Тут немає відгуків, імен клієнтів, цифр продажів і обіцянок «х2 заявок». Усі проекти на сторінці — демонстраційні, крім тих, що позначені як робочі, і вони з робочим бекендом, а не з картинкою.</p>
+      <p>Тексти, фото, логотип і інформацію про послуги даєте ви — я збираю з цього сайт і показую, як це виглядатиме. Якщо фото немає, підберемо разом.</p>
+      <h3 style="margin-top:18px">На чому роблю</h3>
+      <div class="tech">
+        <span>Next.js</span><span>React</span><span>TypeScript</span><span>Tailwind</span>
+        <span>Supabase</span><span>Vercel</span><span>GitHub Pages</span>
+      </div>
+    </div>
   </section>
 
   <section class="contact" id="contacts">
     <div class="micro">контакти</div>
     <h2>Покажу, як це виглядатиме з вашими фото</h2>
-    <p>Напишіть, чим займаєтесь — і я скажу, який з форматів підійде краще і скільки це коштує. Відповідаю протягом дня.</p>
+    <p>Напишіть, чим займаєтесь — скажу, який формат підійде і скільки це коштує. Відповідаю протягом дня.</p>
     <div class="row">
-      <a class="cbtn" href="https://t.me/massiveboy" target="_blank" rel="noopener">Написати в Telegram</a>
+      <a class="cbtn tg" href="https://t.me/massiveboy" target="_blank" rel="noopener">Написати в Telegram</a>
     </div>
     <p class="hint">@massiveboy · Київ · працюю з бізнесом по Україні та за кордоном</p>
   </section>
 
   <div class="note">
-    <b>Про фото:</b> у макетах використані зображення з відкритих профілів Instagram — це приклади, а не клієнтські проєкти.
-    На реальному сайті стоять фото власника бізнесу.
+    <b>Про дані в демо:</b> назви, адреси, ціни, майстри й відгуки в демо-проектах вигадані. Фото взяті з відкритих профілів Instagram як приклади. На реальному сайті стоять ваші дані й фото.
   </div>
 
   <footer>
     <span>Приклади робіт · 2026</span>
-    <span>Сайт, запис і кошик — під ваш бізнес</span>
+    <span>Сайт, запис і заявки — під ваш бізнес</span>
   </footer>
 
 </div>
+
+<script>
+(function () {
+  var links = document.querySelectorAll('.tg');
+  var chips = document.querySelectorAll('#chips button');
+
+  function setMessage(text) {
+    var href = 'https://t.me/massiveboy?text=' + encodeURIComponent(text);
+    links.forEach(function (a) { a.href = href; });
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.classList.remove('on'); });
+      chip.classList.add('on');
+      setMessage(chip.dataset.msg);
+    });
+  });
+
+  var active = document.querySelector('#chips button.on');
+  if (active) setMessage(active.dataset.msg);
+})();
+</script>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Сайти для малого бізнесу — приклади робіт",
+  "name": "Сайти для салонів, барбершопів і майстрів",
   "url": "https://xal1fat.github.io/",
   "inLanguage": "uk",
   "about": { "@type": "Thing", "name": "Розробка сайтів для малого бізнесу" },
@@ -213,7 +489,8 @@
     { "@type": "WebPage", "name": "TERRA — ремонт приватних інтер'єрів", "url": "https://xal1fat.github.io/terra/" },
     { "@type": "WebPage", "name": "Кондитерська yoda.cake", "url": "https://xal1fat.github.io/yoda-cake/" },
     { "@type": "WebPage", "name": "KUB MARKET — каталог речей", "url": "https://xal1fat.github.io/kub-market/" },
-    { "@type": "WebPage", "name": "Портфоліо колориста", "url": "https://xal1fat.github.io/colorist/" }
+    { "@type": "WebPage", "name": "Портфоліо колориста", "url": "https://xal1fat.github.io/colorist/" },
+    { "@type": "WebPage", "name": "Таунхауси — генплан і планування", "url": "https://xal1fat.github.io/estate/" }
   ]
 }
 </script>

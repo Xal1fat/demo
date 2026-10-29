@@ -2,28 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://xal1fat.github.io/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://xal1fat.github.io/yoda-cake/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://xal1fat.github.io/kub-market/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://xal1fat.github.io/colorist/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://xal1fat.github.io/terra/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://xal1fat.github.io/estate/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.7</priority>
   </url>
 </urlset>
