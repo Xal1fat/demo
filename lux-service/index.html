@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="uk" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0C1B2A">
+  <title>Lux Service — ремонт смартфонів, ноутбуків і планшетів у Києві</title>
+  <meta name="description" content="Сервісний центр Lux Service у Києві: ремонт смартфонів, ноутбуків і планшетів. Безкоштовна діагностика, чесна ціна та гарантія до 12 місяців. ТРЦ Dream та Осокорки.">
+  <link rel="canonical" href="https://xal1fat.github.io/lux-service/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:title" content="Lux Service — ремонт техніки у Києві без сюрпризів у чеку">
+  <meta property="og:description" content="Безкоштовна діагностика, фіксована ціна до початку робіт і гарантія до 12 місяців. ТРЦ Dream та Осокорки.">
+  <meta property="og:image" content="https://xal1fat.github.io/lux-service/assets/hero-tech.webp">
+  <meta property="og:image:alt" content="Майстер Lux Service ремонтує смартфон">
+  <meta property="og:url" content="https://xal1fat.github.io/lux-service/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/manrope-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/unbounded-cyr.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти до вмісту</a>
+
+  <!-- SVG-спрайт: усі іконки в одному місці -->
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.78.68 2.61a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.2a2 2 0 0 1 2.11-.45c.83.33 1.71.56 2.61.68A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M8 7h9v9"/>
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m20 6-11 11-5-5"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m8.5 11.5 2.3 2.3 4.7-4.6"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/>
+    </symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24">
+      <path d="M3 6h11v10H3zM14 9h4l3 3v4h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/>
+    </symbol>
+    <symbol id="i-screen" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+    </symbol>
+    <symbol id="i-battery" viewBox="0 0 24 24">
+      <rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 10v4M6 10v4M10 10v4"/>
+    </symbol>
+    <symbol id="i-water" viewBox="0 0 24 24">
+      <path d="M12 2.7s6 6.1 6 10.3a6 6 0 0 1-12 0C6 8.8 12 2.7 12 2.7z"/><path d="M9.5 13.3a2.6 2.6 0 0 0 2.5 2.6"/>
+    </symbol>
+    <symbol id="i-laptop" viewBox="0 0 24 24">
+      <rect x="4" y="4" width="16" height="12" rx="2"/><path d="M2 20h20M9 20h6"/>
+    </symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24">
+      <rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M6 14h.01M18 14h.01M9 14h6"/>
+    </symbol>
+    <symbol id="i-tablet" viewBox="0 0 24 24">
+      <rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
+    </symbol>
+    <symbol id="i-watch" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5"/><path d="M9 7 8 3h8l-1 4M9 17l-1 4h8l-1-4"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path d="m12 2 1.7 5.3L19 9l-5.3 1.7L12 16l-1.7-5.3L5 9l5.3-1.7z"/><path d="M19 15.5 19.8 18l2.2.8-2.2.7-.8 2.5-.7-2.5-2.3-.7 2.3-.8z"/>
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24">
+      <path d="M8 8h11a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2z"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/>
+    </symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24">
+      <path d="M14.7 6.3a4 4 0 0 0-5 5l-7 7a2.1 2.1 0 0 0 3 3l7-7a4 4 0 0 0 5-5l-2.6 2.6-2.4-2.4z"/><path d="M15 15 20 20"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9z" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24">
+      <path d="M10 7H6a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3v3H5M20 7h-4a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3v3h-4"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>
+    </symbol>
+    <symbol id="i-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>
+    </symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24">
+      <path d="M14 4v10.5a4.5 4.5 0 1 1-4-4.47"/><path d="M14 4c.6 3.1 2.7 5 5.5 5.3"/>
+    </symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24">
+      <path d="m21 4-3.2 16-5.4-4.1L9 19l-.7-5.2L21 4z"/><path d="m8.3 13.8 9.2-6.3-6.8 7.4"/>
+    </symbol>
+    <symbol id="i-viber" viewBox="0 0 24 24">
+      <path d="M8 3h8a4 4 0 0 1 4 4v5a4 4 0 0 1-4 4h-2l-3 3v-3H8a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4z"/><path d="M9 8c1.6.2 2.8 1.4 3 3M9 5.5c2.8.3 5.2 2.7 5.5 5.5"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.5L3 21l2-4.8a8.5 8.5 0 1 1 15.5-4.7z"/><path d="M8.7 8.4c.4-.1.8 0 1 .4l.7 1.4c.1.3 0 .6-.2.8l-.7.6a6 6 0 0 0 2.9 2.9l.6-.7c.2-.2.5-.3.8-.2l1.4.7c.4.2.5.6.4 1-.2.8-1.1 1.4-2 1.3-2.9-.4-5.2-2.7-5.6-5.6-.1-.9.5-1.8 1.3-2z"/>
+    </symbol>
+    <symbol id="i-google" viewBox="0 0 24 24">
+      <path d="M21 12.2c0-.7-.1-1.4-.2-2H12v3.9h5a4.3 4.3 0 0 1-1.9 2.8v2.5h3.1c1.8-1.7 2.8-4.1 2.8-7.2z"/>
+      <path d="M12 21c2.5 0 4.7-.8 6.2-2.3l-3.1-2.5c-.9.6-2 .9-3.1.9a5.7 5.7 0 0 1-5.4-3.9H3.4v2.6A9 9 0 0 0 12 21z"/>
+      <path d="M6.6 13.2a5.4 5.4 0 0 1 0-3.4V7.2H3.4a9 9 0 0 0 0 8z"/>
+      <path d="M12 6.6c1.4 0 2.7.5 3.7 1.5l2.7-2.7A9 9 0 0 0 3.4 7.2l3.2 2.6A5.7 5.7 0 0 1 12 6.6z"/>
+    </symbol>
+  </svg>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__location">
+        <svg><use href="#i-pin"></use></svg>
+        Київ · ТРЦ Dream та Осокорки
+      </p>
+      <p class="topbar__hours">
+        <svg><use href="#i-clock"></use></svg>
+        Щодня 10:00–22:00
+      </p>
+      <div class="topbar__right">
+        <a href="#status-modal" class="topbar__status" data-open-status aria-haspopup="dialog">
+          <span class="status-dot"></span>
+          Статус ремонту
+        </a>
+        <a href="tel:+380960686111" class="topbar__phone" data-analytics="call_click">(096) 068-61-11</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a href="#top" class="brand" aria-label="Lux Service — на початок сторінки">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <rect x="1" y="1" width="42" height="42" rx="11" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M14 11v22h17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="30.5" cy="13.5" r="2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Lux Service</span>
+          <span class="brand__sub">сервісний центр · Київ</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Основна навігація">
+        <a href="#services">Послуги</a>
+        <a href="#calculator">Ціни</a>
+        <a href="#process">Як працюємо</a>
+        <a href="#cases">Кейси</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <a href="tel:+380960686111" class="header-phone" data-analytics="call_click">
+          <span class="header-phone__icon"><svg><use href="#i-phone"></use></svg></span>
+          <span>
+            <strong>(096) 068-61-11</strong>
+            <small>щодня 10:00–22:00</small>
+          </span>
+        </a>
+        <button type="button" class="btn btn--gold btn--sm" data-open-booking>Записатися</button>
+        <button type="button" class="burger" aria-label="Відкрити меню" aria-controls="mobile-menu" aria-expanded="false" data-burger>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Меню сайту" hidden>
+    <div class="mobile-menu__head">
+      <a href="#top" class="brand" aria-label="Lux Service">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none">
+            <rect x="1" y="1" width="42" height="42" rx="11" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M14 11v22h17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+            <circle cx="30.5" cy="13.5" r="2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand__text"><span class="brand__name">Lux Service</span><span class="brand__sub">сервісний центр · Київ</span></span>
+      </a>
+      <button type="button" class="mobile-menu__close" aria-label="Закрити меню" data-close-menu>
+        <svg><use href="#i-close"></use></svg>
+      </button>
+    </div>
+    <nav aria-label="Мобільна навігація">
+      <a href="#services">Послуги <svg><use href="#i-arrow"></use></svg></a>
+      <a href="#calculator">Розрахувати ціну <svg><use href="#i-arrow"></use></svg></a>
+      <a href="#process">Як працюємо <svg><use href="#i-arrow"></use></svg></a>
+      <a href="#cases">Кейси <svg><use href="#i-arrow"></use></svg></a>
+      <a href="#reviews">Відгуки <svg><use href="#i-arrow"></use></svg></a>
+      <a href="#contacts">Контакти <svg><use href="#i-arrow"></use></svg></a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="tel:+380960686111" class="btn btn--gold" data-analytics="call_click">
+        <svg><use href="#i-phone"></use></svg> (096) 068-61-11
+      </a>
+      <button type="button" class="btn btn--outline-light" data-open-status>Перевірити статус ремонту</button>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__noise" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow eyebrow--light" data-reveal>
+            <span class="eyebrow__line"></span>
+            Сервісний центр у Києві
+          </p>
+          <h1 data-reveal style="--delay: 60ms">
+            Ремонт техніки<br>
+            <span class="text-gold">без сюрпризів</span><br>
+            у чеку
+          </h1>
+          <p class="hero__lead" data-reveal style="--delay: 120ms">
+            Смартфони, ноутбуки та планшети. Безкоштовна діагностика, фіксована ціна до початку робіт і гарантія до 12 місяців.
+          </p>
+          <div class="hero__actions" data-reveal style="--delay: 180ms">
+            <button type="button" class="btn btn--gold btn--lg" data-open-booking>
+              Записатися на діагностику
+              <svg><use href="#i-arrow"></use></svg>
+            </button>
+            <a href="tel:+380960686111" class="btn btn--ghost-light btn--lg" data-analytics="call_click">
+              <svg><use href="#i-phone"></use></svg>
+              Подзвонити
+            </a>
+          </div>
+          <div class="hero__proof" data-reveal style="--delay: 240ms">
+            <div class="hero-rating">
+              <div class="stars" aria-label="Оцінка 4,9 з 5">
+                <svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg>
+              </div>
+              <p><strong>4,9</strong> <span>· 127 відгуків</span></p>
+            </div>
+            <span class="hero__proof-divider" aria-hidden="true"></span>
+            <p class="hero__proof-text"><strong>2 точки</strong> в Києві</p>
+            <span class="hero__proof-divider" aria-hidden="true"></span>
+            <p class="hero__proof-text"><strong>10:00–22:00</strong> без вихідних</p>
+          </div>
+        </div>
+
+        <div class="hero__visual" data-reveal style="--delay: 120ms">
+          <div class="hero-photo">
+            <img src="assets/hero-tech.webp" width="1200" height="2133" alt="Майстер Lux Service розбирає смартфон у майстерні" fetchpriority="high">
+            <div class="hero-photo__shade" aria-hidden="true"></div>
+            <div class="hero-photo__caption">
+              <span class="live-dot" aria-hidden="true"></span>
+              Зараз працюємо · до 22:00
+            </div>
+            <div class="hero-photo__name">
+              <span>Майстерня</span>
+              <strong>ТРЦ Dream, 3 поверх</strong>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card--diagnostics">
+            <span class="floating-card__icon"><svg><use href="#i-shield"></use></svg></span>
+            <span>
+              <strong>Безкоштовна діагностика</strong>
+              <small>Подивимось і назвемо ціну</small>
+            </span>
+          </div>
+
+          <div class="floating-card floating-card--rating">
+            <span class="floating-card__score">4,9</span>
+            <span>
+              <span class="stars stars--small" aria-hidden="true">
+                <svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg>
+              </span>
+              <small>127 відгуків у Google</small>
+            </span>
+          </div>
+
+          <div class="hero-stamp" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <defs><path id="stampPath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+              <text><textPath href="#stampPath">LUX SERVICE · KYIV · REPAIR · </textPath></text>
+              <path d="M43 60h34M60 43v34" stroke="currentColor" stroke-width="1"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span></span>
+        <p>Гортайте</p>
+      </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <section class="trust-strip" aria-label="Коротко про сервіс">
+      <div class="container trust-strip__grid">
+        <div class="trust-item" data-reveal>
+          <span class="trust-item__icon"><svg><use href="#i-pin"></use></svg></span>
+          <p><strong>2 точки в Києві</strong><span>Оболонь і Осокорки</span></p>
+        </div>
+        <div class="trust-item" data-reveal style="--delay: 60ms">
+          <span class="trust-item__icon"><svg><use href="#i-clock"></use></svg></span>
+          <p><strong>Щодня 10:00–22:00</strong><span>Без вихідних</span></p>
+        </div>
+        <div class="trust-item" data-reveal style="--delay: 120ms">
+          <span class="trust-item__icon"><svg><use href="#i-shield"></use></svg></span>
+          <p><strong>Гарантія до 12 місяців</strong><span>Письмово, у замовленні</span></p>
+        </div>
+        <div class="trust-item" data-reveal style="--delay: 180ms">
+          <span class="trust-item__icon"><svg><use href="#i-truck"></use></svg></span>
+          <p><strong>Доставка по Україні</strong><span>Новою поштою</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-reveal><span class="eyebrow__line"></span>Послуги</p>
+            <h2 data-reveal style="--delay: 60ms">Ваша техніка<br>в надійних руках</h2>
+          </div>
+          <div class="section-head__aside" data-reveal style="--delay: 120ms">
+            <p>Від заміни скла до складного ремонту після води. Ціну та строк називаємо до початку робіт — ви вирішуєте, чи продовжувати.</p>
+            <a href="#prices" class="link-arrow">Повний прайс <svg><use href="#i-arrow"></use></svg></a>
+          </div>
+        </div>
+
+        <div class="services__grid">
+          <button type="button" class="service-card" data-calc-device="smartphone" data-calc-service="Заміна дисплея" data-reveal>
+            <span class="service-card__top">
+              <span class="service-card__icon"><svg><use href="#i-screen"></use></svg></span>
+              <span class="service-card__index">01</span>
+            </span>
+            <span class="service-card__title">Заміна дисплея</span>
+            <span class="service-card__desc">iPhone, Samsung, Xiaomi та інші. Перевіряємо сенсор і кольори перед видачею.</span>
+            <span class="service-card__bottom">
+              <span class="service-card__meta"><span><small>від</small> 1 200 ₴</span><span class="meta-dot"></span><span>1–2 години</span></span>
+              <span class="service-card__arrow" aria-hidden="true"><svg><use href="#i-arrow"></use></svg></span>
+            </span>
+          </button>
+
+          <button type="button" class="service-card" data-calc-device="smartphone" data-calc-service="Заміна акумулятора" data-reveal style="--delay: 60ms">
+            <span class="service-card__top">
+              <span class="service-card__icon"><svg><use href="#i-battery"></use></svg></span>
+              <span class="service-card__index">02</span>
+            </span>
+            <span class="service-card__title">Заміна акумулятора</span>
+            <span class="service-card__desc">Тримає заряд знову цілий день. Показуємо реальну ємність до і після заміни.</span>
+            <span class="service-card__bottom">
+              <span class="service-card__meta"><span><small>від</small> 690 ₴</span><span class="meta-dot"></span><span>40–60 хвилин</span></span>
+              <span class="service-card__arrow" aria-hidden="true"><svg><use href="#i-arrow"></use></svg></span>
+            </span>
+          </button>
+
+          <button type="button" class="service-card" data-calc-device="smartphone" data-calc-service="Ремонт після води" data-reveal style="--delay: 120ms">
+            <span class="service-card__top">
+              <span class="service-card__icon"><svg><use href="#i-water"></use></svg></span>
+              <span class="service-card__index">03</span>
+            </span>
+            <span class="service-card__title">Ремонт після води</span>
+            <span class="service-card__desc">Ультразвукова чистка, діагностика плати та відновлення ланцюгів живлення.</span>
+            <span class="service-card__bottom">
+              <span class="service-card__meta"><span><small>від</small> 1 500 ₴</span><span class="meta-dot"></span><span>1–3 дні</span></span>
+              <span class="service-card__arrow" aria-hidden="true"><svg><use href="#i-arrow"></use></svg></span>
+            </span>
+          </button>
+
+          <button type="button" class="service-card" data-calc-device="laptop" data-calc-service="Чистка та термопаста" data-reveal>
+            <span class="service-card__top">
+              <span class="service-card__icon"><svg><use href="#i-laptop"></use></svg></span>
+              <span class="service-card__index">04</span>
+            </span>
+            <span class="service-card__title">Чистка ноутбука</span>
+            <span class="service-card__desc">Прибираємо пил, міняємо термопасту та перевіряємо температуру під навантаженням.</span>
+            <span class="service-card__bottom">
+              <span class="service-card__meta"><span><small>від</small> 850 ₴</span><span class="meta-dot"></span><span>2–3 години</span></span>
+              <span class="service-card__arrow" aria-hidden="true"><svg><use href="#i-arrow"></use></svg></span>
+            </span>
+          </button>
+
+          <button type="button" class="service-card" data-calc-device="laptop" data-calc-service="Заміна клавіатури" data-reveal style="--delay: 60ms">
+            <span class="service-card__top">
+              <span class="service-card__icon"><svg><use href="#i-keyboard"></use></svg></span>
+              <span class="service-card__index">05</span>
+            </span>
+            <span class="service-card__title">Ремонт клавіатури</span>
+            <span class="service-card__desc">Заміна клавіатури або окремих клавіш із перевіркою підсвітки та тачпада.</span>
+            <span class="service-card__bottom">
+              <span class="service-card__meta"><span><small>від</small> 1 400 ₴</span><span class="meta-dot"></span><span>1–2 дні</span></span>
+              <span class="service-card__arrow" aria-hidden="true"><svg><use href="#i-arrow"></use></svg></span>
+            </span>
+          </button>
+
+          <button type="button" class="service-card" data-calc-device="tablet" data-calc-service="Заміна скла / дисплея" data-reveal style="--delay: 120ms">
+            <span class="service-card__top">
+              <span class="service-card__icon"><svg><use href="#i-tablet"></use></svg></span>
+              <span class="service-card__index">06</span>
+            </span>
+            <span class="service-card__title">Ремонт планшетів</span>
+            <span class="service-card__desc">Скло, дисплей, акумулятор і роз’єм зарядки. Працюємо з iPad та Android-планшетами.</span>
+            <span class="service-card__bottom">
+              <span class="service-card__meta"><span><small>від</small> 900 ₴</span><span class="meta-dot"></span><span>1–2 години</span></span>
+              <span class="service-card__arrow" aria-hidden="true"><svg><use href="#i-arrow"></use></svg></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="services__foot" data-reveal>
+          <p><svg><use href="#i-tools"></use></svg> Не знайшли свою поломку? Ми все одно подивимось.</p>
+          <button type="button" class="link-arrow" data-open-booking>Опишіть ситуацію <svg><use href="#i-arrow"></use></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="section calculator" id="calculator">
+      <div class="calculator__watermark" aria-hidden="true">LUX</div>
+      <div class="container">
+        <div class="section-head section-head--light">
+          <div>
+            <p class="eyebrow eyebrow--light" data-reveal><span class="eyebrow__line"></span>Калькулятор</p>
+            <h2 data-reveal style="--delay: 60ms">Дізнайтеся ціну<br>до того, як приїдете</h2>
+          </div>
+          <div class="section-head__aside" data-reveal style="--delay: 120ms">
+            <p>Оберіть пристрій і поломку — покажемо орієнтовну вартість та строк. Точну суму зафіксуємо після безкоштовної діагностики.</p>
+          </div>
+        </div>
+
+        <div class="calculator__grid">
+          <div class="calculator__panel" data-reveal>
+            <div class="calculator__step">
+              <p class="calculator__label"><span>01</span> Що ремонтуємо?</p>
+              <div class="device-tabs" role="group" aria-label="Тип пристрою">
+                <button type="button" class="device-tab is-active" data-device="smartphone" aria-pressed="true">
+                  <svg><use href="#i-screen"></use></svg><span>Смартфон</span>
+                </button>
+                <button type="button" class="device-tab" data-device="laptop" aria-pressed="false">
+                  <svg><use href="#i-laptop"></use></svg><span>Ноутбук</span>
+                </button>
+                <button type="button" class="device-tab" data-device="tablet" aria-pressed="false">
+                  <svg><use href="#i-tablet"></use></svg><span>Планшет</span>
+                </button>
+                <button type="button" class="device-tab" data-device="other" aria-pressed="false">
+                  <svg><use href="#i-watch"></use></svg><span>Інше</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="calculator__step">
+              <p class="calculator__label"><span>02</span> Що сталося?</p>
+              <div class="select-wrap">
+                <select id="calc-service" aria-label="Виберіть послугу"></select>
+                <svg class="select-wrap__icon"><use href="#i-chevron"></use></svg>
+              </div>
+            </div>
+
+            <div class="calculator__step calculator__step--brand">
+              <p class="calculator__label"><span>03</span> Який бренд?</p>
+              <div class="select-wrap">
+                <select id="calc-brand" aria-label="Виберіть бренд пристрою"></select>
+                <svg class="select-wrap__icon"><use href="#i-chevron"></use></svg>
+              </div>
+            </div>
+
+            <div class="calculator__hint">
+              <svg><use href="#i-info"></use></svg>
+              <p>Ціна залежить від моделі. Показуємо мінімальну вартість для вибраного бренду.</p>
+            </div>
+          </div>
+
+          <div class="calculator__result" data-reveal style="--delay: 100ms">
+            <p class="calculator__result-label">Орієнтовна вартість</p>
+            <p class="calculator__price" aria-live="polite">
+              <span class="calculator__from">від</span>
+              <span data-calc-price>1 700</span>
+              <span class="calculator__currency">₴</span>
+            </p>
+            <p class="calculator__selected" data-calc-service-name>Заміна дисплея · Apple</p>
+
+            <div class="calculator__facts">
+              <div><span>Строк</span><strong data-calc-term>1–2 години</strong></div>
+              <div><span>Гарантія</span><strong data-calc-guarantee>до 12 місяців</strong></div>
+              <div><span>Діагностика</span><strong class="text-success">0 ₴</strong></div>
+            </div>
+
+            <button type="button" class="btn btn--gold btn--full" data-calc-book>
+              Записатися на діагностику
+              <svg><use href="#i-arrow"></use></svg>
+            </button>
+            <p class="calculator__note">Точну ціну зафіксуємо після діагностики. Якщо ремонт не потрібен — ви нічого не платите.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICES -->
+    <section class="section prices" id="prices">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-reveal><span class="eyebrow__line"></span>Прайс</p>
+            <h2 data-reveal style="--delay: 60ms">Популярні позиції<br>без дрібного шрифту</h2>
+          </div>
+          <div class="section-head__aside" data-reveal style="--delay: 120ms">
+            <p>Актуальні ціни на найчастіші ремонти. Повний прайс — у сервісі або за телефоном: підкажемо вартість для вашої моделі.</p>
+          </div>
+        </div>
+
+        <div class="prices__toolbar" data-reveal>
+          <div class="filter-tabs" role="group" aria-label="Фільтр прайсу за пристроєм">
+            <button type="button" class="filter-tab is-active" data-filter="all" aria-pressed="true">Усі</button>
+            <button type="button" class="filter-tab" data-filter="smartphone" aria-pressed="false">Смартфони</button>
+            <button type="button" class="filter-tab" data-filter="laptop" aria-pressed="false">Ноутбуки</button>
+            <button type="button" class="filter-tab" data-filter="tablet" aria-pressed="false">Планшети</button>
+          </div>
+          <label class="search-field">
+            <svg><use href="#i-search"></use></svg>
+            <input type="search" id="price-search" placeholder="Пошук: iPhone, чистка…" autocomplete="off" aria-label="Пошук у прайсі">
+          </label>
+        </div>
+
+        <div class="price-table-wrap" data-reveal>
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th scope="col">Послуга</th>
+                <th scope="col">Пристрій</th>
+                <th scope="col">Від</th>
+                <th scope="col">Строк</th>
+                <th scope="col">Гарантія</th>
+                <th scope="col"><span class="visually-hidden">Дія</span></th>
+              </tr>
+            </thead>
+            <tbody id="price-body">
+              <tr data-category="smartphone" data-service="Заміна дисплея" data-device="Смартфон">
+                <td data-label="Послуга"><strong>Заміна дисплея</strong><span>iPhone 13 / 14</span></td>
+                <td data-label="Пристрій">Смартфон</td>
+                <td data-label="Від"><strong>3 200 ₴</strong></td>
+                <td data-label="Строк">1–2 години</td>
+                <td data-label="Гарантія">12 міс.</td>
+                <td><button type="button" class="table-cta" data-book-service="Заміна дисплея" data-book-device="Смартфон" aria-label="Записатися на заміну дисплея iPhone"><span>Записатися</span><svg><use href="#i-arrow"></use></svg></button></td>
+              </tr>
+              <tr data-category="smartphone" data-service="Заміна дисплея" data-device="Смартфон">
+                <td data-label="Послуга"><strong>Заміна дисплея</strong><span>Samsung Galaxy S21</span></td>
+                <td data-label="Пристрій">Смартфон</td>
+                <td data-label="Від"><strong>2 400 ₴</strong></td>
+                <td data-label="Строк">1–2 години</td>
+                <td data-label="Гарантія">12 міс.</td>
+                <td><button type="button" class="table-cta" data-book-service="Заміна дисплея" data-book-device="Смартфон" aria-label="Записатися на заміну дисплея Samsung"><span>Записатися</span><svg><use href="#i-arrow"></use></svg></button></td>
+              </tr>
+              <tr data-category="smartphone" data-service="Заміна акумулятора" data-device="Смартфон">
+                <td data-label="Послуга"><strong>Заміна акумулятора</strong><span>iPhone 12 / 13</span></td>
+                <td data-label="Пристрій">Смартфон</td>
+                <td data-label="Від"><strong>1 190 ₴</strong></td>
+                <td data-label="Строк">40–60 хв</td>
+                <td data-label="Гарантія">6 міс.</td>
+                <td><button type="button" class="table-cta" data-book-service="Заміна акумулятора" data-book-device="Смартфон" aria-label="Записатися на заміну акумулятора iPhone"><span>Записатися</span><svg><use href="#i-arrow"></use></svg></button></td>
+              </tr>
+              <tr data-category="smartphone" data-service="Ремонт після води" data-device="Смартфон">
+                <td data-label="Послуга"><strong>Ремонт після води</strong><span>Samsung Galaxy S21</span></td>
+                <td data-label="Пристрій">Смартфон</td>
+                <td data-label="Від"><strong>2 800 ₴</strong></td>
+                <td data-label="Строк">1–3 дні</td>
+                <td data-label="Гарантія">3 міс.</td>
+                <td><button type="button" class="table-cta" data-book-service="Ремонт після води" data-book-device="Смартфон" aria-label="Записатися на ремонт після води"><span>Записатися</span><svg><use href="#i-arrow"></use></svg></button></td>
+              </tr>
+              <tr data-category="laptop" data-service="Чистка та термопаста" data-device="Ноутбук">
+                <td data-label="Послуга"><strong>Чистка + термопаста</strong><span>MacBook Pro 13&quot;</span></td>
+                <td data-label="Пристрій">Ноутбук</td>
+                <td data-label="Від"><strong>1 400 ₴</strong></td>
+                <td data-label="Строк">2–3 години</td>
+                <td data-label="Гарантія">3 міс.</td>
+                <td><button type="button" class="table-cta" data-book-service="Чистка та термопаста" data-book-device="Ноутбук" aria-label="Записатися на чистку MacBook"><span>Записатися</span><svg><use href="#i-arrow"></use></svg></button></td>
+              </tr>
+              <tr data-category="laptop" data-service="Заміна клавіатури" data-device="Ноутбук">
+                <td data-label="Послуга"><strong>Заміна клавіатури</strong><span>MacBook Air M1</span></td>
+                <td data-label="Пристрій">Ноутбук</td>
+                <td data-label="Від"><strong>3 200 ₴</strong></td>
+                <td data-label="Строк">1–2 дні</td>
+                <td data-label="Гарантія">6 міс.</td>
+                <td><button type="button" class="table-cta" data-book-service="Заміна клавіатури" data-book-device="Ноутбук" aria-label="Записатися на заміну клавіатури MacBook"><span>Записатися</span><svg><use href="#i-arrow"></use></svg></button></td>
+              </tr>
+              <tr data-category="laptop" data-service="Заміна акумулятора" data-device="Ноутбук">
+                <td data-label="Послуга"><strong>Заміна акумулятора</strong><span>MacBook Air M1</span></td>
+                <td data-label="Пристрій">Ноутбук</td>
+                <td data-label="Від"><strong>2 800 ₴</strong></td>
+                <td data-label="Строк">2–3 години</td>
+                <td data-label="Гарантія">12 міс.</td>
+                <td><button type="button" class="table-cta" data-book-service="Заміна акумулятора" data-book-device="Ноутбук" aria-label="Записатися на заміну акумулятора MacBook"><span>Записатися</span><svg><use href="#i-arrow"></use></svg></button></td>
+              </tr>
+              <tr data-category="tablet" data-service="Заміна скла / дисплея" data-device="Планшет">
+                <td data-label="Послуга"><strong>Заміна скла / дисплея</strong><span>iPad 9</span></td>
+                <td data-label="Пристрій">Планшет</td>
+                <td data-label="Від"><strong>1 900 ₴</strong></td>
+                <td data-label="Строк">1–2 години</td>
+                <td data-label="Гарантія">6 міс.</td>
+                <td><button type="button" class="table-cta" data-book-service="Заміна скла / дисплея" data-book-device="Планшет" aria-label="Записатися на заміну скла iPad"><span>Записатися</span><svg><use href="#i-arrow"></use></svg></button></td>
+              </tr>
+              <tr data-category="all" data-service="Діагностика" data-device="Будь-який пристрій">
+                <td data-label="Послуга"><strong>Діагностика</strong><span>Будь-який пристрій</span></td>
+                <td data-label="Пристрій">Усі</td>
+                <td data-label="Від"><strong class="text-success">0 ₴</strong></td>
+                <td data-label="Строк">15–30 хв</td>
+                <td data-label="Гарантія">—</td>
+                <td><button type="button" class="table-cta" data-book-service="Безкоштовна діагностика" data-book-device="Інше" aria-label="Записатися на безкоштовну діагностику"><span>Записатися</span><svg><use href="#i-arrow"></use></svg></button></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="empty-state" id="price-empty" hidden>
+            <span class="empty-state__icon"><svg><use href="#i-search"></use></svg></span>
+            <h3>Нічого не знайшли</h3>
+            <p>Спробуйте інший запит або надішліть нам модель — підкажемо ціну вручну.</p>
+            <button type="button" class="btn btn--dark btn--sm" data-reset-filters>Скинути фільтри</button>
+          </div>
+        </div>
+
+        <div class="prices__foot" data-reveal>
+          <p><svg><use href="#i-info"></use></svg> Точна вартість — після безкоштовної діагностики. Позначені ціни є орієнтиром «від» і залежать від моделі та стану пристрою.</p>
+          <button type="button" class="link-arrow" data-open-booking>Не знайшли модель? <svg><use href="#i-arrow"></use></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process" id="process">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-reveal><span class="eyebrow__line"></span>Як працюємо</p>
+            <h2 data-reveal style="--delay: 60ms">Чотири кроки —<br>і техніка знову з вами</h2>
+          </div>
+          <div class="section-head__aside" data-reveal style="--delay: 120ms">
+            <p>Без черг і незрозумілих статусів. Ви знаєте, на якому етапі ваш пристрій, і скільки це коштує.</p>
+            <button type="button" class="link-arrow" data-open-status>Перевірити статус ремонту <svg><use href="#i-arrow"></use></svg></button>
+          </div>
+        </div>
+
+        <div class="process__grid">
+          <article class="process-step" data-reveal>
+            <span class="process-step__number">01</span>
+            <div class="process-step__line" aria-hidden="true"></div>
+            <span class="process-step__time">2 хвилини</span>
+            <h3>Залишаєте заявку</h3>
+            <p>Телефоном або на сайті. Достатньо імені, номера та короткого опису проблеми.</p>
+          </article>
+          <article class="process-step" data-reveal style="--delay: 60ms">
+            <span class="process-step__number">02</span>
+            <div class="process-step__line" aria-hidden="true"></div>
+            <span class="process-step__time">15–30 хвилин</span>
+            <h3>Безкоштовна діагностика</h3>
+            <p>Мастер знаходить причину, показує її та називає фіксовану ціну. Ви вирішуєте.</p>
+          </article>
+          <article class="process-step" data-reveal style="--delay: 120ms">
+            <span class="process-step__number">03</span>
+            <div class="process-step__line" aria-hidden="true"></div>
+            <span class="process-step__time">від 40 хвилин</span>
+            <h3>Ремонт</h3>
+            <p>Погоджуємо кожну деталь. Ви можете чекати в сервісі або забрати пізніше.</p>
+          </article>
+          <article class="process-step" data-reveal style="--delay: 180ms">
+            <span class="process-step__number">04</span>
+            <div class="process-step__line" aria-hidden="true"></div>
+            <span class="process-step__time">10 хвилин</span>
+            <h3>Видача з гарантією</h3>
+            <p>Перевіряємо при вас, пояснюємо, що зробили, і видаємо письмову гарантію.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="section why" id="about">
+      <div class="container why__grid">
+        <div class="why__media" data-reveal>
+          <div class="why__photo">
+            <img src="assets/case-phone.webp" loading="lazy" width="1400" height="933" alt="Майстер Lux Service працює з платою смартфона під мікроскопом">
+          </div>
+          <div class="why__badge">
+            <span class="why__badge-number">до 12</span>
+            <span class="why__badge-text">місяців<br>гарантії</span>
+          </div>
+          <div class="why__floating">
+            <svg><use href="#i-tools"></use></svg>
+            <p><strong>Прозорий ремонт</strong><span>Показуємо проблему до початку робіт</span></p>
+          </div>
+        </div>
+
+        <div class="why__content">
+          <p class="eyebrow" data-reveal><span class="eyebrow__line"></span>Чому Lux Service</p>
+          <h2 data-reveal style="--delay: 60ms">Сервіс, у якому видно,<br>за що ви платите</h2>
+          <p class="why__lead" data-reveal style="--delay: 120ms">Ми не ховаємо ціну «до огляду» і не додаємо робіт без вашого погодження. Ремонт починається тільки після того, як ви сказали «так».</p>
+
+          <div class="feature-grid">
+            <div class="feature" data-reveal>
+              <span class="feature__icon"><svg><use href="#i-copy"></use></svg></span>
+              <h3>Дані під захистом</h3>
+              <p>Не втручаємось у ваші файли без потреби. За потреби зробимо резервну копію.</p>
+            </div>
+            <div class="feature" data-reveal style="--delay: 60ms">
+              <span class="feature__icon"><svg><use href="#i-shield"></use></svg></span>
+              <h3>Гарантія до 12 міс.</h3>
+              <p>Письмова гарантія на роботи й комплектуючі. Без умов, написаних дрібним шрифтом.</p>
+            </div>
+            <div class="feature" data-reveal>
+              <span class="feature__icon"><svg><use href="#i-spark"></use></svg></span>
+              <h3>Перевірені деталі</h3>
+              <p>Пропонуємо кілька варіантів комплектуючих і чесно пояснюємо різницю.</p>
+            </div>
+            <div class="feature" data-reveal style="--delay: 60ms">
+              <span class="feature__icon"><svg><use href="#i-clock"></use></svg></span>
+              <h3>Без безкінечних очікувань</h3>
+              <p>Називаємо реальний строк і тримаємо в курсі, якщо щось змінюється.</p>
+            </div>
+          </div>
+
+          <div class="why__quote" data-reveal>
+            <svg><use href="#i-quote"></use></svg>
+            <p>Наша робота — не «поміняти деталь», а повернути вам спокій. Тому пояснюємо кожен крок.</p>
+            <span>Команда Lux Service</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section class="section cases" id="cases">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-reveal><span class="eyebrow__line"></span>Кейси</p>
+            <h2 data-reveal style="--delay: 60ms">Реальні історії,<br>а не обіцянки</h2>
+          </div>
+          <div class="section-head__aside" data-reveal style="--delay: 120ms">
+            <p>Кілька прикладів із майстерні. Кожен ремонт починався з діагностики й закінчувався перевіркою разом із клієнтом.</p>
+          </div>
+        </div>
+
+        <div class="cases__grid">
+          <article class="case-card" data-reveal>
+            <div class="case-card__media">
+              <img src="assets/case-microscope.webp" loading="lazy" width="1400" height="933" alt="Ремонт смартфона під мікроскопом у майстерні Lux Service">
+              <span class="case-card__tag">iPhone 13 Pro</span>
+              <span class="case-card__status">Після</span>
+            </div>
+            <div class="case-card__body">
+              <p class="case-card__problem">Розбите скло, сенсор працював</p>
+              <h3>Заміна дисплея</h3>
+              <div class="case-card__meta">
+                <span><small>Строк</small><strong>90 хвилин</strong></span>
+                <span><small>Вартість</small><strong>3 200 ₴</strong></span>
+                <span><small>Гарантія</small><strong>12 міс.</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-reveal style="--delay: 70ms">
+            <div class="case-card__media">
+              <img src="assets/repair-close.webp" loading="lazy" width="1200" height="2133" alt="Майстер ремонтує електроніку ноутбука">
+              <span class="case-card__tag">MacBook Air M1</span>
+              <span class="case-card__status">Після</span>
+            </div>
+            <div class="case-card__body">
+              <p class="case-card__problem">Перегрів і шум вентилятора</p>
+              <h3>Чистка + термопаста</h3>
+              <div class="case-card__meta">
+                <span><small>Строк</small><strong>2 години</strong></span>
+                <span><small>Вартість</small><strong>1 400 ₴</strong></span>
+                <span><small>Гарантія</small><strong>3 міс.</strong></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card" data-reveal style="--delay: 140ms">
+            <div class="case-card__media">
+              <img src="assets/case-board.webp" loading="lazy" width="1400" height="933" alt="Діагностика плати смартфона під мікроскопом">
+              <span class="case-card__tag">Samsung Galaxy S21</span>
+              <span class="case-card__status">Після</span>
+            </div>
+            <div class="case-card__body">
+              <p class="case-card__problem">Після води, не вмикався</p>
+              <h3>Відновлення плати</h3>
+              <div class="case-card__meta">
+                <span><small>Строк</small><strong>1 день</strong></span>
+                <span><small>Вартість</small><strong>2 800 ₴</strong></span>
+                <span><small>Гарантія</small><strong>3 міс.</strong></span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="cases__foot" data-reveal>
+          <p>Хочете побачити більше? Покажемо фото процесу та відгуки в Instagram.</p>
+          <a href="https://www.instagram.com/lux.serviceua/" class="link-arrow" target="_blank" rel="noopener">@lux.serviceua <svg><use href="#i-arrow"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section reviews" id="reviews">
+      <div class="container reviews__grid">
+        <div class="reviews__summary" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__line"></span>Відгуки</p>
+          <h2>Нам довіряють<br>свою техніку</h2>
+          <div class="reviews__score">
+            <strong>4,9</strong>
+            <div>
+              <span class="stars" aria-label="4,9 з 5">
+                <svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg><svg><use href="#i-star"></use></svg>
+              </span>
+              <p>127 відгуків у Google</p>
+            </div>
+          </div>
+          <p>98% клієнтів рекомендують нас друзям. Ми не видаляємо негативні відгуки — відповідаємо на них і виправляємо ситуацію.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Lux+Service+Kyiv" class="link-arrow" target="_blank" rel="noopener">Читати відгуки в Google <svg><use href="#i-arrow"></use></svg></a>
+        </div>
+
+        <div class="reviews__list">
+          <article class="review-card" data-reveal>
+            <div class="review-card__top">
+              <span class="review-card__avatar" aria-hidden="true">ОК</span>
+              <div><strong>Олена К.</strong><span class="review-card__source"><svg><use href="#i-google"></use></svg> Google</span></div>
+              <span class="review-card__stars" aria-label="5 з 5">★★★★★</span>
+            </div>
+            <p>«Замінили екран iPhone 13 за годину. Показали, що саме було пошкоджено, і не нав’язували зайвого. Дуже приємно, коли з тобою говорять нормально».</p>
+          </article>
+
+          <article class="review-card" data-reveal style="--delay: 70ms">
+            <div class="review-card__top">
+              <span class="review-card__avatar" aria-hidden="true">ДМ</span>
+              <div><strong>Дмитро М.</strong><span class="review-card__source"><svg><use href="#i-instagram"></use></svg> Instagram</span></div>
+              <span class="review-card__stars" aria-label="5 з 5">★★★★★</span>
+            </div>
+            <p>«Ноутбук грівся так, що страшно було працювати. Почистили, поміняли термопасту — температура впала, шум зник. Забрали за дві години».</p>
+          </article>
+
+          <article class="review-card" data-reveal style="--delay: 140ms">
+            <div class="review-card__top">
+              <span class="review-card__avatar" aria-hidden="true">ІЛ</span>
+              <div><strong>Ігор Л.</strong><span class="review-card__source"><svg><use href="#i-google"></use></svg> Google</span></div>
+              <span class="review-card__stars" aria-label="5 з 5">★★★★★</span>
+            </div>
+            <p>«Здавав Samsung після води. Чесно сказали, що шанси не 100%, і назвали ціну. У результаті телефон ожив, усі дані залишилися на місці».</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATIONS -->
+    <section class="section locations" id="contacts">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-reveal><span class="eyebrow__line"></span>Контакти</p>
+            <h2 data-reveal style="--delay: 60ms">Заходьте —<br>ми поруч</h2>
+          </div>
+          <div class="section-head__aside" data-reveal style="--delay: 120ms">
+            <p>Дві точки в Києві, щодня з 10:00 до 22:00. Можна приїхати без запису або залишити заявку, щоб вас уже чекали.</p>
+          </div>
+        </div>
+
+        <div class="locations__grid">
+          <article class="location-card" data-reveal>
+            <div class="location-card__map">
+              <svg viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="640" height="280" fill="#EAE8E1"/>
+                <path d="M430 0h210v280H470c-10-45 16-74 8-118-8-45-58-64-48-162z" fill="#DCE8EA"/>
+                <path d="M0 70h640M0 200h640M110 0v280M260 0v280M390 0v280" stroke="#F7F4ED" stroke-width="18"/>
+                <path d="M0 140c90-8 150 25 240 18s130-55 215-46 125 40 185 31" fill="none" stroke="#F7F4ED" stroke-width="11"/>
+                <path d="M20 30h120v65H20zM280 205h95v55h-95z" fill="#D8E3D6"/>
+                <path d="M0 250c95-25 120 20 210 8s110-45 195-30" fill="none" stroke="#E3B75F" stroke-width="4" stroke-dasharray="9 8"/>
+                <circle cx="330" cy="132" r="26" fill="#12263F"/>
+                <circle cx="330" cy="132" r="9" fill="#F6F4EF"/>
+                <path d="M330 158c-8 16-16 24-16 24s-16-15-16-24a16 16 0 1 1 32 0z" fill="#B08A45"/>
+                <circle cx="314" cy="128" r="5" fill="#12263F"/>
+                <text x="28" y="220" fill="#9A958A" font-size="13" font-family="Manrope, sans-serif">Оболонь</text>
+                <text x="500" y="246" fill="#8EA6AD" font-size="13" font-family="Manrope, sans-serif">Дніпро</text>
+              </svg>
+              <span class="location-card__map-label"><svg><use href="#i-pin"></use></svg> ТРЦ Dream · 3 поверх</span>
+            </div>
+            <div class="location-card__body">
+              <div class="location-card__head">
+                <h3>ТРЦ Dream</h3>
+                <span class="location-card__badge">Оболонь</span>
+              </div>
+              <p class="location-card__address">Оболонський просп., 1Б<br><span>3 поверх, біля ескалатора</span></p>
+              <div class="location-card__info">
+                <p><svg><use href="#i-clock"></use></svg> Щодня 10:00–22:00</p>
+                <p><svg><use href="#i-pin"></use></svg> Метро «Оболонь» — 7 хв пішки</p>
+              </div>
+              <div class="location-card__actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=ТРЦ+Dream+Оболонський+проспект+1Б+Київ" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Прокласти маршрут <svg><use href="#i-arrow"></use></svg></a>
+                <a href="tel:+380960686111" class="btn btn--outline btn--sm" data-analytics="call_click"><svg><use href="#i-phone"></use></svg> Подзвонити</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="location-card" data-reveal style="--delay: 100ms">
+            <div class="location-card__map">
+              <svg viewBox="0 0 640 280" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="640" height="280" fill="#EAE8E1"/>
+                <path d="M0 0h185c15 55-21 95 5 145 24 47 78 59 66 135H0z" fill="#DCE8EA"/>
+                <path d="M0 85h640M0 215h640M170 0v280M355 0v280M510 0v280" stroke="#F7F4ED" stroke-width="18"/>
+                <path d="M0 165c90 8 170-32 250-16s115 58 210 45 115-48 180-38" fill="none" stroke="#F7F4ED" stroke-width="11"/>
+                <path d="M370 20h135v72H370zM40 220h110v38H40z" fill="#D8E3D6"/>
+                <path d="M560 0c-8 70-35 105-14 157s70 54 94 84" fill="none" stroke="#E3B75F" stroke-width="4" stroke-dasharray="9 8"/>
+                <circle cx="430" cy="130" r="26" fill="#12263F"/>
+                <circle cx="430" cy="130" r="9" fill="#F6F4EF"/>
+                <path d="M430 156c-8 16-16 24-16 24s-16-15-16-24a16 16 0 1 1 32 0z" fill="#B08A45"/>
+                <circle cx="414" cy="126" r="5" fill="#12263F"/>
+                <text x="28" y="60" fill="#8EA6AD" font-size="13" font-family="Manrope, sans-serif">Дніпро</text>
+                <text x="500" y="250" fill="#9A958A" font-size="13" font-family="Manrope, sans-serif">Осокорки</text>
+              </svg>
+              <span class="location-card__map-label"><svg><use href="#i-pin"></use></svg> Осокорки</span>
+            </div>
+            <div class="location-card__body">
+              <div class="location-card__head">
+                <h3>Lux Service</h3>
+                <span class="location-card__badge">Осокорки</span>
+              </div>
+              <p class="location-card__address">вул. Драгоманова, 40<br><span>поруч з метро «Осокорки»</span></p>
+              <div class="location-card__info">
+                <p><svg><use href="#i-clock"></use></svg> Щодня 10:00–22:00</p>
+                <p><svg><use href="#i-pin"></use></svg> 5 хв від метро «Осокорки»</p>
+              </div>
+              <div class="location-card__actions">
+                <a href="https://www.google.com/maps/search/?api=1&query=Київ+вул+Драгоманова+40" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Прокласти маршрут <svg><use href="#i-arrow"></use></svg></a>
+                <a href="tel:+380960686111" class="btn btn--outline btn--sm" data-analytics="call_click"><svg><use href="#i-phone"></use></svg> Подзвонити</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="delivery-band" data-reveal>
+          <span class="delivery-band__icon"><svg><use href="#i-truck"></use></svg></span>
+          <div class="delivery-band__text">
+            <p class="eyebrow eyebrow--light">По Україні</p>
+            <h3>Не в Києві? Надішліть техніку Новою поштою</h3>
+            <p>Підкажемо, як безпечно упакувати пристрій, і повернемо його після ремонту з гарантією.</p>
+          </div>
+          <a href="https://t.me/luxserviceua" class="btn btn--outline-light" target="_blank" rel="noopener">Дізнатися умови <svg><use href="#i-arrow"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container faq__grid">
+        <div class="faq__intro">
+          <p class="eyebrow" data-reveal><span class="eyebrow__line"></span>FAQ</p>
+          <h2 data-reveal style="--delay: 60ms">Питання, які<br>ставлять найчастіше</h2>
+          <p data-reveal style="--delay: 120ms">Не знайшли відповідь? Напишіть або подзвоніть — відповімо без «менеджерського» туману.</p>
+          <div class="faq__actions" data-reveal>
+            <button type="button" class="btn btn--dark" data-open-booking>Задати питання <svg><use href="#i-arrow"></use></svg></button>
+            <a href="tel:+380960686111" class="link-arrow" data-analytics="call_click">(096) 068-61-11</a>
+          </div>
+        </div>
+
+        <div class="faq__list" data-reveal>
+          <details class="faq-item" open>
+            <summary>Скільки коштує діагностика?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <div class="faq-item__content"><p>Безкоштовно. Ми оглядаємо пристрій, називаємо причину та фіксовану вартість ремонту. Якщо ви відмовляєтесь від ремонту — не платите нічого.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Чи можна зачекати в сервісі?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <div class="faq-item__content"><p>Так. Більшість ремонтів займає від 40 хвилин до 2 годин. Якщо потрібно більше часу, залишите пристрій і заберете після повідомлення.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Чи збережуться дані на телефоні?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <div class="faq-item__content"><p>Ми не стираємо дані під час звичайного ремонту. Якщо проблема стосується накопичувача, попередимо заздалегідь і запропонуємо зробити резервну копію.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Які запчастини ви використовуєте?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <div class="faq-item__content"><p>Пропонуємо перевірені комплектуючі різних класів і пояснюємо різницю в ціні та якості. Ви бачите варіанти до початку ремонту й обираєте самі.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Що покриває гарантія?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <div class="faq-item__content"><p>Гарантія до 12 місяців залежить від послуги та деталі. Вона покриває роботу й встановлені комплектуючі. Механічні пошкодження після ремонту та контакт із рідиною не є гарантійним випадком.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Чи можна відправити техніку з іншого міста?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <div class="faq-item__content"><p>Так, Новою поштою по всій Україні. Підкажемо, як упакувати пристрій, узгодимо ремонт і надішлемо назад із документом на гарантію.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Телефон упав у воду — що робити?<span class="faq-item__icon" aria-hidden="true"></span></summary>
+            <div class="faq-item__content"><p>Не заряджайте й не сушіть феном. Вимкніть пристрій, якщо він ще працює, і якнайшвидше привезіть на діагностику. Чим менше часу минуло, тим вищі шанси на відновлення.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__card">
+          <div class="contact__copy">
+            <p class="eyebrow eyebrow--light" data-reveal><span class="eyebrow__line"></span>Запис на діагностику</p>
+            <h2 data-reveal style="--delay: 60ms">Не знаєте,<br>що зламалося?<br><span class="text-gold">Розберімося разом.</span></h2>
+            <p class="contact__lead" data-reveal style="--delay: 120ms">Опишіть проблему в кількох словах — ми передзвонимо, уточнимо деталі та запропонуємо зручний час.</p>
+
+            <ul class="contact__list" data-reveal>
+              <li><svg><use href="#i-clock"></use></svg><span><strong>Відповімо за 15 хвилин</strong> у робочі години, 10:00–22:00</span></li>
+              <li><svg><use href="#i-shield"></use></svg><span><strong>Діагностика безкоштовна</strong> і ні до чого не зобов’язує</span></li>
+              <li><svg><use href="#i-pin"></use></svg><span><strong>Дві точки в Києві</strong> або відправка Новою поштою</span></li>
+            </ul>
+
+            <div class="contact__phone-block" data-reveal>
+              <span>Або одразу телефоном</span>
+              <a href="tel:+380960686111" data-analytics="call_click">(096) 068-61-11 <svg><use href="#i-arrow"></use></svg></a>
+            </div>
+          </div>
+
+          <div class="contact__form-wrap" data-reveal style="--delay: 80ms">
+            <form class="lead-form" data-lead-form novalidate>
+              <input type="hidden" name="source" value="final_form">
+              <input type="hidden" name="page" value="Головна">
+              <div class="hp-field" aria-hidden="true"><label>Не заповнюйте це поле<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+
+              <div class="form-head">
+                <span class="form-head__step">Крок 1 із 1</span>
+                <h3>Залишити заявку</h3>
+                <p>Це займе менше хвилини.</p>
+              </div>
+
+              <div class="form-grid">
+                <div class="field">
+                  <label for="lead-name">Ваше ім’я <span aria-hidden="true">*</span></label>
+                  <input type="text" id="lead-name" name="name" autocomplete="name" placeholder="Олена" required>
+                </div>
+                <div class="field">
+                  <label for="lead-phone">Телефон <span aria-hidden="true">*</span></label>
+                  <input type="tel" id="lead-phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="+380 (__) ___-__-__" required>
+                </div>
+                <div class="field field--full">
+                  <label for="lead-device">Що ремонтуємо? <span aria-hidden="true">*</span></label>
+                  <div class="select-wrap select-wrap--form">
+                    <select id="lead-device" name="device" required>
+                      <option value="">Оберіть пристрій</option>
+                      <option value="Смартфон">Смартфон</option>
+                      <option value="Ноутбук">Ноутбук</option>
+                      <option value="Планшет">Планшет</option>
+                      <option value="Інше">Інший пристрій</option>
+                    </select>
+                    <svg class="select-wrap__icon"><use href="#i-chevron"></use></svg>
+                  </div>
+                </div>
+                <div class="field field--full">
+                  <label for="lead-problem">Що сталося? <span aria-hidden="true">*</span></label>
+                  <textarea id="lead-problem" name="problem" rows="3" maxlength="500" placeholder="Наприклад: iPhone 13, розбитий екран, сенсор працює" required></textarea>
+                  <span class="field__counter" data-counter-for="lead-problem">0 / 500</span>
+                </div>
+              </div>
+
+              <fieldset class="contact-method">
+                <legend>Як зручніше зв’язатися?</legend>
+                <div class="contact-method__options">
+                  <label class="radio-chip"><input type="radio" name="contact" value="Дзвінок" checked><span>Дзвінок</span></label>
+                  <label class="radio-chip"><input type="radio" name="contact" value="Telegram"><span>Telegram</span></label>
+                  <label class="radio-chip"><input type="radio" name="contact" value="Viber"><span>Viber</span></label>
+                </div>
+              </fieldset>
+
+              <label class="checkbox">
+                <input type="checkbox" name="consent" required>
+                <span class="checkbox__control" aria-hidden="true"></span>
+                <span class="checkbox__text">Погоджуюся з <a href="privacy.html" target="_blank" rel="noopener">політикою конфіденційності</a> та обробкою персональних даних <span aria-hidden="true">*</span></span>
+              </label>
+
+              <button type="submit" class="btn btn--gold btn--full btn--submit">
+                <span>Записатися на діагностику</span>
+                <svg><use href="#i-arrow"></use></svg>
+              </button>
+              <p class="form-note">Натискаючи кнопку, ви не оплачуєте нічого. Діагностика безкоштовна.</p>
+              <p class="form-message" role="alert" aria-live="assertive"></p>
+            </form>
+
+            <div class="form-success" hidden>
+              <span class="form-success__icon"><svg><use href="#i-check"></use></svg></span>
+              <p class="eyebrow">Заявку прийнято</p>
+              <h3>Дякуємо, <span data-success-name>друже</span>!</h3>
+              <p>Ваша заявка <strong data-order-id>LS-0000</strong> у роботі. Відповімо протягом 15 хвилин у робочі години (10:00–22:00).</p>
+              <div class="form-success__actions">
+                <a href="https://t.me/luxserviceua" class="btn btn--dark btn--sm" target="_blank" rel="noopener"><svg><use href="#i-telegram"></use></svg> Telegram</a>
+                <a href="viber://chat?number=%2B380960686111" class="btn btn--outline btn--sm"><svg><use href="#i-viber"></use></svg> Viber</a>
+              </div>
+              <button type="button" class="link-arrow" data-reset-lead-form>Залишити ще одну заявку <svg><use href="#i-arrow"></use></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a href="#top" class="brand brand--footer" aria-label="Lux Service">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 44 44" fill="none">
+                <rect x="1" y="1" width="42" height="42" rx="11" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M14 11v22h17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <circle cx="30.5" cy="13.5" r="2" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="brand__text"><span class="brand__name">Lux Service</span><span class="brand__sub">сервісний центр · Київ</span></span>
+          </a>
+          <p>Ремонт смартфонів, ноутбуків і планшетів. Безкоштовна діагностика, чесна ціна та гарантія до 12 місяців.</p>
+          <div class="site-footer__socials">
+            <a href="https://www.instagram.com/lux.serviceua/" target="_blank" rel="noopener" aria-label="Instagram Lux Service"><svg><use href="#i-instagram"></use></svg></a>
+            <a href="https://www.tiktok.com/@lux.serviceua" target="_blank" rel="noopener" aria-label="TikTok Lux Service"><svg><use href="#i-tiktok"></use></svg></a>
+            <a href="https://t.me/luxserviceua" target="_blank" rel="noopener" aria-label="Telegram Lux Service"><svg><use href="#i-telegram"></use></svg></a>
+          </div>
+        </div>
+
+        <nav class="site-footer__col" aria-label="Послуги у футері">
+          <h3>Послуги</h3>
+          <a href="#services">Заміна дисплея</a>
+          <a href="#services">Заміна акумулятора</a>
+          <a href="#services">Ремонт після води</a>
+          <a href="#services">Чистка ноутбука</a>
+          <a href="#services">Ремонт планшетів</a>
+        </nav>
+
+        <nav class="site-footer__col" aria-label="Компанія">
+          <h3>Компанія</h3>
+          <a href="#about">Про нас</a>
+          <a href="#reviews">Відгуки</a>
+          <a href="#cases">Кейси</a>
+          <a href="#faq">Питання</a>
+          <button type="button" data-open-status>Статус ремонту</button>
+        </nav>
+
+        <div class="site-footer__col site-footer__contacts">
+          <h3>Контакти</h3>
+          <a href="tel:+380960686111" class="site-footer__phone" data-analytics="call_click">(096) 068-61-11</a>
+          <span>Щодня 10:00–22:00</span>
+          <p>ТРЦ Dream, Оболонський просп., 1Б, 3 поверх</p>
+          <p>Осокорки, вул. Драгоманова, 40</p>
+          <a href="mailto:hello@luxservice.ua">hello@luxservice.ua</a>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© 2026 Lux Service. Усі права захищені.</p>
+        <div>
+          <a href="privacy.html">Політика конфіденційності</a>
+          <a href="oferta.html">Публічна оферта</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta" aria-label="Швидкі дії">
+    <a href="tel:+380960686111" class="mobile-cta__call" data-analytics="call_click">
+      <svg><use href="#i-phone"></use></svg>
+      <span>Подзвонити</span>
+    </a>
+    <button type="button" class="mobile-cta__book" data-open-booking>
+      Записатися на діагностику
+      <svg><use href="#i-arrow"></use></svg>
+    </button>
+  </div>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal" id="booking-modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="booking-title">
+      <button type="button" class="modal__close" aria-label="Закрити вікно" data-close-modal>
+        <svg><use href="#i-close"></use></svg>
+      </button>
+
+      <aside class="modal__aside">
+        <div class="modal__aside-top">
+          <span class="modal__logo">LUX<br>SERVICE</span>
+          <span class="modal__aside-label">Запис на діагностику</span>
+        </div>
+        <div class="modal__aside-copy">
+          <p class="eyebrow eyebrow--light"><span class="eyebrow__line"></span>Безкоштовно</p>
+          <h3>Приведіть техніку —<br>ми скажемо,<br><span class="text-gold">що з нею.</span></h3>
+          <p>Діагностика займає 15–30 хвилин. Ви отримаєте точну причину, ціну та строк — без зобов’язань.</p>
+        </div>
+        <ul class="modal__benefits">
+          <li><svg><use href="#i-check"></use></svg> Фіксована ціна до ремонту</li>
+          <li><svg><use href="#i-check"></use></svg> Гарантія до 12 місяців</li>
+          <li><svg><use href="#i-check"></use></svg> ТРЦ Dream або Осокорки</li>
+        </ul>
+        <div class="modal__aside-footer">
+          <a href="tel:+380960686111" data-analytics="call_click">(096) 068-61-11</a>
+          <span>щодня 10:00–22:00</span>
+        </div>
+      </aside>
+
+      <div class="modal__main">
+        <div class="modal__form-view">
+          <div class="modal__head">
+            <p class="eyebrow">Крок 1 із 1</p>
+            <h2 id="booking-title">Запишіться на діагностику</h2>
+            <p>Залиште контакти — передзвонимо та підберемо зручний час.</p>
+          </div>
+
+          <form class="lead-form lead-form--modal" data-lead-form novalidate>
+            <input type="hidden" name="source" value="modal">
+            <input type="hidden" name="page" value="Головна">
+            <div class="hp-field" aria-hidden="true"><label>Не заповнюйте це поле<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="modal-name">Ваше ім’я <span aria-hidden="true">*</span></label>
+                <input type="text" id="modal-name" name="name" autocomplete="name" placeholder="Олена" required>
+              </div>
+              <div class="field">
+                <label for="modal-phone">Телефон <span aria-hidden="true">*</span></label>
+                <input type="tel" id="modal-phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="+380 (__) ___-__-__" required>
+              </div>
+              <div class="field field--full">
+                <label for="modal-device">Що ремонтуємо? <span aria-hidden="true">*</span></label>
+                <div class="select-wrap select-wrap--form">
+                  <select id="modal-device" name="device" required>
+                    <option value="">Оберіть пристрій</option>
+                    <option value="Смартфон">Смартфон</option>
+                    <option value="Ноутбук">Ноутбук</option>
+                    <option value="Планшет">Планшет</option>
+                    <option value="Інше">Інший пристрій</option>
+                  </select>
+                  <svg class="select-wrap__icon"><use href="#i-chevron"></use></svg>
+                </div>
+              </div>
+              <div class="field field--full">
+                <label for="modal-problem">Що сталося? <span aria-hidden="true">*</span></label>
+                <textarea id="modal-problem" name="problem" rows="3" maxlength="500" placeholder="Наприклад: iPhone 13, розбитий екран, сенсор працює" required></textarea>
+                <span class="field__counter" data-counter-for="modal-problem">0 / 500</span>
+              </div>
+            </div>
+
+            <fieldset class="contact-method">
+              <legend>Як зручніше зв’язатися?</legend>
+              <div class="contact-method__options">
+                <label class="radio-chip"><input type="radio" name="contact" value="Дзвінок" checked><span>Дзвінок</span></label>
+                <label class="radio-chip"><input type="radio" name="contact" value="Telegram"><span>Telegram</span></label>
+                <label class="radio-chip"><input type="radio" name="contact" value="Viber"><span>Viber</span></label>
+              </div>
+            </fieldset>
+
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required>
+              <span class="checkbox__control" aria-hidden="true"></span>
+              <span class="checkbox__text">Погоджуюся з <a href="privacy.html" target="_blank" rel="noopener">політикою конфіденційності</a> та обробкою персональних даних <span aria-hidden="true">*</span></span>
+            </label>
+
+            <button type="submit" class="btn btn--gold btn--full btn--submit">
+              <span>Записатися на діагностику</span>
+              <svg><use href="#i-arrow"></use></svg>
+            </button>
+            <p class="form-note">Відповідаємо протягом 15 хвилин у робочі години.</p>
+            <p class="form-message" role="alert" aria-live="assertive"></p>
+          </form>
+        </div>
+
+        <div class="form-success form-success--modal" hidden>
+          <span class="form-success__icon"><svg><use href="#i-check"></use></svg></span>
+          <p class="eyebrow">Заявку прийнято</p>
+          <h2 id="booking-success-title">Дякуємо, <span data-success-name>друже</span>!</h2>
+          <p>Ваша заявка <strong data-order-id>LS-0000</strong> у роботі. Відповімо протягом 15 хвилин у робочі години (10:00–22:00).</p>
+          <div class="form-success__order">
+            <span>Номер заявки</span>
+            <strong data-order-id>LS-0000</strong>
+            <button type="button" class="copy-order" aria-label="Скопіювати номер заявки" data-copy-order><svg><use href="#i-copy"></use></svg></button>
+          </div>
+          <div class="form-success__actions">
+            <a href="https://t.me/luxserviceua" class="btn btn--dark btn--sm" target="_blank" rel="noopener"><svg><use href="#i-telegram"></use></svg> Telegram</a>
+            <a href="viber://chat?number=%2B380960686111" class="btn btn--outline btn--sm"><svg><use href="#i-viber"></use></svg> Viber</a>
+          </div>
+          <button type="button" class="link-arrow" data-close-modal>Повернутися на сайт <svg><use href="#i-arrow"></use></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATUS MODAL -->
+  <div class="modal" id="status-modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--status" role="dialog" aria-modal="true" aria-labelledby="status-title">
+      <button type="button" class="modal__close" aria-label="Закрити вікно" data-close-modal>
+        <svg><use href="#i-close"></use></svg>
+      </button>
+
+      <div class="status-head">
+        <span class="status-head__icon"><svg><use href="#i-tools"></use></svg></span>
+        <p class="eyebrow">Статус ремонту</p>
+        <h2 id="status-title">Де зараз ваша техніка?</h2>
+        <p>Введіть номер заявки та останні 4 цифри телефону. Це швидше, ніж чекати на дзвінок.</p>
+      </div>
+
+      <form class="status-form" data-status-form novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="status-order">Номер заявки</label>
+            <input type="text" id="status-order" name="order" placeholder="LS-4821" autocomplete="off" required>
+          </div>
+          <div class="field">
+            <label for="status-phone">Останні 4 цифри телефону</label>
+            <input type="text" id="status-phone" name="phone4" inputmode="numeric" maxlength="4" placeholder="6111" autocomplete="off" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--dark btn--full btn--submit"><span>Перевірити статус</span><svg><use href="#i-arrow"></use></svg></button>
+        <p class="status-form__hint">Демо-доступ: <button type="button" data-demo-status>LS-4821 · 6111</button></p>
+        <p class="form-message" role="alert" aria-live="assertive"></p>
+      </form>
+
+      <div class="status-result" hidden>
+        <div class="status-result__top">
+          <div>
+            <span class="status-result__label">Заявка <strong data-status-order>LS-4821</strong></span>
+            <h3 data-status-title>Готово до видачі</h3>
+          </div>
+          <span class="status-badge status-badge--success" data-status-badge>Готово</span>
+        </div>
+
+        <div class="status-progress" data-status-progress>
+          <div class="status-step is-done"><span></span><p>Прийнято<small>Отримали пристрій</small></p></div>
+          <div class="status-step is-done"><span></span><p>Діагностика<small>Знайшли причину</small></p></div>
+          <div class="status-step is-done"><span></span><p>Погоджено<small>Ціну підтверджено</small></p></div>
+          <div class="status-step is-done"><span></span><p>У ремонті<small>Робота виконана</small></p></div>
+          <div class="status-step is-active"><span></span><p>Готово<small>Можна забирати</small></p></div>
+        </div>
+
+        <div class="status-result__details">
+          <div><span>Пристрій</span><strong data-status-device>iPhone 13 Pro</strong></div>
+          <div><span>Послуга</span><strong data-status-service>Заміна дисплея</strong></div>
+          <div><span>Де забрати</span><strong data-status-place>ТРЦ Dream, 3 поверх</strong></div>
+          <div><span>Години роботи</span><strong>Щодня 10:00–22:00</strong></div>
+        </div>
+
+        <div class="status-result__actions">
+          <a href="tel:+380960686111" class="btn btn--gold btn--sm" data-analytics="call_click"><svg><use href="#i-phone"></use></svg> Зателефонувати</a>
+          <button type="button" class="btn btn--outline btn--sm" data-status-back>Інша заявка</button>
+        </div>
+        <p class="status-result__note"><svg><use href="#i-info"></use></svg> Статус оновлюється майстром. Якщо щось змінилося — зателефонуйте, ми уточнимо.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIE BANNER -->
+  <div class="cookie-banner" id="cookie-banner" hidden>
+    <div class="cookie-banner__text">
+      <strong>Коротко про cookies</strong>
+      <p>Використовуємо їх для аналітики, щоб сайт був зручнішим. Відмова нічого не змінює у роботі сайту. <a href="privacy.html">Детальніше</a></p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button type="button" class="btn btn--outline btn--sm" data-cookie="necessary">Лише необхідні</button>
+      <button type="button" class="btn btn--dark btn--sm" data-cookie="all">Прийняти</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="script.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://xal1fat.github.io/lux-service/#business",
+        "name": "Lux Service",
+        "description": "Сервісний центр цифрової техніки у Києві: ремонт смартфонів, ноутбуків і планшетів.",
+        "image": "https://xal1fat.github.io/lux-service/assets/hero-tech.webp",
+        "url": "https://xal1fat.github.io/lux-service/",
+        "telephone": "+380960686111",
+        "priceRange": "₴₴",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Оболонський проспект, 1Б",
+          "addressLocality": "Київ",
+          "addressCountry": "UA"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "10:00",
+          "closes": "22:00"
+        },
+        "areaServed": "Київ",
+        "sameAs": ["https://www.instagram.com/lux.serviceua/", "https://www.tiktok.com/@lux.serviceua"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Скільки коштує діагностика?", "acceptedAnswer": {"@type": "Answer", "text": "Безкоштовно. Ми оглядаємо пристрій, називаємо причину та фіксовану вартість ремонту. Якщо ви відмовляєтесь від ремонту — не платите нічого."}},
+          {"@type": "Question", "name": "Чи можна зачекати в сервісі?", "acceptedAnswer": {"@type": "Answer", "text": "Так. Більшість ремонтів займає від 40 хвилин до 2 годин. Якщо потрібно більше часу, залишите пристрій і заберете після повідомлення."}},
+          {"@type": "Question", "name": "Чи збережуться дані на телефоні?", "acceptedAnswer": {"@type": "Answer", "text": "Ми не стираємо дані під час звичайного ремонту. Якщо проблема стосується накопичувача, попередимо заздалегідь і запропонуємо зробити резервну копію."}},
+          {"@type": "Question", "name": "Що покриває гарантія?", "acceptedAnswer": {"@type": "Answer", "text": "Гарантія до 12 місяців залежить від послуги та деталі. Вона покриває роботу й встановлені комплектуючі. Механічні пошкодження після ремонту та контакт із рідиною не є гарантійним випадком."}},
+          {"@type": "Question", "name": "Чи можна відправити техніку з іншого міста?", "acceptedAnswer": {"@type": "Answer", "text": "Так, Новою поштою по всій Україні. Підкажемо, як упакувати пристрій, узгодимо ремонт і надішлемо назад із документом на гарантію."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
