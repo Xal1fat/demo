@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Набори техкарт — ГРАМ</title>
+<meta name="description" content="Каталог наборів кондитерських технологічних карт: торти, муссові десерти, печиво, тарти, безглютенові та сезонні. 449 ₴ за набір.">
+<meta name="theme-color" content="#fbf6f0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233b2a20'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='17' font-weight='700' text-anchor='middle' fill='%23fbf6f0'%3EГ%3C/text%3E%3Ccircle cx='25' cy='24' r='2' fill='%23c08a3e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="catalog">
+<a class="skip-link" href="#main">Перейти до вмісту</a>
+<div id="site-header"></div>
+<main id="main">
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Хлібні крихти">
+      <a href="index.html">Головна</a><span class="sep">/</span><span aria-current="page">Набори</span>
+    </nav>
+    <header class="page-head">
+      <div class="page-head__row">
+        <div>
+          <span class="kicker">Каталог</span>
+          <h1>Набори технологічних карт</h1>
+          <p class="lead">Шість тем — від базових тортів до безглютенових десертів. Усі набори за єдиною структурою, ціна одного — 449&nbsp;₴.</p>
+        </div>
+        <span class="page-head__count" id="resultCount">6 наборів</span>
+      </div>
+    </header>
+
+    <div class="catalog-layout">
+      <aside class="filters" id="filtersPanel" aria-label="Фільтри">
+        <div class="filters__head">
+          <h2>Фільтри</h2>
+          <button class="filters__close" type="button" data-filters-close aria-label="Закрити фільтри"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button>
+        </div>
+
+        <div class="filter-group" data-filter-group="category">
+          <h3>Тема</h3>
+          <label class="filter-option"><input type="checkbox" value="torty"><span>Торти</span><small>1</small></label>
+          <label class="filter-option"><input type="checkbox" value="mousse"><span>Муссові десерти</span><small>1</small></label>
+          <label class="filter-option"><input type="checkbox" value="cookies"><span>Печиво</span><small>1</small></label>
+          <label class="filter-option"><input type="checkbox" value="tarts"><span>Тарти</span><small>1</small></label>
+          <label class="filter-option"><input type="checkbox" value="glutenfree"><span>Без глютену</span><small>1</small></label>
+          <label class="filter-option"><input type="checkbox" value="seasonal"><span>Сезонні</span><small>1</small></label>
+        </div>
+
+        <div class="filter-group" data-filter-group="level">
+          <h3>Рівень</h3>
+          <label class="filter-option"><input type="checkbox" value="Початковий"><span>Початковий</span></label>
+          <label class="filter-option"><input type="checkbox" value="Середній"><span>Середній</span></label>
+          <label class="filter-option"><input type="checkbox" value="Високий"><span>Високий</span></label>
+        </div>
+
+        <div class="filter-group" data-filter-group="tag">
+          <h3>Особливості</h3>
+          <label class="filter-option"><input type="checkbox" value="Класика"><span>Класика</span></label>
+          <label class="filter-option"><input type="checkbox" value="Для закладу"><span>Для закладу</span></label>
+          <label class="filter-option"><input type="checkbox" value="Сезонне"><span>Сезонне</span></label>
+          <label class="filter-option"><input type="checkbox" value="Без глютену"><span>Без глютену</span></label>
+          <label class="filter-option"><input type="checkbox" value="Без лактози"><span>Без лактози</span></label>
+          <label class="filter-option"><input type="checkbox" value="Для початківців"><span>Для початківців</span></label>
+        </div>
+
+        <div class="filter-group">
+          <h3>Ціна</h3>
+          <div class="price-filter">
+            <input type="range" id="maxPrice" min="300" max="1000" step="50" value="1000" aria-label="Максимальна ціна">
+            <div class="price-filter__row"><span>до</span><span id="maxPriceLabel">1 000 ₴</span></div>
+          </div>
+        </div>
+
+        <button class="filters__reset" type="button" data-reset-filters style="margin-top:16px">Скинути всі фільтри</button>
+      </aside>
+      <div class="filters-overlay" data-filters-close></div>
+
+      <div class="catalog-main">
+        <div class="catalog-toolbar">
+          <button class="filter-toggle" type="button" data-filters-open><svg class="icon" aria-hidden="true"><use href="#i-filter"></use></svg> Фільтри</button>
+          <div class="search-field">
+            <label class="sr-only" for="catalogSearch">Пошук за назвою або складом</label>
+            <input class="search-field__input" id="catalogSearch" type="search" placeholder="Пошук: торти, фісташка, без глютену…" autocomplete="off">
+            <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+            <div class="search-suggest" id="searchSuggest"></div>
+          </div>
+          <label class="sr-only" for="catalogSort">Сортування</label>
+          <select class="sort-field" id="catalogSort">
+            <option value="popular">Спочатку популярні</option>
+            <option value="new">Спочатку нові</option>
+            <option value="price-asc">Ціна: від меншої</option>
+            <option value="price-desc">Ціна: від більшої</option>
+          </select>
+        </div>
+
+        <div class="active-filters" id="activeFilters"></div>
+        <div class="cards-grid" id="catalogGrid"></div>
+        <div class="empty-state" id="catalogEmpty" hidden>
+          <h2>Нічого не знайшлося</h2>
+          <p>Спробуйте інший запит або скиньте фільтри — у каталозі є шість наборів.</p>
+          <button class="btn btn--primary" type="button" data-reset-filters>Скинути фільтри</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="trust" style="margin-top:40px">
+    <div class="shell trust-grid">
+      <div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg><span><b>PDF одразу</b><small>Після підтвердження оплати</small></span></div>
+      <div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-refresh"></use></svg><span><b>Оновлення</b><small>Безкоштовно назавжди</small></span></div>
+      <div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg><span><b>Оплата безпечна</b><small>3-D Secure на стороні банку</small></span></div>
+      <div class="trust-item"><svg class="icon" aria-hidden="true"><use href="#i-telegram"></use></svg><span><b>Підтримка</b><small>Telegram у робочі дні</small></span></div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

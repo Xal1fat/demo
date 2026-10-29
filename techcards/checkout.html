@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Оформлення замовлення — ГРАМ</title>
+<meta name="description" content="Оформлення замовлення набору технологічних карт. Email, оплата карткою або Apple/Google Pay.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233b2a20'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='17' font-weight='700' text-anchor='middle' fill='%23fbf6f0'%3EГ%3C/text%3E%3Ccircle cx='25' cy='24' r='2' fill='%23c08a3e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="checkout">
+<a class="skip-link" href="#main">Перейти до вмісту</a>
+<div id="site-header"></div>
+<main id="main">
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Хлібні крихти"><a href="index.html">Головна</a><span class="sep">/</span><a href="cart.html">Кошик</a><span class="sep">/</span><span aria-current="page">Оформлення</span></nav>
+    <header class="page-head">
+      <span class="kicker">Крок 2 із 3</span>
+      <h1>Оформлення замовлення</h1>
+      <p class="lead">Один екран, без реєстрації. Файли надійдуть на email і з’являться в кабінеті одразу після підтвердження оплати.</p>
+    </header>
+
+    <div class="steps" aria-label="Етапи оформлення">
+      <span class="step is-done"><i>1</i> Кошик</span><span class="step-sep"></span>
+      <span class="step is-active"><i>2</i> Оформлення</span><span class="step-sep"></span>
+      <span class="step"><i>3</i> Доступ</span>
+    </div>
+
+    <div id="checkoutRoot">
+      <form class="checkout-layout" id="checkoutForm" novalidate>
+        <div>
+          <div class="form-card">
+            <h2>Контакти для доступу</h2>
+            <p class="form-card__hint">На email надійдуть файли, чек і посилання для входу в кабінет.</p>
+            <div class="field">
+              <label for="emailField">Email <small>обов’язково</small></label>
+              <input class="input" id="emailField" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="emailError">
+              <span class="field-error" id="emailError"></span>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="nameField">Ім’я <small>необов’язково</small></label>
+                <input class="input" id="nameField" name="name" type="text" autocomplete="name" placeholder="Як до вас звертатися" maxlength="60">
+              </div>
+              <div class="field">
+                <label for="phoneField">Телефон <small>необов’язково</small></label>
+                <input class="input" id="phoneField" name="phone" type="tel" autocomplete="tel" placeholder="+380 XX XXX XX XX" aria-describedby="phoneError">
+                <span class="field-error" id="phoneError"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="commentField">Коментар до замовлення <small>необов’язково</small></label>
+              <textarea class="textarea" id="commentField" name="comment" maxlength="500" placeholder="Наприклад, потрібен рахунок для закладу"></textarea>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h2>Спосіб оплати</h2>
+            <p class="form-card__hint">Дані картки вводяться на стороні банку. Сайт не отримує та не зберігає номер картки.</p>
+            <div class="payment-methods">
+              <label class="pay-option">
+                <input type="radio" name="payment" value="card" checked>
+                <span class="pay-option__icon"><svg class="icon" aria-hidden="true"><use href="#i-card"></use></svg></span>
+                <span><b>Картка Visa / Mastercard</b><small>LiqPay · 3-D Secure</small></span>
+              </label>
+              <label class="pay-option">
+                <input type="radio" name="payment" value="apple">
+                <span class="pay-option__icon"><svg class="icon" aria-hidden="true"><use href="#i-apple"></use></svg></span>
+                <span><b>Apple Pay</b><small>Швидко на iPhone / Mac</small></span>
+              </label>
+              <label class="pay-option">
+                <input type="radio" name="payment" value="google">
+                <span class="pay-option__icon"><svg class="icon" aria-hidden="true"><use href="#i-google"></use></svg></span>
+                <span><b>Google Pay</b><small>Швидко на Android</small></span>
+              </label>
+              <label class="pay-option">
+                <input type="radio" name="payment" value="iban">
+                <span class="pay-option__icon"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg></span>
+                <span><b>Оплата за реквізитами</b><small>Для закладів · рахунок на email</small></span>
+              </label>
+            </div>
+
+            <label class="checkbox">
+              <input id="offerCheck" type="checkbox">
+              <span>Я погоджуюся з <a href="offer.html" target="_blank" rel="noopener">публічною офертою</a> та <a href="privacy.html" target="_blank" rel="noopener">політикою конфіденційності</a>. Розумію, що доступ до цифрових файлів надається одразу після оплати.</span>
+            </label>
+            <label class="checkbox">
+              <input id="newsletterCheck" type="checkbox">
+              <span>Хочу отримувати листи про нові набори та оновлення. Можна відписатися будь-коли.</span>
+            </label>
+            <p class="demo-note mt-16">Демонстраційний прототип: оплата не проводиться, дані картки не запитуються. У продакшні тут буде перехід на касу LiqPay/monobank.</p>
+          </div>
+        </div>
+
+        <aside class="checkout-summary" id="checkoutSummary">
+          <h2>Ваше замовлення</h2>
+          <div class="checkout-items" id="checkoutItems"></div>
+          <div class="summary-lines">
+            <div class="summary-line"><span>Доставка</span><b>0 ₴</b></div>
+            <div class="summary-line"><span>Доступ</span><b>12 місяців</b></div>
+          </div>
+          <div class="summary-total"><span>До сплати</span><span id="checkoutTotal">449 ₴</span></div>
+          <button class="btn btn--primary" id="payButton" type="submit" disabled><span id="payLabel">Оплатити 449 ₴</span> <svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg></button>
+          <p class="secure-note"><svg class="icon" aria-hidden="true"><use href="#i-lock"></use></svg> Оплата на стороні банку. PDF одразу після підтвердження. Доступ 12 місяців.</p>
+          <p class="secure-note"><svg class="icon" aria-hidden="true"><use href="#i-shield"></use></svg> Якщо щось піде не так, напишіть у Telegram — замінимо файл або повернемо кошти.</p>
+        </aside>
+      </form>
+    </div>
+  </div>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

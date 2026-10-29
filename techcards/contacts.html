@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакти — ГРАМ</title>
+<meta name="description" content="Зв’язок із ГРАМ: Telegram, email, реквізити та графік підтримки.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233b2a20'/%3E%3Ctext x='16' y='22' font-family='Georgia' font-size='17' font-weight='700' text-anchor='middle' fill='%23fbf6f0'%3EГ%3C/text%3E%3Ccircle cx='25' cy='24' r='2' fill='%23c08a3e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="legal">
+<a class="skip-link" href="#main">Перейти до вмісту</a>
+<div id="site-header"></div>
+<main id="main">
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Хлібні крихти"><a href="index.html">Головна</a><span class="sep">/</span><span aria-current="page">Контакти</span></nav>
+    <section class="legal-page">
+      <div class="legal-layout">
+        <nav class="legal-nav" aria-label="Документи">
+          <a href="offer.html">Публічна оферта</a>
+          <a href="privacy.html">Конфіденційність</a>
+          <a href="returns.html">Повернення коштів</a>
+          <a href="payment.html">Оплата й отримання</a>
+          <a class="is-active" href="contacts.html">Контакти</a>
+        </nav>
+        <article class="legal-content">
+          <span class="kicker">Контакти</span>
+          <h1>Напишіть нам</h1>
+          <p class="legal-meta">Відповідає людина, зазвичай протягом одного робочого дня.</p>
+
+          <h2>Підтримка покупців</h2>
+          <p>Telegram: <a href="https://t.me/gram_techcards" target="_blank" rel="noopener">@gram_techcards</a><br>
+          Email: <a href="mailto:hello@gram.studio">hello@gram.studio</a><br>
+          Графік: Пн–Пт, 10:00–19:00 за Києвом.</p>
+
+          <h2>Закладам і юридичним особам</h2>
+          <p>Для оплати за реквізитами, рахунку або кількох наборів напишіть на email із темою «Рахунок для закладу». Підготуємо рахунок і підтвердимо доступ після надходження коштів.</p>
+
+          <div class="contact-form">
+            <h2>Написати нам</h2>
+            <p class="form-card__hint">Відповідаємо в робочі дні, 10:00–19:00. У демо-версії форма не надсилає дані на сервер.</p>
+            <form id="contactForm" novalidate>
+              <div class="field-row">
+                <div class="field">
+                  <label for="contactName">Ім’я</label>
+                  <input class="input" id="contactName" name="name" type="text" autocomplete="name" placeholder="Як до вас звертатися">
+                </div>
+                <div class="field">
+                  <label for="contactEmail">Email <small>обов’язково</small></label>
+                  <input class="input" id="contactEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="contactEmailError">
+                  <span class="field-error" id="contactEmailError"></span>
+                </div>
+              </div>
+              <div class="field">
+                <label for="contactMessage">Повідомлення <small>обов’язково</small></label>
+                <textarea class="textarea" id="contactMessage" name="message" rows="4" required placeholder="Коротко опишіть питання" aria-describedby="contactError"></textarea>
+                <span class="field-error" id="contactError"></span>
+              </div>
+              <div class="hp-field" aria-hidden="true">
+                <label for="contactCompany">Компанія</label>
+                <input id="contactCompany" name="company" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <button class="btn btn--primary" type="submit">Надіслати повідомлення <svg class="icon" aria-hidden="true"><use href="#i-arrow"></use></svg></button>
+              <p class="contact-status" id="contactStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <h2>Реквізити</h2>
+          <p>ФОП Ірина Мельник<br>
+          РНОКПП: 0000000000<br>
+          Адреса: Київ, Україна<br>
+          Телефон: +380 67 000 00 00<br>
+          Email: hello@gram.studio</p>
+          <div class="legal-notice">Демонстраційні реквізити. Перед запуском замініть на фактичні дані продавця.</div>
+
+          <h2>Соцмережі</h2>
+          <p><a href="https://instagram.com/gram.techcards" target="_blank" rel="noopener">Instagram</a> · <a href="https://t.me/gram_techcards" target="_blank" rel="noopener">Telegram</a></p>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
