@@ -110,7 +110,7 @@
 
   /* ── пакеты ── */
   .packs{display:grid;margin-top:26px;border-top:1px solid var(--line)}
-  @media(min-width:820px){.packs{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:820px){.packs{grid-template-columns:repeat(2,1fr)}}
   .pack{padding:24px 22px 26px;border-bottom:1px solid var(--line)}
   @media(min-width:820px){
     .pack{border-bottom:0;border-right:1px solid var(--line)}
@@ -178,3 +178,6 @@
 @media(max-width:560px){.head-right{gap:10px}.lang{font-size:10px}}
 
 .pack .price{margin:8px 0 10px;font-size:21px;letter-spacing:-.02em;font-weight:500;color:var(--ink)}
+
+.pack{display:flex;flex-direction:column}
+.pack .btn{margin-top:auto}
