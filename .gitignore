@@ -3,3 +3,7 @@ _vercel.png
 profile/
 subprof/
 _*.html
+# внутрішні матеріали — не публікуємо
+leads/
+prospects/
+outreach*/

@@ -1,4 +1,4 @@
-:root{
+﻿:root{
     --paper:#f1f0ec;
     --ink:#0f0f0e;
     --body:#46463f;
@@ -176,3 +176,5 @@
   text-decoration:none;color:var(--muted);transition:.15s}
 .lang:hover{color:var(--ink)}
 @media(max-width:560px){.head-right{gap:10px}.lang{font-size:10px}}
+
+.pack .price{margin:8px 0 10px;font-size:21px;letter-spacing:-.02em;font-weight:500;color:var(--ink)}
