@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="uk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f4f1ea">
+<title>Калькулятор ціни проєкту</title>
+<style>
+  :root{--bg:#f4f1ea;--card:#fff;--ink:#16150f;--muted:#7d776b;--line:#e2dcd0;--accent:#16150f;
+    --green:#1f6b35;--soft:#faf8f3;--warn:#8a3b3b}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:15px;line-height:1.5;
+    -webkit-font-smoothing:antialiased;padding-bottom:40px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  header{padding:18px 0 10px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:24px;margin:0;letter-spacing:-.01em}
+  .switch{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#fff}
+  .switch button{border:0;background:transparent;padding:8px 14px;font:inherit;font-size:12.5px;color:var(--muted);cursor:pointer}
+  .switch button.on{background:var(--ink);color:#fff}
+  main{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:start}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+  .card h2{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;font-weight:500}
+  label{display:block;font-size:13px;margin:0 0 10px}
+  label span{display:block;color:var(--muted);font-size:12px;margin-bottom:4px}
+  input,select{width:100%;height:40px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);
+    padding:0 10px;font:inherit;font-size:14px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .check{display:flex;align-items:center;gap:8px;font-size:13.5px;margin-bottom:10px}
+  .check input{width:auto;height:auto}
+  /* result */
+  .res{position:sticky;top:14px}
+  .price{font-family:Georgia,serif;font-size:40px;line-height:1;letter-spacing:-.02em;margin:2px 0 4px}
+  .sub{color:var(--muted);font-size:12.5px;margin:0 0 14px}
+  .triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0}
+  .triple div{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:10px}
+  .triple b{display:block;font-size:17px;letter-spacing:-.01em}
+  .triple span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .facts{font-size:13.5px;border-top:1px solid var(--line);padding-top:12px;margin-top:2px}
+  .facts div{display:flex;justify-content:space-between;padding:4px 0;color:var(--muted)}
+  .facts b{color:var(--ink);font-weight:500}
+  .market{margin-top:12px;font-size:12.5px}
+  .bar{height:6px;background:#eee9df;border-radius:999px;position:relative;margin:8px 0 6px}
+  .bar i{position:absolute;left:0;top:0;bottom:0;background:#d9d2c4;border-radius:999px}
+  .bar u{position:absolute;top:-3px;width:2px;height:12px;background:var(--ink)}
+  .hint{font-size:12px;color:var(--muted);margin-top:8px}
+  .copy{width:100%;height:44px;border-radius:10px;border:1px solid var(--ink);background:var(--ink);color:#fff;
+    font:inherit;font-size:14px;margin-top:12px;cursor:pointer}
+  .copy.ghost{background:#fff;color:var(--ink)}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;transition:.25s;
+    background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:13.5px;pointer-events:none}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+  .hidden{display:none!important}
+  @media (max-width:860px){
+    main{grid-template-columns:1fr}
+    .res{position:static}
+    .price{font-size:34px}
+  }
+</style></head><body>
+<div class="wrap">
+  <header>
+    <h1>Калькулятор ціни</h1>
+    <div class="switch">
+      <button id="modeSelf" class="on">Для себе</button>
+      <button id="modeClient">Для клієнта</button>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <div class="card">
+        <h2>Проєкт</h2>
+        <label><span>Назва (необов'язково)</span><input id="name" placeholder="Сайт із записом для салону"></label>
+        <div class="row">
+          <label><span>Складність</span>
+            <select id="complex">
+              <option value="1">1 — дуже проста: одна сторінка</option>
+              <option value="2">2 — проста: форма або каталог</option>
+              <option value="3" selected>3 — середня: каталог, форма, статуси</option>
+              <option value="4">4 — складна: кабінет, ролі, база</option>
+              <option value="5">5 — дуже складна: оплата, адмінка</option>
+            </select>
+          </label>
+          <label><span>Тип роботи (для звірки)</span>
+            <select id="type">
+              <option value="0">Візитка: 1 сторінка, форма в Telegram</option>
+              <option value="1">Лендінг із унікальним дизайном</option>
+              <option value="2" selected>Сайт із записом (послуга, майстер, час)</option>
+              <option value="3">Каталог із фільтрами й статусами</option>
+              <option value="4">Каталог з оплатою або кабінет</option>
+              <option value="5">Доробка на готовій основі</option>
+            </select>
+          </label>
+        </div>
+        <div class="row3">
+          <label><span>Екранів</span><input id="screens" type="number" min="1" step="1" value="4"></label>
+          <label><span>Інтеграцій</span><input id="integ" type="number" min="0" step="1" value="3"></label>
+          <label><span>Позицій вношу сам</span><input id="content" type="number" min="0" step="1" value="0"></label>
+        </div>
+        <label><span>Цінність для клієнта</span>
+          <select id="value">
+            <option value="10">1 — низька: невелика зручність</option>
+            <option value="25" selected>2 — середня: економить час</option>
+            <option value="40">3 — висока: приносить гроші</option>
+          </select>
+        </label>
+        <div class="check"><input type="checkbox" id="base"><label for="base" style="margin:0">Збираю на готовій основі (–50% годин на основу, екрани, інтеграції)</label></div>
+      </div>
+
+      <div class="card">
+        <h2>Що входить</h2>
+        <div class="row">
+          <label><span>Раундів правок</span><input id="rounds" type="number" min="0" step="1" value="2"></label>
+          <label><span>Місяців підтримки</span><input id="support" type="number" min="0" step="1" value="1"></label>
+        </div>
+      </div>
+
+      <div class="card" id="moneyCard">
+        <h2>Гроші</h2>
+        <div class="row">
+          <label><span>Ставка, $/год</span><input id="rate" type="number" min="1" step="1" value="25"></label>
+          <label><span>Запас на ризик, %</span><input id="risk" type="number" min="0" step="1" value="20"></label>
+        </div>
+        <div class="row">
+          <label><span>Податок, %</span><input id="tax" type="number" min="0" step="1" value="0"></label>
+          <label><span>Комісія біржі, %</span><input id="fee" type="number" min="0" step="1" value="0"></label>
+        </div>
+        <div class="row">
+          <label><span>Витрати на місяць, $</span><input id="monthly" type="number" min="0" step="1" value="0"></label>
+          <label><span>Разові витрати, $</span><input id="oneoff" type="number" min="0" step="1" value="0"></label>
+        </div>
+        <label><span>Скільки проєктів ділять ці витрати</span><input id="projects" type="number" min="1" step="1" value="1"></label>
+      </div>
+    </div>
+
+    <aside class="res">
+      <div class="card">
+        <h2>Рекомендована ціна</h2>
+        <p class="price" id="outRec">$0</p>
+        <p class="sub" id="outName">—</p>
+
+        <div class="triple">
+          <div><b id="outMin">$0</b><span>мінімум</span></div>
+          <div><b id="outRec2">$0</b><span>рекоменд.</span></div>
+          <div><b id="outMax">$0</b><span>максимум</span></div>
+        </div>
+
+        <div class="facts" id="facts">
+          <div><span>Годин із запасом</span><b id="outHours">0</b></div>
+          <div><span>Строк</span><b id="outDays">0 днів</b></div>
+          <div id="rowRate"><span>Ставка в розрахунку</span><b id="outRate">$25/год</b></div>
+          <div><span>Доплата за правку</span><b id="outEdit">$0</b></div>
+          <div><span>Підтримка / міс</span><b id="outSupport">$0</b></div>
+        </div>
+
+        <div class="market">
+          <div id="outMarket" class="hint">—</div>
+          <div class="bar"><i id="barFree"></i><u id="barPin"></u></div>
+        </div>
+
+        <button class="copy" id="btnCopy">Скопіювати текст для клієнта</button>
+        <button class="copy ghost" id="btnReset">Скинути</button>
+      </div>
+    </aside>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const H = {screen:2.5, integ:1.5, copy:0.08, round:1.5, launch:0.75, support:0.75, comm:15, baseDisc:50,
+           maxMarkup:60, minEditH:0.5, minSupport:30, step:5, hoursPerDay:5};
+const COMPLEX = {1:[1,0.6], 2:[1.5,0.8], 3:[2,1], 4:[5,1.6], 5:[10,2.5]};
+const TYPES = [
+  {label:'Візитка: 1 сторінка, форма в Telegram', lo:200, mid:300, hi:500},
+  {label:'Лендінг із унікальним дизайном', lo:400, mid:700, hi:1200},
+  {label:'Сайт із записом (послуга, майстер, час)', lo:600, mid:900, hi:1500},
+  {label:'Каталог із фільтрами й статусами', lo:800, mid:1200, hi:2000},
+  {label:'Каталог з оплатою або кабінет', lo:1500, mid:2500, hi:5000},
+  {label:'Доробка на готовій основі', lo:150, mid:250, hi:600}
+];
+
+const $ = id => document.getElementById(id);
+const num = id => { const v = parseFloat($(id).value); return isNaN(v) ? 0 : v; };
+
+function roundUp(v, step){ return Math.ceil(v/step)*step; }
+
+function calc(){
+  const c = COMPLEX[$('complex').value] || COMPLEX[3];
+  const mult = c[1], base = c[0];
+  const screens = Math.max(1, num('screens'));
+  const integ = num('integ'), content = num('content');
+  const rounds = num('rounds'), supportM = num('support');
+  const rate = num('rate'), risk = num('risk'), tax = num('tax'), fee = num('fee');
+  const monthly = num('monthly'), oneoff = num('oneoff'), projects = Math.max(1, num('projects'));
+  const valuePct = parseFloat($('value').value) || 0;
+  const onBase = $('base').checked;
+
+  let work = base + screens*H.screen*mult + integ*H.integ + content*H.copy + rounds*H.round*mult
+             + H.launch + supportM*H.support*mult;
+  if(onBase) work -= (base + screens*H.screen*mult + integ*H.integ) * H.baseDisc/100;
+  work = Math.max(work, 0.5);
+
+  const hours = work * (1 + H.comm/100) * (1 + risk/100);
+  const cost = hours*rate + monthly*(1+supportM)/projects + oneoff;
+  const taxF = tax > 0 && tax < 100 ? 1/(1-tax/100) : 1;
+
+  const min = cost*taxF;
+  const rec = cost*(1+valuePct/100)*taxF;
+  const max = Math.max(rec, cost*(1+H.maxMarkup/100)*taxF);
+  const edit = Math.max(H.round*mult, H.minEditH)*rate*taxF;
+  const supp = Math.max(H.support*mult*rate*taxF, H.minSupport);
+
+  const gross = v => fee > 0 ? v/(1-fee/100) : v;
+  const days = Math.max(3, Math.ceil(hours/H.hoursPerDay)) ;
+  return {hours, min, rec, max, edit, supp, days, rate, valuePct, fee, screens, integ, content, rounds, supportM,
+          name: ($('name').value || '').trim()};
+}
+
+function fmt(v){ return '$' + Math.round(v).toLocaleString('uk-UA').replace(/\u00A0/g,' '); }
+
+function render(){
+  const r = calc();
+  const selfMode = $('modeSelf').classList.contains('on');
+
+  $('outRec').textContent  = fmt(roundUp(r.rec, H.step));
+  $('outRec2').textContent = fmt(roundUp(r.rec, H.step));
+  $('outMin').textContent  = fmt(roundUp(r.min, H.step));
+  $('outMax').textContent  = fmt(roundUp(r.max, H.step));
+  $('outHours').textContent = r.hours.toFixed(1).replace('.0','');
+  $('outDays').textContent  = r.days + ' роб. днів';
+  $('outRate').textContent  = fmt(r.rate) + '/год';
+  $('outEdit').textContent  = fmt(roundUp(r.edit, H.step));
+  $('outSupport').textContent = fmt(roundUp(r.supp, H.step));
+
+  $('outName').textContent = ($('name').value.trim() || 'Без назви') +
+    (r.fee > 0 ? ' · на біржі ' + fmt(roundUp(r.rec/(1-r.fee/100), H.step)) : '');
+
+  // порівняння з ринком
+  const ti = parseInt($('type').value, 10) || 0;
+  const t = TYPES[ti] || TYPES[2];
+  const lo = t.lo, hi = t.hi;
+  const pos = Math.min(1, Math.max(0, (roundUp(r.rec,H.step) - lo) / Math.max(1, hi-lo)));
+  $('barFree').style.width = '100%';
+  $('barPin').style.left = (pos*100).toFixed(1) + '%';
+  let verdict = 'у межах ринку';
+  if (roundUp(r.rec,H.step) < lo) verdict = 'нижче ринку — можна підняти';
+  if (roundUp(r.rec,H.step) > hi) verdict = 'вище ринку — потрібне обґрунтування';
+  $('outMarket').textContent = t.label + ': ' + fmt(lo) + '–' + fmt(hi) + ' · ' + verdict;
+
+  $('rowRate').classList.toggle('hidden', !selfMode);
+  $('moneyCard').classList.toggle('hidden', !selfMode);
+
+  $('btnCopy').onclick = () => copy(clientText(r));
+}
+
+function clientText(r){
+  const name = r.name;
+  return [
+    (name || 'Проєкт') + ': пропозиція',
+    '',
+    'Що входить: ' + r.screens + ' екран(ів), ' + r.integ + ' інтеграцій, ' + r.rounds + ' кола правок, перевірка форми й інструкція.',
+    'Вартість: ' + fmt(roundUp(r.rec, H.step)) + ' (діапазон ' + fmt(roundUp(r.min,H.step)) + '–' + fmt(roundUp(r.max,H.step)) + ', залежно від обсягу).',
+    'Строк: ' + r.days + ' робочих днів після оплати й отримання матеріалів.' + (r.supportM ? ' Підтримка в ціні: ' + r.supportM + ' міс.' : ''),
+    'Додаткова правка після цього — ' + fmt(roundUp(r.edit, H.step)) + '.',
+    'Оплата: 50% на старт, 50% після приймання.',
+    '',
+    'Якщо умови ок — скажіть, і я надішлю реквізити та список матеріалів.'
+  ].join('\n');
+}
+
+function copy(text){
+  if(navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(toasted);
+  else {
+    const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); ta.remove(); toasted();
+  }
+}
+function toasted(){ const t = $('toast'); t.textContent = 'Скопійовано'; t.classList.add('on');
+  clearTimeout(t._t); t._t = setTimeout(()=>t.classList.remove('on'), 1500); }
+
+// режими
+$('modeSelf').onclick = () => { $('modeSelf').classList.add('on'); $('modeClient').classList.remove('on'); render(); };
+$('modeClient').onclick = () => { $('modeClient').classList.add('on'); $('modeSelf').classList.remove('on'); render(); };
+
+$('btnReset').onclick = () => {
+  const d = {screens:4, integ:3, content:0, rounds:2, support:1, rate:25, risk:20, tax:0, fee:0, monthly:0, oneoff:0, projects:1};
+  Object.entries(d).forEach(([k,v]) => $(k).value = v);
+  $('name').value = ''; $('base').checked = false;
+  $('complex').value = '3'; $('type').value = '2'; $('value').value = '25';
+  render();
+};
+
+document.querySelectorAll('input,select').forEach(el => { el.addEventListener('input', render); el.addEventListener('change', render); });
+render();
+</script>
+</body></html>
