@@ -15,12 +15,12 @@
   var I18N = {
     ua: {
       'brand.tag': 'digital studio',
-      'nav.work': 'Роботи', 'nav.services': 'Послуги', 'nav.process': 'Процес', 'nav.contact': 'Контакти',
+      'nav.work': 'Роботи', 'nav.services': 'Послуги', 'nav.packs': 'Пакети', 'nav.process': 'Процес', 'nav.contact': 'Контакти',
       'nav.cta': 'Обговорити проєкт',
       'hero.kicker': 'Незалежна розробка для малого бізнесу',
       'hero.h1': 'Сайти й AI-рішення, які <span class="accent">допомагають рости</span>',
       'hero.lead': 'Розробляю сучасні сайти, інтернет-магазини та AI-асистентів для малого і середнього бізнесу. Без шаблонів і зайвих обіцянок — тільки те, що реально працює.',
-      'hero.cta1': 'Обговорити проєкт', 'hero.cta2': 'Дивитись роботи',
+      'hero.cta1': 'Обговорити проєкт', 'hero.cta2': 'Отримати консультацію',
       'cap.1': 'Сайти', 'cap.1.sub': 'Лендинги, сайти послуг, онлайн-запис',
       'cap.2': 'Інтернет-магазини', 'cap.2.sub': 'Каталоги, фільтри, кошик, оформлення',
       'cap.3': 'AI-автоматизація', 'cap.3.sub': 'Асистенти для Instagram і Telegram',
@@ -37,11 +37,11 @@
       'filter.all': 'Усі', 'filter.service': 'Сайти послуг', 'filter.ecommerce': 'Інтернет-магазини', 'filter.automation': 'Автоматизація',
       'status.real': 'живий · бекенд', 'status.demo': 'демо',
       'proj.open': 'Відкрити демо', 'proj.case': 'Детальніше', 'proj.more': 'Ще роботи',
-      'case.task': 'Задача бізнесу', 'case.concept': 'Візуальне рішення', 'case.functions': 'Основні функції', 'case.open': 'Відкрити демо', 'case.cta': 'Хочу схоже',
-      'sec.ai.title': 'AI Automation for Business', 'sec.ai.sub': 'Конкурентна перевага — асистент, який відповідає клієнтам замість вас і передає готову заявку в Telegram.',
+      'case.task': 'Задача бізнесу', 'case.concept': 'Візуальне рішення', 'case.functions': 'Основні функції', 'case.open': 'Відкрити демо', 'case.cta': 'Обговорити схожий проєкт',
+      'sec.ai.title': 'AI-асистенти, які працюють разом із вашим бізнесом', 'sec.ai.sub': 'Автоматизуємо відповіді на запитання клієнтів, допомагаємо з підбором послуг і збираємо заявки, поки ви займаєтесь бізнесом.',
       'ai.h3': 'AI-асистент салону краси', 'ai.desc': 'Інтерактивна демонстрація: асистент допомагає обрати процедуру, майстра й час, а потім формує заявку власнику.',
       'ai.points': 'Відповідає на звернення в Instagram і Telegram|Підбирає послугу й майстра|Збирає контакт і час|Передає заявку власнику бізнесу|Працює цілодобово',
-      'ai.note': 'Це симуляція демонстраційного сценарію. Реальна AI-інтеграція розробляється окремо під ваші процеси.',
+      'ai.note': 'Інтерактивне демо. Реальні AI-асистенти налаштовуються індивідуально під бізнес.',
       'ai.cta': 'Замовити AI-асистента',
       'sec.process.title': 'Як проходить робота', 'sec.process.sub': 'Чотири зрозумілі етапи — від першої розмови до запуску.',
       'step.1.t': 'Обговорення', 'step.1.d': 'Вивчаю бізнес, задачі та побажання. Визначаємо, що саме має робити сайт.',
@@ -59,17 +59,43 @@
       'final.cta': 'Написати в Telegram',
       'footer.note': 'Xal1fat — незалежна розробка сайтів та автоматизації. Назви, ціни та дані в демо-проєктах вигадані; реальні кейси позначено окремо.',
       'ai.chat.title': 'Асистент салону',
-      'tg.site': 'Здравствуйте! Увидел ваше портфолио. Хочу обсудить разработку сайта для моего бизнеса.',
-      'tg.ai': 'Здравствуйте! Интересует разработка AI-ассистента для моего бизнеса.'
+      'tg.site': 'Вітаю! Побачив ваше портфоліо. Хочу обговорити розробку сайту для мого бізнесу.',
+      'tg.ai': 'Вітаю! Цікавить розробка AI-асистента для мого бізнесу.',
+      'tg.consult': 'Вітаю! Хочу отримати консультацію щодо розробки сайту.',
+      'tg.pkg1': 'Вітаю! Цікавить пакет Website Start.',
+      'tg.pkg2': 'Вітаю! Цікавить пакет Business Website.',
+      'tg.pkg3': 'Вітаю! Цікавить пакет Website + AI.',
+      'sec.packs.title': 'Пакети',
+      'sec.packs.sub': 'Зрозуміла вартість і формат співпраці. Оберіть пакет або напишіть — підберу рішення під вашу задачу.',
+      'pack.popular': 'популярний', 'pack.from': 'від',
+      'pack.1.name': 'Website Start', 'pack.1.price': '4 900 ₴',
+      'pack.1.desc': 'Для невеликих компаній і спеціалістів, яким потрібна професійна присутність в інтернеті.',
+      'pack.1.items': "Односторінковий сайт|Адаптивна мобільна версія|Блоки послуг і переваг|Галерея зображень|Контакти та кнопки зв'язку|Форма заявки|Базова SEO-оптимізація|Публікація сайту",
+      'pack.2.name': 'Business Website', 'pack.2.price': '7 900 ₴',
+      'pack.2.desc': 'Для бізнесу, якому потрібен функціональніший сайт із каталогом і формами.',
+      'pack.2.items': 'Індивідуальна структура|Кілька розділів або сторінок|Каталог товарів чи послуг|Картки товарів|Фільтрація (за потреби)|Форми заявок|Інтеграція з Telegram|Адаптивна версія|Базова SEO-оптимізація|Публікація сайту',
+      'pack.3.name': 'Website + AI', 'pack.3.price': 'індивідуально',
+      'pack.3.desc': 'Для бізнесу, який хоче автоматизувати спілкування з клієнтами.',
+      'pack.3.items': 'Розробка сайту|AI-асистент|Відповіді на часті питання|Консультації по послугах чи товарах|Збір контактних даних|Передача заявок менеджеру|Інтеграції з Telegram|Додаткова автоматизація за домовленістю',
+      'pack.cta': 'Обрати пакет',
+      'pack.note': 'Остаточна вартість залежить від функціональності та обсягу робіт.',
+      'pack.terms': 'Умови: передоплата 50%, решта після узгодження результату, два раунди правок у межах узгодженого обсягу.',
+      'ai.scen.title': 'Три сценарії використання',
+      'ai.scen.a.t': 'AI-консультант', 'ai.scen.a.d': 'Відповідає на питання про компанію, пояснює послуги та ціни, допомагає обрати підходящу послугу.',
+      'ai.scen.b.t': 'AI-адміністратор', 'ai.scen.b.d': "Відповідає на типові питання, допомагає обрати послугу й спеціаліста, збирає ім'я та контакт і передає заявку співробітнику.",
+      'ai.scen.c.t': 'AI-помічник магазину', 'ai.scen.c.d': 'Консультує по товарах, допомагає порівняти варіанти й спрямовує до оформлення або менеджера.',
+      'ai.restart': 'Почати заново', 'ai.typing': 'друкує…',
+      'case.tech': 'Технології', 'case.status': 'Статус',
+      'case.real': 'реальний проєкт · працюючий бекенд', 'case.demo': 'демонстраційний концепт'
     },
     ru: {
       'brand.tag': 'digital studio',
-      'nav.work': 'Работы', 'nav.services': 'Услуги', 'nav.process': 'Процесс', 'nav.contact': 'Контакты',
+      'nav.work': 'Работы', 'nav.services': 'Услуги', 'nav.packs': 'Пакеты', 'nav.process': 'Процесс', 'nav.contact': 'Контакты',
       'nav.cta': 'Обсудить проект',
       'hero.kicker': 'Независимая разработка для малого бизнеса',
       'hero.h1': 'Сайты и AI-решения, которые <span class="accent">помогают расти</span>',
       'hero.lead': 'Разрабатываю современные сайты, интернет-магазины и AI-ассистентов для малого и среднего бизнеса. Без шаблонов и лишних обещаний — только то, что реально работает.',
-      'hero.cta1': 'Обсудить проект', 'hero.cta2': 'Смотреть работы',
+      'hero.cta1': 'Обсудить проект', 'hero.cta2': 'Получить консультацию',
       'cap.1': 'Сайты', 'cap.1.sub': 'Лендинги, сайты услуг, онлайн-запись',
       'cap.2': 'Интернет-магазины', 'cap.2.sub': 'Каталоги, фильтры, корзина, оформление',
       'cap.3': 'AI-автоматизация', 'cap.3.sub': 'Ассистенты для Instagram и Telegram',
@@ -86,11 +112,11 @@
       'filter.all': 'Все', 'filter.service': 'Сайты услуг', 'filter.ecommerce': 'Интернет-магазины', 'filter.automation': 'Автоматизация',
       'status.real': 'живой · бэкенд', 'status.demo': 'демо',
       'proj.open': 'Открыть демо', 'proj.case': 'Подробнее', 'proj.more': 'Ещё работы',
-      'case.task': 'Задача бизнеса', 'case.concept': 'Визуальное решение', 'case.functions': 'Основные функции', 'case.open': 'Открыть демо', 'case.cta': 'Хочу похожее',
-      'sec.ai.title': 'AI Automation for Business', 'sec.ai.sub': 'Конкурентное преимущество — ассистент, который отвечает клиентам вместо вас и передаёт готовую заявку в Telegram.',
+      'case.task': 'Задача бизнеса', 'case.concept': 'Визуальное решение', 'case.functions': 'Основные функции', 'case.open': 'Открыть демо', 'case.cta': 'Обсудить похожий проект',
+      'sec.ai.title': 'AI-ассистенты, которые работают вместе с вашим бизнесом', 'sec.ai.sub': 'Автоматизируем ответы на вопросы клиентов, помогаем с подбором услуг и собираем заявки, пока вы занимаетесь бизнесом.',
       'ai.h3': 'AI-ассистент салона красоты', 'ai.desc': 'Интерактивная демонстрация: ассистент помогает выбрать процедуру, мастера и время, а затем формирует заявку владельцу.',
       'ai.points': 'Отвечает на обращения в Instagram и Telegram|Подбирает услугу и мастера|Собирает контакт и время|Передаёт заявку владельцу бизнеса|Работает круглосуточно',
-      'ai.note': 'Это симуляция демонстрационного сценария. Реальная AI-интеграция разрабатывается отдельно под ваши процессы.',
+      'ai.note': 'Интерактивное демо. Реальные AI-ассистенты настраиваются индивидуально под бизнес.',
       'ai.cta': 'Заказать AI-ассистента',
       'sec.process.title': 'Как проходит работа', 'sec.process.sub': 'Четыре понятных этапа — от первого разговора до запуска.',
       'step.1.t': 'Обсуждение', 'step.1.d': 'Изучаю бизнес, задачи и пожелания. Определяем, что именно должен делать сайт.',
@@ -109,7 +135,33 @@
       'footer.note': 'Xal1fat — независимая разработка сайтов и автоматизации. Названия, цены и данные в демо-проектах выдуманы; реальные кейсы отмечены отдельно.',
       'ai.chat.title': 'Ассистент салона',
       'tg.site': 'Здравствуйте! Увидел ваше портфолио. Хочу обсудить разработку сайта для моего бизнеса.',
-      'tg.ai': 'Здравствуйте! Интересует разработка AI-ассистента для моего бизнеса.'
+      'tg.ai': 'Здравствуйте! Интересует разработка AI-ассистента для моего бизнеса.',
+      'tg.consult': 'Здравствуйте! Хочу получить консультацию по разработке сайта.',
+      'tg.pkg1': 'Здравствуйте! Интересует пакет Website Start.',
+      'tg.pkg2': 'Здравствуйте! Интересует пакет Business Website.',
+      'tg.pkg3': 'Здравствуйте! Интересует пакет Website + AI.',
+      'sec.packs.title': 'Пакеты',
+      'sec.packs.sub': 'Понятная стоимость и формат сотрудничества. Выберите пакет или напишите — подберу решение под вашу задачу.',
+      'pack.popular': 'популярный', 'pack.from': 'от',
+      'pack.1.name': 'Website Start', 'pack.1.price': '4 900 ₴',
+      'pack.1.desc': 'Для небольших компаний и специалистов, которым нужно профессиональное присутствие в интернете.',
+      'pack.1.items': 'Одностраничный сайт|Адаптивная мобильная версия|Блоки услуг и преимуществ|Галерея изображений|Контакты и кнопки связи|Форма заявки|Базовая SEO-оптимизация|Публикация сайта',
+      'pack.2.name': 'Business Website', 'pack.2.price': '7 900 ₴',
+      'pack.2.desc': 'Для бизнеса, которому нужен более функциональный сайт с каталогом и формами.',
+      'pack.2.items': 'Индивидуальная структура|Несколько разделов или страниц|Каталог товаров или услуг|Карточки товаров|Фильтрация (при необходимости)|Формы заявок|Интеграция с Telegram|Адаптивная версия|Базовая SEO-оптимизация|Публикация сайта',
+      'pack.3.name': 'Website + AI', 'pack.3.price': 'индивидуально',
+      'pack.3.desc': 'Для бизнеса, который хочет автоматизировать общение с клиентами.',
+      'pack.3.items': 'Разработка сайта|AI-ассистент|Ответы на частые вопросы|Консультации по услугам или товарам|Сбор контактных данных|Передача заявок менеджеру|Интеграции с Telegram|Дополнительная автоматизация по согласованию',
+      'pack.cta': 'Выбрать пакет',
+      'pack.note': 'Окончательная стоимость зависит от функциональности и объёма работ.',
+      'pack.terms': 'Условия: предоплата 50%, остальное после согласования результата, два раунда правок в рамках согласованного объёма.',
+      'ai.scen.title': 'Три сценария использования',
+      'ai.scen.a.t': 'AI-консультант', 'ai.scen.a.d': 'Отвечает на вопросы о компании, объясняет услуги и цены, помогает выбрать подходящую услугу.',
+      'ai.scen.b.t': 'AI-администратор', 'ai.scen.b.d': 'Отвечает на типичные вопросы, помогает выбрать услугу и специалиста, собирает имя и контакт и передаёт заявку сотруднику.',
+      'ai.scen.c.t': 'AI-помощник магазина', 'ai.scen.c.d': 'Консультирует по товарам, помогает сравнить варианты и направляет к оформлению или менеджеру.',
+      'ai.restart': 'Начать заново', 'ai.typing': 'печатает…',
+      'case.tech': 'Технологии', 'case.status': 'Статус',
+      'case.real': 'реальный проект · работающий бэкенд', 'case.demo': 'демонстрационный концепт'
     }
   };
 
@@ -126,6 +178,8 @@
       feats: { ua: ['Каталог послуг', 'Майстри', 'Онлайн-запис', 'Telegram-сповіщення'], ru: ['Каталог услуг', 'Мастера', 'Онлайн-запись', 'Telegram-уведомления'] },
       task: { ua: 'Дати клієнту можливість записатися самому — без дзвінків і «напишіть у директ».', ru: 'Дать клиенту возможность записаться самому — без звонков и «напишите в директ».' },
       concept: { ua: 'Спокійна преміальна естетика: м\'які тони, великі фото, чітка типографіка.', ru: 'Спокойная премиальная эстетика: мягкие тона, крупные фото, чёткая типографика.' },
+      tech: ['Next.js', 'Supabase', 'Telegram Bot API', 'Tailwind CSS'],
+      caseFeats: { ua: ['Онлайн-запис без дзвінка', 'Вибір послуги та майстра', 'Вибір дати й часу', 'Перевірка доступності слотів', 'Серверна обробка бронювання', 'Адміністративна панель', 'Сповіщення в Telegram'], ru: ['Онлайн-запись без звонка', 'Выбор услуги и мастера', 'Выбор даты и времени', 'Проверка доступности слотов', 'Серверная обработка бронирования', 'Административная панель', 'Уведомления в Telegram'] },
       shots: ['salon.jpg', 'case-desktop.jpg', 'case-mobile.jpg']
     },
     {
@@ -136,6 +190,8 @@
       feats: { ua: ['Каталог зерна', 'Фільтри', 'Кошик', 'Оформлення'], ru: ['Каталог зерна', 'Фильтры', 'Корзина', 'Оформление'] },
       task: { ua: 'Показати асортимент кави й техніки та дати клієнту оформити замовлення самостійно.', ru: 'Показать ассортимент кофе и техники и дать клиенту оформить заказ самостоятельно.' },
       concept: { ua: 'Редакційна подача: папір, графіт і терракота, серифні заголовки, ілюстрації упаковок.', ru: 'Редакционная подача: бумага, графит и терракота, серифные заголовки, иллюстрации упаковок.' },
+      tech: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
+      caseFeats: { ua: ['Каталог зерна з фільтрами', 'Картки товарів', 'Категорії техніки', 'Кошик із перерахунком', 'Оформлення замовлення (демо)', 'Візуальна презентація бренду'], ru: ['Каталог зерна с фильтрами', 'Карточки товаров', 'Категории техники', 'Корзина с пересчётом', 'Оформление заказа (демо)', 'Визуальная презентация бренда'] },
       shots: ['coffee-92.jpg']
     },
     {
@@ -146,6 +202,7 @@
       feats: { ua: ['Меню', 'Категорії', 'Бронювання', 'Контакти'], ru: ['Меню', 'Категории', 'Бронирование', 'Контакты'] },
       task: { ua: 'Показати меню й атмосферу та зібрати бронювання столиків без дзвінка.', ru: 'Показать меню и атмосферу и собрать бронирования столиков без звонка.' },
       concept: { ua: 'Тепла гастрономічна подача: глибокі тони, апетитні фото, акцент на страву.', ru: 'Тёплая гастрономическая подача: глубокие тона, аппетитные фото, акцент на блюдо.' },
+      tech: ['HTML', 'CSS', 'JavaScript'],
       shots: ['restaurant.jpg']
     },
     {
@@ -156,6 +213,7 @@
       feats: { ua: ['Послуги', 'Прайс', 'До/після', 'Калькулятор'], ru: ['Услуги', 'Прайс', 'До/после', 'Калькулятор'] },
       task: { ua: 'Пояснити послуги й ціни та зібрати заявку з попереднім розрахунком.', ru: 'Объяснить услуги и цены и собрать заявку с предварительным расчётом.' },
       concept: { ua: 'Технічна, «чиста» естетика: контраст, графіка, акцент на результат роботи.', ru: 'Техничная, «чистая» эстетика: контраст, графика, акцент на результат работы.' },
+      tech: ['HTML', 'CSS', 'JavaScript'],
       shots: ['detailing.jpg']
     },
     {
@@ -166,6 +224,7 @@
       feats: { ua: ['Напрями лікування', 'Лікарі', 'Ціни', 'Онлайн-заявка'], ru: ['Направления лечения', 'Врачи', 'Цены', 'Онлайн-заявка'] },
       task: { ua: 'Викликати довіру та зібрати заявку на прийом без телефонної розмови.', ru: 'Вызвать доверие и собрать заявку на приём без телефонного разговора.' },
       concept: { ua: 'Чиста медична подача: світлі тони, спокій, довіра через прозорість цін.', ru: 'Чистая медицинская подача: светлые тона, спокойствие, доверие через прозрачность цен.' },
+      tech: ['HTML', 'CSS', 'JavaScript'],
       shots: ['dental.jpg']
     },
     {
@@ -208,6 +267,7 @@
     return '' +
       hero() +
       services() +
+      packages() +
       work() +
       ai() +
       process() +
@@ -222,8 +282,8 @@
       '<h1>' + t('hero.h1') + '</h1>' +
       '<p class="hero-lead">' + t('hero.lead') + '</p>' +
       '<div class="hero-cta">' +
-        '<a class="btn btn--solid" href="' + TG + '?text=' + enc(t('tg.site')) + '" target="_blank" rel="noopener">' + t('hero.cta1') + '</a>' +
-        '<a class="btn btn--ghost" href="#work">' + t('hero.cta2') + '</a>' +
+        '<a class="btn btn--solid" href="' + TG + '?text=' + enc(t('tg.site')) + '" target="_blank" rel="noopener" data-track="cta" data-value="hero_main">' + t('hero.cta1') + '</a>' +
+        '<a class="btn btn--ghost" href="' + TG + '?text=' + enc(t('tg.consult')) + '" target="_blank" rel="noopener" data-track="cta" data-value="hero_consult">' + t('hero.cta2') + '</a>' +
       '</div>' +
       '<div class="capabilities">' +
         [['1', 'cap.1', 'cap.1.sub'], ['2', 'cap.2', 'cap.2.sub'], ['3', 'cap.3', 'cap.3.sub']].map(function (c, i) {
@@ -250,6 +310,29 @@
           '</div>';
         }).join('') +
       '</div></div></section>';
+  }
+
+  function packages() {
+    var packs = [['1', 'tg.pkg1'], ['2', 'tg.pkg2'], ['3', 'tg.pkg3']];
+    return '<section class="section" id="packs"><div class="wrap">' +
+      '<header class="section-head"><h2 class="section-title">' + t('sec.packs.title') + '</h2>' +
+      '<p class="section-sub">' + t('sec.packs.sub') + '</p></header>' +
+      '<div class="packs">' +
+        packs.map(function (p) {
+          var items = t('pack.' + p[0] + '.items').split('|').map(function (x) { return '<li>' + x + '</li>'; }).join('');
+          var popular = p[0] === '2' ? '<span class="pack-badge">' + t('pack.popular') + '</span>' : '';
+          return '<article class="pack' + (p[0] === '2' ? ' pack--popular' : '') + '">' +
+            '<div class="pack-top"><h3 class="pack-name">' + t('pack.' + p[0] + '.name') + '</h3>' + popular + '</div>' +
+            '<p class="pack-price">' + (p[0] === '3' ? '' : '<span>' + t('pack.from') + '</span> ') + t('pack.' + p[0] + '.price') + '</p>' +
+            '<p class="pack-desc">' + t('pack.' + p[0] + '.desc') + '</p>' +
+            '<ul class="pack-list">' + items + '</ul>' +
+            '<a class="btn ' + (p[0] === '2' ? 'btn--solid' : 'btn--ghost') + ' btn--wide" href="' + TG + '?text=' + enc(t(p[1])) + '" target="_blank" rel="noopener" data-track="package" data-value="' + t('pack.' + p[0] + '.name') + '">' + t('pack.cta') + '</a>' +
+          '</article>';
+        }).join('') +
+      '</div>' +
+      '<p class="pack-note">' + t('pack.note') + '</p>' +
+      '<p class="pack-terms">' + t('pack.terms') + '</p>' +
+    '</div></section>';
   }
 
   function work() {
@@ -291,16 +374,22 @@
 
   function ai() {
     var points = t('ai.points').split('|').map(function (x) { return '<li>' + x + '</li>'; }).join('');
+    var scen = [['a', 'ai.scen.a'], ['b', 'ai.scen.b'], ['c', 'ai.scen.c']].map(function (s) {
+      return '<div class="scen"><span class="scen-l">' + s[0].toUpperCase() + '</span>' +
+        '<div><h4>' + t(s[1] + '.t') + '</h4><p>' + t(s[1] + '.d') + '</p></div></div>';
+    }).join('');
     return '<section class="section ai" id="ai"><div class="wrap">' +
       '<header class="section-head"><h2 class="section-title">' + t('sec.ai.title') + '</h2>' +
       '<p class="section-sub">' + t('sec.ai.sub') + '</p></header>' +
+      '<div class="scens"><h3 class="scens-title">' + t('ai.scen.title') + '</h3><div class="scen-row">' + scen + '</div></div>' +
       '<div class="ai-grid">' +
         '<div class="ai-copy"><h3>' + t('ai.h3') + '</h3><p>' + t('ai.desc') + '</p>' +
         '<ul class="ai-points">' + points + '</ul>' +
         '<p class="ai-note">' + t('ai.note') + '</p>' +
-        '<a class="btn btn--solid" style="margin-top:20px" href="' + TG + '?text=' + enc(t('tg.ai')) + '" target="_blank" rel="noopener">' + t('ai.cta') + '</a></div>' +
+        '<a class="btn btn--solid" style="margin-top:20px" href="' + TG + '?text=' + enc(t('tg.ai')) + '" target="_blank" rel="noopener" data-track="cta" data-value="ai">' + t('ai.cta') + '</a></div>' +
         '<div class="chat" role="log" aria-label="' + t('ai.chat.title') + '">' +
-          '<div class="chat-head"><span class="dot"></span><span class="who">' + t('ai.chat.title') + ' · ' + (LANG === 'ua' ? 'онлайн' : 'онлайн') + '</span></div>' +
+          '<div class="chat-head"><span class="dot"></span><span class="who">' + t('ai.chat.title') + ' · ' + (LANG === 'ua' ? 'онлайн' : 'онлайн') + '</span>' +
+          '<button class="chat-restart" type="button" id="chatRestart">' + t('ai.restart') + '</button></div>' +
           '<div class="chat-msgs" id="chatMsgs"></div>' +
           '<div class="chat-quick" id="chatQuick"></div>' +
         '</div>' +
@@ -328,10 +417,10 @@
         '<div class="contact-channel"><p class="lbl">Telegram</p>' +
         '<a class="tg" href="' + TG + '" target="_blank" rel="noopener">@massiveboy</a></div></div>' +
         '<form class="contact-form" id="contactForm">' +
-          '<div class="field"><label>' + t('form.name') + '</label><input type="text" name="name" required placeholder="' + t('form.name.ph') + '"></div>' +
+          '<div class="field"><label>' + t('form.name') + '</label><input type="text" name="name" required maxlength="120" placeholder="' + t('form.name.ph') + '"></div>' +
           '<div class="field"><label>' + t('form.service') + '</label><select name="service">' + opts + '</select></div>' +
-          '<div class="field"><label>' + t('form.contact') + '</label><input type="text" name="contact" placeholder="' + t('form.contact.ph') + '"></div>' +
-          '<div class="field"><label>' + t('form.msg') + '</label><textarea name="msg" placeholder="' + t('form.msg.ph') + '"></textarea></div>' +
+          '<div class="field"><label>' + t('form.contact') + '</label><input type="text" name="contact" required maxlength="120" placeholder="' + t('form.contact.ph') + '"></div>' +
+          '<div class="field"><label>' + t('form.msg') + '</label><textarea name="msg" maxlength="600" placeholder="' + t('form.msg.ph') + '"></textarea></div>' +
           '<button class="btn btn--solid btn--wide" type="submit">' + t('form.submit') + '</button>' +
           '<p class="form-note">' + t('form.note') + '</p>' +
         '</form>' +
@@ -360,18 +449,21 @@
     var p = PROJECTS.find(function (x) { return x.id === id; });
     if (!p) return;
     $('#caseCat').textContent = t(CAT_LABEL[p.cat]);
-    var feats = L(p.feats).map(function (f) { return '<li>' + f + '</li>'; }).join('');
+    var feats = L(p.caseFeats || p.feats).map(function (f) { return '<li>' + f + '</li>'; }).join('');
     var shots = p.shots.map(function (s) { return '<img src="' + s + '" alt="' + esc(L(p.title)) + '" loading="lazy">'; }).join('');
+    var tech = (p.tech && p.tech.length) ? '<div class="case-block"><h4>' + t('case.tech') + '</h4><div class="case-tech">' + p.tech.map(function (x) { return '<span>' + x + '</span>'; }).join('') + '</div></div>' : '';
+    var statusLine = '<span class="case-status' + (p.status === 'real' ? ' real' : '') + '">' + t(p.status === 'real' ? 'case.real' : 'case.demo') + '</span>';
     $('#caseBody').innerHTML =
-      '<h2>' + L(p.title) + '</h2>' +
+      '<h2>' + L(p.title) + '</h2>' + statusLine +
       '<p class="case-lead">' + L(p.desc) + '</p>' +
       '<div class="case-block"><h4>' + t('case.task') + '</h4><p>' + L(p.task) + '</p></div>' +
       '<div class="case-block"><h4>' + t('case.concept') + '</h4><p>' + L(p.concept) + '</p></div>' +
       '<div class="case-block"><h4>' + t('case.functions') + '</h4><ul class="service-list">' + feats + '</ul></div>' +
+      tech +
       '<div class="case-shots">' + shots + '</div>' +
       '<div class="case-actions">' +
         '<a class="btn btn--solid" href="' + p.demo + '"' + (p.demo.indexOf('http') === 0 ? ' target="_blank" rel="noopener"' : '') + '>' + t('case.open') + '</a>' +
-        '<a class="btn btn--ghost" href="' + TG + '?text=' + enc(t('tg.site')) + '" target="_blank" rel="noopener">' + t('case.cta') + '</a>' +
+        '<a class="btn btn--ghost" href="' + TG + '?text=' + enc(t('tg.site')) + '" target="_blank" rel="noopener" data-track="cta" data-value="case_' + p.id + '">' + t('case.cta') + '</a>' +
       '</div>';
     var panel = $('#casePanel'), veil = $('#caseVeil');
     panel.classList.add('is-open'); panel.setAttribute('aria-hidden', 'false');
@@ -416,15 +508,34 @@
     box.scrollTop = box.scrollHeight;
   }
 
+  function showTyping() {
+    removeTyping();
+    var box = $('#chatMsgs');
+    var div = document.createElement('div');
+    div.className = 'msg msg--bot msg--typing';
+    div.innerHTML = '<span></span><span></span><span></span>';
+    box.appendChild(div);
+    box.scrollTop = box.scrollHeight;
+  }
+
+  function removeTyping() {
+    var t = $('#chatMsgs .msg--typing');
+    if (t) t.remove();
+  }
+
   function chatStep(key) {
     var d = CHAT[LANG];
     var node = d[key] || d['final'];
-    addMsg(node.bot, 'bot');
-    var quick = $('#chatQuick');
-    quick.innerHTML = node.q.map(function (q, i) {
-      var nk = key === '0' ? (i === 0 ? 'manik' : i === 1 ? 'str' : 'kons') : (key === 'final' ? '0' : 'final');
-      return '<button type="button" data-next="' + nk + '" data-label="' + esc(q) + '">' + q + '</button>';
-    }).join('');
+    showTyping();
+    setTimeout(function () {
+      removeTyping();
+      addMsg(node.bot, 'bot');
+      var quick = $('#chatQuick');
+      quick.innerHTML = node.q.map(function (q, i) {
+        var nk = key === '0' ? (i === 0 ? 'manik' : i === 1 ? 'str' : 'kons') : (key === 'final' ? '0' : 'final');
+        return '<button type="button" data-next="' + nk + '" data-label="' + esc(q) + '">' + q + '</button>';
+      }).join('');
+    }, 700);
   }
 
   function initChat() {
@@ -436,13 +547,13 @@
 
   function submitContact(form) {
     var name = form.elements.name.value.trim();
-    if (!name) return;
-    var service = form.elements.service.value;
     var contact = form.elements.contact.value.trim();
-    var msg = form.elements.msg.value.trim();
+    if (!name || !contact) return;
+    var service = form.elements.service.value;
+    var msg = form.elements.msg.value.trim().slice(0, 600);
     var text = (LANG === 'ua'
-      ? 'Здрастуйте! Хочу обговорити проєкт.\n\nПослуга: ' + service + '\nІм\'я: ' + name + (contact ? '\nКонтакт: ' + contact : '') + (msg ? '\n\nЗадача: ' + msg : '')
-      : 'Здравствуйте! Хочу обсудить проект.\n\nУслуга: ' + service + '\nИмя: ' + name + (contact ? '\nКонтакт: ' + contact : '') + (msg ? '\n\nЗадача: ' + msg : ''));
+      ? 'Здрастуйте! Хочу обговорити проєкт.\n\nПослуга: ' + service + '\nІм\'я: ' + name + '\nКонтакт: ' + contact + (msg ? '\n\nЗадача: ' + msg : '')
+      : 'Здравствуйте! Хочу обсудить проект.\n\nУслуга: ' + service + '\nИмя: ' + name + '\nКонтакт: ' + contact + (msg ? '\n\nЗадача: ' + msg : ''));
     window.open(TG + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
     track('form_submit', service);
   }
@@ -470,7 +581,15 @@
     var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
   }
 
-  function setLang(l) { LANG = l; try { localStorage.setItem('xal1fat.lang', l); } catch (e) {} applyChrome(); render(); }
+  function setLang(l) {
+    LANG = l;
+    try { localStorage.setItem('xal1fat.lang', l); } catch (e) {}
+    var y = window.scrollY || document.documentElement.scrollTop;
+    applyChrome();
+    render();
+    requestAnimationFrame(function () { window.scrollTo(0, y); });
+    track('lang_switch', l);
+  }
 
   /* ── події ── */
 
@@ -482,11 +601,16 @@
     $('#chatQuick').addEventListener('click', function (e) {
       var b = e.target.closest('button'); if (!b) return;
       addMsg(b.getAttribute('data-label'), 'user');
+      track('ai_interact', b.getAttribute('data-label'));
       setTimeout(function () { chatStep(b.getAttribute('data-next')); }, 420);
     });
+    var restart = $('#chatRestart');
+    if (restart) restart.addEventListener('click', function () { initChat(); track('ai_restart'); });
   }
 
   document.addEventListener('click', function (e) {
+    var dt = e.target.closest('[data-track]');
+    if (dt) track(dt.getAttribute('data-track'), dt.getAttribute('data-value') || '');
     var lb = e.target.closest('.lang-btn'); if (lb) { setLang(lb.getAttribute('data-lang')); return; }
     var fb = e.target.closest('.filter-btn');
     if (fb) {
