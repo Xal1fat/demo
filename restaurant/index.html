@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luma — ресторан сучасної кухні в Києві</title>
+<meta name="description" content="Демо-сайт ресторану: меню з категоріями, фото страв, бронювання столиків і контакти.">
+<style>
+  :root{--bg:#171310;--bg2:#201a16;--paper:#f4efe7;--gold:#c9a06b;--red:#a33b2e;--text:#e9e3d9;--muted:#a99f92;--serif:Georgia,"Times New Roman",serif;--sans:-apple-system,"Segoe UI",system-ui,sans-serif}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--sans)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #2c2420}
+  .logo{font:400 26px/1 var(--serif);letter-spacing:.06em;color:var(--paper)}
+  .logo i{color:var(--gold);font-style:normal}
+  nav{display:flex;gap:22px}nav a{color:var(--muted);text-decoration:none;font-size:14px}nav a:hover{color:var(--paper)}
+  .demo{font:12px/1 monospace;letter-spacing:.1em;color:var(--gold);border:1px solid var(--gold);padding:6px 10px}
+  .hero{padding:90px 0 70px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end}
+  h1{font:400 clamp(2.6rem,6vw,4.6rem)/1.02 var(--serif);margin:0 0 22px;color:var(--paper)}
+  h1 i{color:var(--gold)}
+  .lead{color:var(--muted);max-width:44ch;margin:0 0 30px}
+  .btns{display:flex;gap:12px}.btn{display:inline-block;padding:14px 24px;text-decoration:none;border-radius:2px;font-size:15px}
+  .btn-s{background:var(--gold);color:#1a1512}.btn-g{border:1px solid #4a3f36;color:var(--paper)}
+  .aside{border-left:1px solid #2c2420;padding-left:26px}
+  .aside p{color:var(--muted);font-size:14px;margin:0 0 8px}.aside b{color:var(--paper);font-weight:400}
+  .photo{height:260px;background:linear-gradient(160deg,#2a211c,#171310);border:1px solid #2c2420;display:grid;place-items:center;margin-bottom:0}
+  .photo span{font:400 60px/1 var(--serif);color:var(--gold);opacity:.5}
+  .sec{padding:60px 0;border-top:1px solid #241e1a}
+  .sec h2{font:400 clamp(1.8rem,3.4vw,2.6rem)/1.1 var(--serif);color:var(--paper);margin:0 0 30px}
+  .menu-cats{display:flex;gap:10px;margin-bottom:28px}
+  .cat{padding:9px 16px;border:1px solid #3a322a;color:var(--muted);cursor:pointer;border-radius:2px;font-size:14px}
+  .cat.on{background:var(--gold);color:#1a1512;border-color:var(--gold)}
+  .menu{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+  .item{display:flex;align-items:baseline;gap:10px;padding:14px 0;border-bottom:1px solid #241e1a}
+  .item .n{font:400 17px/1.3 var(--serif);color:var(--paper)}
+  .item .d{flex:1;border-bottom:1px dotted #3a322a;transform:translateY(-4px)}
+  .item .p{font:14px/1 monospace;color:var(--gold)}
+  .item .desc{font-size:13px;color:var(--muted);margin-top:2px}
+  .grid2{display:grid;grid-template-columns:1.3fr .7fr;gap:44px;align-items:start}
+  form{display:grid;gap:14px}
+  label{font-size:13px;color:var(--muted)}
+  input,select{width:100%;padding:13px;background:#1d1814;border:1px solid #3a322a;color:var(--paper);border-radius:2px;font-size:15px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .done{color:var(--gold);font-size:14px}
+  .contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:26px 0;border-top:1px solid #241e1a}
+  .contacts b{display:block;color:var(--paper);font-weight:400;font:400 16px/1.4 var(--serif);margin-bottom:4px}
+  .contacts span{font-size:13px;color:var(--muted)}
+  footer{padding:28px 0 40px;border-top:1px solid #241e1a;color:#6b6157;font-size:13px;text-align:center}
+  @media(max-width:860px){.hero{grid-template-columns:1fr}.menu{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.nav{display:none}.contacts{grid-template-columns:1fr}.photo{height:180px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo">Luma<i>.</i></div>
+  <nav><a href="#menu">Меню</a><a href="#book">Бронювання</a><a href="#contacts">Контакти</a></nav>
+  <span class="demo">ДЕМО</span>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Смак, що<br>залишається<i>.</i></h1>
+    <p class="lead">Сучасна кухня з локальних продуктів. Меню змінюється за сезоном, а бронь столу займає менше хвилини.</p>
+    <div class="btns"><a class="btn btn-s" href="#book">Забронювати стіл</a><a class="btn btn-g" href="#menu">Переглянути меню</a></div>
+  </div>
+  <div>
+    <div class="photo"><span>◆</span></div>
+    <div class="aside">
+      <p><b>Київ</b></p>
+      <p>вул. Золотоворітська, 6</p>
+      <p style="margin-top:14px"><b>Щодня</b> 12:00 — 23:00</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="sec" id="menu"><div class="wrap">
+  <h2>Меню</h2>
+  <div class="menu-cats" id="cats">
+    <button class="cat on" data-c="starters">Закуски</button>
+    <button class="cat" data-c="mains">Основні</button>
+    <button class="cat" data-c="desserts">Десерти</button>
+  </div>
+  <div class="menu" id="menuList"></div>
+</div></section>
+
+<section class="sec" id="book"><div class="wrap">
+  <h2>Бронювання</h2>
+  <div class="grid2">
+    <form id="bookForm">
+      <label>Ім'я<input name="name" required placeholder="Як до вас звертатися"></label>
+      <div class="row">
+        <label>Дата<input type="date" name="date" required></label>
+        <label>Гостей<select name="guests"><option>2</option><option selected>4</option><option>6</option><option>8</option></select></label>
+      </div>
+      <label>Час<select name="time"><option>13:00</option><option>15:00</option><option selected>19:00</option><option>21:00</option></select></label>
+      <button class="btn btn-s" type="submit">Забронювати</button>
+      <p class="done" id="done" hidden>Готово — стіл зарезервовано (демо).</p>
+    </form>
+    <div class="aside">
+      <p>Бронь на 1–8 осіб. Столик тримаємо 15 хвилин.</p>
+      <p style="margin-top:14px"><b>Телефон</b></p><p>+38 096 000 11 22</p>
+    </div>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="contacts" id="contacts">
+  <div><b>Адреса</b><span>Київ, вул. Золотоворітська, 6</span></div>
+  <div><b>Години</b><span>Щодня 12:00 — 23:00</span></div>
+  <div><b>Контакт</b><span>+38 096 000 11 22</span></div>
+</div></div>
+
+<footer><div class="wrap">Демонстраційний сайт ресторану. Назва, меню та ціни вигадані.</div></footer>
+
+<script>
+var MENU={
+  starters:[['Брускета з томатами','350 ₴','хліб, томати, базилік'],['Тартар з яловичини','520 ₴','вирізка, каперси, жовток'],['Сирна тарілка','480 ₴','три сорти, мед, горіхи']],
+  mains:[['Різотто з білими грибами','420 ₴','арборіо, гриби, пармезан'],['Стейк рібай','780 ₴','мармурова яловичина, соус'],['Паста з морепродуктами','540 ₴','креветки, мідії, томати']],
+  desserts:[['Тирамісу','260 ₴','маскарпоне, кава, какао'],['Шоколадний фондан','280 ₴','темний шоколад, морозиво'],['Панна-котта','240 ₴','вершки, ягідний соус']]
+};
+function render(c){document.getElementById('menuList').innerHTML=MENU[c].map(function(i){return '<div class="item"><span class="n">'+i[0]+'</span><span class="d"></span><span class="p">'+i[1]+'</span><br><span class="desc">'+i[2]+'</span></div>';}).join('');}
+document.getElementById('cats').addEventListener('click',function(e){var b=e.target.closest('.cat');if(!b)return;document.querySelectorAll('.cat').forEach(function(x){x.classList.toggle('on',x===b)});render(b.dataset.c);});
+document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();var f=e.target;if(!f.name.value||!f.date.value)return;document.getElementById('done').hidden=false;f.reset();});
+render('starters');
+</script>
+</body>
+</html>

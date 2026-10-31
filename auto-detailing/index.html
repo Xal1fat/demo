@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GlossPro — студія автодетейлінгу в Києві</title>
+<meta name="description" content="Демо-сайт студії автодетейлінгу: послуги, прайс, галерея до/після та калькулятор вартості.">
+<style>
+  :root{--bg:#0f1115;--panel:#16181d;--line:#26282f;--ink:#f2f4f7;--muted:#8a8f98;--accent:#2fd47c;--sans:-apple-system,"Segoe UI",system-ui,sans-serif}
+  *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+  .logo{font:700 18px/1 var(--sans);letter-spacing:-.02em}.logo i{color:var(--accent);font-style:normal}
+  nav{display:flex;gap:22px}nav a{color:var(--muted);text-decoration:none;font-size:14px}nav a:hover{color:var(--ink)}
+  .demo{font:12px/1 monospace;letter-spacing:.1em;color:var(--accent);border:1px solid var(--accent);padding:6px 10px}
+  .hero{padding:80px 0 64px;max-width:760px}
+  h1{font:700 clamp(2.4rem,5.4vw,4rem)/1.02 var(--sans);letter-spacing:-.04em;margin:0 0 18px}
+  h1 i{color:var(--accent)}
+  .lead{color:var(--muted);font-size:17px;max-width:46ch;margin:0 0 30px}
+  .btns{display:flex;gap:12px}.btn{display:inline-block;padding:14px 24px;text-decoration:none;border-radius:4px;font-size:15px;font-weight:600}
+  .btn-s{background:var(--accent);color:#0c100d}.btn-g{border:1px solid var(--line);color:var(--ink)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:48px}
+  .stats div{background:var(--panel);padding:20px 22px}.stats b{display:block;font:700 26px/1 var(--sans);color:var(--accent);margin-bottom:6px}.stats span{color:var(--muted);font-size:13px}
+  .sec{padding:56px 0;border-top:1px solid var(--line)}
+  .sec h2{font:700 clamp(1.7rem,3vw,2.3rem)/1.1 var(--sans);letter-spacing:-.03em;margin:0 0 28px}
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .svc div{background:var(--panel);padding:22px}.svc b{font-size:16px}.svc p{color:var(--muted);font-size:14px;margin:8px 0 0}.svc .price{color:var(--accent);font-size:15px;font-weight:600}
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+  .gal div{background:var(--panel);aspect-ratio:1;display:grid;place-items:center;color:var(--muted);font:12px/1.2 monospace;text-align:center;padding:8px}
+  .gal .b{color:var(--accent);font-size:22px}
+  .calc{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:28px}
+  .calc .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  label{font-size:13px;color:var(--muted);display:block}
+  select,input{width:100%;padding:12px;background:#0f1115;border:1px solid var(--line);color:var(--ink);border-radius:4px;font-size:15px;margin-top:6px}
+  .result{font:700 28px/1 var(--sans);color:var(--accent);margin-top:20px}.result span{font-size:14px;color:var(--muted);font-weight:400}
+  .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:start}
+  form{display:grid;gap:14px}
+  .done{color:var(--accent);font-size:14px}
+  footer{padding:28px 0 44px;border-top:1px solid var(--line);color:#6a6f78;font-size:13px;text-align:center}
+  @media(max-width:860px){.svc{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.nav{display:none}.stats{grid-template-columns:1fr}.calc .grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo">Gloss<i>Pro</i></div>
+  <nav><a href="#services">Послуги</a><a href="#calc">Калькулятор</a><a href="#form">Заявка</a></nav>
+  <span class="demo">ДЕМО</span>
+</header>
+
+<section class="hero">
+  <h1>Авто, яке<br>виглядає <i>як нове</i>.</h1>
+  <p class="lead">Професійний детейлінг: мийка, полірування, кераміка та хімчистка салону. Розрахуйте орієнтовну вартість за хвилину.</p>
+  <div class="btns"><a class="btn btn-s" href="#calc">Розрахувати вартість</a><a class="btn btn-g" href="#services">Послуги</a></div>
+  <div class="stats">
+    <div><b>5 років</b><span>досвіду майстрів</span></div>
+    <div><b>1200+</b><span>авто обслуговано</span></div>
+    <div><b>24 міс.</b><span>гарантія на кераміку</span></div>
+  </div>
+</section>
+</div>
+
+<section class="sec" id="services"><div class="wrap">
+  <h2>Послуги та ціни</h2>
+  <div class="svc">
+    <div><b>Комплексна мийка</b><p>Мийка кузова, диски, арки та килимки.</p><p class="price">від 600 ₴</p></div>
+    <div><b>Полірування кузова</b><p>Видалення подряпин і голограм, блиск.</p><p class="price">від 3 500 ₴</p></div>
+    <div><b>Керамічне покриття</b><p>Захист кузова на 1–2 роки.</p><p class="price">від 8 000 ₴</p></div>
+    <div><b>Хімчистка салону</b><p>Сидіння, стеля, килими, пластик.</p><p class="price">від 2 500 ₴</p></div>
+    <div><b>Захист плівкою</b><p>Антигравійна плівка на зони ризику.</p><p class="price">від 6 000 ₴</p></div>
+    <div><b>Консервація</b><p>Підготовка авто до зими або літа.</p><p class="price">від 1 800 ₴</p></div>
+  </div>
+</div></section>
+
+<section class="sec" id="gallery"><div class="wrap">
+  <h2>До / після</h2>
+  <div class="gal">
+    <div><span class="b">ДО</span><br>кузов із подряпинами</div>
+    <div><span class="b">ПІСЛЯ</span><br>полірування, глибокий блиск</div>
+    <div><span class="b">ДО</span><br>забруднений салон</div>
+    <div><span class="b">ПІСЛЯ</span><br>хімчистка, як новий</div>
+  </div>
+</div></section>
+
+<section class="sec" id="calc"><div class="wrap">
+  <h2>Калькулятор вартості</h2>
+  <div class="grid2">
+    <div class="calc">
+      <div class="grid">
+        <label>Клас авто<select id="cls"><option value="1">Седан / хетчбек</option><option value="1.2">Кросовер</option><option value="1.4">Позашляховик</option></select></label>
+        <label>Послуга<select id="svc"><option value="600">Комплексна мийка</option><option value="3500">Полірування</option><option value="8000">Керамічне покриття</option><option value="2500">Хімчистка салону</option></select></label>
+      </div>
+      <div class="result" id="result">≈ 600 ₴ <span>орієнтовно</span></div>
+    </div>
+    <div class="aside">
+      <p style="color:#8a8f98;font-size:14px">Точну вартість підтверджуємо після огляду авто. Розрахунок орієнтовний і не є публічною офертою.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="form"><div class="wrap">
+  <h2>Заявка на детейлінг</h2>
+  <div class="grid2">
+    <form id="reqForm">
+      <label>Ім'я<input name="name" required placeholder="Як до вас звертатися"></label>
+      <label>Телефон<input name="phone" placeholder="+380 __ ___ __ __"></label>
+      <label>Авто<input name="car" placeholder="Марка і модель"></label>
+      <button class="btn btn-s" type="submit">Надіслати заявку</button>
+      <p class="done" id="done" hidden>Готово — заявку прийнято (демо).</p>
+    </form>
+    <div>
+      <p style="color:#8a8f98;font-size:14px">Київ, вул. Борщагівська, 145<br>Щодня 9:00 — 20:00<br>+38 096 000 22 33</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Демонстраційний сайт студії автодетейлінгу. Назва та ціни вигадані.</div></footer>
+
+<script>
+var cls=document.getElementById('cls'),svc=document.getElementById('svc'),res=document.getElementById('result');
+function calc(){res.innerHTML='≈ '+Math.round(parseInt(svc.value)*parseFloat(cls.value)).toLocaleString('uk-UA')+' ₴ <span>орієнтовно</span>';}
+cls.addEventListener('change',calc);svc.addEventListener('change',calc);
+document.getElementById('reqForm').addEventListener('submit',function(e){e.preventDefault();var f=e.target;if(!f.name.value)return;document.getElementById('done').hidden=false;f.reset();});
+calc();
+</script>
+</body>
+</html>
