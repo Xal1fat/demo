@@ -1,60 +1,66 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>92° — зерно, техника и бар</title>
-<meta name="description" content="92° — спешелти-обжарка, кофейная техника и бар в Москве. Свежеобжаренное зерно, кофемашины, кофемолки, аксессуары и меню кофейни.">
+<title>92° — зерно, техніка і бар</title>
+<meta name="description" content="92° — спешелті-обсмажка, кавова техніка і бар у Києві. Свіжообсмажене зерно, кавомашини, кавомолки, аксесуари й меню кав'ярні.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2317140F'/%3E%3Ctext x='6' y='23' font-family='Georgia,serif' font-size='16' fill='%23EDEAE1'%3E92%C2%B0%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="topbar" id="topbar">
-  <a class="brand" href="#/" aria-label="92° — на главную">
+  <a class="brand" href="#/" aria-label="92° — на головну">
     <span class="brand-mark">92°</span>
     <span class="brand-word">градус</span>
   </a>
 
-  <nav class="nav" aria-label="Основная навигация">
-    <a href="#/" data-nav="home">Главная</a>
-    <a href="#/beans" data-nav="beans">Зерно</a>
-    <a href="#/tech" data-nav="tech">Техника</a>
-    <a href="#/bar" data-nav="bar">Бар</a>
+  <nav class="nav" aria-label="Основна навігація">
+    <a href="#/" data-nav="home" data-i18n="nav.home">Головна</a>
+    <a href="#/beans" data-nav="beans" data-i18n="nav.beans">Зерно</a>
+    <a href="#/tech" data-nav="tech" data-i18n="nav.tech">Техніка</a>
+    <a href="#/bar" data-nav="bar" data-i18n="nav.bar">Бар</a>
   </nav>
 
-  <button class="cart-open" type="button" id="cartOpen" aria-controls="cart" aria-expanded="false">
-    <span>Корзина</span>
-    <span class="cart-badge" id="cartBadge" hidden>0</span>
-  </button>
+  <div class="head-actions">
+    <div class="lang" role="group" aria-label="Мова">
+      <button class="lang-btn is-on" type="button" data-lang="ua" aria-pressed="true">УКР</button>
+      <button class="lang-btn" type="button" data-lang="ru" aria-pressed="false">РУС</button>
+    </div>
+    <button class="cart-open" type="button" id="cartOpen" aria-controls="cart" aria-expanded="false">
+      <span data-i18n="nav.cart">Кошик</span>
+      <span class="cart-badge" id="cartBadge" hidden>0</span>
+    </button>
+  </div>
 </header>
 
 <main id="app"></main>
 
 <footer class="footer">
   <div>
-    <p class="footer-brand">обжарка · техника · бар</p>
-    <p>92° — демо-сайт. Названия, цены и адрес выдуманы, корзина хранит данные только в браузере, заказы никуда не отправляются.</p>
+    <p class="footer-brand" data-i18n="footer.brand">обсмажка · техніка · бар</p>
+    <p data-i18n="footer.note">92° — демо-сайт. Назви, ціни й адреса вигадані, кошик зберігає дані лише в браузері, замовлення нікуди не надсилаються.</p>
   </div>
-  <nav class="footer-nav" aria-label="Навигация в подвале">
-    <a href="#/beans">Зерно</a>
-    <a href="#/tech">Техника</a>
-    <a href="#/bar">Бар</a>
+  <nav class="footer-nav" aria-label="Навігація в підвалі">
+    <a href="#/beans" data-i18n="nav.beans">Зерно</a>
+    <a href="#/tech" data-i18n="nav.tech">Техніка</a>
+    <a href="#/bar" data-i18n="nav.bar">Бар</a>
   </nav>
 </footer>
 
-<!-- Корзина -->
+<!-- Кошик -->
 <div class="cart-veil" id="cartVeil" hidden></div>
-<aside class="cart" id="cart" aria-hidden="true" aria-label="Корзина">
+<aside class="cart" id="cart" aria-hidden="true" aria-label="Кошик">
   <div class="cart-head">
-    <h2>Корзина</h2>
-    <button class="cart-close" type="button" id="cartClose" aria-label="Закрыть корзину">×</button>
+    <h2 data-i18n="cart.title">Кошик</h2>
+    <button class="cart-close" type="button" id="cartClose" aria-label="Закрити кошик">×</button>
   </div>
   <div class="cart-body" id="cartBody"></div>
   <div class="cart-foot">
-    <p class="cart-total"><span>Итого</span><strong id="cartTotal">0 ₽</strong></p>
-    <button class="btn btn--solid btn--wide" type="button" id="checkout">Оформить заказ</button>
-    <p class="cart-hint" id="cartHint">Бесплатная доставка от 3 000 ₽</p>
+    <p class="cart-total"><span data-i18n="co.total">Разом</span><strong id="cartTotal">0 ₴</strong></p>
+    <button class="btn btn--solid btn--wide" type="button" id="checkout" data-i18n="cart.checkout">Оформити замовлення</button>
+    <p class="cart-hint" data-i18n="co.free">Безкоштовна доставка від 3 000 ₴</p>
   </div>
 </aside>
 
